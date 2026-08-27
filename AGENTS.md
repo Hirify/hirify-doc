@@ -27,6 +27,27 @@ Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher d
 
 ## Style
 
+### Ce qui trahit l'écriture automatique
+
+Trois défauts relevés en relecture, à ne pas réintroduire.
+
+**Le point-virgule est proscrit.** Aucun, nulle part. S'il sépare les éléments d'une énumération, passer en liste à puces. Sinon, couper en deux phrases.
+
+**Les virgules superflues.** Pas de virgule avant « et » ou « ou » quand les deux membres partagent le sujet : « il lit vos postes et les remonte », pas « il lit vos postes, et les remonte ». Pas de virgule devant une subordonnée courte : « il capte l'entretien quel que soit le canal ». La virgule reste nécessaire devant « et » quand les propositions ont des sujets différents, et dans une énumération de trois éléments ou plus.
+
+**Les options s'énumèrent en puces**, jamais en prose enchaînée. Nom en gras, deux-points, explication :
+
+```
+Vous avez le choix entre plusieurs fonctionnalités :
+
+- **Coller un lien de réunion** : ajoutez simplement le lien de votre réunion pour lancer l'assistant.
+- **Planifier par email** : invitez l'assistant de réunion directement depuis votre agenda.
+```
+
+Plus largement : pas de triplets rythmés (« court, clair et vérifiable »), pas d'incise entre virgules qui n'apporte rien, pas de « en effet » ni « par ailleurs » décoratifs.
+
+### Le reste
+
 - Vouvoiement, voix active, phrases courtes, une idée par phrase.
 - Titres en minuscule de phrase.
 - Gras pour les éléments d'interface : cliquez sur **Ajouter le bot**.

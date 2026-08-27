@@ -5,11 +5,15 @@ description: "Sélectionner le template qui structurera le compte rendu, ou lanc
 icon: "clipboard-list"
 ---
 
-Un template fixe la trame du compte rendu : ses sections, ses questions, et la façon dont chaque réponse est rédigée. Cette page indique où le désigner, et ce qui se passe quand vous n'en désignez aucun.
+Un template fixe la trame du compte rendu : ses sections, ses questions et la façon dont chaque réponse est rédigée. Cette page indique où le désigner et ce qui se passe quand vous n'en désignez aucun.
 
 ## Les trois moments où le template se décide
 
-Vous rattachez un template à un entretien avant qu'il ait lieu, depuis le **Calendrier**. Vous pouvez aussi créer un compte rendu à partir d'un template après coup, depuis la fiche de l'entretien. Et si vous ne faites ni l'un ni l'autre, votre template par défaut prend le relais.
+Le template se désigne à l'un de ces trois moments :
+
+- **Avant l'entretien** : depuis le **Calendrier**, vous rattachez un template à l'événement.
+- **Après l'entretien** : depuis la fiche de l'entretien, vous créez un compte rendu à partir d'un template.
+- **Ni l'un ni l'autre** : votre template par défaut prend le relais.
 
 ## Avant l'entretien, depuis le calendrier
 
@@ -59,14 +63,20 @@ Si aucun template n'est rattaché à l'entretien, Hirify applique celui que vous
 
 Dans le panneau du calendrier, la première carte de la liste s'appelle **Sans template**. La choisir revient à n'attacher aucune trame à cet événement.
 
-Un compte rendu est produit quand même dans la plupart des cas. Hirify applique alors, dans l'ordre : sur un entretien créé depuis votre logiciel de recrutement, le template par défaut réglé dans ses [automatismes](/fr/integrations/automatismes-ats) ; sinon votre template par défaut s'il en existe un ; sinon un compte rendu structuré à partir du contenu de l'entretien lui-même. La fiche du compte rendu porte dans ce dernier cas la mention « Généré automatiquement ». Ce dernier recours suppose une analyse aboutie et un échange qui a matière à être résumé : un entretien trop court, ou dont l'analyse a échoué, reste sans compte rendu.
+Un compte rendu est produit quand même dans la plupart des cas. Hirify applique alors, dans l'ordre :
+
+- Sur un entretien créé depuis votre logiciel de recrutement, le template par défaut réglé dans ses [automatismes](/fr/integrations/automatismes-ats).
+- Sinon votre template par défaut s'il en existe un.
+- Sinon un compte rendu structuré à partir du contenu de l'entretien lui-même.
+
+La fiche du compte rendu porte dans ce dernier cas la mention « Généré automatiquement ». Ce dernier recours suppose une analyse aboutie et un échange qui a matière à être résumé : un entretien trop court ou dont l'analyse a échoué reste sans compte rendu.
 
 ## Bon à savoir
 
 - Le compte rendu est rédigé **après** l'entretien, une fois l'enregistrement transcrit. Rien ne s'écrit pendant que vous parlez.
 - Quand une information prévue par le template n'a pas été évoquée, le compte rendu écrit « Non abordé dans l'entretien ». Rien n'est comblé par déduction.
 - Le compte rendu **n'est jamais envoyé** dans votre logiciel de recrutement sans votre validation. Voir [Renvoyer une évaluation](/fr/integrations/renvoyer-une-evaluation).
-- Le sélecteur du calendrier ne montre que les templates auxquels vous avez accès : les vôtres, ceux partagés par votre équipe, et ceux proposés par Hirify.
+- Le sélecteur du calendrier ne montre que les templates auxquels vous avez accès : les vôtres, ceux partagés par votre équipe et ceux proposés par Hirify.
 - Sur un événement où un template est déjà enregistré, repasser sur **Sans template** puis **Mettre à jour** ne détache pas le template déjà choisi. Pour changer de trame, sélectionnez un autre template.
 
 <CardGroup cols={2}>

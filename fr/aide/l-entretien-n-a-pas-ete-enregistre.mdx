@@ -19,7 +19,7 @@ Ouvrez **Transcriptions** dans le menu de gauche. Le champ **Rechercher un entre
     Si l'entretien apparaît là, il a bien été capté et c'est le traitement qui a buté. La mention affichée à droite vous dit laquelle.
   </Step>
   <Step title="Vérifiez à qui il appartient">
-    Un membre ne voit que ses propres entretiens. Si votre collègue a lancé la captation, l'entretien est dans sa liste, pas dans la vôtre. Les managers et les administrateurs voient ceux de toute l'organisation, mais la liste reste filtrée sur **Moi** par défaut, y compris après avoir effacé les filtres : ouvrez le filtre par utilisateur et choisissez **Toute l'équipe**.
+    Un membre ne voit que ses propres entretiens. Si votre collègue a lancé la captation, l'entretien est dans sa liste, pas dans la vôtre. Les managers et les administrateurs voient ceux de toute l'organisation, mais la liste reste filtrée sur **Moi** par défaut, y compris après avoir effacé les filtres. Ouvrez le filtre par utilisateur et choisissez **Toute l'équipe**.
   </Step>
 </Steps>
 
@@ -27,9 +27,9 @@ Ouvrez **Transcriptions** dans le menu de gauche. Le champ **Rechercher un entre
 
 ## Ce que disent les mentions d'échec
 
-- **Bot non accepté** — « Le bot n'a pas été admis dans la réunion. » L'assistant de réunion s'est présenté à la réunion, mais personne ne l'y a admis. Il n'y a rien à récupérer.
-- **Trop court** — « Enregistrement trop court pour être transcrit. » L'enregistrement fait moins d'une minute. C'est le cas d'un appel raccroché aussitôt ou d'une réunion ouverte par erreur.
-- **Échec** — « La transcription a échoué. » Le traitement s'est interrompu. Survolez la mention : le message affiché est celui remonté par le traitement, et c'est lui qu'il faut communiquer au support.
+- **Bot non accepté** : « Le bot n'a pas été admis dans la réunion. » L'assistant de réunion s'est présenté, mais personne ne l'y a admis. Il n'y a rien à récupérer.
+- **Trop court** : « Enregistrement trop court pour être transcrit. » L'enregistrement fait moins d'une minute. C'est le cas d'un appel raccroché aussitôt ou d'une réunion ouverte par erreur.
+- **Échec** : « La transcription a échoué. » Le traitement s'est interrompu. Survolez la mention pour lire le message remonté par le traitement et communiquez-le au support.
 
 ## L'assistant de réunion n'a pas rejoint la visio
 
@@ -39,13 +39,13 @@ Reprenez le chemin que vous avez emprunté.
   <Accordion title="Vous avez collé un lien depuis le tableau de bord">
     Le champ **Collez un lien Meet ou Teams** n'accepte pas tous les liens. Un format non reconnu affiche « Format de lien invalide. Utilisez un lien Google Meet ou Teams. » et rien n'est lancé. Un envoi accepté affiche à l'inverse une confirmation d'invitation.
 
-    Vérifiez aussi que vous avez collé le lien de la réunion elle-même, et non celui de l'invitation d'agenda ou d'une page de redirection.
+    Vérifiez aussi que vous avez collé le lien de la réunion elle-même et non celui de l'invitation d'agenda ou d'une page de redirection.
   </Accordion>
   <Accordion title="Vous avez ajouté l'adresse de l'assistant à votre invitation d'agenda">
-    Ouvrez **Planifier par email** depuis le tableau de bord et comparez l'adresse affichée avec celle réellement présente dans les invités de votre événement. Une adresse recopiée à la main, mise en copie du message au lieu d'être invitée, ou ajoutée après l'envoi de l'invitation, ne déclenche rien.
+    Ouvrez **Planifier par email** depuis le tableau de bord et comparez l'adresse affichée avec celle réellement présente dans les invités de votre événement. Rien ne se déclenche si l'adresse a été recopiée à la main, mise en copie du message au lieu d'être invitée ou ajoutée après l'envoi de l'invitation.
   </Accordion>
   <Accordion title="Vous avez programmé l'assistant depuis le Calendrier">
-    Sur le tableau de bord, la liste des entretiens à venir porte un badge **Bot planifié** quand la programmation a bien eu lieu, et un bouton **Ajouter le bot** sinon. Pour le détail, ouvrez **Calendrier** et cliquez sur l'événement : le panneau propose **Ajouter le bot** si rien n'est programmé, et **Mettre à jour** ou **Supprimer** si l'assistant de réunion est déjà attendu. Un événement sans lien de visioconférence ne peut pas être capté de cette façon.
+    Sur le tableau de bord, la liste des entretiens à venir porte un badge **Bot planifié** si la programmation a bien eu lieu, sinon un bouton **Ajouter le bot**. Pour le détail, ouvrez **Calendrier** et cliquez sur l'événement. Le panneau propose **Ajouter le bot** si rien n'est programmé, **Mettre à jour** ou **Supprimer** si l'assistant de réunion est déjà attendu. Un événement sans lien de visioconférence ne peut pas être capté de cette façon.
   </Accordion>
   <Accordion title="L'entretien venait de votre logiciel de recrutement">
     La programmation dépend du réglage **Bots de transcription automatiques**, dans **Paramètres** puis **Intégrations**. Il ne couvre que les entretiens porteurs d'un lien Google Meet ou Microsoft Teams.
@@ -53,12 +53,16 @@ Reprenez le chemin que vous avez emprunté.
 </AccordionGroup>
 
 <Warning>
-  Prévenez toujours vos interlocuteurs avant de faire entrer l'assistant de réunion. Un participant qui découvre l'enregistrement en séance a de bonnes raisons de refuser l'accès, et c'est votre responsabilité, pas celle de Hirify.
+  Prévenez toujours vos interlocuteurs avant de faire entrer l'assistant de réunion. Un participant qui découvre l'enregistrement en séance a de bonnes raisons de refuser l'accès. L'information relève de votre responsabilité, pas de celle de Hirify.
 </Warning>
 
 ## L'enregistrement en présentiel n'est pas parti
 
-Le téléphone qui a scanné le QR code affiche lui-même le motif : **Accès au micro refusé** si le navigateur n'a pas l'autorisation, **Enregistrement bloqué** si l'enregistreur n'a transmis aucun son, **Envoi interrompu** si le fichier n'a pas pu être transmis.
+Le téléphone qui a scanné le QR code affiche lui-même le motif :
+
+- **Accès au micro refusé** : le navigateur n'a pas l'autorisation.
+- **Enregistrement bloqué** : l'enregistreur n'a transmis aucun son.
+- **Envoi interrompu** : le fichier n'a pas pu être transmis.
 
 Dans ce dernier cas, l'écran propose de télécharger l'audio depuis le téléphone avant de quitter la page. Faites-le. Si vous avez déjà quitté, rouvrez la page sur le même téléphone dans les vingt-quatre heures : elle affiche « Un enregistrement interrompu a été trouvé. Souhaitez-vous le récupérer ? » et le bouton **Récupérer** relance l'envoi.
 
@@ -66,7 +70,7 @@ Dans ce dernier cas, l'écran propose de télécharger l'audio depuis le télép
 
 - Un entretien absent de la liste n'a jamais été créé. Il n'y a pas d'archive cachée à restaurer.
 - Il n'existe pas de bouton pour relancer une captation manquée. Un entretien échoué ne se rejoue pas : seul un nouvel enregistrement produira une transcription.
-- L'assistant de réunion rejoint une visioconférence ; il ne compose pas de numéro et n'entre pas dans une salle physique.
+- L'assistant de réunion rejoint une visioconférence. Il ne compose pas de numéro et n'entre pas dans une salle physique.
 - La liste se met à jour d'elle-même pendant le traitement. Un entretien affiché **Traitement transcription** n'est pas perdu, il n'est simplement pas terminé.
 
 <CardGroup cols={2}>

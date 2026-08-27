@@ -9,7 +9,7 @@ icon: "chart-line"
   Accès : offre Hub, rôle administrateur ou manager.
 </Note>
 
-Pilotage compose un tableau de bord de recrutement à partir d'une phrase écrite en français. Cette page couvre la composition d'un tableau, la pose d'un objectif sur un indicateur, et la demande d'analyse.
+Pilotage compose un tableau de bord de recrutement à partir d'une phrase écrite en français.
 
 ## Décrire votre tableau en langage courant
 
@@ -17,7 +17,7 @@ Pilotage compose un tableau de bord de recrutement à partir d'une phrase écrit
   <Step title="Ouvrez Pilotage">
     Dans la barre latérale, section **Mon espace**, cliquez sur **Pilotage**. Si vous n'avez encore enregistré aucun tableau, l'atelier s'ouvre directement. Sinon, cliquez sur **Nouveau tableau**.
   </Step>
-  <Step title="Partez d'un point de départ, ou décrivez le vôtre">
+  <Step title="Partez d'un point de départ ou décrivez le vôtre">
     Sous **Points de départ**, cinq cartes sont proposées : **Santé du pipeline**, **Vélocité et délais**, **Sourcing et qualité**, **Cockpit staffing** et **Activité d'entretiens**. Un clic ouvre le tableau correspondant sans passer par une génération.
   </Step>
   <Step title="Ou écrivez votre demande">
@@ -28,7 +28,7 @@ Pilotage compose un tableau de bord de recrutement à partir d'une phrase écrit
   </Step>
 </Steps>
 
-Chaque carte porte une pastille : **Disponible**, **Partielle**, **En attente de données** ou **Nécessite un ATS connecté**. Une carte en attente n'est pas cliquable. Quand la donnée manque, le lien **Voir comment débloquer →** mène à la page Fiabilité ; sur une carte **Nécessite un ATS connecté**, ce lien ne s'affiche pas — le geste attendu est la connexion de votre logiciel de recrutement.
+Chaque carte porte une pastille : **Disponible**, **Partielle**, **En attente de données** ou **Nécessite un ATS connecté**. Une carte en attente n'est pas cliquable. Quand la donnée manque, le lien **Voir comment débloquer →** mène à la page Fiabilité. Sur une carte **Nécessite un ATS connecté**, ce lien ne s'affiche pas. Le geste attendu est la connexion de votre logiciel de recrutement.
 
 <Frame>
   <img src="/images/pilotage-atelier.webp" alt="l'atelier Pilotage : le bandeau « À votre attention » et les cinq points de départ avec leurs pastilles d'état" />
@@ -54,7 +54,7 @@ La barre du bas porte l'indication « Ajustez : « ajoute le taux de rejet par d
 
 ## Fixer un objectif sur un indicateur
 
-Un objectif se pose sur un tableau déjà enregistré dont vous êtes propriétaire, et seulement sur un bloc qui affiche un chiffre unique.
+Un objectif se pose sur un tableau déjà enregistré dont vous êtes propriétaire. Il ne se pose que sur un bloc qui affiche un chiffre unique.
 
 <Steps>
   <Step title="Ouvrez le tableau enregistré">
@@ -68,7 +68,7 @@ Un objectif se pose sur un tableau déjà enregistré dont vous êtes propriéta
   </Step>
 </Steps>
 
-Le bloc affiche alors une pastille **Objectif** suivie de la valeur. Sa couleur indique si la cible est atteinte, quand la mesure a un sens d'amélioration connu.
+Le bloc affiche alors une pastille **Objectif** suivie de la valeur. Quand la mesure a un sens d'amélioration connu, sa couleur indique si la cible est atteinte.
 
 ## Modifier ou retirer un objectif
 
@@ -78,15 +78,20 @@ Rouvrez le même bloc : l'icône porte maintenant l'infobulle **Modifier l'objec
 
 Sur un tableau enregistré, le bouton **Analyser ce tableau** demande une lecture des chiffres affichés. Pendant le traitement, il indique **Analyse en cours…**.
 
-L'analyse porte sur la vue en cours, filtres compris. Les observations se posent à deux endroits : celles qui concernent un bloc précis se lisent derrière le marqueur d'information de ce bloc ; les autres s'affichent en bandeau au-dessus du tableau. Une ligne récapitule le résultat : **Analyse · 1 observation**, **Analyse · N observations**, ou **Analyse · rien à signaler**.
+L'analyse porte sur la vue en cours, filtres compris. Les observations se posent à deux endroits :
 
-Une fois l'analyse posée, le bouton devient **Relancer l'analyse**. Le bouton **Actualiser**, à côté, recalcule les chiffres ; la mention **Actualisé à** donne l'heure du dernier calcul.
+- Celles qui concernent un bloc précis se lisent derrière le marqueur d'information de ce bloc.
+- Les autres s'affichent en bandeau au-dessus du tableau.
+
+Une ligne récapitule le résultat : **Analyse · 1 observation**, **Analyse · N observations**, ou **Analyse · rien à signaler**.
+
+Une fois l'analyse posée, le bouton devient **Relancer l'analyse**. Le bouton **Actualiser**, à côté, recalcule les chiffres. La mention **Actualisé à** donne l'heure du dernier calcul.
 
 {/* CAPTURE : un tableau enregistré, avec le bandeau d'observations, une pastille Objectif et le bouton Analyser ce tableau */}
 
 ## Qui a accès au Pilotage (à partir de l'offre Hub, rôle admin ou manager)
 
-Le Pilotage demande deux conditions cumulées : une organisation à partir de l'offre Hub, et un rôle **administrateur** ou **manager**. Les entrées **Pilotage** et **Fiabilité** n'apparaissent dans la barre latérale que si les deux sont réunies.
+Le Pilotage demande deux conditions cumulées : une organisation à partir de l'offre Hub et un rôle **administrateur** ou **manager**. Les entrées **Pilotage** et **Fiabilité** n'apparaissent dans la barre latérale que si les deux sont réunies.
 
 Un membre qui atteint la page malgré tout voit un écran **Accès réservé** : « Les tableaux de bord sont réservés aux administrateurs et managers de l'organisation. »
 
