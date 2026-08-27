@@ -7,7 +7,10 @@
     "light": "#eec9bc",
     "dark": "#4fa1ab"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/favicon.svg",
+    "dark": "/images/favicon.svg"
+  },
   "navbar": {
     "primary": {
       "type": "button",
@@ -269,5 +272,9 @@
       "source": "/help/contact-support",
       "destination": "/fr/aide/contacter-le-support"
     }
-  ]
+  ],
+  "logo": {
+    "light": "/images/logo_name_white.svg",
+    "dark": "/images/logo_name_black.svg"
+  }
 }
