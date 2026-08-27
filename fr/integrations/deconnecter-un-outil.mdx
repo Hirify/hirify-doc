@@ -1,0 +1,101 @@
+---
+title: "Déconnecter un outil"
+sidebarTitle: "Déconnexion"
+description: "Retirer un agenda ou un logiciel de recrutement de votre organisation, et savoir quelles données disparaissent"
+icon: "link-slash"
+---
+
+Déconnecter un outil arrête l'échange de données avec Hirify. Selon l'outil, le geste est réversible d'un clic ou emporte des données. Cette page dit ce que chacun entraîne.
+
+Tout se passe dans **Paramètres**, puis **Intégrations**.
+
+## Déconnecter votre agenda
+
+La section **Calendriers** liste **Google Calendar** et **Microsoft Outlook**. Celui qui est relié à votre compte affiche l'adresse utilisée ; le bouton **Déconnecter** est sur la même ligne.
+
+<Steps>
+  <Step title="Ouvrez la section Calendriers">
+    Dans **Paramètres**, puis **Intégrations**.
+  </Step>
+  <Step title="Cliquez sur Déconnecter">
+    Sur la ligne de l'agenda relié.
+  </Step>
+</Steps>
+
+Ce qui se passe ensuite :
+
+- Hirify cesse de lire votre agenda et la connexion est désactivée.
+- Vos prochains rendez-vous n'alimentent plus Hirify, et l'assistant de réunion n'est plus programmé pour vous depuis un rendez-vous.
+- Les entretiens déjà enregistrés, leurs transcriptions et leurs comptes rendus ne sont pas touchés.
+
+<Note>
+  La connexion d'agenda est personnelle. Déconnecter le vôtre ne déconnecte pas celui de vos collègues.
+</Note>
+
+### Changer d'agenda
+
+Un seul agenda est actif à la fois. Tant que l'un des deux est relié, l'autre ligne reste inactive et affiche **Calendrier actif :** suivi du nom de l'agenda en place. Pour basculer, déconnectez d'abord celui qui est actif, puis connectez le second.
+
+Reconnecter plus tard se fait comme la première fois, par le bouton **Connecter**.
+
+## Déconnecter votre logiciel de recrutement
+
+L'opération est réservée aux administrateurs de l'organisation, et elle vaut pour tout le monde : la connexion appartient à l'organisation, pas à un membre.
+
+<Steps>
+  <Step title="Ouvrez la section ATS">
+    Dans **Paramètres**, puis **Intégrations**.
+  </Step>
+  <Step title="Cliquez sur Déconnecter">
+    Sur la carte du logiciel connecté.
+  </Step>
+  <Step title="Lisez la fenêtre de confirmation">
+    Elle annonce : « Cette action supprimera la connexion et arrêtera la synchronisation. Par défaut, les données déjà synchronisées sont conservées. »
+  </Step>
+  <Step title="Décidez du sort des données">
+    Laissez la case décochée pour conserver les données, ou cochez-la pour tout supprimer.
+  </Step>
+  <Step title="Confirmez">
+    Le bouton porte **Déconnecter**, ou **Déconnecter et supprimer** si vous avez coché la case.
+  </Step>
+</Steps>
+
+{/* CAPTURE : la fenêtre de confirmation de déconnexion ATS, avec la case de suppression des données */}
+
+### Déconnexion simple
+
+La synchronisation s'arrête, les identifiants enregistrés sont effacés et la connexion devient inactive. Les candidats, postes, candidatures et entretiens déjà importés restent dans Hirify.
+
+Cessent aussi de fonctionner : le renvoi d'évaluation, les tags de synthèse, le remplissage des champs, et l'envoi de l'assistant de réunion sur les rendez-vous issus de votre logiciel de recrutement. La page **Familles de profils** repasse à son état vide.
+
+### Déconnexion avec suppression des données
+
+La case à cocher est explicite : **Supprimer aussi les candidats, postes et données ATS synchronisées**.
+
+<Warning>
+  Action irréversible. Elle est prévue pour répondre à une demande de protection des données ou pour nettoyer un environnement de test. Les transcriptions et les comptes rendus produits par Hirify ne sont pas affectés.
+</Warning>
+
+Sont supprimés : les candidats, les postes, les candidatures, les entretiens, les évaluations et les pièces jointes importés, ainsi que les rendez-vous créés à partir des entretiens de votre logiciel de recrutement.
+
+### Changer de logiciel de recrutement
+
+Une seule connexion est active par organisation. Tant qu'un logiciel est connecté, les autres cartes affichent un bouton **Connecter** inactif et l'explication : « Un seul ATS peut être connecté à la fois. Déconnectez l'ATS actuel pour en changer. »
+
+## Bon à savoir
+
+- Déconnecter n'annule pas un abonnement. Cela se règle sur la page de votre abonnement.
+- Déconnecter un logiciel de recrutement ne retire rien de ce que Hirify y a écrit. Les évaluations, tags et champs déjà transmis y restent : votre outil en est le propriétaire.
+- Une reconnexion repart d'une synchronisation complète. Après une suppression des données, Hirify réimporte ce que votre logiciel de recrutement expose sur la période couverte par cet import : les enregistrements les plus anciens peuvent ne pas revenir.
+- Si la suppression des données échoue, Hirify vous le dit : la connexion est bien désactivée, mais la purge doit être relancée par le support.
+- La déconnexion d'agenda n'offre pas d'option de suppression : il n'y a pas de case à cocher sur cette section.
+- Un membre qui n'est pas administrateur ne voit pas la section **ATS** de la page **Intégrations**, et ne peut donc pas déconnecter le logiciel de recrutement.
+
+<CardGroup cols={2}>
+  <Card title="Connecter votre agenda" icon="calendar" href="/fr/integrations/connecter-votre-agenda">
+    Remettre un agenda en place, ou en changer.
+  </Card>
+  <Card title="Vos données" icon="shield" href="/fr/confiance/vos-donnees">
+    Ce que Hirify conserve, et pendant combien de temps.
+  </Card>
+</CardGroup>

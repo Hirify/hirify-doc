@@ -1,0 +1,103 @@
+---
+title: "Relire un entretien"
+sidebarTitle: "Relire un entretien"
+description: "Naviguez entre les trois vues d'une fiche entretien — Notes, L'essentiel et Transcription — et remontez de n'importe quelle phrase au moment où elle a été dite."
+icon: "file-lines"
+---
+
+La fiche d'un entretien réunit tout ce que Hirify en a tiré. Trois vues cohabitent : le compte rendu, un résumé court et la transcription mot à mot. Cette page explique comment circuler entre elles et comment remonter d'une affirmation au passage de l'échange qui la porte.
+
+## Ouvrir une fiche entretien
+
+<Steps>
+  <Step title="Ouvrez la liste des entretiens">
+    Dans le menu de gauche, section **Entretiens**, cliquez sur **Transcriptions**.
+  </Step>
+  <Step title="Cliquez sur la ligne de l'entretien">
+    Seuls les entretiens au statut **Terminé** s'ouvrent. Un entretien encore en traitement, marqué **Trop court** ou en **Échec**, reste visible dans la liste sans être consultable.
+  </Step>
+  <Step title="Repérez la barre du haut">
+    Les trois onglets **Notes**, **L'essentiel** et **Transcription** occupent la gauche de cette barre. Le titre de l'entretien s'affiche à droite, suivi de sa date et de sa durée sur les écrans larges.
+  </Step>
+</Steps>
+
+<Note>
+  Sur le bord droit de l'écran, une barre verticale ouvre trois panneaux : **Actions**, **Analyse**, et **ATS** lorsque votre organisation a connecté son logiciel de recrutement. Le contenu du panneau **Actions** dépend de l'onglet ouvert.
+</Note>
+
+{/* CAPTURE : fiche entretien ouverte sur l'onglet Notes, les trois onglets à gauche de la barre du haut, la barre verticale à droite */}
+
+## La vue Notes
+
+C'est la vue ouverte par défaut. Elle affiche le compte rendu de l'entretien : son titre, modifiable en cliquant dessus, et son texte, modifiable ligne à ligne. À droite du titre, une mention indique **Enregistrement…** pendant la sauvegarde puis **Enregistré**.
+
+Le compte rendu que Hirify produit de lui-même porte la pastille **Auto**. Une rangée de pilules au-dessus du document permet de passer d'un compte rendu à l'autre ; le bouton **Nouvelle note** en fin de rangée ouvre la fenêtre **Sélectionner un template**. Dès qu'un entretien compte deux comptes rendus ou plus, l'onglet **Notes** affiche leur nombre. Sur les entretiens anciens qui n'ont aucun compte rendu, la vue propose **Générer le compte rendu** et **Nouvelle note**.
+
+Tant que la génération n'est pas terminée, la vue affiche un état d'attente qui reprend **L'essentiel** sous le titre « En attendant, l'essentiel ». Si la génération échoue, un message le dit et propose **Réessayer** ; la transcription et l'analyse ne sont pas affectées.
+
+Pour modifier, réécrire ou traduire un compte rendu, voyez [Lire et modifier un compte rendu](/fr/comptes-rendus/lire-et-modifier).
+
+## La vue « L'essentiel »
+
+Un paragraphe, puis une liste **À retenir**. C'est la lecture la plus courte de l'entretien, faite pour être parcourue entre deux rendez-vous. Le lien **Ouvrir le compte rendu** en bas bascule vers la vue Notes.
+
+Le panneau **Actions** propose ici une seule commande, **Copier l'essentiel**, qui place le paragraphe et les puces dans le presse-papiers.
+
+Trois autres situations existent :
+
+- **Pas de résumé pour cet appel** : la vue précise pourquoi — soit aucun candidat n'est présent dans l'échange, soit son contenu ne permet pas de produire un résumé.
+- Génération en cours : un message l'indique et le texte apparaît dès qu'il est prêt.
+- **L'essentiel n'est pas disponible** : la génération n'a pas abouti, le bouton **Réessayer** la relance.
+
+## La vue Transcription
+
+La transcription liste les prises de parole dans l'ordre. Chaque ligne porte le nom de l'intervenant et la plage horaire de sa prise de parole, du début à la fin.
+
+Cliquez sur le texte d'une ligne pour le corriger. Entrée enregistre, Échap annule ; les boutons **Valider** et **Annuler** font la même chose. Si un CV a été ajouté à l'entretien, les mots que Hirify a corrigés à partir du CV sont soulignés en pointillés : survolez-les pour voir le mot d'origine et sa correction.
+
+Au survol d'une ligne, un bouton apparaît à gauche de l'avatar. Il ouvre les actions qui concernent l'intervenant de cette ligne : **Renommer**, **Candidat** ou **Non-candidat**, **Inverser avec...** et **Fusionner avec...**. Ces gestes sont détaillés dans [Identifier les intervenants](/fr/entretiens/identifier-les-intervenants).
+
+Le panneau **Actions** propose **Copier la transcription** et **Télécharger en TXT**.
+
+{/* CAPTURE : la vue Transcription, une ligne survolée avec son menu d'actions ouvert */}
+
+## Passer d'une vue à l'autre et remonter à la source
+
+Les trois onglets restent visibles en permanence : un clic suffit. L'adresse de la page retient la vue ouverte et le compte rendu sélectionné, donc un lien copié depuis votre navigateur rouvre l'entretien exactement là où vous l'aviez laissé.
+
+Le chemin le plus utile part du panneau **Analyse**. Chaque élément que Hirify avance y est adossé à une citation de l'entretien :
+
+<Steps>
+  <Step title="Ouvrez le panneau Analyse">
+    Cliquez sur **Analyse** dans la barre verticale de droite.
+  </Step>
+  <Step title="Dépliez la citation">
+    Cliquez sur un élément de la liste **À trancher** ou **Couvert** pour le déplier, puis sur **Voir la citation**. La prise de parole citée s'affiche entourée de celle qui la précède et de celle qui la suit, avec le nom de l'intervenant et l'horodatage. **Masquer la citation** referme le tout.
+  </Step>
+  <Step title="Ouvrez le passage complet">
+    Si l'extrait ne suffit pas, cliquez sur **Ouvrir dans la transcription**. Hirify bascule sur l'onglet **Transcription**, fait défiler jusqu'à la ligne citée et la met brièvement en surbrillance.
+  </Step>
+</Steps>
+
+## Bon à savoir
+
+- La fiche ne rejoue pas l'audio de l'entretien. « Remonter à la source » veut dire retrouver la phrase écrite et son horodatage, pas réécouter l'enregistrement.
+- La vue Transcription n'a pas de champ de recherche. Pour retrouver un passage, partez d'une citation du panneau **Analyse** ou parcourez les prises de parole.
+- Corriger le texte d'une ligne ne relance ni le compte rendu ni l'analyse. Les documents déjà produits gardent la formulation d'origine tant que vous ne les régénérez pas.
+- L'essentiel n'existe pas pour tous les entretiens : sans candidat dans l'échange, ou quand le contenu ne s'y prête pas, il n'est pas généré.
+- Un membre ne voit que ses propres entretiens. Les managers et les administrateurs voient ceux de toute l'organisation. Voir [Rôles et accès](/fr/demarrer/roles-et-acces).
+
+<CardGroup cols={2}>
+  <Card title="Identifier les intervenants" icon="users" href="/fr/entretiens/identifier-les-intervenants">
+    Nommer chaque voix, corriger une permutation, fusionner deux intervenants.
+  </Card>
+  <Card title="Lire et modifier un compte rendu" icon="file-pen" href="/fr/comptes-rendus/lire-et-modifier">
+    Retoucher le texte, réécrire une section, changer de format.
+  </Card>
+  <Card title="L'analyse du candidat" icon="user-magnifying-glass" href="/fr/comptes-rendus/analyse-du-candidat">
+    Ce que contient le panneau Analyse et comment le lire.
+  </Card>
+  <Card title="La transcription est incomplète" icon="life-ring" href="/fr/aide/la-transcription-est-incomplete">
+    Que faire quand il manque une partie de l'échange.
+  </Card>
+</CardGroup>

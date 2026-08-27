@@ -1,0 +1,99 @@
+---
+title: "Les intervenants sont mélangés"
+sidebarTitle: "Intervenants mélangés"
+description: "Corrigez une attribution de paroles erronée pour retrouver un compte rendu fidèle"
+icon: "right-left"
+---
+
+Hirify sépare les voix d'un entretien, mais il ne sait pas à qui elles appartiennent tant que vous ne le lui avez pas dit. Trois symptômes se corrigent depuis la fiche entretien : des intervenants sans nom, deux personnes interverties, une même personne coupée en deux.
+
+{/* CAPTURE : bandeau d'alerte en haut d'une fiche entretien, avec le bouton Identifier les intervenants */}
+
+## Identifier des intervenants sans nom
+
+Un bandeau s'affiche en haut de l'entretien : « 2 intervenants ne sont pas identifiés », avec la précision « Les identifier améliore le compte rendu et l'essentiel. »
+
+<Steps>
+  <Step title="Ouvrez l'assistant d'identification">
+    Cliquez sur **Identifier les intervenants** dans le bandeau. La fenêtre **Qui parle ici ?** s'ouvre.
+  </Step>
+  <Step title="Écoutez qui parle, par ses mots">
+    La fenêtre affiche les trois prises de parole les plus substantielles de la personne, avec leur horodatage. **Voir dans la transcription** vous replace au bon endroit si l'extrait ne suffit pas.
+  </Step>
+  <Step title="Nommez la personne">
+    Saisissez le nom dans le champ **Nom de l'intervenant**. Quand des participants sont connus, ils sont proposés en un clic sous le champ.
+  </Step>
+  <Step title="Précisez le rôle">
+    Choisissez **Candidat** ou **Recruteur** en face de **Rôle**, puis cliquez sur **Valider**.
+  </Step>
+  <Step title="Passez au suivant">
+    Le compteur « 1 sur 3 » et les flèches vous font circuler entre les intervenants restants. **Passer** laisse celui-ci de côté.
+  </Step>
+</Steps>
+
+<Note>
+  Deux intervenants ne peuvent pas porter le même nom. Si vous réutilisez un nom déjà attribué, Hirify affiche « Ce nom est déjà attribué à un autre intervenant ».
+</Note>
+
+## Deux personnes ont été interverties
+
+Le cas typique : ce que le candidat a dit est attribué au recruteur, et inversement. Vous corrigez les deux d'un coup.
+
+<Steps>
+  <Step title="Ouvrez la vue Transcription">
+    Dans la fiche entretien, basculez sur l'onglet **Transcription**.
+  </Step>
+  <Step title="Ouvrez le menu d'une prise de parole">
+    Survolez un passage mal attribué. Un bouton d'actions apparaît à gauche de l'avatar.
+  </Step>
+  <Step title="Permutez les deux intervenants">
+    Choisissez **Inverser avec...**, puis sélectionnez la personne à qui ce passage revient. Toutes les prises de parole des deux intervenants échangent leur attribution.
+  </Step>
+</Steps>
+
+Le même menu propose **Renommer** pour corriger un seul nom, et un raccourci **Candidat** / **Non-candidat** pour désigner ou retirer le candidat.
+
+## Une même personne apparaît deux fois
+
+Quand une voix a été coupée en deux, par exemple après un changement de micro ou une reprise d'appel, la même personne occupe deux entrées distinctes. Fusionnez-les.
+
+<Steps>
+  <Step title="Ouvrez le menu d'une prise de parole">
+    Toujours dans la vue **Transcription**, survolez un passage de l'entrée à supprimer.
+  </Step>
+  <Step title="Choisissez la cible">
+    Cliquez sur **Fusionner avec...** puis sur l'intervenant à conserver.
+  </Step>
+  <Step title="Confirmez">
+    La fenêtre **Fusionner les speakers** vous prévient : « Cette action est irréversible. Tous les segments du speaker source seront réattribués au speaker cible, et les segments adjacents seront fusionnés. » Cliquez sur **Fusionner**.
+  </Step>
+</Steps>
+
+<Warning>
+  La fusion de deux intervenants ne s'annule pas. Vérifiez que vous fusionnez bien la même personne avant de confirmer.
+</Warning>
+
+## Répercuter la correction sur le compte rendu
+
+Corriger les intervenants ne réécrit pas le compte rendu déjà généré. Si vous venez de passer par **Identifier les intervenants**, le bandeau change et affiche « Intervenants identifiés », avec l'invitation « Régénérez le compte rendu et l'essentiel pour en tenir compte. » Cliquez sur **Régénérer** pour relancer la génération avec les bons noms ; **Plus tard** referme simplement le bandeau.
+
+Après une correction faite depuis le menu d'une prise de parole (**Renommer**, **Inverser avec...**, **Fusionner avec...**), ce bandeau n'apparaît pas. Relancez alors la génération depuis l'action **Régénérer**, sous **Compte-rendu**, dans le volet latéral de l'entretien.
+
+{/* CAPTURE : bandeau Intervenants identifiés avec les boutons Plus tard et Régénérer */}
+
+## Bon à savoir
+
+- L'identification agit sur l'entretien ouvert, pas sur les autres. Un même candidat entendu dans deux entretiens se nomme dans chacun.
+- Les corrections d'intervenants ne modifient pas un compte rendu déjà envoyé dans votre logiciel de recrutement. Régénérez, relisez, puis renvoyez-le vous-même.
+- La régénération remplace le compte rendu existant : vos modifications manuelles sur ce compte rendu sont perdues.
+- En présentiel, le nombre choisi dans **Participants** au moment de générer le QR code aide la séparation des voix, mais ne la garantit pas. Une prise de parole très courte ou deux voix très proches restent des cas difficiles.
+- Si la transcription elle-même est vide ou tronquée, l'identification n'y changera rien : voyez d'abord la page ci-dessous.
+
+<CardGroup cols={2}>
+  <Card title="Identifier les intervenants" href="/fr/entretiens/identifier-les-intervenants">
+    La procédure complète, hors dépannage.
+  </Card>
+  <Card title="La transcription est incomplète" href="/fr/aide/la-transcription-est-incomplete">
+    Quand le problème vient de la captation.
+  </Card>
+</CardGroup>

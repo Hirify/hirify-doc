@@ -1,0 +1,113 @@
+---
+title: "Enregistrer un entretien en visioconférence"
+sidebarTitle: "En visioconférence"
+description: "Faites venir l'assistant de réunion dans votre visioconférence Meet ou Teams, qu'elle démarre dans cinq minutes ou qu'elle soit déjà posée dans votre agenda."
+icon: "video"
+---
+
+L'assistant de réunion rejoint votre visioconférence, l'enregistre et la transcrit. Il apparaît dans la liste des participants, comme un invité de plus.
+
+## Trois façons de faire venir l'assistant de réunion
+
+| Chemin | Quand l'utiliser | Ce qu'il faut |
+| --- | --- | --- |
+| Coller le lien sur le tableau de bord | La réunion démarre maintenant ou dans quelques minutes | Le lien de la visioconférence |
+| Inviter l'adresse de l'assistant dans l'invitation d'agenda | L'entretien est déjà planifié | Rien de plus |
+| Ajouter l'assistant depuis le **Calendrier** | Vous voulez aussi choisir le template du compte rendu | Un agenda connecté |
+
+Les trois aboutissent au même résultat : un entretien qui apparaît dans **Transcriptions** et qui suit le même traitement.
+
+## Coller un lien Meet ou Teams depuis l'accueil
+
+<Steps>
+  <Step title="Ouvrez le Tableau de bord">
+    C'est la page d'accueil de Hirify. Repérez la ligne **Démarrer un entretien**.
+  </Step>
+  <Step title="Collez le lien de la visioconférence">
+    Dans le champ **Collez un lien Meet ou Teams**, collez l'adresse de la réunion.
+  </Step>
+  <Step title="Validez">
+    Appuyez sur Entrée, ou cliquez sur la flèche à droite du champ. Le message « Bot Hirify invité avec succès à la réunion » confirme l'envoi.
+  </Step>
+</Steps>
+
+Si le lien n'est pas reconnu, Hirify répond « Format de lien invalide. Utilisez un lien Google Meet ou Teams. » et rien n'est déclenché.
+
+{/* CAPTURE : le champ « Collez un lien Meet ou Teams » du tableau de bord, avec un lien saisi */}
+
+## Inviter notes@bot.hirify.fr dans votre invitation d'agenda
+
+C'est le chemin le plus simple pour un entretien déjà calé : vous ajoutez l'assistant comme n'importe quel invité.
+
+<Steps>
+  <Step title="Ouvrez la fenêtre Planifier par email">
+    Sur le **Tableau de bord**, cliquez sur **Planifier par email**.
+  </Step>
+  <Step title="Copiez l'adresse">
+    Cliquez sur **Copier l'adresse**. L'adresse affichée est `notes@bot.hirify.fr`.
+  </Step>
+  <Step title="Ajoutez-la en invité">
+    Dans votre invitation d'agenda, collez l'adresse dans la liste des participants, puis envoyez l'invitation.
+  </Step>
+</Steps>
+
+L'assistant rejoint la visioconférence à l'heure prévue par l'événement.
+
+<Note>
+  Ce chemin ne demande aucune connexion d'agenda : il fonctionne depuis n'importe quel outil de calendrier, tant que l'invitation contient un lien de visioconférence et qu'elle part de l'adresse email de votre compte Hirify.
+</Note>
+
+## Ajouter l'assistant de réunion à un événement depuis le Calendrier
+
+Ce chemin suppose que votre agenda soit relié à Hirify. Il ajoute une possibilité que les deux autres n'ont pas : choisir dès maintenant le template du compte rendu.
+
+<Steps>
+  <Step title="Ouvrez le Calendrier">
+    Dans la barre latérale, section **Mon espace**, cliquez sur **Calendrier**.
+  </Step>
+  <Step title="Cliquez sur l'événement">
+    Un panneau s'ouvre sur la droite avec le titre de l'événement et son horaire.
+  </Step>
+  <Step title="Choisissez un template de notes">
+    Sous **Template de notes**, sélectionnez celui à appliquer. Vous pouvez laisser ce choix de côté et le faire plus tard.
+  </Step>
+  <Step title="Cliquez sur Ajouter le bot">
+    Le message « Bot ajouté avec succès » confirme la programmation.
+  </Step>
+</Steps>
+
+Sur un événement déjà programmé et qui n'a pas encore commencé, le même panneau propose **Mettre à jour** pour changer de template et **Supprimer** pour annuler. La suppression demande une confirmation : « Le bot ne rejoindra plus cette réunion. Cette action est irréversible. » Une fois l'événement commencé, il ne propose plus que **Fermer**.
+
+Quand votre agenda est connecté, le tableau de bord affiche aussi un bloc **Agenda**, classé en **Aujourd'hui** et **À venir**. Chaque événement sans assistant programmé y porte un bouton **Ajouter le bot**, qui vous emmène sur le **Calendrier** pour finir la manœuvre.
+
+{/* CAPTURE : le panneau latéral d'un événement du Calendrier, avec le sélecteur de template et le bouton Ajouter le bot */}
+
+## Vérifier que l'assistant de réunion a bien rejoint
+
+Deux endroits vous renseignent.
+
+Dans le bloc **Agenda** du tableau de bord, un événement dont l'assistant est programmé porte la mention **Bot planifié** au lieu du bouton **Ajouter le bot**. Sur le **Calendrier**, il porte une petite icône de robot en haut à droite de la vignette.
+
+Dans **Transcriptions**, l'entretien change d'état au fil de la réunion : **En attente**, puis **Bot connecté** quand l'assistant est entré, **Réunion en cours** pendant l'échange, **Traitement transcription** ensuite. La liste se met à jour d'elle-même.
+
+<Warning>
+  Si la réunion filtre les arrivants, l'hôte doit admettre l'assistant comme n'importe quel participant. Sans cela, l'entretien s'arrête sur la mention **Bot non accepté** et aucun enregistrement n'est conservé.
+</Warning>
+
+## Bon à savoir
+
+- Le champ du tableau de bord et le message d'erreur nomment Google Meet et Microsoft Teams.
+- L'assistant de réunion est visible des participants. Annoncez l'enregistrement avant de le déclencher : voir [Informer vos candidats](/fr/confiance/informer-vos-candidats).
+- Un enregistrement de moins d'une minute n'est pas transcrit. L'entretien porte la mention **Trop court**.
+- Le template d'un assistant déjà programmé ne peut plus être modifié une fois l'événement commencé. Sur un événement terminé, le panneau affiche « Les templates ne peuvent plus être modifiés pour les événements terminés. »
+- Le **Calendrier** est le seul chemin qui permette de choisir le template du compte rendu au moment où vous programmez l'assistant. Les deux autres laissent ce choix pour plus tard.
+- Vous pouvez changer l'image affichée par l'assistant en réunion : voir [Personnaliser l'assistant](/fr/integrations/personnaliser-l-assistant).
+
+<CardGroup cols={2}>
+  <Card title="Retrouver et suivre" href="/fr/entretiens/retrouver-et-suivre">
+    Les statuts et les filtres de la liste.
+  </Card>
+  <Card title="L'entretien n'a pas été enregistré" href="/fr/aide/l-entretien-n-a-pas-ete-enregistre">
+    Quand rien n'est arrivé.
+  </Card>
+</CardGroup>

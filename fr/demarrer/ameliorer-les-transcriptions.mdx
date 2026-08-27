@@ -1,0 +1,80 @@
+---
+title: "Améliorer la reconnaissance de vos termes métier"
+sidebarTitle: "Vocabulaire métier"
+description: "Vous ajoutez votre vocabulaire métier et vos termes maison pour qu'ils soient correctement retranscrits"
+icon: "spell-check"
+---
+
+Les noms de vos clients, vos projets internes et votre jargon maison ne sont pas dans le dictionnaire commun. La page **Vocabulaire** vous laisse les déclarer, pour qu'ils soient correctement retranscrits.
+
+## Où se trouve le vocabulaire
+
+Ouvrez le menu à votre nom, en bas de la barre latérale, puis **Paramètres** et **Vocabulaire**. La page comporte deux sections.
+
+**Vocabulaires métier activés** liste les vocabulaires sectoriels préparés par Hirify pour votre organisation, sous forme d'étiquettes. Vous ne les modifiez pas vous-même : contactez le support si vous souhaitez les ajuster. Quand aucun n'est activé, la section affiche « Aucun vocabulaire métier activé pour votre organisation. »
+
+**Termes spécifiques à votre entreprise** est la partie que vous alimentez. La description le dit : « Noms de clients, projets internes, jargon maison. Ces termes seront ajoutés en complément des vocabulaires métier ci-dessus. »
+
+{/* CAPTURE : page Paramètres → Vocabulaire, avec les deux sections */}
+
+## Ajouter un terme
+
+<Steps>
+  <Step title="Ouvrez la fenêtre d'ajout">
+    Dans la section **Termes spécifiques à votre entreprise**, cliquez sur **Ajouter**. Si la liste est vide, le bouton s'appelle **Ajouter le premier terme**.
+  </Step>
+  <Step title="Saisissez le mot ou l'expression">
+    Le champ **Mot ou expression** attend l'orthographe correcte, celle que vous voulez lire dans la transcription.
+  </Step>
+  <Step title="Listez les variantes mal transcrites">
+    Le champ **Variantes orthographiques** attend ce que vous avez vu apparaître à tort, séparé par des virgules. La consigne affichée : « Variantes mal transcrites à corriger (séparées par des virgules) ». Écrivez-les comme le mot s'entend, pas en alphabet phonétique.
+  </Step>
+  <Step title="Enregistrez">
+    Cliquez sur **Ajouter**. Le message « Terme ajouté » confirme l'enregistrement.
+  </Step>
+</Steps>
+
+<Tip>
+  Relisez une transcription récente avant d'alimenter la liste. Les variantes les plus utiles sont celles que vous avez réellement constatées, pas celles que vous imaginez.
+</Tip>
+
+{/* CAPTURE : fenêtre « Ajouter un mot » avec les deux champs et le lien Options avancées */}
+
+## Régler l'intensité
+
+Le lien **Options avancées**, dans la fenêtre d'ajout, dévoile un réglage **Intensité** à deux valeurs : **Basse**, appliquée par défaut, et **Normale**. L'application résume l'effet : « Une intensité "Normale" donnera plus de poids au mot ».
+
+Gardez **Basse**. Hirify plafonne le poids réellement transmis à la transcription : **Normale** produit en pratique le même résultat. Si un terme continue de mal passer, complétez plutôt ses **Variantes orthographiques** avec les formes que vous avez réellement vues apparaître.
+
+## Modifier ou supprimer un terme
+
+<Steps>
+  <Step title="Modifier">
+    Cliquez sur l'action d'édition sur la ligne du terme. La fenêtre **Modifier le mot** reprend les valeurs enregistrées. Validez par **Modifier** ; le message « Terme modifié » confirme.
+  </Step>
+  <Step title="Supprimer">
+    Cliquez sur l'action de suppression. La fenêtre **Supprimer le terme** demande confirmation et prévient que « Cette action est irréversible ». Le message « Terme supprimé » confirme.
+  </Step>
+</Steps>
+
+<Note>
+  Si vous tentez d'ajouter un terme déjà présent, l'application répond « Ce terme existe déjà » et n'enregistre rien.
+</Note>
+
+## Bon à savoir
+
+- Modifier le vocabulaire de l'organisation demande le rôle **Administrateur**. Les autres membres ouvrent la page en lecture seule : ni bouton **Ajouter**, ni action de modification sur les lignes.
+- Le vocabulaire vaut pour toute l'organisation. Il n'existe pas de liste personnelle par recruteur.
+- Un terme ne vaut que pour les entretiens transcrits après son ajout. Un entretien déjà traité ne repasse pas dans la moulinette : la transcription existante reste telle quelle.
+- Les termes de moins de quatre caractères ne sont pas retenus. Les sigles très courts que vous ajouteriez vous-même n'auront donc pas d'effet ; en revanche, les vocabulaires métier préparés par Hirify conservent les leurs.
+- Ce réglage agit sur la transcription, pas sur le compte rendu. Il ne corrige pas un compte rendu déjà rédigé et ne remplace pas une relecture.
+- Une liste trop longue devient contre-productive : plus elle contient de termes proches les uns des autres, plus les confusions deviennent probables. Déclarez ce qui pose vraiment problème.
+
+<CardGroup cols={2}>
+  <Card title="La transcription est incomplète" icon="life-ring" href="/fr/aide/la-transcription-est-incomplete">
+    Quand le problème ne vient pas du vocabulaire.
+  </Card>
+  <Card title="Relire un entretien" icon="file-lines" href="/fr/entretiens/relire-un-entretien">
+    Revenir au passage exact dans la transcription.
+  </Card>
+</CardGroup>

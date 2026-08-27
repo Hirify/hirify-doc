@@ -1,0 +1,89 @@
+---
+title: "Lier un entretien à une candidature"
+sidebarTitle: "Lien avec une candidature"
+description: "Rattacher un entretien au bon candidat et à la bonne offre de votre logiciel de recrutement"
+icon: "link"
+---
+
+<Note>
+  Accès : offre Hub, avec un logiciel de recrutement connecté.
+</Note>
+
+Un entretien lié à une candidature retrouve son contexte : le bon candidat, la bonne offre, et le droit de renvoyer une évaluation. Le lien se pose en un clic, et il se défait aussi facilement.
+
+## Où poser le lien
+
+Depuis la liste de vos entretiens, la colonne du logiciel de recrutement affiche un bouton **Lier** pour chaque entretien terminé qui n'est pas encore rattaché. Un entretien déjà lié affiche à la place l'icône de votre logiciel de recrutement.
+
+Les deux ouvrent l'entretien sur l'onglet **ATS**, dans la barre verticale à droite de la page. La première section s'appelle **Candidature liée** : c'est là que tout se passe.
+
+{/* CAPTURE : la colonne ATS de la liste des entretiens, avec un bouton « Lier » et une ligne déjà liée */}
+
+## Lier un entretien à la main
+
+<Steps>
+  <Step title="Ouvrez l'onglet ATS de l'entretien">
+    Cliquez sur **Lier** depuis la liste, ou sur l'onglet **ATS** de la barre verticale une fois l'entretien ouvert.
+  </Step>
+  <Step title="Cherchez la candidature">
+    Le champ **Rechercher par candidat ou poste…** interroge les candidatures synchronisées. Tapez une adresse, un nom d'offre, un fragment de l'un ou de l'autre.
+  </Step>
+  <Step title="Repérez les participants de la réunion">
+    Tant que le champ est vide, un groupe **Participants à la réunion** remonte les candidatures dont l'adresse correspond à un participant de l'invitation. Le reste s'affiche sous **Toutes les candidatures**.
+  </Step>
+  <Step title="Cliquez sur la bonne ligne">
+    Le lien est posé immédiatement. Un message **Candidature liée à la transcription** confirme, avec un bouton **Annuler** si vous vous êtes trompé de ligne.
+  </Step>
+</Steps>
+
+Chaque ligne indique l'adresse du candidat, l'intitulé du poste, l'étape en cours quand elle existe, et le statut de la candidature — **Nouveau**, **En cours**, **Entretien**, **Offre**, **Embauché**, **Rejeté**, entre autres. La liste est plafonnée : si vous voyez « Affinez votre recherche pour voir plus de résultats. », précisez votre saisie.
+
+## Quand le lien existe déjà
+
+Certains entretiens arrivent déjà rattachés.
+
+- **Depuis l'agenda.** Quand l'entretien vient d'un rendez-vous poussé par votre logiciel de recrutement, la candidature est identifiée sans ambiguïté. La mention **Lié automatiquement** apparaît sous le statut.
+- **Depuis l'adresse d'un participant.** À défaut de rendez-vous correspondant, Hirify peut déduire la candidature de l'adresse d'un participant externe. Ce lien-là reste à confirmer.
+
+Un lien posé à la main n'est jamais remplacé par un lien déduit. Vous gardez le dernier mot.
+
+## Confirmer un lien déduit
+
+Un lien déduit d'une adresse affiche un bandeau : « Lié automatiquement depuis l'email du participant. Vérifiez le candidat et le poste, puis confirmez. » Vérifiez la ligne au-dessus, puis cliquez sur **Confirmer le lien**.
+
+<Warning>
+  Tant que ce lien n'est pas confirmé, Hirify n'écrit rien dans votre logiciel de recrutement pour cet entretien, et ne va pas y chercher le CV du candidat. La confirmation est la condition d'entrée de toutes les actions qui touchent la fiche.
+</Warning>
+
+## Ce que le lien débloque
+
+Une fois la candidature liée et, s'il y a lieu, confirmée :
+
+- l'entretien peut recevoir une évaluation renvoyée vers la fiche du candidat ;
+- Hirify tente de récupérer le CV rattaché à la candidature pour nourrir l'analyse ;
+- l'icône en haut de la carte, **Voir dans l'ATS**, ouvre la candidature dans votre logiciel de recrutement ;
+- les automatismes réglés par un administrateur — tags de synthèse, remplissage des champs personnalisés vides — s'appliquent à cette candidature. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+
+## Dissocier un entretien
+
+L'icône **Dissocier**, à droite de l'adresse du candidat, ouvre une confirmation : « Dissocier cette candidature ? ». Le dialogue rappelle que **l'historique des envois ATS est conservé** et que vous pourrez réassocier l'entretien plus tard.
+
+Dissocier ne supprime rien dans votre logiciel de recrutement. Les évaluations déjà envoyées y restent : pour en retirer une, passez par l'historique des envois.
+
+## Bon à savoir
+
+- Le bouton **Lier** de la liste n'apparaît que sur les entretiens terminés. Un entretien encore en traitement se rattache depuis l'onglet **ATS** de sa propre page.
+- Sans logiciel de recrutement connecté, la section affiche « Aucun ATS connecté » et un bouton **Connecter un ATS** vers les paramètres.
+- Un entretien ne peut être lié qu'à une seule candidature. Pour en changer, dissociez d'abord la candidature en cours : le champ de recherche ne réapparaît qu'une fois le lien retiré.
+- La recherche ne porte que sur les candidatures déjà synchronisées dans Hirify. Une candidature créée à l'instant peut n'apparaître qu'après la synchronisation suivante.
+- Le groupe **Participants à la réunion** ne s'appuie que sur les adresses de l'invitation d'agenda. Un entretien enregistré sans invitation n'a pas de suggestion.
+- Hirify ne crée jamais de candidature ni de candidat dans votre logiciel de recrutement.
+
+<CardGroup cols={2}>
+  <Card title="Renvoi d'évaluation" icon="star" href="/fr/integrations/renvoyer-une-evaluation">
+    Envoyer vous-même une évaluation sur la candidature liée.
+  </Card>
+  <Card title="Connecter votre ATS" icon="plug" href="/fr/integrations/connecter-votre-ats">
+    Mettre en place la connexion à votre logiciel de recrutement.
+  </Card>
+</CardGroup>

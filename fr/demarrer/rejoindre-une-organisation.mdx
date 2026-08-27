@@ -1,0 +1,84 @@
+---
+title: "Rejoindre une organisation existante"
+sidebarTitle: "Rattachement"
+description: "Vous demandez votre rattachement à une organisation déjà créée et suivez l'approbation par un administrateur"
+icon: "user-check"
+---
+
+Vos collègues utilisent déjà Hirify. Plutôt que de créer un second espace, demandez votre rattachement au leur : une fois la demande approuvée, vos comptes rendus sont partagés avec cette organisation.
+
+## Demander à rejoindre l'espace de vos collègues
+
+La proposition apparaît à l'étape **Votre entreprise**, juste après la création de votre compte. Hirify compare le domaine de votre adresse email à celui des organisations existantes.
+
+<Steps>
+  <Step title="Repérez l'écran de proposition">
+    S'il trouve une correspondance, Hirify affiche **Vos collègues sont déjà là**, avec le nom de l'organisation et son nombre de membres actifs.
+  </Step>
+  <Step title="Envoyez votre demande">
+    Cliquez sur **Demander à rejoindre**. Les administrateurs de l'organisation reçoivent une notification.
+  </Step>
+  <Step title="Ou choisissez un espace séparé">
+    Cliquez sur **Créer ma propre organisation** pour saisir vous-même un nom d'entreprise.
+  </Step>
+</Steps>
+
+{/* CAPTURE : écran « Vos collègues sont déjà là » avec le nom de l'organisation et les deux boutons */}
+
+## Suivre votre demande
+
+L'écran bascule sur **Demande envoyée**. Il nomme l'organisation concernée et précise qu'un administrateur doit approuver votre accès. Une ligne **En attente d'approbation** reste affichée, et la page se met à jour toute seule : inutile de la recharger.
+
+Deux issues possibles, toutes deux notifiées dans Hirify :
+
+- **Demande acceptée** : vous entrez dans l'organisation et accédez à votre espace.
+- **Demande refusée** : la notification vous rappelle que vous pouvez créer votre propre organisation.
+
+Vous pouvez aussi revenir en arrière : le bouton **Annuler et créer ma propre organisation** retire votre demande et vous ramène à la création d'un espace.
+
+## Côté administrateur : accepter ou refuser
+
+Les demandes se traitent depuis la page **Gestion des membres**, accessible par le menu à votre nom, en bas de la barre latérale, puis **Gérer les membres**.
+
+<Steps>
+  <Step title="Ouvrez l'onglet Demandes">
+    L'onglet **Demandes** n'apparaît que s'il existe au moins une demande en attente. Un compteur indique leur nombre.
+  </Step>
+  <Step title="Acceptez">
+    Le bouton **Accepter la demande** ouvre une confirmation : « Le membre rejoindra votre organisation avec le rôle "membre". »
+  </Step>
+  <Step title="Ou refusez">
+    Le bouton **Refuser la demande** prévient que « L'utilisateur sera notifié et pourra créer sa propre organisation ».
+  </Step>
+</Steps>
+
+<Note>
+  Un nouvel arrivant entre toujours avec le rôle **Membre**. Pour lui donner davantage de droits, changez son rôle depuis l'onglet **Actifs** une fois la demande acceptée. Voir [Choisir le rôle de chaque membre](/fr/demarrer/roles-et-acces).
+</Note>
+
+## Si aucune organisation ne vous est proposée
+
+Trois raisons possibles :
+
+- votre adresse email utilise un domaine grand public : Hirify ne propose alors aucun rattachement, un domaine partagé ne prouvant aucun lien d'entreprise ;
+- aucun de vos collègues n'a encore de compte Hirify sur ce domaine ;
+- vos collègues utilisent un autre domaine que le vôtre.
+
+Dans ce cas, créez votre espace et faites-vous inviter par un administrateur : l'invitation nominative fonctionne quel que soit le domaine. Voir [Inviter un membre](/fr/demarrer/inviter-un-membre).
+
+## Bon à savoir
+
+- Une seule demande en attente à la fois par organisation. Une seconde demande est refusée tant que la première n'est pas traitée.
+- La proposition de rattachement n'apparaît qu'à la création du compte, pas dans les paramètres. Une fois votre espace créé, seule une invitation permet de rejoindre une autre organisation.
+- Un compte appartient à une seule organisation.
+- Si l'abonnement de l'organisation n'a plus de place disponible au moment de l'approbation, le membre est bien rattaché mais reste inactif. Il apparaît alors dans l'onglet **Inactifs** et un administrateur doit libérer ou ajouter une place pour l'activer.
+- Refuser une demande ne bloque rien : la personne peut créer son propre espace, ou redemander plus tard.
+
+<CardGroup cols={2}>
+  <Card title="Rôles et accès" icon="users-gear" href="/fr/demarrer/roles-et-acces">
+    Ce que voit et fait chacun des quatre rôles.
+  </Card>
+  <Card title="Gérer les membres" icon="users" href="/fr/compte/gerer-les-membres">
+    Activer, désactiver et retirer un membre.
+  </Card>
+</CardGroup>

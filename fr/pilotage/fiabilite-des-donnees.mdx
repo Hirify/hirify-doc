@@ -1,0 +1,92 @@
+---
+title: "Vérifier la fiabilité de vos données"
+sidebarTitle: "Fiabilité des données"
+description: "Voir quelles analyses sont disponibles, lesquelles restent à débloquer et le geste qui les débloque"
+icon: "list-check"
+---
+
+<Note>
+  Accès : offre Hub, rôle administrateur ou manager.
+</Note>
+
+La page Fiabilité dit ce que vos tableaux de bord peuvent calculer aujourd'hui, ce qui leur manque encore, et le geste exact qui débloque chaque analyse. Elle ne note pas votre organisation : elle compte.
+
+## Ouvrir la page
+
+Dans la barre latérale, section **Données**, cliquez sur **Fiabilité**. La barre d'outils propose un raccourci **Composer un tableau** pour repartir directement vers le Pilotage.
+
+## Lire le décompte
+
+En tête de page, une phrase donne le compte : **N analyses disponibles sur M**. La barre juste en dessous détaille la répartition, reprise en légende : « N disponibles · N partielles · N en attente ».
+
+À droite, la mention **Synchronisé depuis votre ATS le** suivie d'une date indique la fraîcheur des données importées.
+
+Trois états seulement :
+
+| État | Ce qu'il signifie |
+| --- | --- |
+| Disponible | L'analyse se calcule sur vos données. |
+| Partielle | Une partie seulement des lignes porte la donnée nécessaire. |
+| En attente | La donnée manque entièrement. |
+
+Une analyse disponible dont la couverture n'atteint pas 100 % affiche son pourcentage sur sa pastille.
+
+{/* CAPTURE : le décompte en tête de page, avec la barre de répartition et sa légende */}
+
+## À débloquer : le geste qui manque
+
+La section **À débloquer** liste, une ligne par analyse, ce qui bloque et ce qu'il faut faire. Le geste est écrit en clair, par exemple :
+
+- Motifs de rejet — « Renseignez le motif au moment du rejet dans votre ATS. »
+- Répartition géographique — « Complétez la localisation des postes dans votre ATS. »
+- Types de contrat — « Complétez le type de contrat des postes dans votre ATS. »
+- Entretiens reliés au pipeline — « Reliez chaque entretien à sa candidature depuis sa fiche. »
+- Entretiens planifiés (ATS) — « Planifiez les entretiens dans votre ATS. »
+
+Quand la donnée est présente mais incomplète, la ligne indique le compte exact, sous la forme **N sur M**.
+
+Une ligne particulière, **Historique de progression**, regroupe trois analyses : « Débloque à lui seul la progression, les délais et l'acceptation des offres. » Elle porte l'étiquette **se remplit tout seul** : cet historique s'accumule au fil des synchronisations de votre logiciel de recrutement vers Hirify, sans geste de votre part.
+
+## Les analyses disponibles
+
+La section **Disponibles** rassemble en pastilles ce qui se calcule déjà chez vous. Selon vos données, on y trouve par exemple **Volumes du pipeline**, **Taux de conversion**, **Sources de candidature**, **Familles de profils**, **Salaires des postes**, **Prétentions salariales**, **Évaluations d'entretien** ou **Entretiens menés via Hirify**. Le survol d'une pastille donne le détail chiffré.
+
+## Ce que votre logiciel de recrutement a envoyé
+
+La section **Intégration ATS** montre le volume déjà en place : **Postes**, **Candidats**, **Candidatures**, **CV synchronisés**, **Évaluations**, **Entretiens planifiés**.
+
+En dessous, le graphique **Injecté par jour (14 derniers jours)** montre le rythme d'arrivée des données. Une ligne de pied de graphique rappelle la date de la dernière **synchronisation complète** et de la dernière **incrémentale**.
+
+Sans logiciel de recrutement connecté, un bandeau s'affiche en haut de page : « Aucun ATS connecté. Seules les analyses d'entretiens menés dans Hirify sont disponibles ; connectez votre système de recrutement pour ouvrir le reste de la carte. »
+
+## La ligne des candidats exclus par consentement
+
+En bas de page, quand le cas se présente, une ligne indique combien de candidats sont écartés de la recherche de profils par consentement, avec cette précision : « Un choix respecté, pas une donnée manquante. Les analyses ci-dessus comptent tous les candidats. »
+
+## La fiabilité d'un tableau, bloc par bloc
+
+La même honnêteté se retrouve sur chaque tableau de bord. Quand un tableau a quelque chose à signaler, une mention **Fiabilité du tableau** apparaît au-dessus des blocs, avec un lien **Détail** vers cette page. Elle résume les exceptions : blocs sur données partielles, blocs en attente de données, blocs qui ignorent une partie des filtres, blocs qui n'ont pas pu être calculés.
+
+Au niveau du bloc, un petit marqueur d'information dans l'en-tête ouvre la raison précise. Un tableau sans exception n'affiche rien : le silence vaut feu vert.
+
+<Warning>
+  Un bloc que le moteur n'a pas pu calculer n'est jamais retiré en silence. Il est décompté dans la mention de fiabilité du tableau, pour que vous sachiez qu'il manque quelque chose.
+</Warning>
+
+## Bon à savoir
+
+- La liste des analyses est la même pour toutes les organisations. Seuls les états bougent, ce qui rend le décompte « N sur M » comparable dans le temps.
+- Le décompte est un nombre d'analyses disponibles sur un total, jamais une note de qualité de vos données.
+- Une analyse en attente n'est pas une panne. C'est une donnée qui n'a pas encore été saisie, ou pas encore synchronisée.
+- Sans logiciel de recrutement connecté, seules les analyses portant sur les entretiens menés dans Hirify sont disponibles ; les autres restent en attente d'une connexion.
+- Cette page ne modifie rien. Les gestes qu'elle recommande se font dans votre logiciel de recrutement ou sur la fiche de l'entretien concerné.
+- Si la mention **Profil de données indisponible** s'affiche, le calcul n'a pas abouti sur le moment. Rechargez la page quelques minutes plus tard.
+
+<CardGroup cols={2}>
+  <Card title="Tableau de bord" icon="chart-line" href="/fr/pilotage/composer-un-tableau-de-bord">
+    Composer un tableau, poser un objectif, demander une analyse.
+  </Card>
+  <Card title="Relier un entretien à une candidature" icon="link" href="/fr/integrations/lier-un-entretien-a-une-candidature">
+    Le geste qui débloque les analyses croisées.
+  </Card>
+</CardGroup>

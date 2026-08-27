@@ -1,0 +1,94 @@
+---
+title: "Connecter votre agenda Google ou Outlook"
+sidebarTitle: "Agenda"
+description: "Relier Google Calendar ou Microsoft Outlook, qui s'excluent l'un l'autre, pour préparer vos entretiens depuis votre agenda"
+icon: "calendar"
+---
+
+Hirify lit votre agenda pour faire remonter vos réunions en visioconférence dans la page **Calendrier**. Vous choisissez ensuite, réunion par réunion, celles que l'assistant de réunion doit rejoindre.
+
+## Ce que Hirify lit, ce qu'il n'écrit pas
+
+L'autorisation demandée porte sur la lecture de vos événements. Hirify ne crée pas d'événement, n'envoie aucune invitation et ne modifie rien dans votre agenda.
+
+De votre agenda, seules les réunions qui portent un lien de visioconférence remontent dans Hirify. Une réunion d'agenda sans lien de visio n'apparaît pas dans la page **Calendrier** : pour ces échanges, voyez [Enregistrer un entretien en présentiel](/fr/entretiens/en-presentiel). Si votre logiciel de recrutement est connecté, la page **Calendrier** affiche par ailleurs les entretiens qui y sont planifiés : voyez [Déclencher la captation automatiquement depuis votre ATS](/fr/entretiens/automatique-depuis-l-ats).
+
+## Connecter Google Calendar ou Microsoft Outlook
+
+Chaque personne relie son propre agenda. Il n'y a rien à décider au niveau de l'organisation.
+
+<Steps>
+  <Step title="Ouvrez Paramètres, puis Intégrations">
+    Dans le menu de votre compte, en bas de la barre latérale, choisissez **Paramètres**. Ouvrez ensuite **Intégrations** et descendez jusqu'à la section **Calendriers**.
+  </Step>
+  <Step title="Cliquez sur Connecter">
+    En face de **Google Calendar** ou de **Microsoft Outlook**, cliquez sur **Connecter**. Vous êtes redirigé vers votre fournisseur d'agenda pour autoriser l'accès, puis ramené dans Hirify.
+  </Step>
+  <Step title="Vérifiez la ligne de connexion">
+    La ligne affiche l'adresse du compte relié, la date de **Dernière synchronisation** et le nombre d'événements synchronisés. Le bouton **Connecter** est remplacé par **Déconnecter**.
+  </Step>
+</Steps>
+
+{/* CAPTURE : la section Calendriers de Paramètres > Intégrations, avec une ligne connectée et une ligne encore disponible */}
+
+## Un seul agenda actif à la fois
+
+Google Calendar et Microsoft Outlook s'excluent. Dès que l'un est relié, le bouton de l'autre laisse place à la mention **Calendrier actif : Google Calendar** ou **Calendrier actif : Microsoft Outlook**, et devient inactif.
+
+Pour changer d'agenda, déconnectez d'abord celui qui est actif, puis connectez l'autre.
+
+## Confier une réunion à l'assistant de réunion
+
+Connecter votre agenda ne déclenche aucun enregistrement. Vous désignez chaque réunion.
+
+<Steps>
+  <Step title="Ouvrez Calendrier">
+    Dans la barre latérale, cliquez sur **Calendrier**. La vue affiche votre semaine ; les flèches vous déplacent d'une semaine à l'autre et **Aujourd'hui** vous ramène à la semaine en cours.
+  </Step>
+  <Step title="Cliquez sur la réunion">
+    Un panneau s'ouvre sur la droite, avec le titre et l'horaire de la réunion.
+  </Step>
+  <Step title="Choisissez un template, puis Ajouter le bot">
+    Sous **Template de notes**, sélectionnez le template qui servira au compte rendu, puis cliquez sur **Ajouter le bot**. Une icône **Bot programmé** apparaît sur l'événement.
+  </Step>
+</Steps>
+
+Tant que la réunion n'a pas commencé, le même panneau propose **Mettre à jour** pour changer de template et **Supprimer** pour retirer l'assistant.
+
+{/* CAPTURE : le panneau latéral d'un événement, avec le sélecteur de template et le bouton Ajouter le bot */}
+
+Le détail des trois façons de faire venir l'assistant est réuni dans [Enregistrer un entretien en visioconférence](/fr/entretiens/en-visioconference).
+
+## Quand votre agenda change
+
+Hirify suit vos événements et ajuste l'assistant en conséquence.
+
+- Réunion déplacée : l'assistant est reprogrammé sur le nouvel horaire.
+- Réunion annulée : l'assistant est retiré.
+- Lien de visio supprimé de l'événement : l'assistant ne rejoindra pas.
+
+## Déconnecter votre agenda
+
+Dans **Paramètres**, **Intégrations**, section **Calendriers**, cliquez sur **Déconnecter** en face de l'agenda relié. La procédure et ses conséquences sont décrites dans [Déconnecter un outil](/fr/integrations/deconnecter-un-outil).
+
+<Warning>
+  Prévenez le candidat avant d'enregistrer. L'information à donner et les modèles de mention sont réunis dans [Informer vos candidats](/fr/confiance/informer-vos-candidats).
+</Warning>
+
+## Bon à savoir
+
+- L'accès est en lecture seule. Hirify n'écrit jamais dans votre agenda.
+- Une réunion de votre agenda sans lien de visioconférence ne remonte pas. La page **Calendrier** ne montre donc pas la totalité de votre semaine.
+- Vous ne pouvez pas ajouter l'assistant à une réunion terminée : le panneau affiche **Événement terminé** et se contente d'un bouton **Fermer**.
+- Une fois la réunion commencée et l'assistant connecté, le panneau ne propose plus que **Fermer** : le template n'est plus modifiable.
+- Connecter votre agenda ne suffit pas à couvrir les entretiens planifiés dans votre logiciel de recrutement : ce cas relève d'un réglage distinct, décrit dans [Les automatismes de votre logiciel de recrutement](/fr/integrations/automatismes-ats).
+- L'agenda est personnel : la page **Calendrier** affiche vos propres événements, pas ceux de vos collègues.
+
+<CardGroup cols={2}>
+  <Card title="Enregistrer en visioconférence" icon="video" href="/fr/entretiens/en-visioconference">
+    Les trois façons de faire venir l'assistant de réunion.
+  </Card>
+  <Card title="Apparence de l'assistant" icon="image" href="/fr/integrations/personnaliser-l-assistant">
+    Choisir l'image affichée aux participants pendant la réunion.
+  </Card>
+</CardGroup>

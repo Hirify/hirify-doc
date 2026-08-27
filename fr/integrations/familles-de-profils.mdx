@@ -1,0 +1,100 @@
+---
+title: "Organiser vos familles de profils"
+sidebarTitle: "Familles de profils"
+description: "Renommer, ajouter ou réaffecter les familles de profils qui regroupent les offres de votre organisation"
+icon: "sitemap"
+---
+
+<Note>
+  Accès : offre Hub, avec un logiciel de recrutement connecté. Les réglages sont réservés aux administrateurs.
+</Note>
+
+Les familles de profils regroupent vos postes en grandes catégories — familles de métiers, practices, spécialités. C'est la maille qui segmente vos tableaux de bord. Hirify la propose, vous la corrigez.
+
+## Comment la taxonomie se construit
+
+Hirify observe les postes synchronisés depuis votre logiciel de recrutement et en tire une liste de familles. Deux conditions :
+
+- il faut **au moins vingt postes synchronisés** pour que la taxonomie soit générée ;
+- chaque poste est ensuite rattaché à une famille, ou laissé de côté en attendant la passe suivante.
+
+Avant ce seuil, la page annonce : « La taxonomie sera générée automatiquement dès que suffisamment de postes auront été synchronisés (20 minimum). » Sans logiciel de recrutement connecté, elle affiche « Connectez votre ATS pour activer les familles de profils. »
+
+## Lire la page
+
+Un administrateur ouvre **Paramètres**, puis **Familles de profils**.
+
+La section **Familles** liste chaque famille, sa description quand elle en a une, et son nombre de **Postes**. Sous le tableau, une ligne récapitule le total : combien de postes au total, combien en **Autre**, combien non classés.
+
+**Autre** est la famille de repli : elle regroupe les postes qui ne rentrent dans aucune catégorie nommée. Un compteur **Autre** qui gonfle est le signal qu'il manque une famille.
+
+{/* CAPTURE : la section Familles avec le tableau, les compteurs par famille et la ligne de totaux */}
+
+## Ajouter une famille
+
+<Steps>
+  <Step title="Cliquez sur Ajouter">
+    Le bouton se trouve en haut de la section **Familles**.
+  </Step>
+  <Step title="Nommez la famille">
+    Le champ **Nom de la famille** accepte jusqu'à 80 caractères.
+  </Step>
+  <Step title="Décrivez-la, si c'est utile">
+    Le champ **Description (optionnelle)** « aide le classement automatique à cerner la famille ». Comptez jusqu'à 300 caractères.
+  </Step>
+  <Step title="Validez">
+    Les postes actuellement classés en **Autre** sont reconsidérés pour la nouvelle famille.
+  </Step>
+</Steps>
+
+Une taxonomie tient au maximum seize familles. Au-delà, Hirify refuse l'ajout et vous le dit.
+
+## Renommer ou fusionner
+
+Le crayon en bout de ligne ouvre **Renommer**. Les postes de la famille suivent le nouveau nom.
+
+<Tip>
+  Saisir le nom d'une famille qui existe déjà fusionne les deux. C'est le moyen de rattraper une taxonomie trop découpée, sans passer poste par poste.
+</Tip>
+
+## Supprimer une famille
+
+La corbeille ouvre une confirmation qui annonce ce qui va se passer : les postes de la famille « repasseront en classement automatique ». Ils ne sont pas perdus, ils redeviennent candidats à un autre rattachement.
+
+Une taxonomie doit conserver au moins deux familles. La dernière paire n'est pas supprimable.
+
+## Corriger un poste
+
+Quand un poste est mal rangé, la section **Corriger un poste** le remet en place.
+
+<Steps>
+  <Step title="Cherchez le poste">
+    Le champ **Rechercher un poste par titre…** filtre à la frappe.
+  </Step>
+  <Step title="Ouvrez le sélecteur de famille">
+    Il propose **Automatique (à classer)**, chaque famille de votre taxonomie, et **Autre**.
+  </Step>
+  <Step title="Choisissez la bonne famille">
+    Le poste est réaffecté aussitôt et reçoit un badge **manuel**.
+  </Step>
+</Steps>
+
+Une correction manuelle est durable : le classement automatique ne la modifiera plus. Pour rendre la main à Hirify sur un poste, rechoisissez **Automatique (à classer)**.
+
+## Bon à savoir
+
+- La page reste vide sans logiciel de recrutement connecté : les familles portent sur les postes qui en proviennent.
+- Modifier la taxonomie ne change rien dans votre logiciel de recrutement. Elle vit dans Hirify et sert vos tableaux de bord.
+- Un ajout ou une suppression de famille déclenche un reclassement des postes concernés, qui n'est pas instantané. Les compteurs se stabilisent après la passe.
+- Les postes non classés ne sont pas des erreurs : ils attendent la prochaine passe de classement.
+- Deux familles au minimum, seize au maximum. Un nom déjà pris est refusé — utilisez le renommage pour fusionner.
+- Une correction manuelle ne se propage pas aux autres postes portant un intitulé voisin. Elle ne vaut que pour le poste corrigé.
+
+<CardGroup cols={2}>
+  <Card title="Composer un tableau de bord" icon="chart-line" href="/fr/pilotage/composer-un-tableau-de-bord">
+    Là où la segmentation par famille devient lisible.
+  </Card>
+  <Card title="Connecter votre ATS" icon="plug" href="/fr/integrations/connecter-votre-ats">
+    L'origine des postes que Hirify classe.
+  </Card>
+</CardGroup>

@@ -1,0 +1,88 @@
+---
+title: "Inviter un membre dans votre organisation"
+sidebarTitle: "Invitations"
+description: "Vous envoyez une invitation à un collègue, lui attribuez un rôle et suivez son arrivée"
+icon: "user-plus"
+---
+
+Une invitation se fait par email, avec un rôle choisi dès le départ. Elle reste valable sept jours et vous suivez son sort depuis la page **Gestion des membres**.
+
+## Envoyer une invitation
+
+<Steps>
+  <Step title="Ouvrez la page Gestion des membres">
+    Cliquez sur le menu à votre nom, en bas de la barre latérale, puis sur **Gérer les membres**. L'en-tête rappelle le nombre de membres actifs, inactifs et en attente.
+  </Step>
+  <Step title="Cliquez sur Inviter un membre">
+    La fenêtre **Inviter un membre** s'ouvre. Un encart **Places disponibles** indique combien de places il vous reste sur votre abonnement.
+  </Step>
+  <Step title="Saisissez l'adresse email">
+    Renseignez le champ **Adresse email**. C'est cette adresse, et elle seule, qui pourra utiliser le lien d'invitation.
+  </Step>
+  <Step title="Choisissez un rôle">
+    Le sélecteur **Rôle** propose **Membre**, **Manager**, **Administrateur** et **Admin facturation**. Sous le sélecteur, une carte **Privilèges** suivie du nom du rôle énumère ce qu'il autorise.
+  </Step>
+  <Step title="Envoyez">
+    Cliquez sur **Envoyer l'invitation**. Le message « Invitation envoyée avec succès » confirme le départ du mail.
+  </Step>
+</Steps>
+
+{/* CAPTURE : fenêtre « Inviter un membre » avec le sélecteur de rôle et la carte « Privilèges » */}
+
+## Choisir le rôle au moment de l'invitation
+
+Le rôle n'est pas définitif : un administrateur peut le changer plus tard. Retenez surtout deux points au moment de l'invitation.
+
+- **Admin facturation** ne consomme pas de place. C'est le rôle à donner à un comptable ou à un service achats qui n'utilisera pas le produit.
+- Les trois autres rôles consomment une place. S'il n'en reste aucune, le sélecteur les désactive.
+
+Le détail complet est sur [Choisir le rôle de chaque membre](/fr/demarrer/roles-et-acces).
+
+## Quand il ne reste plus de place
+
+L'encart devient **Aucune place disponible** et propose deux issues : « Mettez à niveau votre forfait pour inviter plus de membres, ou invitez un admin facturation (ne consomme pas de place). » La page **Gestion des membres** affiche par ailleurs un bandeau **Places limitées** dès qu'il reste moins de trois places, et **Limite d'abonnement atteinte** quand il n'en reste aucune.
+
+Voir [Abonnement et facturation](/fr/compte/abonnement-et-facturation).
+
+## Suivre les invitations en attente
+
+L'onglet **En attente** liste les invitations non encore acceptées, avec leur destinataire, leur rôle et la personne qui les a envoyées. Un badge résume l'état : **Active**, **Expire bientôt** dans les vingt-quatre dernières heures, **Expirée** au-delà du délai.
+
+Deux actions par ligne :
+
+- **Renvoyer l'invitation** repart pour sept jours.
+- **Annuler l'invitation** invalide le lien. La confirmation le dit : « L'invitation sera annulée et le lien ne sera plus valide. »
+
+{/* CAPTURE : onglet « En attente » de la page Gestion des membres, avec les badges d'état */}
+
+## Ce que reçoit la personne invitée
+
+Elle reçoit un email contenant un lien vers une page **Vous êtes invité !** qui nomme votre organisation, la personne qui invite, l'adresse à laquelle l'invitation a été envoyée et le délai qui reste avant expiration.
+
+<Steps>
+  <Step title="Elle n'est pas connectée à Hirify">
+    Le bouton indique **Créer un compte et accepter**. Son adresse est pré-remplie sur l'écran d'inscription, avec la mention « Adresse pré-remplie depuis votre invitation. » Elle choisit un mot de passe, donne son prénom et son nom, et arrive directement dans votre espace. Si elle possède déjà un compte Hirify, elle doit d'abord se connecter, puis rouvrir le lien d'invitation : l'inscription refusera son adresse.
+  </Step>
+  <Step title="Elle est déjà connectée">
+    Le bouton indique **Accepter l'invitation**.
+  </Step>
+</Steps>
+
+Si le lien a expiré ou a été annulé, la page **Invitation invalide** l'invite à revenir vers vous pour une nouvelle invitation.
+
+## Bon à savoir
+
+- Une invitation expire au bout de sept jours. Passé ce délai, seul un renvoi la réactive.
+- Seuls les rôles **Administrateur** et **Admin facturation** peuvent inviter, retirer un membre ou changer un rôle. Un **Manager** consulte la liste des membres sans pouvoir agir dessus ; un **Membre** n'y a pas accès.
+- Une invitation vise une adresse email précise. Elle ne peut pas être transférée à un collègue.
+- Renvoyer une invitation ne crée pas un nouveau lien : elle prolonge l'invitation existante de sept jours et renvoie le même email. L'adresse et le rôle ne changent pas.
+- Hirify n'importe pas d'annuaire et ne crée pas de comptes en masse. Chaque membre est invité un par un, ou demande son rattachement lui-même.
+
+<CardGroup cols={2}>
+  <Card title="Rôles et accès" icon="users-gear" href="/fr/demarrer/roles-et-acces">
+    Comparer les quatre rôles avant d'inviter.
+  </Card>
+  <Card title="Gérer les membres" icon="users" href="/fr/compte/gerer-les-membres">
+    Désactiver, réactiver ou retirer un membre.
+  </Card>
+</CardGroup>

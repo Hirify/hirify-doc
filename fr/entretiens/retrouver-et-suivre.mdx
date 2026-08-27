@@ -1,0 +1,114 @@
+---
+title: "Retrouver un entretien et suivre son traitement"
+sidebarTitle: "Retrouver et suivre"
+description: "Repérez un entretien dans la liste grâce à la recherche et aux filtres, et suivez son état jusqu'à ce que le compte rendu soit prêt."
+icon: "list"
+---
+
+Tous vos entretiens se rejoignent au même endroit, quel que soit le canal qui les a captés. Cette page vous montre comment y retrouver le bon et comment lire son état d'avancement.
+
+## La liste de vos entretiens
+
+Dans la barre latérale, section **Entretiens**, cliquez sur **Transcriptions**.
+
+Chaque ligne porte le titre de l'entretien, une icône rappelant son canal, sa date, ses intervenants quand ils sont connus, et un statut à droite. Le nombre total s'affiche au-dessus de la liste, sous la forme « 12 entretiens ».
+
+L'ordre n'est pas simplement chronologique : les entretiens à venir dont l'assistant de réunion est déjà programmé remontent en tête, du plus proche au plus lointain. Viennent ensuite les entretiens passés, du plus récent au plus ancien. Les entretiens créés mais dont aucun enregistrement n'est encore parti ferment la liste.
+
+La liste se charge par tranches de quinze au fil du défilement.
+
+{/* CAPTURE : la page Transcriptions avec sa barre de filtres et quelques lignes d'entretiens */}
+
+## Rechercher un entretien
+
+Le champ **Rechercher un entretien...**, à gauche de la barre de filtres, cherche dans le titre de l'entretien et dans le titre de ses comptes rendus.
+
+Il ne cherche pas dans le contenu de la transcription. Pour interroger ce que les candidats ont dit, passez par l'Assistant, disponible avec l'offre Hub.
+
+<CardGroup cols={1}>
+  <Card title="Poser une question" href="/fr/assistant/poser-une-question">
+    Interroger le contenu de vos entretiens.
+  </Card>
+</CardGroup>
+
+## Filtrer par statut, par type et par utilisateur
+
+Trois filtres se combinent, et se cumulent avec la recherche.
+
+**Statut** propose quatre entrées :
+
+- **Sans note** : les entretiens terminés pour lesquels aucun compte rendu n'existe.
+- **Terminés** : les entretiens dont la transcription est prête.
+- **En cours** : tout ce qui est encore en route, de l'attente au traitement.
+- **Échoués** : les échecs, les enregistrements trop courts et les réunions où l'assistant n'a pas été admis.
+
+**Type** distingue **Visio**, **Téléphone** et **Enregistrement**.
+
+Le troisième filtre porte sur l'utilisateur qui a créé l'entretien. Il n'apparaît que si votre rôle vous donne accès aux entretiens de toute l'organisation. Il propose **Moi**, **Toute l'équipe**, et la liste nominative des membres, que vous pouvez cocher un par un.
+
+Le bouton **Réinitialiser** remet la barre à son état de départ.
+
+## Les statuts de traitement
+
+Le statut affiché à droite de chaque ligne suit l'entretien de bout en bout.
+
+| Statut | Ce qu'il signifie |
+| --- | --- |
+| **En attente** | L'assistant de réunion est programmé, la réunion n'a pas commencé |
+| **Bot connecté** | L'assistant est entré dans la visioconférence |
+| **Réunion en cours** | L'échange est en train d'être enregistré |
+| **Traitement transcription** | L'audio est en cours de transcription |
+| **Génération en cours** | La transcription est prête, le compte rendu s'écrit |
+| **Note prête** | Le compte rendu est disponible |
+| **Brouillon** | Un compte rendu existe, non finalisé |
+| **Échec note** | Le compte rendu n'a pas pu être rédigé |
+
+Une fois la transcription terminée, le statut bascule sur l'état du compte rendu. Un entretien transcrit sans aucun compte rendu n'affiche donc plus de statut du tout : c'est celui que le filtre **Sans note** rassemble.
+
+Trois autres états signalent qu'un entretien n'a pas pu être transcrit :
+
+| Statut | Ce qu'il signifie |
+| --- | --- |
+| **Trop court** | L'enregistrement fait moins d'une minute et n'a pas été transcrit |
+| **Bot non accepté** | L'assistant n'a pas été admis dans la réunion |
+| **Échec** | La transcription a échoué |
+
+Passez la souris sur l'un de ces trois statuts : une bulle en donne la raison.
+
+## Suivre l'avancement sans rafraîchir la page
+
+La liste se met à jour d'elle-même. Un entretien qui change d'état, un compte rendu qui se termine, une analyse qui aboutit : la ligne se réécrit sous vos yeux, sans recharger la page. Un nouvel entretien qui démarre vient se placer en haut de la liste.
+
+Si vous quittez l'onglet un moment et que vous y revenez, Hirify recharge la liste pour rattraper ce qui a bougé pendant votre absence.
+
+Les entretiens et les comptes rendus terminés laissent aussi une trace dans le centre de notifications : dans le menu de votre compte, ouvrez **Notifications**. Les onglets **Tout**, **Transcriptions** et **Notes** trient les entrées.
+
+<Note>
+  La liste vous mène au compte rendu, mais seul un entretien dont la transcription est terminée s'ouvre au clic. Une ligne encore en traitement ne réagit pas.
+</Note>
+
+## Qui voit quels entretiens
+
+Le périmètre dépend de votre rôle dans l'organisation.
+
+| Rôle | Ce qu'il voit |
+| --- | --- |
+| Membre | Ses propres entretiens uniquement |
+| Manager | Les entretiens de toute l'organisation |
+| Administrateur | Les entretiens de toute l'organisation |
+
+Les managers et les administrateurs disposent en plus du filtre par utilisateur et de la colonne **Créé par**, qui apparaît dès que ce filtre porte sur plus que vos propres entretiens.
+
+<CardGroup cols={1}>
+  <Card title="Rôles et accès" href="/fr/demarrer/roles-et-acces">
+    Ce que chaque rôle peut faire.
+  </Card>
+</CardGroup>
+
+## Bon à savoir
+
+- La recherche porte sur les titres, jamais sur le contenu des échanges.
+- Un entretien renommé change de titre partout : c'est aussi ce qui le rend retrouvable. Sélectionnez-le dans la liste, puis cliquez sur **Renommer**.
+- La suppression est définitive. La confirmation le rappelle : « Cette action est irréversible. »
+- Sélectionner deux entretiens ou plus fait apparaître **Fusionner**, pour réunir un entretien coupé en plusieurs enregistrements. Voir [Fusionner deux entretiens](/fr/entretiens/fusionner-deux-entretiens).
+- Aucun statut de la liste n'indique qu'un entretien a été transmis à votre logiciel de recrutement : l'envoi d'un compte rendu ou d'une évaluation est une action distincte, que vous déclenchez depuis le panneau ATS de l'entretien.

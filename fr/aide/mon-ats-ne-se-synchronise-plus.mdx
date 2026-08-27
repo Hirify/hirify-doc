@@ -1,0 +1,80 @@
+---
+title: "Mon ATS ne se synchronise plus"
+sidebarTitle: "ATS désynchronisé"
+description: "Comprenez pourquoi vos postes et vos candidatures n'arrivent plus dans Hirify et rétablissez la connexion"
+icon: "arrows-rotate"
+---
+
+<Note>
+  Accès : offre Hub, avec un logiciel de recrutement connecté.
+</Note>
+
+Vos postes, candidats et candidatures cessent de se mettre à jour. Avant de conclure à une panne, ouvrez la carte de connexion : elle dit elle-même dans quel état elle se trouve.
+
+## Lire l'état de la connexion
+
+Ouvrez **Paramètres**, puis **Intégrations**. La section **ATS** liste les logiciels de recrutement et détaille celui qui est connecté.
+
+Quatre choses s'y lisent, de haut en bas.
+
+- Une pastille verte suivie de **Connecté**. Si elle a disparu et que le bouton affiche de nouveau **Connecter**, la connexion a été désactivée.
+- Une ligne d'état qui décrit le rythme de synchronisation et se termine par « Dernière vérification », suivi de l'ancienneté du dernier contrôle. Une date qui ne bouge plus est le signal le plus fiable.
+- Un encadré rouge, le cas échéant, reprenant le message d'erreur renvoyé par votre logiciel de recrutement lors du dernier échange.
+- Les quatre compteurs **Candidats**, **Postes**, **Candidatures** et **Entretiens**.
+
+{/* CAPTURE : carte d'une connexion ATS active, avec la pastille Connecté, la ligne d'état et les quatre compteurs */}
+
+<Note>
+  Si la page affiche « Impossible de vérifier le statut des connexions ATS. », c'est l'affichage qui a échoué, pas la synchronisation. Cliquez sur **Réessayer**.
+</Note>
+
+## La connexion a été désactivée
+
+Hirify contrôle périodiquement que ses accès fonctionnent encore. Lorsqu'une authentification est refusée, la connexion est désactivée et une notification « Connexion ATS désactivée » vous parvient, avec le motif : un jeton expiré qui n'a pas pu être renouvelé, ou un problème détecté lors d'une vérification.
+
+La carte retombe alors à l'état **Connecter**. Vos données déjà importées restent en place, mais rien de nouveau n'entre. Reprenez la connexion.
+
+<Tabs>
+  <Tab title="SmartRecruiters">
+    Dans votre espace d'administration, ouvrez **Apps** puis **OAuth Credentials** et créez une nouvelle application. Cochez les permissions listées dans l'assistant de Hirify, copiez le **Client ID** et le **Client Secret**, puis collez-les dans la fenêtre **Connecter SmartRecruiters**.
+  </Tab>
+  <Tab title="Teamtailor">
+    Depuis votre espace Teamtailor, ouvrez la marketplace, recherchez Hirify et lancez l'installation. Quand le formulaire demande un **code de connexion**, collez celui affiché dans la fenêtre **Connecter Teamtailor**.
+  </Tab>
+  <Tab title="Nicoka">
+    Vérifiez d'abord que l'utilisateur API dédié existe toujours dans Nicoka, sous **Paramétrage** puis **Administration**, **Utilisateurs**, **Utilisateur API**. Générez un nouveau jeton d'accès, puis saisissez votre sous-domaine et ce jeton dans la fenêtre **Connecter Nicoka**.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Ne cliquez pas sur **Déconnecter** pour « repartir de zéro » sans lire la fenêtre de confirmation. La case qui y figure supprime aussi les candidats, postes et données importées, et l'opération est irréversible.
+</Warning>
+
+## Les données arrivent, mais en retard
+
+La connexion est active et pourtant les nouveautés mettent des heures à apparaître. Regardez la ligne d'état de la carte : elle vous dit à quel rythme votre logiciel de recrutement est interrogé, et ce rythme n'est pas le même partout.
+
+Lorsqu'elle indique que la synchronisation est périodique et invite à configurer les webhooks, c'est que le lien qui pousse les changements dès qu'ils surviennent n'est pas en place. Le bloc **Configuration des webhooks**, tout en bas de la carte, porte alors un badge **À configurer** et détaille les deux étapes à réaliser une fois dans votre logiciel : créer les destinations, puis les évènements déclencheurs. Une fois le premier message reçu, le badge passe à **Configuration détectée**.
+
+## Un import qui n'en finit pas
+
+Juste après une connexion, les quatre compteurs sont à zéro et un encadré annonce que la synchronisation initiale est en cours. C'est normal : le vivier remonte par vagues. Le bouton **Actualiser** rafraîchit les compteurs.
+
+Si, plusieurs heures après, tout est encore à zéro, vérifiez que le compte utilisé côté logiciel de recrutement a bien accès aux postes, aux candidats et aux candidatures. Un accès partiel donne une connexion valide qui ne rapporte rien.
+
+## Bon à savoir
+
+- Il n'existe pas de bouton « synchroniser maintenant ». Hirify déclenche ses échanges au rythme indiqué sur la ligne d'état de la carte.
+- La section **ATS** n'apparaît qu'aux administrateurs. Les autres membres lisent « Les intégrations ATS et CRM sont gérées par les administrateurs de votre organisation. »
+- Une seule connexion est active par organisation. Tant qu'un logiciel est connecté, les autres cartes affichent un bouton **Connecter** grisé.
+- Une connexion rétablie ne rejoue pas ce qui a été manqué instantanément : les données remontent au fil des vérifications suivantes.
+- Un compte rendu n'est jamais renvoyé dans votre logiciel de recrutement sans que vous le déclenchiez. Un problème de synchronisation ne bloque donc pas un envoi que vous auriez cru parti.
+
+<CardGroup cols={2}>
+  <Card title="Connecter votre ATS" href="/fr/integrations/connecter-votre-ats">
+    La mise en place initiale, par logiciel.
+  </Card>
+  <Card title="Contacter le support" href="/fr/aide/contacter-le-support">
+    Si la reconnexion échoue.
+  </Card>
+</CardGroup>
