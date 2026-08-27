@@ -5,4 +5,80 @@ description: "Comparer les chemins de captation et retenir celui qui correspond 
 icon: "signs-post"
 ---
 
-Contenu en cours de rédaction.
+Hirify enregistre et transcrit vos entretiens quel que soit le canal. Cette page vous aide à choisir le bon chemin selon la situation, avant d'ouvrir la procédure détaillée.
+
+Tout part du même endroit : la section **Démarrer un entretien**, sur le **Tableau de bord**.
+
+{/* CAPTURE : la ligne « Démarrer un entretien » du tableau de bord, avec le champ de lien et les boutons Appeler, Planifier par email et Présentiel */}
+
+## Les chemins disponibles
+
+| Situation | Ce que vous faites | Où |
+| --- | --- | --- |
+| La visioconférence démarre maintenant | Vous collez le lien dans le champ **Collez un lien Meet ou Teams** | Tableau de bord |
+| L'entretien est déjà posé dans votre agenda | Vous ajoutez l'adresse de l'assistant de réunion en invité | Bouton **Planifier par email** |
+| Votre agenda est connecté à Hirify | Vous cliquez sur l'événement, puis sur **Ajouter le bot** | **Calendrier** |
+| L'entretien a lieu en face à face | Vous générez un QR code et enregistrez depuis un téléphone | Bouton **Présentiel** |
+| Vous appelez le candidat | Vous composez le numéro | Tableau de bord |
+| L'entretien est créé dans votre logiciel de recrutement | Rien : l'assistant est programmé pour vous | Réglage d'organisation |
+
+## En visioconférence
+
+C'est le cas le plus courant. Un assistant de réunion rejoint la visioconférence, l'enregistre et la transcrit. Trois chemins y mènent : le champ de lien du tableau de bord, l'invitation d'agenda, et le **Calendrier** de Hirify.
+
+Les deux premiers ne demandent aucune connexion préalable. Le **Calendrier**, lui, suppose que Google Calendar ou Outlook soit relié à votre espace.
+
+<CardGroup cols={2}>
+  <Card title="Enregistrer en visioconférence" href="/fr/entretiens/en-visioconference">
+    Les trois chemins, pas à pas.
+  </Card>
+  <Card title="Connecter votre agenda" href="/fr/integrations/connecter-votre-agenda">
+    Relier Google Calendar ou Outlook.
+  </Card>
+</CardGroup>
+
+## En présentiel
+
+Pour un entretien en face à face, Hirify génère un QR code. Vous le scannez avec un téléphone, vous choisissez le micro et vous lancez l'enregistrement depuis la page qui s'ouvre. Rien à installer sur le téléphone.
+
+<CardGroup cols={1}>
+  <Card title="Enregistrer un entretien en présentiel" href="/fr/entretiens/en-presentiel">
+    Du QR code à l'envoi de l'enregistrement.
+  </Card>
+</CardGroup>
+
+## Au téléphone
+
+Hirify passe un appel sortant depuis votre ligne et transcrit la conversation. Quand un numéro sortant par défaut est actif, le tableau de bord affiche directement un champ où composer le numéro. Sinon, le bouton **Appeler** ouvre la fenêtre **Appel téléphonique**, où vous choisissez la ligne, le micro et le numéro à appeler.
+
+<CardGroup cols={2}>
+  <Card title="Obtenir un numéro" href="/fr/telephonie/obtenir-un-numero">
+    La ligne et sa vérification.
+  </Card>
+  <Card title="Passer un appel" href="/fr/telephonie/passer-un-appel">
+    Composer et suivre l'appel.
+  </Card>
+</CardGroup>
+
+## Depuis votre logiciel de recrutement
+
+Si votre logiciel de recrutement est connecté à Hirify, les entretiens qui y sont créés avec un lien de visioconférence peuvent recevoir l'assistant de réunion sans aucune action de votre part.
+
+<CardGroup cols={1}>
+  <Card title="Automatique depuis l'ATS" href="/fr/entretiens/automatique-depuis-l-ats">
+    Le réglage, ses conditions et ses limites.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Quel que soit le canal, l'information des candidats vous incombe. Présentez l'enregistrement avant de le déclencher : voir [Informer vos candidats](/fr/confiance/informer-vos-candidats).
+</Warning>
+
+## Bon à savoir
+
+- Le champ du tableau de bord attend un lien de visioconférence. Un lien qu'il ne reconnaît pas est refusé avec le message « Format de lien invalide. Utilisez un lien Google Meet ou Teams. »
+- Un enregistrement de moins d'une minute n'est pas transcrit : l'entretien porte alors la mention **Trop court**.
+- L'assistant de réunion doit être admis dans la visioconférence. Si l'hôte ne l'accepte pas, l'entretien porte la mention **Bot non accepté** et rien n'est enregistré.
+- Hirify n'envoie jamais de message au candidat, sur aucun canal. L'appel que vous déclenchez depuis le tableau de bord est sortant, à votre initiative.
+- Le compte rendu et l'évaluation ne partent vers votre logiciel de recrutement que si vous les envoyez depuis le panneau ATS de l'entretien. Deux automatismes, désactivés par défaut et activables par un administrateur, peuvent en revanche écrire sans validation entretien par entretien : voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- Le choix du canal ne change ni la transcription, ni le compte rendu, ni l'analyse : la suite du traitement est la même.

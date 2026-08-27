@@ -5,4 +5,85 @@ description: "Sortez un compte rendu en PDF, DOCX ou TXT, ou l'entretien complet
 icon: "file-export"
 ---
 
-Contenu en cours de rédaction.
+Un compte rendu se sort de Hirify de deux manières : dans le presse-papiers, pour le coller ailleurs, ou en fichier, pour le transmettre. Tout se fait depuis le panneau **Actions**, sur le bord droit de la fiche entretien.
+
+<Note>
+  Les actions sur le compte rendu n'apparaissent que sur l'onglet **Notes**, et seulement une fois le compte rendu terminé. Sur les onglets **L'essentiel** et **Transcription**, le panneau propose les actions de ces documents-là.
+</Note>
+
+## Copier le compte rendu dans un autre outil
+
+Dans la section **Compte-rendu** du panneau **Actions**, deux copies coexistent, pour deux destinations différentes.
+
+- **Copier le document** conserve les titres et les paragraphes. C'est celle à choisir pour un document ou une page de prise de notes.
+- **Copier tout en puces** aplatit la structure en liste. C'est celle à choisir pour un champ de texte qui ne sait pas mettre en forme, comme ceux de votre logiciel de recrutement.
+
+Pour ne copier qu'une partie, survolez le texte : la poignée qui apparaît dans la marge gauche propose **Copier** sur le champ ou la section visée.
+
+{/* CAPTURE : le panneau « Actions » avec les sections « Compte-rendu » et « Télécharger » */}
+
+## Exporter le compte rendu en PDF, DOCX ou TXT
+
+<Steps>
+  <Step title="Sélectionnez le bon compte rendu">
+    Si l'entretien en porte plusieurs, choisissez-le dans la section **Notes** du panneau. Le téléchargement porte sur celui qui est ouvert.
+  </Step>
+  <Step title="Descendez jusqu'à Télécharger">
+    La section **Télécharger** propose trois boutons : **PDF**, **DOCX** et **TXT**.
+  </Step>
+  <Step title="Téléchargez">
+    Cliquez sur le format voulu. Le fichier arrive dans votre dossier de téléchargements, nommé d'après le template et la date.
+  </Step>
+</Steps>
+
+## Transmettre un entretien dans son ensemble
+
+Il n'existe pas d'export en un seul fichier réunissant tout l'entretien. Le téléchargement porte toujours sur un compte rendu à la fois, et la transcription se télécharge à part.
+
+Procédez donc en deux temps : téléchargez chaque compte rendu depuis la section **Télécharger**, puis la transcription depuis l'onglet **Transcription**. Un entretien qui porte un seul compte rendu tient en deux fichiers.
+
+## Copier ou télécharger la transcription
+
+<Steps>
+  <Step title="Ouvrez l'onglet Transcription">
+    Sur la fiche de l'entretien, cliquez sur **Transcription**.
+  </Step>
+  <Step title="Ouvrez le panneau Actions">
+    La section **Transcription** y remplace celles du compte rendu.
+  </Step>
+  <Step title="Copiez ou téléchargez">
+    **Copier la transcription** met le texte dans le presse-papiers. **Télécharger en TXT** produit un fichier.
+  </Step>
+</Steps>
+
+Dans les deux cas, le texte est présenté un tour de parole par bloc, précédé du nom de l'intervenant. Prenez le temps de vérifier les noms avant de transmettre : voir [Identifier les intervenants](/fr/entretiens/identifier-les-intervenants).
+
+L'onglet **L'essentiel** dispose de sa propre action, **Copier l'essentiel**, pour une synthèse courte à coller dans un message.
+
+## Ce que contient chaque format
+
+| Format | Contenu |
+| --- | --- |
+| **PDF** | Titre de l'entretien, date, durée, participants, puis le compte rendu mis en page, avec numéros de page. |
+| **DOCX** | Les mêmes éléments, dans un document modifiable dans votre traitement de texte. |
+| **TXT** | Les mêmes éléments, en texte brut, sans mise en forme. |
+| TXT de la transcription | Les tours de parole, un par bloc, avec le nom de l'intervenant. |
+
+Aucun de ces fichiers ne contient la transcription : le compte rendu et la transcription restent deux exports distincts.
+
+## Bon à savoir
+
+- Un compte rendu doit être terminé pour être téléchargé. Tant qu'une génération est en cours, l'export est refusé.
+- L'export **DOCX** n'existe que pour un compte rendu, pas pour la transcription.
+- Ces exports ne sont pas des envois : rien ne part vers votre logiciel de recrutement par ce chemin. Pour transmettre une évaluation à votre logiciel, voir [Renvoyer une évaluation](/fr/integrations/renvoyer-une-evaluation).
+- Un compte rendu exporté contient des données personnelles concernant un candidat. Ce que vous en faites relève de votre responsabilité : voir [Vos données](/fr/confiance/vos-donnees).
+- Il n'y a pas de partage par lien : le partage passe par le fichier que vous transmettez, ou par l'accès de vos collègues à l'entretien dans Hirify.
+
+<CardGroup cols={2}>
+  <Card title="Lire et modifier" icon="pen-to-square" href="/fr/comptes-rendus/lire-et-modifier">
+    Corriger, réécrire et régénérer avant d'exporter.
+  </Card>
+  <Card title="Renvoyer une évaluation" icon="arrow-right-arrow-left" href="/fr/integrations/renvoyer-une-evaluation">
+    Transmettre à votre logiciel de recrutement, après validation.
+  </Card>
+</CardGroup>

@@ -9,4 +9,86 @@ icon: "bolt"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Contenu en cours de rédaction.
+Quand votre logiciel de recrutement est relié à Hirify, un entretien qui y est planifié avec un lien de visioconférence peut recevoir l'assistant de réunion sans que personne n'ait à le demander. Vous ne collez plus de lien : vous ouvrez votre compte rendu après coup.
+
+## Le réglage
+
+Il porte sur toute l'organisation et se trouve sur la carte de votre logiciel de recrutement.
+
+<Steps>
+  <Step title="Ouvrez les paramètres d'intégration">
+    Dans le menu de votre compte, cliquez sur **Paramètres**, puis sur **Intégrations** dans la colonne de gauche.
+  </Step>
+  <Step title="Repérez les réglages de votre connexion">
+    Sous la section **ATS**, la carte de votre connexion affiche le bloc **Réglages**.
+  </Step>
+  <Step title="Vérifiez l'interrupteur">
+    **Bots de transcription automatiques** doit être activé. Le texte sous le libellé rappelle la règle : « Programme automatiquement un bot de transcription sur les entretiens ATS dotés d'un lien Google Meet ou Microsoft Teams. »
+  </Step>
+</Steps>
+
+<Note>
+  Ce réglage est activé par défaut. Seul un administrateur de l'organisation y a accès : les autres rôles ne voient pas la section **ATS** et lisent à la place « Les intégrations ATS et CRM sont gérées par les administrateurs de votre organisation. »
+</Note>
+
+{/* CAPTURE : le bloc « Réglages » sous la section ATS, avec l'interrupteur « Bots de transcription automatiques » */}
+
+## Choisir le template appliqué
+
+Un entretien capté sans intervention n'a pas de template choisi à la main. Le menu **Template de compte rendu par défaut**, dans le même bloc **Réglages**, comble ce vide : « Appliqué aux entretiens enregistrés automatiquement depuis votre ATS pour générer un compte rendu sans sélection manuelle. Seuls les templates partagés avec l'organisation sont proposés. »
+
+Tant que ce menu reste sur **Aucun template**, l'entretien est bien enregistré et transcrit, mais aucun compte rendu n'est rédigé. Vous pouvez toujours en demander un ensuite depuis la fiche de l'entretien.
+
+<CardGroup cols={1}>
+  <Card title="Partager un template avec votre équipe" href="/fr/comptes-rendus/partager-un-template">
+    Un template personnel n'apparaît pas dans ce menu.
+  </Card>
+</CardGroup>
+
+## Ce qui déclenche l'assistant
+
+L'assistant est programmé quand toutes ces conditions sont réunies :
+
+- l'entretien est planifié dans votre logiciel de recrutement, et non annulé ni reprogrammé ;
+- il comporte un lien de visioconférence ;
+- son horaire est encore à venir ;
+- aucun assistant n'est déjà programmé sur cet entretien ;
+- personne ne l'a retiré à la main sur l'événement correspondant ;
+- l'abonnement de l'organisation est actif.
+
+Si l'une manque, rien ne se passe et l'entretien reste captable par les autres chemins.
+
+## Retirer l'assistant d'un entretien précis
+
+Le réglage vaut pour toute l'organisation, mais vous gardez la main entretien par entretien. Le retrait se fait depuis le **Calendrier**, qui suppose un agenda relié à votre espace.
+
+<Steps>
+  <Step title="Ouvrez le Calendrier">
+    Dans la barre latérale, section **Mon espace**, cliquez sur **Calendrier**.
+  </Step>
+  <Step title="Cliquez sur l'événement concerné">
+    Le panneau latéral s'ouvre.
+  </Step>
+  <Step title="Cliquez sur Supprimer">
+    Une confirmation s'affiche : « Le bot ne rejoindra plus cette réunion. Cette action est irréversible. »
+  </Step>
+</Steps>
+
+Ce retrait est retenu : Hirify ne reprogramme pas l'assistant sur cet entretien, même si votre logiciel de recrutement le met à jour ensuite.
+
+## Bon à savoir
+
+- Un entretien créé sans lien de visioconférence n'est pas capté. Le texte du réglage, lui, nomme Google Meet et Microsoft Teams.
+- Un entretien qui réunit plusieurs personnes de votre équipe ne donne lieu qu'à un seul enregistrement, pas un par intervenant.
+- Dans Hirify, l'entretien est rattaché à la candidature correspondante dès la programmation de l'assistant : vous retrouvez le contexte du poste et du candidat sans le chercher. Ce rattachement n'écrit rien dans votre logiciel de recrutement.
+- Le compte rendu n'est jamais renvoyé vers votre logiciel de recrutement de lui-même. Hirify le prépare, vous décidez de l'envoyer : voir [Renvoyer une évaluation](/fr/integrations/renvoyer-une-evaluation).
+- Un entretien reprogrammé ou annulé dans votre logiciel de recrutement suit son statut : l'assistant n'est programmé que sur les entretiens planifiés et à venir.
+
+<CardGroup cols={2}>
+  <Card title="Connecter votre ATS" href="/fr/integrations/connecter-votre-ats">
+    Établir la connexion.
+  </Card>
+  <Card title="Automatismes ATS" href="/fr/integrations/automatismes-ats">
+    Tags, champs et template par défaut.
+  </Card>
+</CardGroup>

@@ -5,4 +5,96 @@ description: "Scanner un QR code et enregistrer un entretien en face à face ave
 icon: "qrcode"
 ---
 
-Contenu en cours de rédaction.
+Pour un entretien en face à face, Hirify génère un QR code. Vous le scannez avec un téléphone et vous enregistrez depuis la page qui s'ouvre. Rien à installer.
+
+## Générer le QR code
+
+<Steps>
+  <Step title="Ouvrez le Tableau de bord">
+    Dans la ligne **Démarrer un entretien**, cliquez sur **Présentiel**.
+  </Step>
+  <Step title="Nommez l'entretien">
+    Renseignez le **Titre de l'entretien**. Le champ propose un exemple : « Ex : Entretien Alice Martin ».
+  </Step>
+  <Step title="Indiquez le nombre de participants">
+    Le menu **Participants** va de **1 personne** à **5 personnes**. Il aide Hirify à séparer les voix.
+  </Step>
+  <Step title="Cliquez sur Générer">
+    La fenêtre affiche « Votre QR code est prêt ».
+  </Step>
+</Steps>
+
+{/* CAPTURE : la fenêtre « Entretien en présentiel », champ Titre de l'entretien et menu Participants */}
+
+## Ouvrir la page d'enregistrement sur le téléphone
+
+Scannez le QR code avec l'appareil photo du téléphone. La page d'enregistrement s'ouvre dans le navigateur.
+
+Deux autres options sont proposées sous le QR code :
+
+- **Ouvrir** lance la page directement dans un nouvel onglet, sur l'ordinateur.
+- **Copier le lien** met l'adresse dans le presse-papiers, pour l'envoyer sur un autre appareil.
+
+Le bouton **Nouveau** revient au formulaire pour générer un autre QR code, **Terminer** ferme la fenêtre.
+
+## Enregistrer
+
+Sur le téléphone, la page affiche le titre de l'entretien et votre nom.
+
+<Steps>
+  <Step title="Choisissez le micro">
+    Le menu **Microphone** liste les entrées audio disponibles. Le navigateur demande l'autorisation d'accéder au micro : acceptez-la.
+  </Step>
+  <Step title="Lancez l'enregistrement">
+    Appuyez sur **Commencer l'enregistrement**. Une forme d'onde et un chronomètre s'affichent.
+  </Step>
+  <Step title="Suspendez si nécessaire">
+    **Pause** interrompt la prise, **Reprendre** la relance. La mention « Sauvegardé automatiquement » indique que l'enregistrement est conservé sur l'appareil au fil de l'entretien.
+  </Step>
+  <Step title="Arrêtez à la fin">
+    **Arrêter** clôt la prise et lance l'envoi. La barre de progression affiche l'avancement, puis la page confirme « Enregistrement envoyé ! » et « Transcription en cours ».
+  </Step>
+</Steps>
+
+<Warning>
+  Gardez la page ouverte et l'écran déverrouillé pendant tout l'enregistrement et pendant l'envoi. Sur iPhone, la page conseille de désactiver le verrouillage automatique dans **Réglages → Affichage → Verrouillage auto → Jamais**.
+</Warning>
+
+{/* CAPTURE : la page d'enregistrement sur téléphone, en cours d'enregistrement, avec le chronomètre et les boutons Pause et Arrêter */}
+
+## Reprendre un enregistrement interrompu
+
+La page d'enregistrement conserve ce qu'elle a capté. Deux situations sont prises en charge à la réouverture.
+
+<AccordionGroup>
+  <Accordion title="Enregistrement précédent détecté">
+    Un enregistrement a été coupé avant la fin. La page propose **Récupérer** pour le reprendre, ou **Nouveau** pour repartir de zéro.
+  </Accordion>
+  <Accordion title="Upload précédent en attente">
+    L'enregistrement est complet mais l'envoi n'a pas abouti. La page propose **Réessayer l'envoi**, **Télécharger** pour récupérer le fichier audio, ou **Supprimer**.
+  </Accordion>
+</AccordionGroup>
+
+Après un envoi réussi, le bouton **Télécharger l'enregistrement** reste disponible sur la page.
+
+## Retrouver l'entretien dans Hirify
+
+L'entretien est créé dès la génération du QR code. Il figure alors en bas de la liste **Transcriptions**, sans statut, tant qu'aucun enregistrement n'a été envoyé. Il rejoint le flux normal une fois l'envoi terminé. Dans les filtres, il relève du type **Enregistrement**.
+
+<CardGroup cols={2}>
+  <Card title="Retrouver et suivre" href="/fr/entretiens/retrouver-et-suivre">
+    Les statuts et les filtres de la liste.
+  </Card>
+  <Card title="Identifier les intervenants" href="/fr/entretiens/identifier-les-intervenants">
+    Nommer les voix après la transcription.
+  </Card>
+</CardGroup>
+
+## Bon à savoir
+
+- Un enregistrement de moins d'une minute n'est pas transcrit. La page l'annonce sur le téléphone, et l'entretien porte la mention **Trop court** dans la liste.
+- Le nombre de participants est une aide à la séparation des voix, pas une limite : le menu s'arrête à cinq personnes, mais un intervenant de plus ne bloque pas l'enregistrement.
+- La qualité du micro du téléphone détermine la qualité de la transcription. Posez l'appareil entre les intervenants, à distance égale.
+- Un entretien en présentiel n'est rattaché à aucun événement d'agenda : il n'apparaît pas dans le **Calendrier**.
+- Si un même entretien a été coupé en deux enregistrements, vous pouvez les réunir : voir [Fusionner deux entretiens](/fr/entretiens/fusionner-deux-entretiens).
+- Les termes métier et les noms propres de votre organisation se transcrivent mieux si vous les avez déclarés : voir [Améliorer les transcriptions](/fr/demarrer/ameliorer-les-transcriptions).

@@ -5,4 +5,103 @@ description: "Rendez un template visible par votre équipe, désignez celui qui 
 icon: "users"
 ---
 
-Contenu en cours de rédaction.
+Un template peut rester le vôtre ou servir à toute l'équipe. Cette page explique comment régler sa visibilité, comment désigner celui qui s'applique quand vous n'en choisissez aucun, et comment réutiliser une grille d'évaluation que vous avez déjà dans votre logiciel de recrutement.
+
+## Personnel ou Équipe : qui voit vos templates
+
+La liste de gauche de la page **Templates de notes** range les templates en trois groupes.
+
+| Groupe | Qui le voit |
+| --- | --- |
+| **Personnel** | Vous seul. La liste l'écrit d'ailleurs : « Visible par vous seul ». |
+| **Équipe** | Tous les membres de votre organisation. Sur le template d'un collègue, son nom s'affiche à droite. |
+| **Proposés par Hirify** | Tout le monde. Ce sont les exemples fournis avec le produit. |
+
+{/* CAPTURE : la liste de gauche avec ses trois groupes dépliés et le badge « Défaut » sur un template */}
+
+## Partager un template avec votre équipe
+
+La visibilité se règle dans l'éditeur, en haut à droite, avec les deux onglets **Equipe** et **Personnel**.
+
+<Steps>
+  <Step title="Ouvrez le template">
+    Cliquez sur son nom dans la liste de gauche.
+  </Step>
+  <Step title="Basculez la visibilité">
+    Sous **Visibilité**, cliquez sur **Equipe** pour le partager, sur **Personnel** pour le garder pour vous.
+  </Step>
+  <Step title="Enregistrez">
+    Cliquez sur **Sauvegarder**. Le template change de groupe dans la liste.
+  </Step>
+</Steps>
+
+<Note>
+  Un template nouvellement créé est réglé sur **Equipe**. Si vous en voulez un qui reste privé, basculez la visibilité avant d'enregistrer.
+</Note>
+
+Un template partagé par un collègue s'ouvre en lecture seule : vous voyez sa structure, ses questions et ses instructions, sous la mention « Partagé par » suivie de son nom. Le bouton **Dupliquer** vous en donne une copie modifiable dans vos templates ; l'original reste géré par son créateur. Sur un template proposé par Hirify, ce même bouton s'appelle **Personnaliser**.
+
+## Définir votre template par défaut
+
+Le template par défaut s'applique à vos entretiens quand aucun template n'a été choisi. Ce réglage est personnel : il ne s'impose à personne d'autre.
+
+<Tabs>
+  <Tab title="Sur un template que vous éditez">
+    Ouvrez le template. En bas de l'éditeur, à côté de **Annuler**, activez l'interrupteur **Template par défaut**.
+  </Tab>
+  <Tab title="Sur un exemple ou un template partagé">
+    Ouvrez-le depuis la liste. Sous son titre, activez l'interrupteur **Utiliser par défaut**, décrit par « Appliqué à vos entretiens quand aucun template n'est choisi. ».
+  </Tab>
+</Tabs>
+
+Le template retenu porte le badge **Défaut** dans la liste de gauche. Un seul à la fois : en désigner un autre remplace le précédent. Désactiver l'interrupteur retire le défaut : les entretiens sans template reçoivent alors un compte rendu structuré à partir de leur seul contenu, à condition que l'analyse ait abouti et que l'échange ait matière à être résumé.
+
+Une exception : sur un entretien créé depuis votre logiciel de recrutement, le template par défaut réglé dans ses [automatismes](/fr/integrations/automatismes-ats) passe avant le vôtre.
+
+## Importer une grille d'évaluation depuis votre logiciel de recrutement
+
+Si votre logiciel de recrutement expose ses grilles d'évaluation, vous pouvez en réutiliser une comme template plutôt que de la ressaisir.
+
+<Steps>
+  <Step title="Ouvrez la création de template">
+    Sur **Templates de notes**, cliquez sur le bouton **+**.
+  </Step>
+  <Step title="Ouvrez la liste des grilles">
+    Tout en bas du volet, cliquez sur **importer une grille d'évaluation depuis votre ATS**. Ce lien n'apparaît que si des grilles sont disponibles.
+  </Step>
+  <Step title="Choisissez la grille">
+    Chaque carte affiche le nom de la grille et son volume, en thèmes et en questions. Cliquez sur celle qui vous intéresse.
+  </Step>
+  <Step title="Importez">
+    Cliquez sur **Importer cette grille**. Le template est créé et s'ouvre aussitôt dans l'éditeur, où vous pouvez l'ajuster.
+  </Step>
+</Steps>
+
+À l'import, chaque thème de la grille devient un champ du template, ses questions servent de guide à la rédaction, et une section de synthèse est ajoutée : avis global, points forts, points de vigilance. Le template obtenu porte le badge **ATS** dans la liste.
+
+<Warning>
+  Importer une grille ne relie rien : le compte rendu produit reste dans Hirify. L'envoyer vers votre logiciel de recrutement reste un geste explicite, depuis le panneau ATS de l'entretien, grille ou pas. Voir [Renvoyer une évaluation](/fr/integrations/renvoyer-une-evaluation).
+</Warning>
+
+## Mettre à jour une grille déjà importée
+
+Une grille que vous avez déjà importée porte le badge **Importée**. Sélectionnez-la de nouveau : le bouton s'appelle cette fois **Mettre à jour l'import**, et le template existant est réaligné sur la grille telle qu'elle est aujourd'hui dans votre logiciel de recrutement.
+
+Si un collègue l'a importée avant vous, la carte porte **Importée par un membre** et ne peut pas être sélectionnée. Demandez-lui de partager son template avec l'équipe, ou dupliquez-le depuis la liste.
+
+## Bon à savoir
+
+- Seuls certains logiciels de recrutement exposent leurs grilles d'évaluation. Quand ce n'est pas le cas, ou qu'aucune connexion n'est active, le lien d'import n'apparaît pas.
+- Une seule connexion à un logiciel de recrutement est active par organisation.
+- Partager un template partage la trame, pas les comptes rendus. Ce que chacun voit des entretiens dépend de son rôle, décrit dans [Rôles et accès](/fr/demarrer/roles-et-acces).
+- Vous ne pouvez supprimer ou dupliquer depuis la liste que vos propres templates. Ceux d'un collègue s'ouvrent en lecture seule.
+- Supprimer un template ne supprime pas les comptes rendus déjà rédigés avec lui.
+
+<CardGroup cols={2}>
+  <Card title="Créer un template" icon="table-list" href="/fr/comptes-rendus/creer-un-template">
+    Sections, questions, types de réponse et instructions.
+  </Card>
+  <Card title="Connecter votre logiciel de recrutement" icon="plug" href="/fr/integrations/connecter-votre-ats">
+    SmartRecruiters, Teamtailor, Nicoka.
+  </Card>
+</CardGroup>

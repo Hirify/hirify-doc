@@ -5,4 +5,83 @@ description: "Vous comparez les quatre rôles et savez ce que chacun peut voir e
 icon: "users-gear"
 ---
 
-Contenu en cours de rédaction.
+Hirify compte quatre rôles d'organisation. Ils décident de deux choses : quels entretiens vous voyez, et ce que vous pouvez faire des membres et de l'abonnement.
+
+## Les quatre rôles
+
+Le rôle est attribué à l'invitation et modifiable ensuite. Les libellés ci-dessous sont ceux de l'interface.
+
+| Rôle | Ce qu'il peut faire |
+| --- | --- |
+| **Membre** | Accès à ses propres entretiens. Création et partage de notes. Utilisation des templates personnalisés. |
+| **Manager** | Accès à tous les entretiens de l'équipe, édition et suppression de ceux de tous les membres, consultation des statistiques par membre. Pas de gestion des membres ni de la facturation. |
+| **Administrateur** | Invitation et suppression de membres, gestion des rôles, accès aux paramètres de l'organisation, accès complet aux fonctionnalités produit. |
+| **Admin facturation** | Invitation et suppression de membres, gestion des rôles, gestion de l'abonnement et de la facturation. Ne consomme pas de place. Pas d'accès aux fonctionnalités produit. |
+
+{/* CAPTURE : carte « Privilèges » de la fenêtre Inviter un membre, pour chacun des quatre rôles */}
+
+## Qui voit quels entretiens
+
+C'est la différence la plus visible au quotidien.
+
+- Un **Membre** ne voit que les entretiens dont il est l'auteur.
+- Un **Manager** et un **Administrateur** voient tous les entretiens de l'organisation, et peuvent les modifier ou les supprimer.
+- Un **Admin facturation** n'a accès à aucun entretien.
+
+<Warning>
+  Passer un membre en **Manager** ou en **Administrateur** lui donne accès à l'ensemble des entretiens déjà enregistrés par l'organisation, y compris ceux qui précèdent son changement de rôle.
+</Warning>
+
+## Qui peut gérer les membres
+
+| Action | Membre | Manager | Administrateur | Admin facturation |
+| --- | --- | --- | --- | --- |
+| Consulter la liste des membres | — | Oui, en lecture seule | Oui | Oui |
+| Inviter, retirer, changer un rôle | — | — | Oui | Oui |
+| Gérer l'abonnement et la facturation | — | — | Oui | Oui |
+| Accéder aux paramètres de l'organisation | — | — | Oui | — |
+
+Un **Manager** qui ouvre la page voit la liste des membres actifs et leurs statistiques, sans les onglets de gestion ni le bouton **Inviter un membre**. Un **Membre** n'a pas l'entrée dans son menu ; s'il ouvre l'adresse directement, il obtient un écran **Accès restreint**.
+
+## Changer le rôle d'un membre
+
+<Steps>
+  <Step title="Ouvrez la page Gestion des membres">
+    Menu à votre nom, en bas de la barre latérale, puis **Gérer les membres**.
+  </Step>
+  <Step title="Repérez la personne dans l'onglet Actifs">
+    Le champ de recherche accepte un nom ou une adresse email.
+  </Step>
+  <Step title="Changez son rôle">
+    Sélectionnez le nouveau rôle sur sa ligne. Le message « Rôle mis à jour avec succès » confirme l'enregistrement.
+  </Step>
+</Steps>
+
+Deux garde-fous : vous ne pouvez pas modifier votre propre rôle, et le dernier administrateur de l'organisation ne peut être ni rétrogradé ni retiré.
+
+## Ce qui dépend de l'offre
+
+Certaines fonctionnalités ne s'ouvrent pas avec le rôle seul : elles demandent d'abord l'abonnement.
+
+- **Sourcing** et **Assistant** sont accessibles à partir de l'offre Hub. Sans cette offre, l'entrée reste visible dans la barre latérale, mais grisée et non cliquable.
+- **Pilotage** et **Fiabilité** demandent à la fois l'offre Hub et le rôle **Administrateur** ou **Manager**. Si l'une des deux conditions manque, l'entrée n'apparaît pas du tout dans la barre latérale. Sans l'offre, l'adresse ouverte directement vous ramène au tableau de bord. Avec l'offre mais sans le rôle, vous obtenez un écran **Accès réservé** : « Les tableaux de bord sont réservés aux administrateurs et managers de l'organisation. » sur Pilotage, « La fiabilité des données est réservée aux administrateurs et managers de l'organisation. » sur Fiabilité.
+- L'authentification unique relève de l'offre Volume.
+
+Le détail des offres est sur [Offres et accès](/fr/compte/offres-et-acces).
+
+## Bon à savoir
+
+- Le rôle **Admin facturation** n'ouvre aucune fonctionnalité produit : la personne est redirigée vers la page des membres. C'est le rôle d'un comptable, pas d'un recruteur.
+- Il est le seul à ne pas consommer de place sur votre abonnement.
+- Le champ **Rôle** de la page Profil est un intitulé de poste en texte libre. Il n'a rien à voir avec le rôle d'organisation décrit ici et n'ouvre aucun droit.
+- Un rôle vaut pour toute l'organisation. Hirify ne permet pas de restreindre un membre à un poste, à une équipe ou à un client donné.
+- Modifier le vocabulaire métier de l'organisation demande le rôle **Administrateur**.
+
+<CardGroup cols={2}>
+  <Card title="Inviter un membre" icon="user-plus" href="/fr/demarrer/inviter-un-membre">
+    Attribuer le rôle dès l'invitation.
+  </Card>
+  <Card title="Offres et accès" icon="star" href="/fr/compte/offres-et-acces">
+    Ce que chaque offre contient.
+  </Card>
+</CardGroup>

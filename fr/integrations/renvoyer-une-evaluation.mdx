@@ -9,4 +9,96 @@ icon: "star"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Contenu en cours de rédaction.
+Le compte rendu d'un entretien peut repartir sur la fiche du candidat, accompagné de votre verdict. L'envoi part de vous, après un aperçu et une confirmation. Ni le compte rendu ni votre verdict ne partent sans ce geste.
+
+## Avant d'envoyer
+
+La section **Évaluation** vit dans l'onglet **ATS** de l'entretien, sous la candidature liée. Elle refuse de s'ouvrir tant que quelque chose manque, et vous dit quoi :
+
+| Message affiché | Ce qu'il attend de vous |
+| --- | --- |
+| « Associez d'abord une candidature pour pouvoir l'évaluer. » | Liez l'entretien à une candidature. |
+| « Confirmez d'abord le lien ci-dessus pour pouvoir évaluer. » | Le lien a été déduit d'une adresse : confirmez-le. |
+| « Aucune note complétée n'est encore disponible. » | Générez un compte rendu pour cet entretien. |
+| « La note actuellement ouverte n'est pas finalisée. » | Sélectionnez un compte rendu terminé dans la barre latérale. |
+
+{/* CAPTURE : la section Évaluation de l'onglet ATS, avec le sélecteur de verdict et le bouton d'envoi */}
+
+## Envoyer une évaluation
+
+<Steps>
+  <Step title="Ouvrez l'onglet ATS de l'entretien">
+    Puis dépliez la section **Évaluation**.
+  </Step>
+  <Step title="Choisissez la forme de l'envoi">
+    Deux onglets apparaissent quand votre logiciel de recrutement et les accès accordés le permettent : **Évaluation** et **Note simple**. Sinon, seule l'évaluation est proposée.
+  </Step>
+  <Step title="Posez votre verdict">
+    Le sélecteur **Choisir un verdict** propose cinq positions, de **Très défavorable** à **Très favorable**, chacune assortie d'un rappel : « À écarter sans réserve », « Pas le bon match », « À discuter, signaux partagés », « Profil aligné, recommandé », « Profil idéal, à recruter sans attendre ».
+  </Step>
+  <Step title="Envoyez">
+    Le bouton **Envoyer à** porte le nom de votre logiciel de recrutement. En mode évaluation, il reste inactif tant qu'aucun verdict n'est choisi.
+  </Step>
+  <Step title="Relisez l'aperçu, puis confirmez">
+    Le dialogue **Confirmer l'envoi vers l'ATS** rappelle sur quelle candidature vous écrivez, affiche un extrait du compte rendu et précise : « Aperçu. Le compte rendu complet sera envoyé. » Cliquez sur **Confirmer l'envoi**.
+  </Step>
+</Steps>
+
+<Warning>
+  Cette action est visible par l'équipe recrutement dans votre logiciel de recrutement. Elle n'est pas silencieuse.
+</Warning>
+
+## Évaluation ou note simple
+
+L'onglet **Note simple** dépose le compte rendu tel quel, sans verdict. C'est le bon choix quand l'entretien ne se conclut pas par une recommandation, ou quand une évaluation formelle a déjà été saisie par quelqu'un d'autre.
+
+<Tabs>
+  <Tab title="SmartRecruiters">
+    L'envoi crée une évaluation portant votre verdict. Le dépôt en note simple n'est pas proposé.
+  </Tab>
+  <Tab title="Teamtailor">
+    Les deux formes sont disponibles : évaluation avec verdict, ou note simple sur la fiche du candidat, sous réserve des accès accordés à la connexion.
+  </Tab>
+  <Tab title="Nicoka">
+    Le compte rendu part sans note d'évaluation : la section affiche « Cet ATS reçoit le compte rendu sans note d'évaluation. » et le bouton d'envoi s'active sans verdict à choisir.
+  </Tab>
+</Tabs>
+
+## Suivre l'historique des envois
+
+La section **Historique des envois** liste chaque tentative, la plus récente en premier, avec le nombre total en regard du titre. Tant que rien n'est parti, elle affiche « Aucune évaluation n'a encore été envoyée. »
+
+Chaque ligne porte un état :
+
+- **Envoyée** — l'évaluation est arrivée. Une icône **Voir dans l'ATS** ouvre la fiche.
+- **En attente** — « En attente de confirmation de … Actualisez dans un instant. » Le bouton de rafraîchissement, en haut de la section, relit l'état.
+- **Échec** — le message d'erreur s'affiche, avec un bouton **Réessayer**.
+- **Supprimée** — l'envoi a été retiré. La ligne reste, barrée.
+
+Passez la souris sur l'état pour voir qui a envoyé. Un envoi en note simple est signalé par la mention « Note simple ». Quand une évaluation existait déjà sur la candidature, la ligne précise « Envoyée en commentaire (une évaluation existait déjà) ». Au-delà de cinq entrées, un bouton **Voir plus** déplie le reste.
+
+## Retirer un envoi
+
+L'icône de suppression n'apparaît que sur un envoi **Envoyée**, et seulement pour la personne qui l'a expédié.
+
+<Warning>
+  Le dialogue **Supprimer cet envoi ?** est explicite : l'évaluation correspondante sera supprimée dans votre logiciel de recrutement, et l'action est irréversible. L'entrée reste visible dans l'historique avec le statut « Supprimée », et vous pourrez renvoyer une nouvelle évaluation par la suite.
+</Warning>
+
+## Bon à savoir
+
+- Aucun compte rendu ne part de lui-même. L'envoi est toujours déclenché par une personne, après aperçu et confirmation.
+- Un compte rendu non finalisé ne peut pas être envoyé : Hirify n'envoie que des comptes rendus terminés.
+- Vous ne pouvez pas supprimer l'envoi d'un collègue depuis Hirify. Passez par votre logiciel de recrutement, ou demandez-lui de le retirer.
+- Dissocier l'entretien de la candidature n'efface pas l'historique des envois, et ne retire rien de votre logiciel de recrutement.
+- L'aperçu peut être indisponible — le dialogue de confirmation affiche alors « Aperçu indisponible. ». L'envoi reste possible, mais vous relisez le compte rendu dans l'éditeur avant de confirmer.
+- Ce qui part par cet envoi est le compte rendu sélectionné et votre verdict, rien d'autre. Deux automatismes peuvent écrire par ailleurs sur la fiche du candidat, si un administrateur les a activés : les tags de synthèse et le remplissage des champs personnalisés restés vides. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+
+<CardGroup cols={2}>
+  <Card title="Lien avec une candidature" icon="link" href="/fr/integrations/lier-un-entretien-a-une-candidature">
+    Rattacher l'entretien avant de pouvoir l'évaluer.
+  </Card>
+  <Card title="Automatismes ATS" icon="sliders" href="/fr/integrations/automatismes-ats">
+    Ce que Hirify peut faire de lui-même après un entretien.
+  </Card>
+</CardGroup>

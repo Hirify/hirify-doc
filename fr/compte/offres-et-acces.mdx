@@ -5,4 +5,81 @@ description: "Comparer les offres et repérer les fonctionnalités réservées �
 icon: "table-list"
 ---
 
-Contenu en cours de rédaction.
+Dans Hirify, ce que vous voyez dépend de deux choses : l'offre souscrite par votre organisation, et le rôle qui vous a été donné dedans. Cette page vous dit laquelle des deux explique une fonctionnalité absente de votre écran.
+
+## Les trois offres
+
+| | Starter | Hub | Volume |
+| --- | --- | --- | --- |
+| Prix HT par siège | 29 € / mois | 59 € / mois | sur devis |
+| Positionnement | Capter et restituer vos entretiens | Le produit complet, connecté à votre logiciel de recrutement | Plusieurs équipes, contrat sur mesure |
+
+L'offre Hub reprend tout ce que contient Starter. L'offre Volume reprend tout ce que contient Hub.
+
+## Ce que couvre chaque offre
+
+<AccordionGroup>
+  <Accordion title="Starter">
+    Entretiens en visioconférence et en présentiel sans limite de nombre, comptes rendus et analyse, templates personnalisés, export avancé, et une ligne téléphonique dédiée avec un quota de 300 minutes d'appels par mois.
+  </Accordion>
+  <Accordion title="Hub">
+    Tout Starter, sans quota de minutes d'appels, plus la connexion à votre logiciel de recrutement, l'Assistant, le Sourcing, le Pilotage, la collaboration multi-sièges et le support prioritaire.
+  </Accordion>
+  <Accordion title="Volume">
+    Tout Hub, plus l'authentification unique, un contrat et une facturation sur mesure, et un support dédié. La tarification s'affiche « Sur mesure » et le bouton **Parler à notre équipe** ouvre un formulaire de prise de contact.
+  </Accordion>
+</AccordionGroup>
+
+## Ce qui dépend de votre offre
+
+- **Assistant**, **Sourcing** et **Pilotage** demandent au minimum l'offre Hub. Sans elle, l'entrée n'apparaît pas dans la barre latérale.
+- **Templates personnalisés** et **téléphonie** demandent au minimum l'offre Starter. L'entrée **Téléphonie** ne s'affiche dans les **Paramètres** que si votre offre y donne droit.
+- La **connexion à votre logiciel de recrutement** relève de l'offre Hub.
+- Le **quota de minutes d'appels** ne concerne que l'offre Starter. Sur l'offre Hub, la page **Consommation** affiche « Minutes illimitées ce mois-ci ».
+
+## Ce qui dépend de votre rôle
+
+Quatre rôles existent : administrateur, manager, membre et admin facturation.
+
+- Un **membre** ne voit que ses propres entretiens.
+- Un **manager** voit les entretiens de toute l'organisation et les statistiques par membre, mais ne gère ni les membres ni la facturation.
+- Un **administrateur** gère les membres, les rôles, les paramètres de l'organisation et l'abonnement, et accède à tout le produit.
+- Un **admin facturation** gère les membres et l'abonnement, sans aucun accès au produit. Il n'occupe pas de place dans votre abonnement.
+
+Deux écrans cumulent les deux conditions : **Pilotage** et **Fiabilité** exigent l'offre Hub *et* le rôle administrateur ou manager. Un membre y voit un message d'accès réservé.
+
+Le détail des rôles est décrit dans [Rôles et accès](/fr/demarrer/roles-et-acces).
+
+## Vérifier ce dont vous disposez
+
+<Steps>
+  <Step title="Ouvrir la page Abonnement">
+    Depuis le menu de votre compte, en bas de la barre latérale, choisissez **Gérer l'abonnement**. L'entrée n'apparaît que pour les administrateurs et les admins facturation.
+  </Step>
+  <Step title="Lire l'onglet Mon plan">
+    Le bandeau en haut de page affiche le nom de votre offre, son statut, la date de prochaine échéance et le nombre de sièges occupés.
+  </Step>
+  <Step title="Comparer">
+    Plus bas, la section **Tous les plans** liste les offres côte à côte. La bascule **Mensuel** / **Annuel** recalcule les montants et affiche la remise appliquée au paiement annuel.
+  </Step>
+</Steps>
+
+{/* CAPTURE : l'onglet « Mon plan » avec le bandeau de plan et la grille de comparaison. */}
+
+## Bon à savoir
+
+- Une fonctionnalité absente peut tenir à votre offre comme à votre rôle : commencez par regarder votre rôle sur la page des membres, il est plus souvent en cause.
+- Le changement d'offre se fait depuis la page **Abonnement**, et seulement par un administrateur ou un admin facturation.
+- Une organisation ne peut connecter qu'un seul logiciel de recrutement à la fois, quelle que soit l'offre.
+- L'authentification unique se met en place avec l'équipe Hirify : aucun écran de configuration n'existe côté client.
+- Hirify ne décide jamais à votre place. Le compte rendu et l'évaluation ne partent dans votre logiciel de recrutement que sur un geste de votre part : vous les envoyez depuis le panneau ATS de l'entretien, et une confirmation vous est demandée.
+- Deux automatismes peuvent en revanche écrire sans validation entretien par entretien : les tags de synthèse posés sur la fiche du candidat après chaque entretien analysé, et le remplissage des champs personnalisés restés vides. Les deux sont désactivés par défaut ; seul un administrateur les active, au niveau de la connexion, dans **Paramètres** > **Intégrations**. Le remplissage ne touche que les champs vides, vous êtes notifié, et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+
+<CardGroup cols={2}>
+  <Card title="Abonnement et facturation" icon="credit-card" href="/fr/compte/abonnement-et-facturation">
+    Changer d'offre, suivre vos places et retrouver vos factures.
+  </Card>
+  <Card title="Membres et rôles" icon="users" href="/fr/compte/gerer-les-membres">
+    Inviter un collègue et lui attribuer le bon rôle.
+  </Card>
+</CardGroup>

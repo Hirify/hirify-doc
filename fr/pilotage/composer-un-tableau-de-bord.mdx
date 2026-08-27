@@ -9,4 +9,101 @@ icon: "chart-line"
   Accès : offre Hub, rôle administrateur ou manager.
 </Note>
 
-Contenu en cours de rédaction.
+Pilotage compose un tableau de bord de recrutement à partir d'une phrase écrite en français. Cette page couvre la composition d'un tableau, la pose d'un objectif sur un indicateur, et la demande d'analyse.
+
+## Décrire votre tableau en langage courant
+
+<Steps>
+  <Step title="Ouvrez Pilotage">
+    Dans la barre latérale, section **Mon espace**, cliquez sur **Pilotage**. Si vous n'avez encore enregistré aucun tableau, l'atelier s'ouvre directement. Sinon, cliquez sur **Nouveau tableau**.
+  </Step>
+  <Step title="Partez d'un point de départ, ou décrivez le vôtre">
+    Sous **Points de départ**, cinq cartes sont proposées : **Santé du pipeline**, **Vélocité et délais**, **Sourcing et qualité**, **Cockpit staffing** et **Activité d'entretiens**. Un clic ouvre le tableau correspondant sans passer par une génération.
+  </Step>
+  <Step title="Ou écrivez votre demande">
+    Sous **Ou décrivez-le**, le champ porte l'indication « Décrivez le tableau à composer, en français ». Écrivez ce que vous voulez suivre, puis cliquez sur **Générer**. La touche <kbd>/</kbd> place le curseur dans ce champ depuis n'importe où sur la page.
+  </Step>
+  <Step title="Suivez la composition">
+    Les étapes s'affichent au fur et à mesure, puis les blocs apparaissent. **Arrêter** interrompt la composition et vous ramène à l'atelier.
+  </Step>
+</Steps>
+
+Chaque carte porte une pastille : **Disponible**, **Partielle**, **En attente de données** ou **Nécessite un ATS connecté**. Une carte en attente n'est pas cliquable. Quand la donnée manque, le lien **Voir comment débloquer →** mène à la page Fiabilité ; sur une carte **Nécessite un ATS connecté**, ce lien ne s'affiche pas — le geste attendu est la connexion de votre logiciel de recrutement.
+
+{/* CAPTURE : l'atelier Pilotage — les cinq points de départ, leurs pastilles, et la barre « Ou décrivez-le » */}
+
+## Lire le tableau obtenu
+
+Le tableau porte un titre, une phrase de restitution, puis une ligne discrète qui indique **Composé en N s** ou **Rendu instantané**, suivie du nombre de blocs. Après une composition, le bouton **Détail des étapes** rouvre la liste des étapes suivies. Un tableau ouvert depuis un point de départ s'affiche instantanément, sans étapes à détailler : le bouton n'apparaît pas.
+
+Les blocs prennent la forme la mieux adaptée à la mesure : chiffres clés en bandeau, barres, courbes, tunnel de conversion, histogrammes et tableaux.
+
+Tant que vous n'avez pas cliqué sur **Enregistrer**, le tableau n'existe que dans cette page.
+
+## Ajuster le tableau par une nouvelle demande
+
+La barre du bas porte l'indication « Ajustez : « ajoute le taux de rejet par département, passe sur 6 mois » ». Écrivez votre correction, puis cliquez sur **Envoyer**. Chaque demande appliquée reste affichée au-dessus de la barre, préfixée par « Vous : ».
+
+**Retour à l'atelier** repart d'une page vierge.
+
+<Warning>
+  Quitter la page après une génération ou un ajustement demande confirmation : « Le tableau composé n'est pas enregistré. Quitter sans enregistrer ? ». Le bouton Précédent du navigateur, lui, ne déclenche pas cette confirmation.
+</Warning>
+
+## Fixer un objectif sur un indicateur
+
+Un objectif se pose sur un tableau déjà enregistré dont vous êtes propriétaire, et seulement sur un bloc qui affiche un chiffre unique.
+
+<Steps>
+  <Step title="Ouvrez le tableau enregistré">
+    Depuis la barre latérale ou depuis la liste de vos tableaux.
+  </Step>
+  <Step title="Cliquez sur l'icône de cible">
+    Elle apparaît dans l'en-tête du bloc, avec l'infobulle **Définir un objectif**.
+  </Step>
+  <Step title="Saisissez la valeur">
+    La fenêtre **Objectif du bloc** rappelle le titre du bloc et attend une **Valeur cible**. L'unité du bloc est rappelée à droite du champ. Cliquez sur **Enregistrer**.
+  </Step>
+</Steps>
+
+Le bloc affiche alors une pastille **Objectif** suivie de la valeur. Sa couleur indique si la cible est atteinte, quand la mesure a un sens d'amélioration connu.
+
+## Modifier ou retirer un objectif
+
+Rouvrez le même bloc : l'icône porte maintenant l'infobulle **Modifier l'objectif**. Changez la valeur et cliquez sur **Enregistrer**, ou cliquez sur **Retirer** pour l'effacer. Le bloc reprend aussitôt son affichage sans cible.
+
+## Faire analyser le tableau
+
+Sur un tableau enregistré, le bouton **Analyser ce tableau** demande une lecture des chiffres affichés. Pendant le traitement, il indique **Analyse en cours…**.
+
+L'analyse porte sur la vue en cours, filtres compris. Les observations se posent à deux endroits : celles qui concernent un bloc précis se lisent derrière le marqueur d'information de ce bloc ; les autres s'affichent en bandeau au-dessus du tableau. Une ligne récapitule le résultat : **Analyse · 1 observation**, **Analyse · N observations**, ou **Analyse · rien à signaler**.
+
+Une fois l'analyse posée, le bouton devient **Relancer l'analyse**. Le bouton **Actualiser**, à côté, recalcule les chiffres ; la mention **Actualisé à** donne l'heure du dernier calcul.
+
+{/* CAPTURE : un tableau enregistré, avec le bandeau d'observations, une pastille Objectif et le bouton Analyser ce tableau */}
+
+## Qui a accès au Pilotage (à partir de l'offre Hub, rôle admin ou manager)
+
+Le Pilotage demande deux conditions cumulées : une organisation à partir de l'offre Hub, et un rôle **administrateur** ou **manager**. Les entrées **Pilotage** et **Fiabilité** n'apparaissent dans la barre latérale que si les deux sont réunies.
+
+Un membre qui atteint la page malgré tout voit un écran **Accès réservé** : « Les tableaux de bord sont réservés aux administrateurs et managers de l'organisation. »
+
+La distinction entre administrateur et manager porte sur l'accès, pas sur le contenu : les deux rôles voient les mêmes chiffres.
+
+## Bon à savoir
+
+- Un objectif ne se pose que sur un bloc à chiffre unique. Les graphiques, tunnels et tableaux n'en acceptent pas.
+- Les objectifs se posent sur un tableau enregistré. Dans l'atelier, l'icône de cible n'est pas proposée.
+- L'analyse ne lit que les données affichées à l'écran, filtres compris. Elle ne va rien chercher ailleurs.
+- Sans logiciel de recrutement connecté, vos tableaux ne couvrent que les entretiens menés dans Hirify. Un bandeau le rappelle en haut de l'atelier.
+- Le tableau composé ne s'enregistre pas seul : sans clic sur **Enregistrer**, il est perdu en quittant la page.
+- Les cartes des points de départ dépendent des données réellement présentes dans votre compte. Une carte grisée n'est pas une panne, c'est une donnée qui manque.
+
+<CardGroup cols={2}>
+  <Card title="Visibilité et épinglage" icon="thumbtack" href="/fr/pilotage/enregistrer-partager-epingler">
+    Conserver un tableau, le partager et le retrouver.
+  </Card>
+  <Card title="Fiabilité des données" icon="list-check" href="/fr/pilotage/fiabilite-des-donnees">
+    Voir ce qui est disponible et le geste qui débloque le reste.
+  </Card>
+</CardGroup>

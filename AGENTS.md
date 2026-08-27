@@ -18,7 +18,12 @@ Ces trois règles ont une raison d'être : les 23 pages générées le 27 août 
 
 Repris de l'interface, à ne pas traduire ni paraphraser : *entretien*, *compte rendu*, *template*, *vivier*, *intervenant*, *analyse*, *signaux*, *assistant de réunion* (le bouton s'appelle « Ajouter le bot »), *Sourcing*, *Assistant*, *Pilotage*, *Fiabilité*.
 
-Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, écrire dans le logiciel de recrutement sans validation du recruteur, chercher des profils hors du vivier, décider à la place du recruteur. Aucune page ne doit laisser entendre le contraire — en particulier, **le compte rendu n'est jamais poussé automatiquement**.
+Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher des profils hors du vivier, décider à la place du recruteur.
+
+**Écritures vers le logiciel de recrutement — la distinction est à faire, toujours.** Ne jamais écrire « Hirify n'écrit rien sans votre validation » : c'est faux.
+
+- **Le compte rendu et l'évaluation ne partent jamais sans un geste du recruteur.** L'envoi passe par le panneau ATS de l'entretien et une confirmation explicite.
+- **Deux automatismes écrivent d'eux-mêmes, si un administrateur les a activés** : les tags de synthèse posés sur la fiche du candidat, et le remplissage des champs personnalisés restés vides — réversible depuis le panneau ATS, avec une notification. Les deux sont désactivés par défaut ; l'envoi automatique de l'assistant de réunion, lui, est actif par défaut.
 
 ## Style
 

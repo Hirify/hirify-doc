@@ -5,4 +5,79 @@ description: "Joindre le CV du candidat à un entretien pour enrichir l'analyse 
 icon: "paperclip"
 ---
 
-Contenu en cours de rédaction.
+Un entretien dit beaucoup, mais rarement les dates exactes, les intitulés complets et les diplômes. Le CV les apporte. Joint à un entretien, il complète le dossier du candidat et signale les écarts entre ce qui est écrit et ce qui a été dit.
+
+## Déposer un CV
+
+Le CV se dépose depuis le panneau **Analyse** de la fiche entretien.
+
+<Steps>
+  <Step title="Ouvrez le panneau Analyse">
+    Sur la fiche de l'entretien, cliquez sur **Analyse** dans la barre verticale de droite.
+  </Step>
+  <Step title="Repérez la barre Ajouter le CV">
+    Elle est en haut du panneau, bordure pointillée, avec la mention « Complète les dates et les diplômes, signale les écarts avec l'entretien ».
+  </Step>
+  <Step title="Déposez le fichier">
+    Cliquez sur **Déposer** pour choisir un fichier, ou faites glisser le PDF directement sur la barre.
+  </Step>
+  <Step title="Laissez le traitement se faire">
+    La barre suit l'avancement : **Envoi du fichier**, puis **Analyse du contenu**, **Structuration du profil** et **Enrichissement du profil**.
+  </Step>
+</Steps>
+
+Le fichier doit être un **PDF** de **10 Mo** au maximum. Tout autre format est refusé avec le message « Seuls les fichiers PDF sont acceptés ».
+
+{/* CAPTURE : le panneau Analyse avec la barre « Ajouter le CV » en bordure pointillée */}
+
+<Warning>
+  Le dépôt d'un CV relance la génération de tous les comptes rendus déjà produits pour cet entretien, pour qu'ils tiennent compte de ce que le CV apporte. Les retouches que vous auriez déjà faites sur ces comptes rendus sont remplacées. Déposez le CV avant de retravailler le texte.
+</Warning>
+
+## Ce que le CV change
+
+Une fois le traitement terminé, la barre affiche **CV analysé** et résume l'apport, par exemple « 4 champs complétés · 2 corrections de transcription ». Trois effets se cumulent :
+
+- **Le dossier se complète.** Postes, dates, formations, certifications et langues sont enrichis à partir du CV. La section **Dossier** du panneau s'ouvre pour vous montrer le résultat.
+- **Les écarts remontent.** Quand le CV contredit l'entretien, l'élément apparaît dans la liste **À trancher** avec le repère **Écart CV**. En le dépliant, vous voyez côte à côte ce qui a été dit, ligne **Entretien**, et ce qui est écrit, ligne **CV**. Hirify signale la divergence, il ne tranche pas à votre place.
+- **La transcription se corrige.** Les noms propres et les termes mal entendus pendant l'entretien sont rectifiés à partir du CV. Dans l'onglet **Transcription**, ces mots sont soulignés en pointillés : survolez-les pour voir la version d'origine et la correction.
+
+## Remplacer ou supprimer le CV
+
+Une fois l'analyse du candidat disponible, la barre disparaît et le CV se replie dans le repère **CV analysé** de l'en-tête du panneau. Cliquez dessus : le menu rappelle le nom du fichier, sa date d'ajout et son nombre de pages, et propose **Remplacer le CV** et **Supprimer le CV**.
+
+Tant que le panneau n'a pas d'analyse du candidat à afficher, la barre reste en place, titrée **CV analysé** : elle porte le bouton **Remplacer** et, au survol, une corbeille qui supprime le CV.
+
+<Note>
+  La suppression retire le CV et fait disparaître de l'analyse les écarts qu'il avait relevés. Les corrections de noms déjà appliquées à la transcription, elles, sont conservées.
+</Note>
+
+## Quand le traitement échoue
+
+La barre reste affichée et indique la raison : **Fichier protégé par mot de passe**, **Format de fichier non supporté**, **Impossible de lire le contenu**, **Fichier trop volumineux**, **Erreur réseau** ou **Échec du traitement**. Le bouton **Remplacer** permet de renvoyer un autre fichier.
+
+Un CV protégé par mot de passe ou constitué d'images de mauvaise qualité ne peut pas être lu. Réexportez-le en PDF depuis le document d'origine, ou continuez sans lui : l'entretien reste analysé.
+
+## Bon à savoir
+
+- Le CV ne peut être déposé que sur un entretien au statut **Terminé**.
+- Un seul CV par entretien. Pour en changer, utilisez **Remplacer le CV** ; le précédent est écrasé.
+- Tant qu'un CV est en cours de traitement, Hirify refuse un nouveau dépôt et le dit.
+- Si l'entretien est rattaché à une candidature dans votre logiciel de recrutement, Hirify va chercher le CV joint à cette candidature. Un CV que vous déposez vous-même l'emporte toujours : il ne sera jamais remplacé par celui de la candidature.
+- Le CV nourrit l'analyse du candidat pour cet entretien. Il n'est pas renvoyé vers votre logiciel de recrutement.
+- Format accepté : PDF uniquement. Les fichiers de traitement de texte doivent être exportés en PDF avant dépôt.
+
+<CardGroup cols={2}>
+  <Card title="L'analyse du candidat" icon="user-magnifying-glass" href="/fr/comptes-rendus/analyse-du-candidat">
+    Lire le panneau Analyse, ses listes et ses citations.
+  </Card>
+  <Card title="Relire un entretien" icon="file-lines" href="/fr/entretiens/relire-un-entretien">
+    Circuler entre les vues Notes, L'essentiel et Transcription.
+  </Card>
+  <Card title="Lier un entretien à une candidature" icon="link" href="/fr/integrations/lier-un-entretien-a-une-candidature">
+    Rattacher l'entretien au dossier candidat de votre logiciel de recrutement.
+  </Card>
+  <Card title="Lire et modifier un compte rendu" icon="file-pen" href="/fr/comptes-rendus/lire-et-modifier">
+    Retoucher le texte une fois le CV pris en compte.
+  </Card>
+</CardGroup>

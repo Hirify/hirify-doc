@@ -5,4 +5,84 @@ description: "Vous saurez ce que l'IA produit, comment vérifier ses citations e
 icon: "microchip"
 ---
 
-Contenu en cours de rédaction.
+L'IA de Hirify assiste le recruteur et ne décide pas à sa place. Cette page dit ce qu'elle produit, ce qu'elle ne fait pas, comment vérifier une affirmation, et ses limites connues.
+
+## Ce que l'IA produit
+
+À partir de la transcription d'un entretien, l'analyse produit un profil structuré du candidat, une appréciation d'ensemble en cinq niveaux, des signaux d'attention et des observations. Chaque fait extrait porte un niveau de confiance. **L'analyse ne produit pas de score numérique global du candidat.**
+
+Le compte rendu met en forme une synthèse lisible à partir de cette analyse.
+
+Le Sourcing, lui, note chaque candidat retenu de zéro à cent sur quatre dimensions, puis agrège ces notes en un score pondéré qui ordonne la liste. Les candidats sont ensuite regroupés en paliers d'affichage.
+
+## Ce qu'elle ne fait pas
+
+- **Elle n'envoie ni le compte rendu ni l'évaluation dans votre logiciel de recrutement sans vous.** Vous les relisez, puis vous les envoyez depuis le panneau ATS de l'entretien, après confirmation.
+- **Elle n'envoie aucun message à un candidat.** Un texte qu'elle rédige part de vos propres outils, sous votre signature.
+- **Elle n'écarte personne.** Dans le Sourcing, les exigences du poste sont des critères de notation, pas des filtres éliminatoires : les profils les moins en adéquation restent visibles dans un palier dédié.
+- **Elle ne cherche pas hors de votre vivier.** Le Sourcing interroge vos propres données, jamais un annuaire externe.
+- **Elle ne décide pas.** La décision relative à une candidature est prise par un recruteur.
+
+Deux écritures font exception, et il faut les connaître : les **tags de synthèse** posés sur la fiche du candidat après chaque entretien analysé, et le **remplissage des champs personnalisés restés vides** — salaire, disponibilité, télétravail. Celles-là partent sans validation entretien par entretien. Les deux sont désactivées par défaut, et seul un administrateur les active, au niveau de la connexion, dans **Paramètres** > **Intégrations**. Le remplissage ne touche que les champs vides, il vous est notifié, et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+
+<Note>
+  La production de l'évaluation est automatique ; l'usage qui en est fait reste un acte humain. Autrement dit, le point de contrôle se situe à l'envoi et à la décision, pas à l'étape de génération — et, pour les deux écritures ci-dessus, à leur activation par un administrateur. Ce point est énoncé tel quel pour que votre entreprise et son conseil l'apprécient.
+</Note>
+
+## Comment les affirmations sont ancrées
+
+L'extraction est ancrée par citation. Les agents n'écrivent pas eux-mêmes le texte des preuves : ils renvoient les indices des segments de la transcription, et le texte cité est ensuite reconstitué à partir des segments réels.
+
+Un fait dépourvu d'ancrage valide est écarté par une règle de code, non par un jugement du modèle. La même suppression vaut pour un fait sans valeur exploitable, hors limites, ou attribué au mauvais intervenant.
+
+Les agents fonctionnent à température zéro et sous schéma strict : leurs sorties sont stables d'une exécution à l'autre et conformes à une structure attendue.
+
+Des évaluateurs de qualité échantillonnent une partie des analyses pour mesurer la fidélité à la source, l'hallucination et le biais, et détecter une dérive. Ils ne jugent pas le candidat et ne vous sont jamais montrés.
+
+## Vérifier une affirmation vous-même
+
+Chaque affirmation ancrée peut être remontée à sa source, sans quitter le panneau d'analyse.
+
+<Steps>
+  <Step title="Cliquez sur Voir la citation">
+    Le lien apparaît sous l'affirmation. Il ouvre le passage cité, entouré des tours de parole qui l'encadrent, avec le nom de l'intervenant et l'horodatage.
+  </Step>
+  <Step title="Ouvrez la transcription si l'extrait ne suffit pas">
+    Le bouton **Ouvrir dans la transcription** vous dépose au bon endroit dans l'entretien complet.
+  </Step>
+</Steps>
+
+Dans l'Assistant, une référence que l'IA aurait citée sans qu'un outil l'ait réellement produite est retirée, et le retrait vous est signalé sous la réponse plutôt que masqué.
+
+{/* CAPTURE : une affirmation du panneau d'analyse, son lien « Voir la citation » ouvert sur le passage cité */}
+
+## Le garde-fou contre la discrimination
+
+L'agent qui produit les insights applique des règles codées citant l'article L1132-1 du Code du travail et la directive 2000/78/CE. Les caractéristiques protégées — santé, âge, situation familiale, origine, convictions — ne peuvent jamais être classées en point d'attention ou en risque. Elles ne sont retenues, de façon neutre, que si elles sont strictement pertinentes pour le poste.
+
+Lorsqu'un critère protégé a été abordé pendant l'entretien, une section **Vigilance légale** apparaît dans le panneau d'analyse. Elle nomme le critère, précise la nature de l'échange, donne la citation vérifiable et rappelle l'article. Sur un propos évoqué spontanément par le candidat, elle ajoute : « Information à écarter de la décision ».
+
+Ces alertes qualifient la conduite de l'entretien, jamais le candidat : elles restent hors de l'appréciation portée sur lui.
+
+## Les limites connues
+
+**L'attribution des intervenants est un risque résiduel.** La détection peut mal rattacher des segments, ou inverser les rôles du recruteur et du candidat. Un propos mal attribué peut être écarté à tort, ou orienter l'évaluation. Des filets de réessai et un mécanisme de correction d'inversion réduisent l'occurrence du défaut sans l'éliminer.
+
+**L'IA reçoit du contenu nominatif.** Le contexte issu de votre logiciel de recrutement ne transmet que des champs structurés, et les outils de l'Assistant ne transmettent que des références anonymes. Le pipeline d'analyse d'entretien, lui, transmet la transcription nominative et le contenu des CV. Les fournisseurs de modèles retenus s'engagent à ne conserver aucun contenu soumis et à ne pas entraîner leurs modèles sur les données transmises.
+
+## Bon à savoir
+
+- La génération de ces appréciations et de ces classements constitue un profilage au sens de l'article 4.4 du RGPD. Le fait est énoncé, pas qualifié : la qualification juridique relève de votre conseil.
+- Rien dans le produit ne vous oblige à réviser ou à acquitter le résultat de l'IA avant de vous y fier. Ce point est signalé comme ouvert.
+- Sont journalisés à des fins d'audit la version de modèle, les segments cités et les scores.
+- L'évaluation d'équité dédiée n'a pas encore été menée. Aucun résultat n'est avancé à ce stade.
+- L'information des candidats sur l'usage de l'IA vous incombe. Un modèle de mention est fourni sur la page Informer vos candidats.
+
+<CardGroup cols={2}>
+  <Card title="Informer vos candidats" icon="bullhorn" href="/fr/confiance/informer-vos-candidats">
+    Le modèle de transparence sur l'IA.
+  </Card>
+  <Card title="Vérifier une réponse" icon="magnifying-glass-chart" href="/fr/assistant/verifier-une-reponse">
+    Remonter à la source dans l'Assistant.
+  </Card>
+</CardGroup>

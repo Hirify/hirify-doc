@@ -5,4 +5,75 @@ description: "Identifiez ce qui a limité la transcription d'un entretien et ce 
 icon: "closed-captioning"
 ---
 
-Contenu en cours de rédaction.
+L'entretien est bien dans Hirify, mais le texte s'arrête trop tôt, saute des passages, ou n'existe pas. Ce qui manque dans la transcription manquera aussi dans le compte rendu et dans l'analyse : c'est donc par là qu'il faut commencer.
+
+## Un entretien marqué Trop court
+
+La mention **Trop court** s'affiche quand l'enregistrement dure moins d'une minute. Elle couvre aussi le cas d'un enregistrement d'une durée normale mais dans lequel aucune parole n'a été captée, par exemple lorsque le micro est resté coupé ou que la mauvaise entrée audio a été sélectionnée.
+
+Il n'y a rien à récupérer dans ce cas. Vérifiez le matériel, puis relancez un enregistrement.
+
+## Le texte s'arrête en cours d'entretien
+
+Trois causes fréquentes, dans l'ordre où il faut les écarter.
+
+<AccordionGroup>
+  <Accordion title="L'entretien a été coupé en deux">
+    Une visioconférence relancée après une coupure, ou un appel rappelé, crée deux entretiens distincts. Chacun ne porte que sa moitié. Vous pouvez les réunir : ouvrez **Transcriptions**, sélectionnez les deux, puis cliquez sur **Fusionner**.
+  </Accordion>
+  <Accordion title="L'assistant de réunion est parti avant la fin">
+    S'il a été retiré de la visioconférence, ou si la réunion a été fermée puis rouverte sous un autre lien, l'enregistrement s'arrête là. La suite de l'échange n'existe nulle part.
+  </Accordion>
+  <Accordion title="Le téléphone qui enregistrait s'est mis en veille">
+    En présentiel, l'enregistrement s'appuie sur le navigateur du téléphone. Un écran verrouillé, un appel entrant ou un changement d'application peuvent l'interrompre. Gardez la page au premier plan pendant tout l'entretien.
+  </Accordion>
+</AccordionGroup>
+
+## Le texte est là, mais fautif
+
+Noms de clients écorchés, intitulés internes méconnaissables, sigles métier transformés : la transcription entend correctement mais écrit ce qu'elle connaît. C'est ce que corrige le vocabulaire de votre organisation.
+
+<Steps>
+  <Step title="Ouvrez le vocabulaire">
+    Un administrateur ouvre **Paramètres**, puis **Vocabulaire**.
+  </Step>
+  <Step title="Ajoutez vos termes">
+    Dans **Termes spécifiques à votre entreprise**, cliquez sur **Ajouter**, puis saisissez les noms propres, produits et intitulés qui reviennent dans vos entretiens.
+  </Step>
+  <Step title="Vérifiez les vocabulaires métier">
+    La section **Vocabulaires métier activés** indique les domaines déjà pris en charge pour votre organisation.
+  </Step>
+</Steps>
+
+<Note>
+  Le vocabulaire agit sur les entretiens captés ensuite. Il ne réécrit pas une transcription déjà produite.
+</Note>
+
+{/* CAPTURE : page Vocabulaire avec la section Termes spécifiques à votre entreprise */}
+
+## Ce que la transcription entraîne dans sa chute
+
+Quand la transcription est pauvre, les écrans qui en dépendent le disent explicitement plutôt que d'inventer.
+
+- **L'essentiel** peut afficher « Le contenu de cet appel ne permet pas de générer un résumé. » Un autre message, « L'essentiel n'est généré que pour les entretiens où un candidat est présent. », signale simplement qu'aucun intervenant n'a été désigné comme candidat.
+- L'analyse peut afficher **Analyse impossible**. Un bouton **Relancer l'analyse** apparaît quand une nouvelle tentative a du sens.
+- Le compte rendu peut afficher « La génération du compte rendu a échoué », avec la précision « La transcription et l'analyse ne sont pas affectées. » et un bouton **Réessayer**.
+
+Une nouvelle tentative repart de la même transcription. Si celle-ci est trop pauvre, le résultat ne changera pas.
+
+## Bon à savoir
+
+- Une transcription ne se re-transcrit pas. L'audio est traité une fois ; ce qui n'a pas été capté ne peut pas être retrouvé.
+- En présentiel, le nombre choisi dans **Participants** au moment de générer le QR code aide la séparation des voix. C'est une aide, pas une garantie.
+- Une transcription partielle reste exploitable : le compte rendu et l'analyse s'appuient sur ce qui existe, et signalent ce qu'ils n'ont pas trouvé plutôt que de le combler.
+- Si des passages sont attribués à la mauvaise personne, ce n'est pas un problème de transcription mais d'identification des intervenants.
+- Une salle bruyante, un haut-parleur éloigné ou plusieurs personnes qui parlent en même temps dégradent la captation avant même le traitement.
+
+<CardGroup cols={2}>
+  <Card title="Améliorer les transcriptions" href="/fr/demarrer/ameliorer-les-transcriptions">
+    Le vocabulaire, en détail.
+  </Card>
+  <Card title="Fusionner deux entretiens" href="/fr/entretiens/fusionner-deux-entretiens">
+    Recoller un entretien coupé en deux.
+  </Card>
+</CardGroup>

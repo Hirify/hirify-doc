@@ -5,4 +5,80 @@ description: "Réunir plusieurs enregistrements d'un même échange pour obtenir
 icon: "code-merge"
 ---
 
-Contenu en cours de rédaction.
+Un appel coupé, une visioconférence reprise sur un autre lien, une pause qui a interrompu l'enregistrement : le même entretien se retrouve alors éclaté en deux ou trois entretiens dans Hirify. La fusion les réunit en un seul, avec une transcription continue et un compte rendu qui couvre tout l'échange.
+
+## Fusionner des enregistrements
+
+<Steps>
+  <Step title="Ouvrez la liste des entretiens">
+    Dans le menu de gauche, section **Entretiens**, cliquez sur **Transcriptions**.
+  </Step>
+  <Step title="Cochez les enregistrements à réunir">
+    Une case à cocher se trouve au début de chaque ligne, active seulement sur les entretiens au statut **Terminé**. Cochez-en au moins deux, et dix au maximum. Une barre apparaît en bas de l'écran et indique combien vous en avez sélectionné.
+  </Step>
+  <Step title="Cliquez sur Fusionner">
+    Le bouton n'apparaît qu'à partir de deux enregistrements sélectionnés. La fenêtre **Fusionner des entretiens** s'ouvre.
+  </Step>
+  <Step title="Vérifiez l'ordre de fusion">
+    Par défaut, l'ordre est chronologique et le plus ancien est conservé. Le bouton **Modifier** déplie la liste : l'enregistrement conservé porte le repère **Conservé**, les flèches permettent de remonter ou de descendre les autres.
+  </Step>
+  <Step title="Vérifiez les intervenants">
+    La ligne **Intervenants** résume la façon dont les voix se recoupent. **Ajuster** la déplie : pour chaque voix des enregistrements ajoutés, choisissez l'intervenant de l'enregistrement conservé auquel elle correspond, ou **Nouvel intervenant** pour la garder à part. Les correspondances sont pré-remplies ; la liste s'ouvre d'elle-même quand une voix n'a pas de correspondance évidente.
+  </Step>
+  <Step title="Confirmez">
+    Le récapitulatif annonce la durée totale et le nombre de prises de parole. Cliquez sur **Fusionner et supprimer la source** — le bouton se met au pluriel si vous avez ajouté plusieurs enregistrements.
+  </Step>
+</Steps>
+
+{/* CAPTURE : la fenêtre « Fusionner des entretiens » avec l'ordre de fusion replié et l'alerte de suppression */}
+
+<Warning>
+  Les enregistrements ajoutés sont supprimés définitivement à la fin de l'opération : seul l'enregistrement marqué **Conservé** subsiste. La fenêtre l'annonce avant confirmation, en indiquant combien d'entretiens disparaissent et à quelles dates. La fusion ne se défait pas.
+</Warning>
+
+## Ce que devient l'entretien fusionné
+
+L'entretien conservé garde son titre et sa date, et hérite de la totalité des prises de parole, dans l'ordre choisi. Son compte rendu principal et son analyse sont refaits à partir de la conversation complète : la liste affiche alors le repère **Régénération** sur la ligne concernée, jusqu'à ce que vous rechargiez la page.
+
+Les comptes rendus issus d'un template que l'entretien conservé n'a pas sont repris sur lui : leur texte est préservé, mais ils ne se refont pas seuls. Quand les deux entretiens portent un compte rendu du même template, seul celui de l'entretien conservé subsiste.
+
+## Quand la fusion est refusée
+
+Seuls les entretiens au statut **Terminé** sont sélectionnables : ailleurs la case à cocher est désactivée et l'infobulle indique « Seuls les entretiens terminés peuvent être fusionnés ». Un entretien dont la régénération est en cours est grisé lui aussi.
+
+Sur une sélection valide, si Hirify ne peut pas préparer l'opération, la fenêtre affiche **Fusion impossible** et la raison. Les cas les plus courants :
+
+<AccordionGroup>
+  <Accordion title="Ces entretiens ont déjà été fusionnés">
+    Un enregistrement déjà absorbé par l'autre ne peut pas l'être une seconde fois : ses prises de parole seraient comptées deux fois. Il en va de même si les deux entretiens contiennent déjà un troisième enregistrement commun.
+  </Accordion>
+  <Accordion title="Un des entretiens n'a aucune prise de parole">
+    Un enregistrement sans transcription n'a rien à apporter. Supprimez-le plutôt que de le fusionner.
+  </Accordion>
+  <Accordion title="Vous n'avez pas les droits">
+    La fusion modifie l'entretien conservé et supprime les autres. Il vous faut donc pouvoir modifier le premier et supprimer les seconds. Un membre ne peut fusionner que ses propres entretiens ; les managers et les administrateurs peuvent le faire sur toute l'organisation.
+  </Accordion>
+</AccordionGroup>
+
+## Bon à savoir
+
+- Vérifiez l'avertissement avant de confirmer : si l'un des enregistrements est rattaché à une candidature différente dans votre logiciel de recrutement, Hirify le signale. C'est souvent le signe qu'il ne s'agit pas du même entretien.
+- L'ordre compte. Les enregistrements sont mis bout à bout dans l'ordre affiché : un ordre faux produit une conversation dans le désordre. L'ordre chronologique proposé par défaut est presque toujours le bon.
+- Les correspondances d'intervenants sont des suggestions, pas des certitudes. La séparation des voix d'un enregistrement ne connaît pas celle de l'autre : dépliez **Ajuster** et vérifiez, surtout si la voix du candidat porte des noms différents d'un enregistrement à l'autre.
+- Un compte rendu qui ne se refait pas de lui-même reste marqué **Échec** sur l'entretien conservé. Son texte d'avant la fusion est conservé, mais il ne tient pas compte de l'échange complet.
+- La fusion ne sert qu'à réunir des enregistrements d'un même échange. Deux entretiens distincts avec le même candidat n'ont pas à être fusionnés : chacun garde son compte rendu. S'ils sont rattachés à la même candidature dans votre logiciel de recrutement, l'analyse du second tient compte de ce que le premier avait déjà établi.
+
+<CardGroup cols={2}>
+  <Card title="Retrouver et suivre vos entretiens" icon="list" href="/fr/entretiens/retrouver-et-suivre">
+    La liste, les statuts et les filtres.
+  </Card>
+  <Card title="Identifier les intervenants" icon="users" href="/fr/entretiens/identifier-les-intervenants">
+    Nommer les voix avant ou après la fusion.
+  </Card>
+  <Card title="Relire un entretien" icon="file-lines" href="/fr/entretiens/relire-un-entretien">
+    Vérifier la transcription continue une fois la fusion faite.
+  </Card>
+  <Card title="L'entretien n'a pas été enregistré" icon="life-ring" href="/fr/aide/l-entretien-n-a-pas-ete-enregistre">
+    Quand il manque tout ou partie d'un échange.
+  </Card>
+</CardGroup>

@@ -5,4 +5,75 @@ description: "Sélectionner le template qui structurera le compte rendu, ou lanc
 icon: "clipboard-list"
 ---
 
-Contenu en cours de rédaction.
+Un template fixe la trame du compte rendu : ses sections, ses questions, et la façon dont chaque réponse est rédigée. Cette page indique où le désigner, et ce qui se passe quand vous n'en désignez aucun.
+
+## Les trois moments où le template se décide
+
+Vous rattachez un template à un entretien avant qu'il ait lieu, depuis le **Calendrier**. Vous pouvez aussi créer un compte rendu à partir d'un template après coup, depuis la fiche de l'entretien. Et si vous ne faites ni l'un ni l'autre, votre template par défaut prend le relais.
+
+## Avant l'entretien, depuis le calendrier
+
+<Steps>
+  <Step title="Ouvrez l'événement">
+    Dans la barre latérale, cliquez sur **Calendrier**, puis sur l'événement concerné. Un panneau s'ouvre à droite avec le titre de l'événement et son horaire.
+  </Step>
+  <Step title="Parcourez vos templates">
+    Sous **Template de notes**, trois onglets se partagent la liste : **Vôtres**, **Partagés** et **Bibliothèque**. Le champ **Rechercher un template...** filtre les trois sur le nom, la description et les tags.
+  </Step>
+  <Step title="Sélectionnez, puis validez">
+    Cliquez sur la carte du template voulu. Cliquez ensuite sur **Ajouter le bot** pour envoyer l'assistant de réunion avec ce template. Si l'assistant est déjà prévu sur cet événement, le bouton s'appelle **Mettre à jour** et reste inactif tant que vous n'avez rien changé.
+  </Step>
+</Steps>
+
+{/* CAPTURE : le panneau latéral d'un événement, section « Template de notes », avec les trois onglets et le bouton « Ajouter le bot » */}
+
+<Note>
+  Une fois l'événement commencé, le template d'un assistant déjà prévu ne peut plus être changé : le panneau ne propose plus que **Fermer**. Tant qu'aucun assistant n'est prévu, vous pouvez encore en choisir un et cliquer sur **Ajouter le bot** : l'assistant rejoint immédiatement. Sur un événement terminé, le panneau affiche « Les templates ne peuvent plus être modifiés pour les événements terminés ».
+</Note>
+
+## Après l'entretien, depuis la fiche entretien
+
+Un entretien déjà traité peut recevoir un compte rendu supplémentaire, bâti sur un autre template. Les comptes rendus s'ajoutent, ils ne se remplacent pas.
+
+<Steps>
+  <Step title="Ouvrez le panneau Actions">
+    Sur la fiche de l'entretien, cliquez sur **Actions** dans la barre verticale de droite.
+  </Step>
+  <Step title="Créez une note">
+    Dans la section **Notes**, cliquez sur le bouton **+**.
+  </Step>
+  <Step title="Choisissez le template">
+    La fenêtre **Sélectionner un template** reprend les onglets **Vôtres**, **Partagés** et **Bibliothèque**. Cliquez sur un template : la génération démarre.
+  </Step>
+</Steps>
+
+<Note>
+  Ici, l'option **Sans template** n'est pas proposée : vous demandez explicitement un compte rendu, il faut donc une trame.
+</Note>
+
+## Votre template par défaut
+
+Si aucun template n'est rattaché à l'entretien, Hirify applique celui que vous avez désigné comme défaut. Ce réglage est personnel : il vaut pour vos entretiens, pas pour ceux de vos collègues. Vous le posez depuis **Templates de notes**, avec l'interrupteur **Utiliser par défaut** sur un template en lecture, ou **Template par défaut** en bas de l'éditeur. La page [Partager un template](/fr/comptes-rendus/partager-un-template) détaille la manœuvre.
+
+## Lancer l'entretien sans template
+
+Dans le panneau du calendrier, la première carte de la liste s'appelle **Sans template**. La choisir revient à n'attacher aucune trame à cet événement.
+
+Un compte rendu est produit quand même dans la plupart des cas. Hirify applique alors, dans l'ordre : sur un entretien créé depuis votre logiciel de recrutement, le template par défaut réglé dans ses [automatismes](/fr/integrations/automatismes-ats) ; sinon votre template par défaut s'il en existe un ; sinon un compte rendu structuré à partir du contenu de l'entretien lui-même. La fiche du compte rendu porte dans ce dernier cas la mention « Généré automatiquement ». Ce dernier recours suppose une analyse aboutie et un échange qui a matière à être résumé : un entretien trop court, ou dont l'analyse a échoué, reste sans compte rendu.
+
+## Bon à savoir
+
+- Le compte rendu est rédigé **après** l'entretien, une fois l'enregistrement transcrit. Rien ne s'écrit pendant que vous parlez.
+- Quand une information prévue par le template n'a pas été évoquée, le compte rendu écrit « Non abordé dans l'entretien ». Rien n'est comblé par déduction.
+- Le compte rendu **n'est jamais envoyé** dans votre logiciel de recrutement sans votre validation. Voir [Renvoyer une évaluation](/fr/integrations/renvoyer-une-evaluation).
+- Le sélecteur du calendrier ne montre que les templates auxquels vous avez accès : les vôtres, ceux partagés par votre équipe, et ceux proposés par Hirify.
+- Sur un événement où un template est déjà enregistré, repasser sur **Sans template** puis **Mettre à jour** ne détache pas le template déjà choisi. Pour changer de trame, sélectionnez un autre template.
+
+<CardGroup cols={2}>
+  <Card title="Créer un template" icon="table-list" href="/fr/comptes-rendus/creer-un-template">
+    Bâtir votre propre trame, à partir d'un document ou d'une description.
+  </Card>
+  <Card title="Lire et modifier" icon="pen-to-square" href="/fr/comptes-rendus/lire-et-modifier">
+    Relire le compte rendu, le corriger et le régénérer.
+  </Card>
+</CardGroup>

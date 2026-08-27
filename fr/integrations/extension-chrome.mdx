@@ -5,4 +5,80 @@ description: "Installer l'extension depuis le Chrome Web Store et la connecter �
 icon: "puzzle-piece"
 ---
 
-Contenu en cours de rédaction.
+L'extension ouvre Hirify dans un panneau latéral de votre navigateur. Vous lancez un entretien et interrogez votre vivier sans changer d'onglet.
+
+## Installer l'extension
+
+<Steps>
+  <Step title="Ouvrez la carte depuis le tableau de bord">
+    Sur le **Tableau de bord**, section **Pour aller plus loin**, la carte **Hirify dans votre navigateur** annonce : « Enregistrez et transcrivez vos entretiens directement depuis Chrome, sans quitter votre ATS. » Cliquez sur **Installer l'extension**.
+  </Step>
+  <Step title="Ajoutez l'extension à Chrome">
+    Le Chrome Web Store s'ouvre dans un nouvel onglet, sur la fiche Hirify. Lancez l'installation depuis cette page.
+  </Step>
+  <Step title="Épinglez l'icône">
+    Une fois l'extension installée, épinglez son icône dans la barre d'outils de Chrome : c'est elle qui ouvre et referme le panneau latéral.
+  </Step>
+</Steps>
+
+{/* CAPTURE : la carte « Hirify dans votre navigateur » du tableau de bord, avec le bouton Installer l'extension */}
+
+## Connecter l'extension à votre compte
+
+À la première ouverture, le panneau affiche un écran **Connexion**. Deux chemins existent.
+
+Le plus court : cliquez sur **Se connecter avec Hirify**. Votre navigateur vous renvoie vers votre espace Hirify pour vous identifier, puis le panneau s'ouvre sur votre compte.
+
+Si ce chemin échoue — session expirée, navigateur restrictif —, dépliez **Options avancées** en bas de l'écran et connectez-vous avec un jeton d'accès.
+
+## Se connecter avec un jeton d'accès
+
+Le jeton est une clé personnelle, créée dans Hirify, qui vaut identification pour l'extension.
+
+<Steps>
+  <Step title="Créez le jeton dans Hirify">
+    Ouvrez **Paramètres**, puis **Sécurité**. La section **Jetons d'accès** précise : « Créez un jeton personnel pour connecter l'extension de navigateur ou l'API à votre compte. Le jeton n'est affiché qu'une seule fois. » Cliquez sur **Créer un jeton**.
+  </Step>
+  <Step title="Nommez-le">
+    Donnez-lui un nom qui vous parle, par exemple « Extension Chrome ». Validez avec **Créer**.
+  </Step>
+  <Step title="Copiez la valeur affichée">
+    La fenêtre **Votre nouveau jeton** montre la clé une seule fois. Copiez-la, puis cliquez sur **Terminé**.
+  </Step>
+  <Step title="Collez-la dans le panneau">
+    Dans l'extension, sous **Options avancées**, collez la clé dans le champ **Jeton d'accès** et cliquez sur **Se connecter par jeton**.
+  </Step>
+</Steps>
+
+<Warning>
+  Un jeton donne accès à votre compte. Ne le partagez pas et ne le collez pas dans un document commun. Si vous avez un doute, révoquez-le : dans **Paramètres**, **Sécurité**, cliquez sur l'icône de suppression en face du jeton, puis sur **Révoquer**. Toute application qui l'utilisait perd l'accès immédiatement.
+</Warning>
+
+## Ce que vous faites depuis le panneau
+
+Une fois connecté, le panneau propose deux onglets.
+
+- **Assistant** : posez vos questions à votre vivier, comme dans l'application. Voir [Poser une question](/fr/assistant/poser-une-question).
+- **Entretiens** : retrouvez vos entretiens récents et ouvrez-en un pour le relire.
+
+Le bouton **Démarrer** lance un nouvel entretien sans repasser par l'application, avec le choix entre **Visioconférence**, **Entretien en présentiel** et **Appel téléphonique**. Les trois canaux et leurs prérequis sont décrits dans [Choisir son canal](/fr/entretiens/choisir-son-canal).
+
+Sur une fiche candidat de SmartRecruiters, le panneau signale en haut la fiche Hirify correspondante, quand elle existe.
+
+## Bon à savoir
+
+- L'extension s'installe depuis le Chrome Web Store. Elle ne se distribue pas par fichier.
+- L'appel téléphonique reste visible dans le menu de création mais est inactif, suivi de la mention « indisponible », si votre offre ne l'inclut pas. Voir [Passer un appel](/fr/telephonie/passer-un-appel).
+- Le rapprochement avec une fiche candidat ne fonctionne aujourd'hui que sur les pages SmartRecruiters. Les autres logiciels de recrutement n'affichent pas ce bandeau.
+- L'extension ne remplace pas l'application : les templates, l'analyse, le Sourcing et le Pilotage restent dans Hirify.
+- Le jeton d'accès n'est montré qu'une fois. Perdu, il ne se retrouve pas : créez-en un nouveau et révoquez l'ancien.
+- Installer l'extension ne dispense pas d'informer le candidat avant tout enregistrement.
+
+<CardGroup cols={2}>
+  <Card title="Sécuriser votre compte" icon="lock" href="/fr/demarrer/securiser-votre-compte">
+    Mot de passe, jetons d'accès, connexion unique.
+  </Card>
+  <Card title="Choisir son canal" icon="microphone" href="/fr/entretiens/choisir-son-canal">
+    Visio, présentiel ou téléphone : ce que chaque canal suppose.
+  </Card>
+</CardGroup>

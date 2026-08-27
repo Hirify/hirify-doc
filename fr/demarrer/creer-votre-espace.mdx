@@ -5,4 +5,83 @@ description: "Vous créez votre compte, complétez votre profil et renseignez le
 icon: "building"
 ---
 
-Contenu en cours de rédaction.
+Trois écrans séparent votre inscription de votre espace de travail : le compte, votre nom, votre entreprise. Vous complétez ensuite votre profil depuis les paramètres.
+
+## Créer votre compte
+
+<Steps>
+  <Step title="Ouvrez l'écran d'inscription">
+    L'écran s'intitule **Créer votre compte**. Il annonce la suite : « Vous configurerez votre espace juste après. »
+  </Step>
+  <Step title="Saisissez votre adresse email professionnelle">
+    Le champ **Adresse email professionnelle** sert aussi à vous rattacher à l'espace de vos collègues, s'ils utilisent déjà Hirify avec le même domaine.
+  </Step>
+  <Step title="Choisissez un mot de passe">
+    Comptez 8 caractères minimum en mélangeant deux types de caractères (lettres, chiffres, majuscules…), ou 12 caractères. Un indicateur de solidité se met à jour pendant que vous tapez. Tant qu'il reste insuffisant, le bouton de validation demeure inactif et l'écran vous dit quoi corriger.
+  </Step>
+  <Step title="Validez">
+    Cliquez sur **Créer mon compte**. Vous arrivez sur la première étape de configuration.
+  </Step>
+</Steps>
+
+<Note>
+  Si votre organisation utilise l'authentification unique, ne créez pas de mot de passe : passez par **Se connecter avec le SSO** depuis l'écran de connexion.
+</Note>
+
+{/* CAPTURE : écran « Créer votre compte », avec les deux champs et l'indicateur de solidité du mot de passe */}
+
+## Donner votre nom
+
+L'écran **Comment vous appelez-vous ?** demande votre **Prénom** et votre **Nom**. Il en explique la raison : « Votre nom apparaît sur les comptes rendus que vous partagez avec votre équipe. » Cliquez sur **Continuer**.
+
+## Nommer votre entreprise
+
+<Steps>
+  <Step title="Laissez Hirify chercher vos collègues">
+    L'écran affiche un instant « Nous vérifions si vos collègues ont déjà un espace. » La recherche porte sur le domaine de votre adresse email.
+  </Step>
+  <Step title="Si vos collègues sont déjà là">
+    L'écran **Vos collègues sont déjà là** vous propose leur organisation et son nombre de membres actifs. Cliquez sur **Demander à rejoindre**, ou sur **Créer ma propre organisation** si vous préférez un espace distinct.
+  </Step>
+  <Step title="Sinon, nommez votre espace">
+    L'écran **Votre entreprise** demande le **Nom de l'entreprise**. Ce nom « identifie votre espace de travail et les collègues que vous inviterez ensuite ». Cliquez sur **Continuer**.
+  </Step>
+  <Step title="Si vous travaillez seul">
+    Cliquez sur **Je travaille seul**. Hirify crée votre espace sans vous demander de nom d'entreprise.
+  </Step>
+</Steps>
+
+Une fois l'espace créé, Hirify vous rappelle la conséquence : toute personne disposant d'une adresse email de votre domaine peut désormais demander à le rejoindre.
+
+## Compléter votre profil
+
+Ouvrez le menu à votre nom, en bas de la barre latérale, puis **Paramètres** et **Profil**. La section **Informations personnelles** indique que ces informations « apparaissent dans vos comptes rendus et auprès de votre équipe ».
+
+| Champ | À quoi il sert |
+| --- | --- |
+| **Prénom**, **Nom** | Identifient l'auteur d'un compte rendu partagé |
+| **Email** | Affiché, non modifiable |
+| **Rôle** | Votre intitulé de poste, en texte libre : « ex : Développeur, Recruteur IT » |
+| **Niveau d'expérience** | À choisir dans une liste |
+
+Terminez par **Enregistrer**.
+
+{/* CAPTURE : page Paramètres → Profil, section « Informations personnelles » */}
+
+## Bon à savoir
+
+- L'adresse email d'un compte n'est pas modifiable. La page **Profil** l'affiche avec la mention « Non modifiable ».
+- L'étape **Votre entreprise** ne demande que le nom. Ni secteur, ni effectif.
+- Le champ **Rôle** de la page Profil est un intitulé de poste. Il n'ouvre aucun droit : vos permissions dépendent du rôle d'organisation, décrit sur [Choisir le rôle de chaque membre](/fr/demarrer/roles-et-acces).
+- Sur l'écran de connexion, Google, Microsoft et LinkedIn apparaissent désactivés, marqués « bientôt disponible ». Restent le mot de passe et l'authentification unique.
+- Un compte appartient à une seule organisation.
+- Créer un espace ne connecte rien : l'agenda et le logiciel de recrutement se branchent ensuite depuis **Paramètres** puis **Intégrations**, la téléphonie depuis **Paramètres** puis **Téléphonie**.
+
+<CardGroup cols={2}>
+  <Card title="Rejoindre une organisation" icon="user-check" href="/fr/demarrer/rejoindre-une-organisation">
+    Vos collègues ont déjà un espace : demandez votre rattachement.
+  </Card>
+  <Card title="Inviter un membre" icon="user-plus" href="/fr/demarrer/inviter-un-membre">
+    Faites venir votre équipe et attribuez-lui un rôle.
+  </Card>
+</CardGroup>

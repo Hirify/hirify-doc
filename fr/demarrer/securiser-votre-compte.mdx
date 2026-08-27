@@ -5,4 +5,112 @@ description: "Changez votre mot de passe, créez les jetons d'accès dont votre 
 icon: "lock"
 ---
 
-Contenu en cours de rédaction.
+La page **Sécurité** réunit deux choses : votre mot de passe et vos jetons d'accès. Elle s'ouvre depuis le menu à votre nom, en bas de la barre latérale, puis **Paramètres** et **Sécurité**. L'authentification unique, elle, se met en place avec l'équipe Hirify.
+
+## Changer votre mot de passe
+
+La section **Mot de passe** annonce son objet : « Modifiez votre mot de passe de connexion. »
+
+<Steps>
+  <Step title="Saisissez votre mot de passe actuel">
+    Le champ **Mot de passe actuel** vérifie que la session est bien la vôtre.
+  </Step>
+  <Step title="Choisissez le nouveau">
+    Renseignez **Nouveau mot de passe**, puis **Confirmer**. La consigne affichée sous les champs : « Utilisez au moins 8 caractères avec lettres, chiffres et symboles. »
+  </Step>
+  <Step title="Validez">
+    Cliquez sur **Mettre à jour**. Le message « Mot de passe changé avec succès » confirme l'opération, et les trois champs se vident.
+  </Step>
+</Steps>
+
+{/* CAPTURE : page Paramètres → Sécurité, section « Mot de passe » */}
+
+<Note>
+  Vous ne connaissez plus votre mot de passe actuel ? Le lien **Mot de passe oublié ?** de l'écran de connexion vous envoie un email pour en définir un nouveau, sans passer par cette page.
+</Note>
+
+## Créer un jeton d'accès pour l'extension ou l'API
+
+La section **Jetons d'accès** explique à quoi ils servent : « Créez un jeton personnel pour connecter l'extension de navigateur ou l'API à votre compte. Le jeton n'est affiché qu'une seule fois. »
+
+<Steps>
+  <Step title="Cliquez sur Créer un jeton">
+    La fenêtre **Créer un jeton d'accès** s'ouvre.
+  </Step>
+  <Step title="Donnez-lui un nom">
+    Le champ **Nom du jeton** sert uniquement à vous y retrouver. Choisissez un nom qui dise à quoi il sert, par exemple le nom de l'outil qui l'utilisera.
+  </Step>
+  <Step title="Créez le jeton">
+    Cliquez sur **Créer**. La fenêtre **Votre nouveau jeton** affiche la valeur du jeton, avec un bouton de copie.
+  </Step>
+  <Step title="Copiez-le immédiatement">
+    « Copiez ce jeton maintenant. Pour des raisons de sécurité, il ne sera plus affiché. » Collez-le dans l'outil concerné, puis cliquez sur **Terminé**.
+  </Step>
+</Steps>
+
+<Warning>
+  Un jeton donne accès à votre compte. L'application le rappelle sans détour : « Conservez ce jeton en lieu sûr. Toute personne le possédant peut accéder à votre compte. » Ne le collez ni dans un ticket, ni dans une conversation d'équipe, ni dans un fichier partagé.
+</Warning>
+
+Une fois créé, le jeton apparaît dans la liste avec sa date de création et, dès qu'il a servi, sa date de dernière utilisation. C'est le moyen le plus simple de repérer un jeton devenu inutile.
+
+{/* CAPTURE : section « Jetons d'accès » avec un jeton listé et sa date de dernière utilisation */}
+
+## Révoquer un jeton d'accès
+
+Révoquez un jeton dès qu'il ne sert plus, ou au moindre doute sur l'endroit où il a circulé.
+
+<Steps>
+  <Step title="Repérez le jeton dans la liste">
+    La date de dernière utilisation vous aide à identifier celui qui dort depuis longtemps.
+  </Step>
+  <Step title="Ouvrez la fenêtre de révocation">
+    Cliquez sur l'icône de suppression sur la ligne du jeton. La fenêtre **Révoquer le jeton** vous demande confirmation en rappelant son nom.
+  </Step>
+  <Step title="Confirmez">
+    Cliquez sur **Révoquer**. Le message « Jeton révoqué avec succès » confirme l'opération.
+  </Step>
+</Steps>
+
+<Warning>
+  « Cette action est irréversible. Toute application utilisant ce jeton perdra immédiatement l'accès. » Si l'extension de navigateur utilisait ce jeton, elle cessera de fonctionner tant que vous ne lui en aurez pas fourni un nouveau.
+</Warning>
+
+## Mettre en place l'authentification unique (SSO)
+
+L'authentification unique laisse le fournisseur d'identité de votre organisation décider qui entre dans Hirify. Vos équipes se connectent alors sans mot de passe Hirify.
+
+Sa mise en place ne se fait pas depuis l'application : il n'existe pas d'écran client pour l'activer ou la configurer. Elle se fait avec l'équipe Hirify, qui enregistre votre domaine et les métadonnées de votre fournisseur d'identité. Elle relève de l'offre Volume.
+
+Une fois le domaine enregistré, vos équipes disposent de deux chemins.
+
+<Steps>
+  <Step title="Depuis l'écran de connexion">
+    Le bouton **Se connecter avec le SSO** mène à l'écran **Connexion SSO**. Si le domaine de l'adresse saisie sur l'écran de connexion est reconnu, celui-ci bascule de lui-même sur **Continuer avec le SSO** et n'attend plus de mot de passe.
+  </Step>
+  <Step title="Depuis l'écran Connexion SSO">
+    Saisissez votre adresse email professionnelle, puis cliquez sur **Continuer avec le SSO**. Vous êtes redirigé vers le fournisseur d'identité de votre organisation.
+  </Step>
+</Steps>
+
+Si le domaine n'est pas enregistré, l'écran répond « Le SSO n'est pas configuré pour ce domaine email ». Rapprochez-vous de votre administrateur ou de votre interlocuteur Hirify.
+
+{/* CAPTURE : écran « Connexion SSO » avec le champ adresse email et le bouton Continuer avec le SSO */}
+
+## Bon à savoir
+
+- Un jeton créé depuis cette page n'a pas de date d'expiration : il reste valable tant que vous ne l'avez pas révoqué. D'où l'intérêt de faire le ménage régulièrement.
+- Vous ne pouvez pas conserver plus de vingt jetons actifs. Au-delà, l'application demande d'en révoquer un avant d'en créer un nouveau.
+- Un jeton est personnel : il porte vos droits et ne voit que ce que vous voyez. Ne le partagez pas avec un collègue, faites-lui créer le sien.
+- La valeur d'un jeton n'est affichée qu'une fois. Perdue, elle ne se récupère pas : il faut révoquer le jeton et en créer un autre.
+- Le mot de passe et l'authentification unique sont les deux moyens de se connecter à Hirify.
+- L'adresse email d'un compte n'est pas modifiable, y compris par un administrateur.
+
+<CardGroup cols={2}>
+  <Card title="Extension de navigateur" icon="puzzle-piece" href="/fr/integrations/extension-chrome">
+    L'outil qui consomme un jeton d'accès au quotidien.
+  </Card>
+  <Card title="Vos données" icon="shield-check" href="/fr/confiance/vos-donnees">
+    Ce que Hirify conserve et pendant combien de temps.
+  </Card>
+</CardGroup>

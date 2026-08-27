@@ -5,4 +5,96 @@ description: "Inviter un collègue, changer son rôle, retirer un membre et suiv
 icon: "users"
 ---
 
-Contenu en cours de rédaction.
+La page **Gestion des membres** réunit tout ce qui concerne votre équipe : les invitations, les rôles, les comptes désactivés et les places restantes de votre abonnement.
+
+## Ouvrir la page des membres
+
+Dans le menu de votre compte, en bas de la barre latérale, choisissez **Gérer les membres**. Un manager y accède aussi, sous le libellé **Membres de l'équipe**, mais en lecture seule : il voit la liste et les statistiques par membre, sans les actions.
+
+L'en-tête récapitule l'état de l'équipe : nombre de membres actifs, de membres inactifs et d'invitations en attente.
+
+{/* CAPTURE : la page « Gestion des membres » avec ses onglets et le bouton « Inviter un membre ». */}
+
+## Inviter un membre
+
+<Steps>
+  <Step title="Ouvrir la fenêtre d'invitation">
+    Cliquez sur **Inviter un membre**, en haut à droite.
+  </Step>
+  <Step title="Saisir l'adresse">
+    Renseignez l'**Adresse email** du collègue.
+  </Step>
+  <Step title="Choisir le rôle">
+    La liste **Rôle** propose **Membre**, **Manager**, **Administrateur** et **Admin facturation**. Un encart **Privilèges** décrit, sous la liste, ce que le rôle sélectionné autorise.
+  </Step>
+  <Step title="Envoyer">
+    Cliquez sur **Envoyer l'invitation**. Elle apparaît aussitôt dans l'onglet **En attente**.
+  </Step>
+</Steps>
+
+## Les quatre rôles
+
+| Rôle | Ce qu'il peut faire |
+| --- | --- |
+| **Membre** | Accède à ses propres entretiens, crée et partage des notes, utilise les templates personnalisés |
+| **Manager** | Accède à tous les entretiens de l'équipe, les édite et les supprime, consulte les statistiques par membre. Ne gère ni les membres ni la facturation |
+| **Administrateur** | Invite et retire des membres, gère les rôles et les paramètres de l'organisation, accède à toutes les fonctionnalités |
+| **Admin facturation** | Gère les membres et l'abonnement, sans accès aux fonctionnalités produit. N'occupe pas de place |
+
+<Note>
+  Un admin facturation reste invitable même quand toutes les places sont prises : la fenêtre d'invitation indique « Les admins facturation ne consomment pas de place. »
+</Note>
+
+## Suivre les invitations en attente
+
+L'onglet **En attente** liste les invitations envoyées, avec l'e-mail, le rôle prévu, la personne qui a invité et l'échéance. Un badge signale l'état du lien : **Active**, **Expire bientôt** ou **Expirée**.
+
+Deux actions sont disponibles sur chaque ligne : renvoyer l'invitation, ou l'annuler. L'annulation invalide le lien immédiatement.
+
+## Répondre à une demande de rattachement
+
+Quand un collègue crée un compte avec une adresse du même domaine que le vôtre, Hirify lui propose de demander son rattachement à votre organisation. Ces demandes s'accumulent dans l'onglet **Demandes**, qui n'apparaît que s'il y en a au moins une.
+
+Acceptez, et le membre rejoint l'organisation avec le rôle **Membre**. Refusez, et il en est informé : il pourra créer sa propre organisation.
+
+Le détail du parcours côté demandeur est décrit dans [Rejoindre une organisation](/fr/demarrer/rejoindre-une-organisation).
+
+## Changer le rôle d'un membre
+
+Dans l'onglet **Actifs**, ouvrez le menu d'actions au bout de la ligne, puis choisissez le nouveau rôle sous **Changer le rôle**. Le changement prend effet tout de suite.
+
+## Retirer ou réactiver un membre
+
+Le même menu propose **Supprimer**. Une confirmation prévient que « le membre perdra immédiatement l'accès à l'organisation ».
+
+Les comptes retirés basculent dans l'onglet **Inactifs**, avec le temps écoulé depuis la désactivation et la personne qui les avait invités. Le bouton **Réactiver** les remet en service — à condition qu'une place soit libre.
+
+<Warning>
+  Retirer un membre lui coupe l'accès sur-le-champ. Vérifiez d'abord qui reprend ses entretiens en cours : un membre ne voit que les siens, seuls un manager et un administrateur voient ceux de toute l'organisation.
+</Warning>
+
+## Suivre les places occupées
+
+Le nombre de places dépend de votre abonnement. Deux alertes vous préviennent en haut de page :
+
+- **Places limitées**, quand il reste moins de trois places disponibles ;
+- **Limite d'abonnement atteinte**, quand il n'en reste aucune. Un lien renvoie alors vers la page **Abonnement**.
+
+Le décompte exact se lit dans l'onglet **Consommation** de la page **Abonnement**, sous **Membres actifs**.
+
+## Bon à savoir
+
+- Seuls un administrateur et un admin facturation peuvent inviter, retirer ou changer le rôle d'un membre.
+- Un manager consulte la liste et les statistiques par membre, sans pouvoir agir dessus.
+- Un admin facturation ne consomme pas de place et n'a aucun accès au produit : il est redirigé vers la page des membres.
+- Une invitation expirée ne se prolonge pas : renvoyez-la pour générer un lien neuf.
+- Aucune place ne se libère automatiquement. Un membre qui n'utilise plus Hirify continue d'en occuper une tant qu'il n'a pas été désactivé.
+
+<CardGroup cols={2}>
+  <Card title="Inviter un membre" icon="user-plus" href="/fr/demarrer/inviter-un-membre">
+    Le parcours d'invitation vu du côté de la personne invitée.
+  </Card>
+  <Card title="Offres et accès" icon="table-list" href="/fr/compte/offres-et-acces">
+    Ce que votre offre et votre rôle ouvrent, écran par écran.
+  </Card>
+</CardGroup>
