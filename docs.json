@@ -274,7 +274,7 @@
     }
   ],
   "logo": {
-    "light": "/images/logo_name_white.svg",
+    "light": "/images/logo_name_lg.png",
     "dark": "/images/logo_name_black.svg"
   }
 }
