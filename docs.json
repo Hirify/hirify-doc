@@ -22,11 +22,252 @@
     }
   },
   "navigation": {
-    "groups": [
+    "languages": [
       {
-        "group": "Hirify",
-        "pages": ["introduction"]
+        "language": "fr",
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Bienvenue",
+                "icon": "hand-wave",
+                "pages": [
+                  "fr/index",
+                  "fr/premiers-pas",
+                  "fr/glossaire"
+                ]
+              },
+              {
+                "group": "Bien démarrer",
+                "icon": "rocket",
+                "pages": [
+                  "fr/demarrer/creer-votre-espace",
+                  "fr/demarrer/rejoindre-une-organisation",
+                  "fr/demarrer/inviter-un-membre",
+                  "fr/demarrer/roles-et-acces",
+                  "fr/demarrer/securiser-votre-compte",
+                  "fr/demarrer/ameliorer-les-transcriptions"
+                ]
+              },
+              {
+                "group": "Capter un entretien",
+                "icon": "microphone",
+                "pages": [
+                  "fr/entretiens/choisir-son-canal",
+                  "fr/entretiens/en-visioconference",
+                  "fr/entretiens/en-presentiel",
+                  "fr/entretiens/automatique-depuis-l-ats",
+                  "fr/entretiens/retrouver-et-suivre",
+                  "fr/entretiens/relire-un-entretien",
+                  "fr/entretiens/identifier-les-intervenants",
+                  "fr/entretiens/ajouter-le-cv-du-candidat",
+                  "fr/entretiens/fusionner-deux-entretiens"
+                ]
+              },
+              {
+                "group": "Comptes rendus et analyse",
+                "icon": "file-lines",
+                "pages": [
+                  "fr/comptes-rendus/choisir-un-template",
+                  "fr/comptes-rendus/creer-un-template",
+                  "fr/comptes-rendus/partager-un-template",
+                  "fr/comptes-rendus/lire-et-modifier",
+                  "fr/comptes-rendus/analyse-du-candidat",
+                  "fr/comptes-rendus/exporter-et-partager"
+                ]
+              },
+              {
+                "group": "Connecter vos outils",
+                "icon": "plug",
+                "pages": [
+                  "fr/integrations/connecter-votre-agenda",
+                  "fr/integrations/connecter-votre-ats",
+                  "fr/integrations/lier-un-entretien-a-une-candidature",
+                  "fr/integrations/renvoyer-une-evaluation",
+                  "fr/integrations/automatismes-ats",
+                  "fr/integrations/familles-de-profils",
+                  "fr/integrations/extension-chrome",
+                  "fr/integrations/personnaliser-l-assistant",
+                  "fr/integrations/deconnecter-un-outil"
+                ]
+              },
+              {
+                "group": "Téléphonie",
+                "icon": "phone",
+                "pages": [
+                  "fr/telephonie/obtenir-un-numero",
+                  "fr/telephonie/passer-un-appel"
+                ]
+              },
+              {
+                "group": "Exploiter votre vivier",
+                "icon": "users-viewfinder",
+                "pages": [
+                  {
+                    "group": "Assistant",
+                    "icon": "comments",
+                    "pages": [
+                      "fr/assistant/poser-une-question",
+                      "fr/assistant/verifier-une-reponse"
+                    ]
+                  },
+                  {
+                    "group": "Sourcing",
+                    "icon": "magnifying-glass",
+                    "pages": [
+                      "fr/sourcing/lancer-une-recherche",
+                      "fr/sourcing/ponderer-les-criteres",
+                      "fr/sourcing/lire-et-comparer",
+                      "fr/sourcing/rediger-un-message-d-approche"
+                    ]
+                  },
+                  {
+                    "group": "Pilotage",
+                    "icon": "chart-line",
+                    "pages": [
+                      "fr/pilotage/composer-un-tableau-de-bord",
+                      "fr/pilotage/enregistrer-partager-epingler",
+                      "fr/pilotage/fiabilite-des-donnees"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Votre compte",
+                "icon": "gear",
+                "pages": [
+                  "fr/compte/offres-et-acces",
+                  "fr/compte/gerer-les-membres",
+                  "fr/compte/abonnement-et-facturation",
+                  "fr/compte/notifications",
+                  "fr/compte/suivi-du-support"
+                ]
+              },
+              {
+                "group": "Confiance",
+                "icon": "shield-check",
+                "pages": [
+                  "fr/confiance/informer-vos-candidats",
+                  "fr/confiance/vos-donnees",
+                  "fr/confiance/l-ia-chez-hirify"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Aide",
+            "groups": [
+              {
+                "group": "Dépannage",
+                "icon": "life-ring",
+                "pages": [
+                  "fr/aide/faq",
+                  "fr/aide/l-entretien-n-a-pas-ete-enregistre",
+                  "fr/aide/la-transcription-est-incomplete",
+                  "fr/aide/les-intervenants-sont-melanges",
+                  "fr/aide/mon-ats-ne-se-synchronise-plus",
+                  "fr/aide/contacter-le-support"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/introduction",
+      "destination": "/fr"
+    },
+    {
+      "source": "/quickstart",
+      "destination": "/fr/premiers-pas"
+    },
+    {
+      "source": "/getting-started/account-setup",
+      "destination": "/fr/demarrer/creer-votre-espace"
+    },
+    {
+      "source": "/getting-started/invite-team",
+      "destination": "/fr/demarrer/inviter-un-membre"
+    },
+    {
+      "source": "/features/interview-capture",
+      "destination": "/fr/entretiens/choisir-son-canal"
+    },
+    {
+      "source": "/features/candidate-profiles",
+      "destination": "/fr/comptes-rendus/analyse-du-candidat"
+    },
+    {
+      "source": "/features/talent-pool-chat",
+      "destination": "/fr/assistant/poser-une-question"
+    },
+    {
+      "source": "/features/ats-integration",
+      "destination": "/fr/integrations/connecter-votre-ats"
+    },
+    {
+      "source": "/features/templates",
+      "destination": "/fr/comptes-rendus/choisir-un-template"
+    },
+    {
+      "source": "/integrations/ats-overview",
+      "destination": "/fr/integrations/connecter-votre-ats"
+    },
+    {
+      "source": "/integrations/connecting-your-ats",
+      "destination": "/fr/integrations/connecter-votre-ats"
+    },
+    {
+      "source": "/integrations/data-sync",
+      "destination": "/fr/integrations/connecter-votre-ats"
+    },
+    {
+      "source": "/compliance/gdpr",
+      "destination": "/fr/confiance/vos-donnees"
+    },
+    {
+      "source": "/compliance/ai-act",
+      "destination": "/fr/confiance/l-ia-chez-hirify"
+    },
+    {
+      "source": "/compliance/data-hosting",
+      "destination": "/fr/confiance/vos-donnees"
+    },
+    {
+      "source": "/compliance/sub-processors",
+      "destination": "/fr/confiance/vos-donnees"
+    },
+    {
+      "source": "/account/plans",
+      "destination": "/fr/compte/offres-et-acces"
+    },
+    {
+      "source": "/account/managing-users",
+      "destination": "/fr/compte/gerer-les-membres"
+    },
+    {
+      "source": "/account/billing",
+      "destination": "/fr/compte/abonnement-et-facturation"
+    },
+    {
+      "source": "/help/faq",
+      "destination": "/fr/aide/faq"
+    },
+    {
+      "source": "/help/ats-connection-issues",
+      "destination": "/fr/aide/mon-ats-ne-se-synchronise-plus"
+    },
+    {
+      "source": "/help/interview-recording",
+      "destination": "/fr/aide/l-entretien-n-a-pas-ete-enregistre"
+    },
+    {
+      "source": "/help/contact-support",
+      "destination": "/fr/aide/contacter-le-support"
+    }
+  ]
 }
