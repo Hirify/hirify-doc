@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Hirify",
-  "theme": "almond",
+  "theme": "mint",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#335cff",
+    "light": "#f4f1f2",
+    "dark": "#335cff"
   },
   "favicon": {
     "light": "/images/favicon.svg",
