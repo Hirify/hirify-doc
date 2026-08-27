@@ -5,7 +5,7 @@ description: "Vous saurez ce que l'IA produit, comment vérifier ses citations e
 icon: "microchip"
 ---
 
-L'IA de Hirify assiste le recruteur et ne décide pas à sa place. Cette page dit ce qu'elle produit, ce qu'elle ne fait pas, comment vérifier une affirmation, et ses limites connues.
+L'IA de Hirify assiste le recruteur et ne décide pas à sa place.
 
 ## Ce que l'IA produit
 
@@ -13,7 +13,7 @@ L'IA de Hirify assiste le recruteur et ne décide pas à sa place. Cette page di
 
 Le compte rendu met en forme une synthèse lisible à partir de cette analyse.
 
-Le Sourcing, lui, note chaque candidat retenu de zéro à cent sur quatre dimensions, puis agrège ces notes en un score pondéré qui ordonne la liste. Les candidats sont ensuite regroupés en paliers d'affichage.
+Le Sourcing note chaque candidat retenu de zéro à cent sur quatre dimensions, puis agrège ces notes en un score pondéré qui ordonne la liste. Les candidats sont ensuite regroupés en paliers d'affichage.
 
 ## Ce qu'elle ne fait pas
 
@@ -23,10 +23,15 @@ Le Sourcing, lui, note chaque candidat retenu de zéro à cent sur quatre dimens
 - **Elle ne cherche pas hors de votre vivier.** Le Sourcing interroge vos propres données, jamais un annuaire externe.
 - **Elle ne décide pas.** La décision relative à une candidature est prise par un recruteur.
 
-Deux écritures font exception, et il faut les connaître : les **tags de synthèse** posés sur la fiche du candidat après chaque entretien analysé, et le **remplissage des champs personnalisés restés vides** — salaire, disponibilité, télétravail. Celles-là partent sans validation entretien par entretien. Les deux sont désactivées par défaut, et seul un administrateur les active, au niveau de la connexion, dans **Paramètres** > **Intégrations**. Le remplissage ne touche que les champs vides, il vous est notifié, et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+Deux écritures font exception :
+
+- **Les tags de synthèse** : ils sont posés sur la fiche du candidat après chaque entretien analysé.
+- **Le remplissage des champs personnalisés restés vides** : salaire, disponibilité, télétravail.
+
+Ces deux écritures partent sans validation entretien par entretien. Elles sont désactivées par défaut, et seul un administrateur les active, au niveau de la connexion, dans **Paramètres** > **Intégrations**. Le remplissage ne touche que les champs vides, il vous est notifié, et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
 
 <Note>
-  La production de l'évaluation est automatique ; l'usage qui en est fait reste un acte humain. Autrement dit, le point de contrôle se situe à l'envoi et à la décision, pas à l'étape de génération — et, pour les deux écritures ci-dessus, à leur activation par un administrateur. Ce point est énoncé tel quel pour que votre entreprise et son conseil l'apprécient.
+  La production de l'évaluation est automatique. L'usage qui en est fait reste un acte humain. Le point de contrôle se situe à l'envoi et à la décision, pas à l'étape de génération. Pour les deux écritures ci-dessus, il se situe à leur activation par un administrateur. Ce point est énoncé tel quel pour que votre entreprise et son conseil l'apprécient.
 </Note>
 
 ## Comment les affirmations sont ancrées
@@ -41,7 +46,7 @@ Des évaluateurs de qualité échantillonnent une partie des analyses pour mesur
 
 ## Vérifier une affirmation vous-même
 
-Chaque affirmation ancrée peut être remontée à sa source, sans quitter le panneau d'analyse.
+Chaque affirmation ancrée peut être remontée à sa source sans quitter le panneau d'analyse.
 
 <Steps>
   <Step title="Cliquez sur Voir la citation">
@@ -66,7 +71,7 @@ Ces alertes qualifient la conduite de l'entretien, jamais le candidat : elles re
 
 ## Les limites connues
 
-**L'attribution des intervenants est un risque résiduel.** La détection peut mal rattacher des segments, ou inverser les rôles du recruteur et du candidat. Un propos mal attribué peut être écarté à tort, ou orienter l'évaluation. Des filets de réessai et un mécanisme de correction d'inversion réduisent l'occurrence du défaut sans l'éliminer.
+**L'attribution des intervenants est un risque résiduel.** La détection peut mal rattacher des segments, ou inverser les rôles du recruteur et du candidat. Un propos mal attribué peut être écarté à tort ou orienter l'évaluation. Des filets de réessai et un mécanisme de correction d'inversion réduisent l'occurrence du défaut sans l'éliminer.
 
 **L'IA reçoit du contenu nominatif.** Le contexte issu de votre logiciel de recrutement ne transmet que des champs structurés, et les outils de l'Assistant ne transmettent que des références anonymes. Le pipeline d'analyse d'entretien, lui, transmet la transcription nominative et le contenu des CV. Les fournisseurs de modèles retenus s'engagent à ne conserver aucun contenu soumis et à ne pas entraîner leurs modèles sur les données transmises.
 
@@ -74,7 +79,7 @@ Ces alertes qualifient la conduite de l'entretien, jamais le candidat : elles re
 
 - La génération de ces appréciations et de ces classements constitue un profilage au sens de l'article 4.4 du RGPD. Le fait est énoncé, pas qualifié : la qualification juridique relève de votre conseil.
 - Rien dans le produit ne vous oblige à réviser ou à acquitter le résultat de l'IA avant de vous y fier. Ce point est signalé comme ouvert.
-- Sont journalisés à des fins d'audit la version de modèle, les segments cités et les scores.
+- La version de modèle, les segments cités et les scores sont journalisés à des fins d'audit.
 - L'évaluation d'équité dédiée n'a pas encore été menée. Aucun résultat n'est avancé à ce stade.
 - L'information des candidats sur l'usage de l'IA vous incombe. Un modèle de mention est fourni sur la page Informer vos candidats.
 

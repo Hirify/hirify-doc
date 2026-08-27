@@ -9,7 +9,7 @@ icon: "sliders"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Une fois la connexion en place, quatre réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs, tous se coupent, et aucun ne concerne l'envoi du compte rendu.
+Une fois la connexion en place, quatre réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs et se coupent à tout moment. Aucun ne concerne l'envoi du compte rendu.
 
 ## Où trouver les réglages
 
@@ -25,7 +25,7 @@ Une fois la connexion en place, quatre réglages décident de ce que Hirify fait
   </Step>
 </Steps>
 
-Ces réglages sont réservés aux administrateurs de l'organisation. Les autres membres lisent, en bas de la page : « Les intégrations ATS et CRM sont gérées par les administrateurs de votre organisation. »
+Ces réglages sont réservés aux administrateurs de l'organisation. Les autres membres lisent en bas de la page : « Les intégrations ATS et CRM sont gérées par les administrateurs de votre organisation. »
 
 {/* CAPTURE : le bloc Réglages d'une carte ATS connectée, avec ses interrupteurs et le sélecteur de template */}
 
@@ -33,9 +33,9 @@ Ces réglages sont réservés aux administrateurs de l'organisation. Les autres 
 
 L'interrupteur **Bots de transcription automatiques** décide si l'assistant de réunion se programme seul. Le libellé le dit : il vise « les entretiens ATS dotés d'un lien Google Meet ou Microsoft Teams ».
 
-Concrètement, un rendez-vous d'entretien remonté depuis votre logiciel de recrutement, avec un lien de visioconférence exploitable, se voit attribuer un assistant sans que personne n'ait à y penser. Ce réglage est actif par défaut.
+Un rendez-vous d'entretien qui remonte de votre logiciel de recrutement et porte un lien de visioconférence exploitable se voit attribuer un assistant sans que personne n'ait à y penser. Ce réglage est actif par défaut.
 
-Coupez-le si vous préférez décider entretien par entretien, ou si tous vos entretiens ne doivent pas être enregistrés.
+Coupez-le si vous préférez décider entretien par entretien ou si tous vos entretiens ne doivent pas être enregistrés.
 
 <Warning>
   Enregistrer un entretien reste soumis à l'information du candidat. Un réglage automatique ne vous dispense pas de le prévenir.
@@ -43,32 +43,32 @@ Coupez-le si vous préférez décider entretien par entretien, ou si tous vos en
 
 ## Tags de synthèse
 
-L'interrupteur **Tags automatiques** pose des tags sur la fiche du candidat après chaque entretien analysé — « signal, points bloquants », comme l'indique le réglage.
+L'interrupteur **Tags automatiques** pose des tags sur la fiche du candidat après chaque entretien analysé. Le réglage les décrit ainsi : « signal, points bloquants ».
 
 Les tags sont écrits sous un préfixe réservé, `Hirify · ` :
 
-- **Hirify · Évalué**, posé dès qu'un entretien a été analysé ;
-- **Hirify · Signal positif**, **Hirify · Signal mitigé** ou **Hirify · Signal négatif**, selon la synthèse ;
+- **Hirify · Évalué**, posé dès qu'un entretien a été analysé.
+- **Hirify · Signal positif**, **Hirify · Signal mitigé** ou **Hirify · Signal négatif**, selon la synthèse.
 - **Hirify · Point bloquant**, tant qu'un point bloquant subsiste.
 
 Le jeu est recalculé à chaque analyse : un signal qui s'améliore ou un point bloquant qui se lève fait disparaître le tag devenu faux. Les tags qui n'appartiennent pas à ce préfixe — les vôtres — ne sont jamais ajoutés, retirés ni réordonnés.
 
 <Note>
-  Cet interrupteur est fermé par défaut. Une fois qu'un administrateur l'a ouvert, les tags partent sur la fiche après chaque entretien analysé, sans validation entretien par entretien : c'est cette autorisation, donnée une fois pour toute l'organisation, qui vaut accord. Elle ne porte que sur les tags du préfixe réservé, jamais sur le compte rendu. Laissez l'interrupteur fermé si votre organisation ne souhaite pas que Hirify pose de tags.
+  Cet interrupteur est fermé par défaut. Une fois qu'un administrateur l'a ouvert, les tags partent sur la fiche après chaque entretien analysé, sans validation entretien par entretien. L'autorisation donnée une fois pour toute l'organisation vaut accord. Elle ne porte que sur les tags du préfixe réservé, jamais sur le compte rendu. Laissez l'interrupteur fermé si votre organisation ne souhaite pas que Hirify pose de tags.
 </Note>
 
 ## Compléter les champs personnalisés
 
 L'interrupteur **Compléter les champs ATS** ouvre le second canal d'écriture : les champs personnalisés de votre logiciel de recrutement — salaire, disponibilité, télétravail, et ce que vous y avez ajouté.
 
-Une fois l'interrupteur ouvert, un bloc **Champs personnalisés** apparaît sur la carte. Hirify y liste les champs détectés et propose, pour chacun, une source parmi deux familles : **Intelligence artificielle** ou **Données d'entretien**. Rien n'est actif tant qu'un administrateur n'a pas tranché.
+Une fois l'interrupteur ouvert, un bloc **Champs personnalisés** apparaît sur la carte. Hirify y liste les champs détectés et propose pour chacun une source parmi deux familles : **Intelligence artificielle** ou **Données d'entretien**. Rien n'est actif tant qu'un administrateur n'a pas tranché.
 
 <Steps>
   <Step title="Confirmez les champs proposés">
-    Un badge indique combien de champs sont à confirmer. Pour chacun, **Approuver** ou **Ignorer** ; **Tout approuver** traite la liste d'un coup.
+    Un badge indique combien de champs sont à confirmer. Pour chacun, **Approuver** ou **Ignorer**. **Tout approuver** traite la liste d'un coup.
   </Step>
   <Step title="Ajustez la source si besoin">
-    Le sélecteur permet de changer la source, ou de choisir **Ne pas mapper**. Les champs laissés de côté se replient sous « champs sans mapping ».
+    Le sélecteur permet de changer la source ou de choisir **Ne pas mapper**. Les champs laissés de côté se replient sous « champs sans mapping ».
   </Step>
   <Step title="Décidez du remplissage automatique">
     Sous **Complétés après chaque entretien**, chaque champ porte un interrupteur **Auto**.
@@ -83,15 +83,18 @@ Laissé fermé, le champ reste proposé dans l'entretien, et c'est vous qui déc
 
 Tout se relit depuis l'entretien, dans l'onglet **ATS**, section **Champs ATS à compléter**.
 
-Chaque proposition affiche le nom du champ, la valeur actuelle barrée s'il y en a une, la valeur proposée, l'origine de l'information et, quand elle existe, la phrase de l'entretien qui la porte. Deux boutons : **Ajouter** si le champ est vide, **Remplacer** s'il est déjà renseigné, et **Ignorer** pour écarter la ligne.
+Chaque proposition affiche le nom du champ, la valeur actuelle barrée s'il y en a une, la valeur proposée, l'origine de l'information et, quand elle existe, la phrase de l'entretien qui la porte. Deux boutons accompagnent chaque proposition :
+
+- **Ajouter** si le champ est vide, ou **Remplacer** s'il est déjà renseigné.
+- **Ignorer** pour écarter la ligne.
 
 <Note>
   Le bouton **Tout ajouter** ne traite que les champs vides. Écraser une valeur déjà présente reste un geste ligne par ligne, jamais un lot.
 </Note>
 
-Une ligne appliquée passe à **Complété**. Si la valeur a bougé entre-temps dans votre logiciel de recrutement, Hirify le dit — « La valeur a changé dans l'ATS. Proposition actualisée. » — et repropose.
+Une ligne appliquée passe à **Complété**. Si la valeur a bougé entre-temps dans votre logiciel de recrutement, Hirify le dit et repropose : « La valeur a changé dans l'ATS. Proposition actualisée. »
 
-Les champs remplis sans vous sont regroupés sous **Remplis automatiquement**, chacun avec un bouton **Annuler** qui rétablit l'état antérieur. Le propriétaire de l'entretien reçoit par ailleurs une notification **Champs ATS complétés** qui nomme les champs concernés.
+Les champs remplis sans vous sont regroupés sous **Remplis automatiquement**, chacun avec un bouton **Annuler** qui rétablit l'état antérieur. Le propriétaire de l'entretien reçoit une notification **Champs ATS complétés** qui nomme les champs concernés.
 
 ## Template de compte rendu par défaut
 
@@ -103,7 +106,7 @@ Seuls les templates partagés avec l'organisation sont proposés. La valeur par 
 
 Aucun de ces réglages n'envoie le compte rendu ni votre évaluation. Il n'existe pas d'interrupteur pour cela.
 
-Le compte rendu part sur la fiche du candidat quand vous l'envoyez : vous choisissez la forme, vous posez un verdict, vous relisez un aperçu, vous confirmez. Hirify prépare, vous décidez.
+Le compte rendu part sur la fiche du candidat quand vous l'envoyez : vous choisissez la forme, vous posez un verdict, vous relisez un aperçu et vous confirmez.
 
 ## Les réglages disponibles dépendent de votre logiciel de recrutement
 
@@ -121,7 +124,7 @@ Un interrupteur qui ne s'affiche pas n'est pas un bug : le réglage n'a pas d'é
   </Tab>
 </Tabs>
 
-L'envoi automatique de l'assistant de réunion et le template par défaut, eux, ne dépendent pas du logiciel connecté.
+L'envoi automatique de l'assistant de réunion et le template par défaut ne dépendent pas du logiciel connecté.
 
 ## Bon à savoir
 

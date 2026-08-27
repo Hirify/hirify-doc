@@ -11,7 +11,7 @@ Tout se passe dans **Paramètres**, puis **Intégrations**.
 
 ## Déconnecter votre agenda
 
-La section **Calendriers** liste **Google Calendar** et **Microsoft Outlook**. Celui qui est relié à votre compte affiche l'adresse utilisée ; le bouton **Déconnecter** est sur la même ligne.
+La section **Calendriers** liste **Google Calendar** et **Microsoft Outlook**. Celui qui est relié à votre compte affiche l'adresse utilisée. Le bouton **Déconnecter** est sur la même ligne.
 
 <Steps>
   <Step title="Ouvrez la section Calendriers">
@@ -36,11 +36,11 @@ Ce qui se passe ensuite :
 
 Un seul agenda est actif à la fois. Tant que l'un des deux est relié, l'autre ligne reste inactive et affiche **Calendrier actif :** suivi du nom de l'agenda en place. Pour basculer, déconnectez d'abord celui qui est actif, puis connectez le second.
 
-Reconnecter plus tard se fait comme la première fois, par le bouton **Connecter**.
+Pour reconnecter plus tard, reprenez le bouton **Connecter**.
 
 ## Déconnecter votre logiciel de recrutement
 
-L'opération est réservée aux administrateurs de l'organisation, et elle vaut pour tout le monde : la connexion appartient à l'organisation, pas à un membre.
+L'opération est réservée aux administrateurs de l'organisation et elle vaut pour tout le monde : la connexion appartient à l'organisation, pas à un membre.
 
 <Steps>
   <Step title="Ouvrez la section ATS">
@@ -66,7 +66,14 @@ L'opération est réservée aux administrateurs de l'organisation, et elle vaut 
 
 La synchronisation s'arrête, les identifiants enregistrés sont effacés et la connexion devient inactive. Les candidats, postes, candidatures et entretiens déjà importés restent dans Hirify.
 
-Cessent aussi de fonctionner : le renvoi d'évaluation, les tags de synthèse, le remplissage des champs, et l'envoi de l'assistant de réunion sur les rendez-vous issus de votre logiciel de recrutement. La page **Familles de profils** repasse à son état vide.
+Cessent aussi de fonctionner :
+
+- le renvoi d'évaluation.
+- les tags de synthèse.
+- le remplissage des champs.
+- l'envoi de l'assistant de réunion sur les rendez-vous issus de votre logiciel de recrutement.
+
+La page **Familles de profils** repasse à son état vide.
 
 ### Déconnexion avec suppression des données
 
@@ -76,7 +83,10 @@ La case à cocher est explicite : **Supprimer aussi les candidats, postes et don
   Action irréversible. Elle est prévue pour répondre à une demande de protection des données ou pour nettoyer un environnement de test. Les transcriptions et les comptes rendus produits par Hirify ne sont pas affectés.
 </Warning>
 
-Sont supprimés : les candidats, les postes, les candidatures, les entretiens, les évaluations et les pièces jointes importés, ainsi que les rendez-vous créés à partir des entretiens de votre logiciel de recrutement.
+Sont supprimés :
+
+- les candidats, les postes, les candidatures, les entretiens, les évaluations et les pièces jointes importés.
+- les rendez-vous créés à partir des entretiens de votre logiciel de recrutement.
 
 ### Changer de logiciel de recrutement
 
@@ -89,7 +99,7 @@ Une seule connexion est active par organisation. Tant qu'un logiciel est connect
 - Une reconnexion repart d'une synchronisation complète. Après une suppression des données, Hirify réimporte ce que votre logiciel de recrutement expose sur la période couverte par cet import : les enregistrements les plus anciens peuvent ne pas revenir.
 - Si la suppression des données échoue, Hirify vous le dit : la connexion est bien désactivée, mais la purge doit être relancée par le support.
 - La déconnexion d'agenda n'offre pas d'option de suppression : il n'y a pas de case à cocher sur cette section.
-- Un membre qui n'est pas administrateur ne voit pas la section **ATS** de la page **Intégrations**, et ne peut donc pas déconnecter le logiciel de recrutement.
+- Un membre qui n'est pas administrateur ne voit pas la section **ATS** de la page **Intégrations** et ne peut donc pas déconnecter le logiciel de recrutement.
 
 <CardGroup cols={2}>
   <Card title="Connecter votre agenda" icon="calendar" href="/fr/integrations/connecter-votre-agenda">

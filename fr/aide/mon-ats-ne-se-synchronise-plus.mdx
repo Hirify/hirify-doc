@@ -15,7 +15,7 @@ Vos postes, candidats et candidatures cessent de se mettre à jour. Avant de con
 
 Ouvrez **Paramètres**, puis **Intégrations**. La section **ATS** liste les logiciels de recrutement et détaille celui qui est connecté.
 
-Quatre choses s'y lisent, de haut en bas.
+Quatre choses s'y lisent de haut en bas.
 
 - Une pastille verte suivie de **Connecté**. Si elle a disparu et que le bouton affiche de nouveau **Connecter**, la connexion a été désactivée.
 - Une ligne d'état qui décrit le rythme de synchronisation et se termine par « Dernière vérification », suivi de l'ancienneté du dernier contrôle. Une date qui ne bouge plus est le signal le plus fiable.
@@ -32,7 +32,7 @@ Quatre choses s'y lisent, de haut en bas.
 
 ## La connexion a été désactivée
 
-Hirify contrôle périodiquement que ses accès fonctionnent encore. Lorsqu'une authentification est refusée, la connexion est désactivée et une notification « Connexion ATS désactivée » vous parvient, avec le motif : un jeton expiré qui n'a pas pu être renouvelé, ou un problème détecté lors d'une vérification.
+Hirify contrôle périodiquement que ses accès fonctionnent encore. Lorsqu'une authentification est refusée, la connexion est désactivée et une notification « Connexion ATS désactivée » vous parvient avec le motif : un jeton expiré qui n'a pas pu être renouvelé ou un problème détecté lors d'une vérification.
 
 La carte retombe alors à l'état **Connecter**. Vos données déjà importées restent en place, mais rien de nouveau n'entre. Reprenez la connexion.
 
@@ -49,12 +49,12 @@ La carte retombe alors à l'état **Connecter**. Vos données déjà importées 
 </Tabs>
 
 <Warning>
-  Ne cliquez pas sur **Déconnecter** pour « repartir de zéro » sans lire la fenêtre de confirmation. La case qui y figure supprime aussi les candidats, postes et données importées, et l'opération est irréversible.
+  Ne cliquez pas sur **Déconnecter** pour « repartir de zéro » sans lire la fenêtre de confirmation. La case qui y figure supprime aussi les candidats, postes et données importées. L'opération est irréversible.
 </Warning>
 
 ## Les données arrivent, mais en retard
 
-La connexion est active et pourtant les nouveautés mettent des heures à apparaître. Regardez la ligne d'état de la carte : elle vous dit à quel rythme votre logiciel de recrutement est interrogé, et ce rythme n'est pas le même partout.
+La connexion est active et pourtant les nouveautés mettent des heures à apparaître. Regardez la ligne d'état de la carte : elle vous dit à quel rythme votre logiciel de recrutement est interrogé. Ce rythme n'est pas le même partout.
 
 Lorsqu'elle indique que la synchronisation est périodique et invite à configurer les webhooks, c'est que le lien qui pousse les changements dès qu'ils surviennent n'est pas en place. Le bloc **Configuration des webhooks**, tout en bas de la carte, porte alors un badge **À configurer** et détaille les deux étapes à réaliser une fois dans votre logiciel : créer les destinations, puis les évènements déclencheurs. Une fois le premier message reçu, le badge passe à **Configuration détectée**.
 
@@ -62,7 +62,7 @@ Lorsqu'elle indique que la synchronisation est périodique et invite à configur
 
 Juste après une connexion, les quatre compteurs sont à zéro et un encadré annonce que la synchronisation initiale est en cours. C'est normal : le vivier remonte par vagues. Le bouton **Actualiser** rafraîchit les compteurs.
 
-Si, plusieurs heures après, tout est encore à zéro, vérifiez que le compte utilisé côté logiciel de recrutement a bien accès aux postes, aux candidats et aux candidatures. Un accès partiel donne une connexion valide qui ne rapporte rien.
+Si tout est encore à zéro plusieurs heures après, vérifiez que le compte utilisé côté logiciel de recrutement a bien accès aux postes, aux candidats et aux candidatures. Un accès partiel donne une connexion valide qui ne rapporte rien.
 
 ## Bon à savoir
 
