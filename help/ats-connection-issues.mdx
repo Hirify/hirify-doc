@@ -1,0 +1,91 @@
+---
+title: 'Troubleshoot ATS Connection Problems in Hirify'
+sidebarTitle: 'ATS Issues'
+description: 'Diagnose and fix common problems when connecting, importing, or syncing your ATS with Hirify, including auth errors and field mapping issues.'
+---
+
+A reliable ATS connection is central to getting the most out of Hirify's enrichment and talent pool features. Most connection problems fall into one of a few predictable categories — authorisation failures, import delays, sync gaps, or permission mismatches. Work through the relevant section below to resolve your issue quickly.
+
+## Connection Fails During Authorisation
+
+If the ATS connection drops or throws an error at the OAuth authorisation step, follow these steps:
+
+<Steps>
+  <Step title="Confirm you are using the correct ATS account">
+    Make sure you are logged into the ATS account that has **admin privileges**. Standard user accounts typically lack the permissions required to authorise a third-party integration. Open your ATS in a separate browser tab and verify your role before retrying.
+  </Step>
+  <Step title="Clear browser cookies and retry">
+    Stale session cookies can interfere with the OAuth handshake. Clear cookies for your ATS domain in your browser settings, then return to **Settings > Integrations** in Hirify and restart the connection flow.
+  </Step>
+  <Step title="Check for an OAuth error message">
+    If the authorisation page displays a specific OAuth error code (such as `access_denied` or `invalid_client`), note the exact message. These errors usually indicate a permission scope mismatch or an expired authorisation token on the ATS side. Contact [support@hirify.fr](mailto:support@hirify.fr) with the error message and your ATS provider name.
+  </Step>
+</Steps>
+
+## Talent Pool Not Importing
+
+After a successful connection, your talent pool should begin importing automatically. If it appears stuck or empty, follow these steps:
+
+<Steps>
+  <Step title="Check import status in Settings">
+    Go to **Settings > Integrations** and look at the status indicator next to your ATS. A spinning indicator means the import is still running. An amber warning icon means the import paused and may need attention.
+  </Step>
+  <Step title="Allow sufficient time for large pools">
+    Pools containing **10,000 or more candidates** can take up to 30 minutes to import fully. Avoid triggering a re-import while the first import is still running, as this can cause duplicates or reset progress.
+  </Step>
+  <Step title="Contact support if stuck after one hour">
+    If the import status has not changed after **one hour**, contact [support@hirify.fr](mailto:support@hirify.fr). Include your ATS provider name, the approximate number of candidates in your pool, and the time the import started.
+  </Step>
+</Steps>
+
+## Enriched Data Not Appearing in Your ATS
+
+After an interview completes, Hirify enriches the candidate profile and pushes the structured data back to your ATS. If the enriched fields are missing, check the following:
+
+<Steps>
+  <Step title="Verify your ATS connection status">
+    In **Settings > Integrations**, confirm that your ATS shows a green **Connected** status. If the status is **Disconnected** or **Error**, re-authorise the connection before attempting any further troubleshooting.
+  </Step>
+  <Step title="Confirm the interview was fully completed">
+    Enrichment only runs for interviews that were completed in full. If the call was abandoned mid-way — for example, if the candidate hung up early or the recorder dropped — Hirify will not process a partial transcript. Check **Hirify > Interviews** to see the interview status.
+  </Step>
+  <Step title="Review ATS field mapping">
+    Hirify pushes enriched data into specific ATS fields. If those fields are not mapped correctly, the data is captured in Hirify but not written to your ATS. Review your configuration in **Settings > Integrations > Field Mapping** and ensure each Hirify output field is mapped to the correct ATS field.
+  </Step>
+</Steps>
+
+## Sync Delays
+
+Hirify polls your ATS every **15 minutes** to pull in new or updated candidate records. If changes made in your ATS are not reflected in Hirify, or vice versa, follow these steps:
+
+<Steps>
+  <Step title="Wait the standard polling interval">
+    Changes can take up to 15 minutes to propagate in either direction. If you made a change in your ATS less than 15 minutes ago, wait and then refresh the relevant candidate record in Hirify.
+  </Step>
+  <Step title="Trigger a manual sync">
+    If 30 minutes have passed and the data still has not updated, force an immediate sync from **Settings > Integrations > Sync Now**. The page will show a timestamp confirming when the last successful sync completed.
+  </Step>
+  <Step title="Check for ATS-side delays">
+    Some ATS platforms have their own API rate limits or maintenance windows that can delay outbound data. If manual sync also fails to update the data, log in to your ATS directly to confirm the record is in the expected state on the ATS side.
+  </Step>
+</Steps>
+
+## ATS Permission Errors
+
+Hirify requires both **read and write access** to candidate fields in your ATS. A permission error typically means the authorisation was granted with insufficient scope.
+
+<Steps>
+  <Step title="Identify the permission error">
+    In **Settings > Integrations**, an error badge on your ATS connection often includes a short description. Errors referencing `403 Forbidden` or `insufficient_scope` confirm a permissions issue rather than a connectivity problem.
+  </Step>
+  <Step title="Re-authorise with full permissions">
+    Disconnect the ATS from **Settings > Integrations > Disconnect**, then reconnect. During the OAuth flow, ensure you grant both read and write permissions when prompted. Some ATS platforms display these as separate checkboxes — both must be selected.
+  </Step>
+  <Step title="Confirm access in your ATS admin panel">
+    Log in to your ATS as an administrator and verify that the Hirify integration or API key has the correct access level assigned. Refer to your ATS provider's documentation for instructions on managing third-party app permissions.
+  </Step>
+</Steps>
+
+<Note>
+  For persistent issues that are not resolved by the steps above, contact [support@hirify.fr](mailto:support@hirify.fr). Include your ATS provider name, a description of the error (including any error codes), and the approximate time the issue first occurred. This helps the team investigate quickly.
+</Note>

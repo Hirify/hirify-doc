@@ -1,47 +1,62 @@
 ---
-title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+title: 'Get Started with Hirify in 4 Steps'
+sidebarTitle: 'Quick Start'
+description: 'Set up Hirify, connect your ATS, capture your first interview, and run your first talent pool search in under 30 minutes.'
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
-
-## Prerequisites
-
-Before you begin, you must have:
-
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
-
-## Get started
+This guide walks you through everything you need to go from a fresh Hirify account to running your first AI-powered talent pool search. By the end, you will have connected your ATS, captured a structured interview, and experienced natural-language candidate sourcing first-hand.
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Create your account">
+    Go to [app.hirify.fr](https://app.hirify.fr) and click **Sign Up**. Enter your work email address and choose a password, then select the plan that fits your team:
 
-    ```bash
-    npm install your-package
-    ```
+    - **Starter** — €24/month. Ideal for individual recruiters or small teams just getting started with AI-assisted hiring.
+    - **Hub** — €49/month. Adds two-way ATS integration and expanded template access, designed for growing recruitment teams.
+    - **Volume** — Custom pricing for 50+ seats. Contact [support@hirify.fr](mailto:support@hirify.fr) for a tailored quote.
+
+    Once you confirm your email, your workspace is ready to configure.
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
 
-    ```bash
-    your-cli init
-    ```
+  <Step title="Connect your ATS">
+    Navigate to **Settings → Integrations** in the left-hand sidebar. Select your ATS from the list of supported platforms and click **Authorize**. The OAuth handshake typically completes in under five minutes.
+
+    After authorization, Hirify begins a background import of your existing talent pool — candidate records, notes, and status fields flow in automatically. You do not need to do anything while the import runs; a progress indicator appears at the top of your dashboard.
+
+    <Note>
+      Two-way ATS sync is available on the **Hub** and **Volume** plans. On Starter, you can import candidates but changes made in Hirify will not be written back to your ATS automatically.
+    </Note>
   </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
-    ```bash
-    your-cli start
-    ```
+  <Step title="Capture your first interview">
+    Install the **Hirify Recorder** from the integrations page for your calendar or video-conferencing tool (Google Meet, Microsoft Teams, and Zoom are supported). Once installed, a **Record with Hirify** button appears directly inside your meeting interface.
+
+    Start your next candidate interview as usual and click **Record with Hirify** when the call begins. Hirify transcribes the conversation in real time, then automatically structures the output against your role's qualification framework — extracting skills, seniority signals, availability, and key answers — so you receive a complete, searchable candidate profile the moment the call ends.
+  </Step>
+
+  <Step title="Search your talent pool">
+    Open **Talent Pool Chat** from the main navigation. Type a plain-language query in the search bar — for example:
+
+    > *"Find me 3 senior Java developers available in Paris"*
+
+    Hirify searches across every candidate in your pool, including profiles enriched from past interviews, and surfaces the best matches ranked by relevance. Click any result to review the full structured profile, original transcript, and ATS history side by side.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+<Note>
+  All candidate data processed by Hirify — transcripts, profiles, and ATS records — is stored exclusively on servers located in France (Scalingo, Paris), certified ISO 27001. Hirify is fully compliant with GDPR and the EU AI Act.
+</Note>
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
-</Tip>
+<CardGroup cols={2}>
+  <Card title="Account Setup" icon="user-circle" href="/getting-started/account-setup">
+    Configure your profile, choose a plan, and complete onboarding after signing up.
+  </Card>
+  <Card title="Connect Your ATS" icon="plug" href="/integrations/connecting-your-ats">
+    Step-by-step instructions for authorizing and syncing your ATS with Hirify.
+  </Card>
+  <Card title="Interview Capture" icon="microphone" href="/features/interview-capture">
+    Learn how Hirify records, transcribes, and structures your candidate interviews.
+  </Card>
+  <Card title="Talent Pool Chat" icon="magnifying-glass" href="/features/talent-pool-chat">
+    Use natural-language search to source candidates from your entire talent pool.
+  </Card>
+</CardGroup>

@@ -1,0 +1,81 @@
+---
+title: 'Connect Your ATS to Hirify Step by Step'
+sidebarTitle: 'Connect ATS'
+description: 'Authorize your ATS in Hirify Settings, run the initial talent pool import, and verify two-way sync is working in minutes.'
+---
+
+Connecting your ATS to Hirify takes less than ten minutes. Once authorized, Hirify imports your existing talent pool automatically and begins writing enriched candidate data back to your ATS after every interview. The steps below walk you through the full setup — from granting permissions to confirming your first live sync.
+
+## Prerequisites
+
+Before you begin, make sure you have:
+
+- A **Hub** or **Volume** plan (ATS integration is not available on the Starter plan)
+- **Admin access** to your Hirify account (Settings must be visible in your navigation)
+- **Admin or API access** to your ATS so you can authorize a third-party connection
+
+If you're unsure about your plan or permissions, contact [support@hirify.fr](mailto:support@hirify.fr) before proceeding.
+
+## Setup Steps
+
+<Steps>
+  <Step title="Open Integrations in Hirify">
+    Log in at [app.hirify.fr](https://app.hirify.fr), then navigate to **Settings > Integrations**. You'll see a list of supported ATS platforms available for your account.
+  </Step>
+  <Step title="Select Your ATS">
+    Find your ATS in the list and click on it to open its connection panel. Each platform displays a short summary of the data it exchanges with Hirify.
+  </Step>
+  <Step title="Initiate the Connection">
+    Click **Connect**. Hirify redirects you to your ATS's authorization page where you'll log in with your ATS credentials.
+  </Step>
+  <Step title="Grant the Required Permissions">
+    On your ATS's authorization screen, approve the permissions Hirify requests — typically **read candidates** and **write candidate fields**. These are the minimum permissions needed for two-way sync. Click **Authorize** or the equivalent button to confirm.
+  </Step>
+  <Step title="Confirm the Connection in Hirify">
+    You are redirected back to Hirify automatically. In **Settings > Integrations**, the status for your ATS should now display **Connected**. If it shows an error, verify that you granted all requested permissions and try again.
+  </Step>
+  <Step title="Wait for the Initial Import">
+    Hirify immediately begins importing your existing talent pool from the ATS. Depending on the size of your database, this takes between **5 and 30 minutes**. You can continue using Hirify during the import — profiles appear in your talent pool as they are processed.
+  </Step>
+  <Step title="Receive Your Import Confirmation">
+    Once the import is complete, Hirify sends a confirmation email to your account address. The email includes a summary of how many profiles were imported and flags any records that could not be processed.
+  </Step>
+</Steps>
+
+<Note>
+  The initial talent pool import may take up to 30 minutes for large databases. You'll receive an email confirmation when it's complete — you don't need to keep the Settings page open while it runs.
+</Note>
+
+## Testing the Connection
+
+After the import email arrives, verify that live sync is working correctly:
+
+1. Create a new candidate record in your ATS with a recognizable name (for example, "Test Sync Candidate").
+2. Wait **2–5 minutes**, then open **Talent Pool Chat** in Hirify and search for the candidate's name.
+3. If the record appears, your real-time sync is working as expected.
+4. Delete the test record from your ATS when you're done — Hirify will remove it from the talent pool on the next sync cycle.
+
+If the test candidate doesn't appear after five minutes, check **Settings > Integrations** for any error messages, or contact [support@hirify.fr](mailto:support@hirify.fr) with your ATS name and account details.
+
+## Disconnecting Your ATS
+
+To remove the integration at any time:
+
+1. Go to **Settings > Integrations**
+2. Click on your connected ATS
+3. Select **Disconnect** and confirm the action
+
+<Warning>
+  Disconnecting your ATS does not delete candidate data already written to your ATS. All enriched fields, interview summaries, and structured profiles that Hirify previously synced remain in your ATS. However, future interviews completed in Hirify will no longer sync back, and new candidates added to your ATS will no longer appear in Hirify's talent pool.
+</Warning>
+
+You can reconnect your ATS at any time by following the setup steps above. Previous enrichment data will not be duplicated on reconnection.
+
+<CardGroup cols={2}>
+  <Card title="ATS Overview" icon="list" href="/integrations/ats-overview">
+    Review supported platforms, integration capabilities, and plan requirements before connecting.
+  </Card>
+  <Card title="Data Sync" icon="arrows-rotate" href="/integrations/data-sync">
+    Understand how Hirify syncs data, how often, and how conflicts are resolved.
+  </Card>
+</CardGroup>

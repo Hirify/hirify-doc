@@ -1,0 +1,87 @@
+---
+title: 'How Hirify Syncs Data With Your ATS'
+sidebarTitle: 'Data Sync'
+description: "Understand Hirify's real-time and polling sync behavior, how enriched fields map to your ATS, and how conflicts are resolved safely."
+---
+
+Hirify keeps your ATS and talent pool in sync continuously. After the initial import, data flows in both directions on an ongoing basis — your ATS pushes new candidates and status changes into Hirify, and Hirify pushes structured interview enrichments back into your ATS. This page explains exactly what moves in each direction, how often syncs run, and what happens when both systems have conflicting data for the same field.
+
+## Sync Direction
+
+Hirify operates a true two-way sync. The table below shows what data originates from each system.
+
+<Tabs>
+  <Tab title="ATS → Hirify">
+    The following data is read from your ATS and kept up to date in Hirify:
+
+    | Field | Notes |
+    |---|---|
+    | **Candidate profiles** | Name, contact details, linked applications, and CV attachments |
+    | **Application history** | Roles applied to, pipeline stages, and status changes |
+    | **Existing notes** | Recruiter notes already saved in the ATS are imported and visible in the candidate's Hirify profile |
+    | **New candidates** | Any candidate added to your ATS after the initial import syncs into Hirify automatically |
+  </Tab>
+  <Tab title="Hirify → ATS">
+    The following enriched fields are written back to your ATS after each interview:
+
+    | Field | Notes |
+    |---|---|
+    | **Skills** | Structured skill tags extracted and validated during the interview |
+    | **Mobility** | Geographic and remote-work preferences captured in the interview |
+    | **Salary expectations** | Current and target figures, with currency, as declared by the candidate |
+    | **Availability** | Notice period and earliest start date |
+    | **Interview summary** | A structured summary linked to the specific interview that generated the enrichment |
+  </Tab>
+</Tabs>
+
+## Sync Frequency
+
+Hirify uses different sync mechanisms depending on the direction and urgency of the data:
+
+<CardGroup cols={2}>
+  <Card title="Real-time Enrichment Write-back" icon="bolt">
+    When a recruiter completes and validates an interview in Hirify, enriched fields are written to the ATS within **a few minutes**. No manual action is required — the sync triggers automatically on interview completion.
+  </Card>
+  <Card title="Polling Sync (ATS → Hirify)" icon="clock">
+    Hirify polls your ATS every **15 minutes** to pick up new candidates, updated profiles, and pipeline status changes. This keeps Hirify's talent pool current without requiring a webhook setup on your ATS.
+  </Card>
+</CardGroup>
+
+## Field Mapping
+
+Hirify writes enriched data into **standard custom fields** in your ATS. During the initial connection setup, you can configure exactly which Hirify field maps to which ATS field — useful if your ATS already has custom fields for skills or availability that your team relies on.
+
+Default mappings are pre-configured for each supported ATS so that the integration works immediately without any configuration. You can review and adjust mappings at any time in **Settings > Integrations > [Your ATS] > Field Mapping**.
+
+<Info>
+  If your ATS does not support a particular custom field type (for example, a structured multi-value field for skills), Hirify falls back to writing the data as a formatted text block. The exact fallback format is shown in the field mapping configuration screen.
+</Info>
+
+## Conflict Resolution
+
+A sync conflict occurs when the same field has been edited in both Hirify and your ATS since the last sync completed. Hirify is designed to never silently overwrite a manual edit — every conflict is surfaced to the recruiter for an explicit decision.
+
+When Hirify detects a conflict:
+
+1. The affected candidate's profile in Hirify displays a **conflict notice** with the two differing values side by side.
+2. The recruiter selects which version to keep — the Hirify value or the ATS value.
+3. Hirify applies the chosen value to both systems on the next sync, resolving the conflict.
+
+Unresolved conflicts do not block other fields from syncing. Only the conflicted field is held pending resolution.
+
+<Tip>
+  If you update a candidate's salary expectation in both Hirify and your ATS before a sync cycle completes, you'll see a conflict notice on the candidate's Hirify profile. Open the profile, review both values, and select the correct one — Hirify will propagate your choice to both systems automatically.
+</Tip>
+
+<Warning>
+  Conflicts must be resolved before a new interview enrichment for the same field is written back to the ATS. If a conflict on the salary field is left open and a new interview captures a fresh salary figure, Hirify will queue the new write-back until you resolve the existing conflict first.
+</Warning>
+
+<CardGroup cols={2}>
+  <Card title="ATS Overview" icon="list" href="/integrations/ats-overview">
+    Review the full list of integration capabilities and supported platforms.
+  </Card>
+  <Card title="Connect ATS" icon="plug" href="/integrations/connecting-your-ats">
+    Follow the step-by-step guide to authorize your ATS and run your first import.
+  </Card>
+</CardGroup>

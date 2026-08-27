@@ -1,26 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Hirify",
+  "projectType": "saas",
+  "projectName": "Hirify",
+  "projectDescription": "Hirify is an AI-powered HR Hub that connects to your existing ATS, enriches candidate profiles after every interview, and makes your entire talent pool searchable in natural language.",
   "theme": "almond",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "Open App",
-      "href": "https://app.hirify.fr"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://twitter.com/hirify_",
-      "website": "https://hirify.fr"
-    }
-  },
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -87,5 +72,24 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "AI interview capture and structured candidate summary generation",
+    "Two-way ATS integration for automatic profile enrichment",
+    "Natural-language talent pool search (Talent Pool Chat)",
+    "Role-specific qualification templates from job descriptions",
+    "GDPR and AI Act compliant processing with 100% French data hosting",
+    "Explainable AI — every recommendation is sourced from interview evidence",
+    "Team-wide template sharing for consistent candidate evaluation",
+    "Support for recruitment agencies, IT services firms, and accounting firms"
+  ],
+  "publicApiSurface": [
+    "ATS integration (two-way read/write sync)",
+    "Interview capture via meeting recorder",
+    "Talent Pool Chat (natural-language query interface)",
+    "Candidate profile enrichment (skills, mobility, salary expectations, availability)",
+    "Qualification templates (create, share, apply per role)",
+    "Team and user management",
+    "Billing and subscription management"
+  ]
 }

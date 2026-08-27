@@ -1,0 +1,57 @@
+---
+title: 'Where Hirify Stores Your Data: French Sovereign Infrastructure'
+sidebarTitle: 'Data Hosting'
+description: 'All Hirify data is stored exclusively in France on ISO 27001-certified infrastructure — zero US cloud exposure for your candidate records.'
+---
+
+All Hirify data — candidate profiles, interview recordings, transcripts, and enriched fields — is stored exclusively in France on sovereign, ISO 27001-certified infrastructure. This means your recruitment data never leaves French territory as part of core platform operations, giving you a clear and auditable data residency posture for compliance, enterprise procurement, and client assurance purposes.
+
+## Infrastructure Details
+
+The table below lists the infrastructure components that power Hirify's platform and where each element is hosted.
+
+| Component | Provider | Location | Certification |
+|---|---|---|---|
+| Application Hosting | Scalingo | Paris, France | ISO 27001 |
+| File Storage | Scaleway | France | ISO 27001 |
+| AI Analysis | Mistral | France | — |
+| Transcription | Gladia | France | — |
+
+All core data — including candidate profiles, interview audio, transcripts, and AI-generated enrichments — resides within Scalingo and Scaleway's French infrastructure. AI processing by Mistral and audio transcription by Gladia are performed within France and do not result in persistent storage of candidate data outside the Scalingo/Scaleway perimeter.
+
+---
+
+## What 'Data Hosted in France' Means
+
+Choosing infrastructure hosted entirely in France has concrete legal and operational implications for your recruitment team:
+
+- **Your candidate data is subject to French and EU law only.** Data stored in France is governed by the GDPR and French data protection law (Loi Informatique et Libertés). It is not subject to the jurisdiction of non-EU governments.
+- **No US Cloud Act exposure.** Because Hirify does not rely on US-based infrastructure providers for core data storage or processing, your candidate records are not reachable under the US CLOUD Act. This is a meaningful distinction for public sector clients and organisations with strict data sovereignty requirements.
+- **Auditable data residency.** If a client, auditor, or regulator asks where candidate data is stored, the answer is unambiguous: France. Hirify can provide written confirmation of data residency for enterprise and public sector procurement processes.
+
+<Info>
+  For a full technical security overview, a completed security questionnaire, or an infrastructure residency statement for procurement purposes, contact **support@hirify.fr**.
+</Info>
+
+---
+
+## Encryption
+
+Hirify applies encryption at every layer of the data lifecycle:
+
+- **Data in transit** — all communication between your browser, the Hirify application, and backend services is encrypted using TLS 1.2 or higher. Unencrypted HTTP connections are rejected.
+- **Data at rest** — all stored data, including interview recordings, transcripts, and candidate profile fields, is encrypted at rest using AES-256 encryption.
+- **Encryption key management** — encryption keys are managed within the French infrastructure perimeter. Keys are never stored or managed by US-based services.
+
+---
+
+## Related Pages
+
+<CardGroup cols={2}>
+  <Card title="Sub-Processors" icon="list-check" href="/compliance/sub-processors">
+    See the full list of third-party services Hirify uses and their GDPR compliance basis.
+  </Card>
+  <Card title="GDPR Compliance" icon="shield-halved" href="/compliance/gdpr">
+    Understand your obligations as a data controller and how Hirify supports them.
+  </Card>
+</CardGroup>
