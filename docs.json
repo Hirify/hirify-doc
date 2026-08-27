@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Hirify",
-  "theme": "mint",
+  "theme": "maple",
   "colors": {
     "primary": "#335cff",
     "light": "#f4f1f2",
@@ -20,8 +20,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://twitter.com/hirify_",
-      "website": "https://hirify.fr"
+      "website": "https://hirify.fr",
+      "linkedin": "https://www.linkedin.com/company/hirify-fr"
     }
   },
   "navigation": {
