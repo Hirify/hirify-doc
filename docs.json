@@ -11,7 +11,7 @@
   "navbar": {
     "primary": {
       "type": "button",
-      "label": "Open App",
+      "label": "Ouvrir l'application",
       "href": "https://app.hirify.fr"
     }
   },
@@ -22,69 +22,10 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Get Started",
-            "pages": [
-              "introduction",
-              "quickstart",
-              "getting-started/account-setup",
-              "getting-started/invite-team"
-            ]
-          },
-          {
-            "group": "Core Features",
-            "pages": [
-              "features/interview-capture",
-              "features/candidate-profiles",
-              "features/talent-pool-chat",
-              "features/ats-integration",
-              "features/templates"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "integrations/ats-overview",
-              "integrations/connecting-your-ats",
-              "integrations/data-sync"
-            ]
-          },
-          {
-            "group": "Security & Compliance",
-            "pages": [
-              "compliance/gdpr",
-              "compliance/ai-act",
-              "compliance/data-hosting",
-              "compliance/sub-processors"
-            ]
-          },
-          {
-            "group": "Account & Billing",
-            "pages": [
-              "account/plans",
-              "account/managing-users",
-              "account/billing"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Help & FAQ",
-        "groups": [
-          {
-            "group": "Troubleshooting",
-            "pages": [
-              "help/faq",
-              "help/ats-connection-issues",
-              "help/interview-recording",
-              "help/contact-support"
-            ]
-          }
-        ]
+        "group": "Hirify",
+        "pages": ["introduction"]
       }
     ]
   }
