@@ -1,0 +1,57 @@
+---
+title: "Importer un enregistrement audio"
+sidebarTitle: "Importer un audio"
+description: "Transcrire et analyser un entretien déjà enregistré en important son fichier audio depuis le tableau de bord"
+icon: "file-import"
+---
+
+Un entretien enregistré en dehors de Hirify — sur un dictaphone, un téléphone ou un autre outil — peut être importé tel quel. Une fois le fichier envoyé, il suit exactement le même chemin que les autres : transcription, compte rendu, analyse.
+
+## Importer un fichier
+
+<Steps>
+  <Step title="Ouvrez la fenêtre d'import">
+    Sur le **Tableau de bord**, dans la ligne **Démarrer un entretien**, cliquez sur **Importer un audio**.
+  </Step>
+  <Step title="Décrivez l'entretien">
+    Donnez un **Titre de l'entretien**, puis indiquez le nombre de **Participants**, de 1 à 5 personnes. Ce nombre aide Hirify à séparer les voix dans la transcription.
+  </Step>
+  <Step title="Choisissez le fichier">
+    Cliquez sur la zone **Cliquez ou déposez un fichier ici**, ou glissez-y le fichier. Les formats MP3, WAV, M4A, MP4, OGG, WEBM, AAC et FLAC sont acceptés, jusqu'à 1,5 Go.
+  </Step>
+  <Step title="Lancez l'envoi">
+    Cliquez sur **Importer**. Une barre de progression affiche l'avancement, le débit et le temps restant. Gardez la fenêtre ouverte pendant l'envoi.
+  </Step>
+</Steps>
+
+## Ce qui se passe après l'envoi
+
+Une fois le fichier transmis, Hirify le vérifie puis lance la transcription. Selon le cas, la fenêtre affiche :
+
+- **Fichier envoyé** : la transcription démarre et l'entretien apparaît dans la liste d'ici quelques minutes.
+- **Fichier reçu** : le traitement d'un fichier volumineux se poursuit en arrière-plan. Vous pouvez fermer la fenêtre, une notification vous préviendra quand l'entretien sera prêt.
+- **Enregistrement trop court** : le fichier fait moins d'une minute et ne sera pas transcrit.
+- **Échec de l'envoi** : le transfert n'a pas abouti. Vérifiez votre connexion, puis cliquez sur **Réessayer** — l'envoi reprend sans recréer l'entretien.
+
+Dans la liste des entretiens, un entretien importé porte une icône d'import et la mention **Fichier importé**.
+
+<Warning>
+  L'information des candidats vous incombe, y compris pour un enregistrement réalisé en dehors de Hirify : assurez-vous que l'enregistrement a été annoncé avant de l'importer. Voir [Informer vos candidats](/fr/confiance/informer-vos-candidats).
+</Warning>
+
+## Bon à savoir
+
+- Fermer la fenêtre pendant l'envoi annule le transfert. L'entretien créé au lancement reste dans la liste à l'état de brouillon, vous pouvez le supprimer.
+- Le nombre de participants n'est pas bloquant : les intervenants se renomment et se corrigent après coup, comme sur les autres canaux. Voir [Identifier les intervenants](/fr/entretiens/identifier-les-intervenants).
+- Un enregistrement de moins d'une minute n'est pas transcrit : l'entretien porte alors la mention **Trop court**.
+- Le canal ne change ni la transcription, ni le compte rendu, ni l'analyse. Un entretien importé se rattache à une candidature comme les autres.
+
+<CardGroup cols={2}>
+  <Card title="Retrouver et suivre" icon="list" href="/fr/entretiens/retrouver-et-suivre">
+    Suivre l'état de l'entretien jusqu'au compte rendu.
+  </Card>
+
+  <Card title="Relire un entretien" icon="file-lines" href="/fr/entretiens/relire-un-entretien">
+    Les trois vues de la fiche entretien.
+  </Card>
+</CardGroup>

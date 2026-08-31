@@ -40,7 +40,7 @@ Pour reconnecter plus tard, reprenez le bouton **Connecter**.
 
 ## Déconnecter votre logiciel de recrutement
 
-L'opération est réservée aux administrateurs de l'organisation et elle vaut pour tout le monde : la connexion appartient à l'organisation, pas à un membre.
+L'opération est réservée aux administrateurs et aux admins facturation de l'organisation et elle vaut pour tout le monde : la connexion appartient à l'organisation, pas à un membre.
 
 <Steps>
   <Step title="Ouvrez la section ATS">
@@ -99,12 +99,13 @@ Une seule connexion est active par organisation. Tant qu'un logiciel est connect
 - Une reconnexion repart d'une synchronisation complète. Après une suppression des données, Hirify réimporte ce que votre logiciel de recrutement expose sur la période couverte par cet import : les enregistrements les plus anciens peuvent ne pas revenir.
 - Si la suppression des données échoue, Hirify vous le dit : la connexion est bien désactivée, mais la purge doit être relancée par le support.
 - La déconnexion d'agenda n'offre pas d'option de suppression : il n'y a pas de case à cocher sur cette section.
-- Un membre qui n'est pas administrateur ne voit pas la section **ATS** de la page **Intégrations** et ne peut donc pas déconnecter le logiciel de recrutement.
+- Un membre qui n'est ni administrateur ni admin facturation ne voit pas la section **ATS** de la page **Intégrations** et ne peut donc pas déconnecter le logiciel de recrutement.
 
 <CardGroup cols={2}>
   <Card title="Connecter votre agenda" icon="calendar" href="/fr/integrations/connecter-votre-agenda">
     Remettre un agenda en place, ou en changer.
   </Card>
+
   <Card title="Vos données" icon="shield" href="/fr/confiance/vos-donnees">
     Ce que Hirify conserve, et pendant combien de temps.
   </Card>
