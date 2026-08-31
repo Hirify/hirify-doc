@@ -10,7 +10,7 @@ Hirify enregistre et transcrit vos entretiens quel que soit le canal. Cette page
 Tout part du même endroit : la section **Démarrer un entretien**, sur le **Tableau de bord**.
 
 <Frame>
-  <img src="/images/tableau-de-bord.webp" alt="la ligne « Démarrer un entretien » du tableau de bord, avec le champ de lien et les boutons Appeler, Planifier par email et Présentiel" />
+  ![la ligne « Démarrer un entretien » du tableau de bord, avec le champ de lien et les boutons Appeler, Planifier par email et Présentiel](/images/tableau-de-bord.webp)
 </Frame>
 
 ## Les chemins disponibles
@@ -21,6 +21,7 @@ Tout part du même endroit : la section **Démarrer un entretien**, sur le **Tab
 | L'entretien est déjà posé dans votre agenda | Vous ajoutez l'adresse de l'assistant de réunion en invité | Bouton **Planifier par email** |
 | Votre agenda est connecté à Hirify | Vous cliquez sur l'événement, puis sur **Ajouter le bot** | **Calendrier** |
 | L'entretien a lieu en face à face | Vous générez un QR code et enregistrez depuis un téléphone | Bouton **Présentiel** |
+| L'entretien est déjà enregistré ailleurs | Vous importez le fichier audio | Bouton **Importer un audio** |
 | Vous appelez le candidat | Vous composez le numéro | Tableau de bord |
 | L'entretien est créé dans votre logiciel de recrutement | Rien : l'assistant est programmé pour vous | Réglage d'organisation |
 
@@ -34,6 +35,7 @@ Les deux premiers ne demandent aucune connexion préalable. Le **Calendrier** su
   <Card title="Enregistrer en visioconférence" href="/fr/entretiens/en-visioconference">
     Les trois chemins, pas à pas.
   </Card>
+
   <Card title="Connecter votre agenda" href="/fr/integrations/connecter-votre-agenda">
     Relier Google Calendar ou Outlook.
   </Card>
@@ -49,6 +51,16 @@ Pour un entretien en face à face, Hirify génère un QR code. Vous le scannez a
   </Card>
 </CardGroup>
 
+## Depuis un fichier audio
+
+Un entretien déjà enregistré ailleurs — dictaphone, téléphone, autre outil — s'importe depuis le bouton **Importer un audio** du tableau de bord. Vous donnez un titre, indiquez le nombre de participants et déposez le fichier. La transcription et l'analyse sont les mêmes que pour les autres canaux.
+
+<CardGroup cols={1}>
+  <Card title="Importer un enregistrement audio" href="/fr/entretiens/importer-un-audio">
+    Formats acceptés, envoi et suivi du traitement.
+  </Card>
+</CardGroup>
+
 ## Au téléphone
 
 Hirify passe un appel sortant depuis votre ligne et transcrit la conversation. Quand un numéro sortant par défaut est actif, le tableau de bord affiche directement un champ où composer le numéro. Sinon, le bouton **Appeler** ouvre la fenêtre **Appel téléphonique**, où vous choisissez la ligne, le micro et le numéro à appeler.
@@ -57,6 +69,7 @@ Hirify passe un appel sortant depuis votre ligne et transcrit la conversation. Q
   <Card title="Obtenir un numéro" href="/fr/telephonie/obtenir-un-numero">
     La ligne et sa vérification.
   </Card>
+
   <Card title="Passer un appel" href="/fr/telephonie/passer-un-appel">
     Composer et suivre l'appel.
   </Card>
