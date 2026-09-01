@@ -1,0 +1,67 @@
+---
+title: "Enregistrer une réunion hors recrutement"
+sidebarTitle: "Réunions hors recrutement"
+description: "Hirify reconnaît les réunions qui ne sont pas des entretiens et leur épargne l'analyse candidat"
+icon: "users"
+---
+
+Tous vos enregistrements ne sont pas des entretiens. Un point client, un débrief d'équipe ou une réunion interne peut être capté avec les mêmes canaux — visioconférence, présentiel, import — sans produire une analyse candidat qui n'aurait aucun sens. Hirify détecte ces réunions et adapte ce qu'il génère.
+
+## Comment la détection fonctionne
+
+La classification est automatique. Après la transcription, Hirify examine le contenu de l'échange et décide s'il s'agit d'un entretien de recrutement ou d'une réunion. Dans le doute, l'enregistrement est traité comme un entretien.
+
+Certains cas ne passent jamais par la détection :
+
+- **Un entretien lié à une candidature** de votre logiciel de recrutement est toujours traité comme un entretien.
+- **Un choix manuel** est définitif : un enregistrement que vous avez reclassé vous-même ne sera plus jamais reclassé automatiquement.
+
+## Ce qu'une réunion reçoit
+
+Une réunion garde l'essentiel du traitement, sans le volet candidat :
+
+- **Un compte rendu adapté** : le template **Compte rendu de réunion** structure la synthèse en contexte et participants, points discutés, décisions et actions. Vous pouvez régénérer le compte rendu avec un autre template si vous préférez.
+- **La transcription et L'essentiel** : disponibles comme pour un entretien.
+- **Pas d'analyse candidat** : le panneau Analyse affiche **Analyse non générée**, avec la raison de la classification.
+- **Pas de transfert ATS** : rien n'est proposé à l'envoi vers votre logiciel de recrutement.
+
+Une réunion reste aussi en dehors de vos statistiques d'entretiens, du Sourcing et de l'historique des candidats.
+
+## Repérer les réunions dans la liste
+
+Dans la liste des enregistrements, une réunion porte le badge **Réunion**. Le filtre **Catégorie** permet d'afficher seulement les entretiens ou seulement les réunions.
+
+## Reclasser une réunion en entretien
+
+Si un enregistrement classé réunion était en réalité un entretien, ouvrez sa page. Un bandeau **Réunion hors recrutement** le signale en haut de la fiche.
+
+<Steps>
+  <Step title="Cliquez sur « Analyser quand même »">
+    Le bouton se trouve dans le bandeau, et aussi dans le panneau **Analyse**.
+  </Step>
+  <Step title="Laissez l'analyse se relancer">
+    L'enregistrement est reclassé en entretien et le traitement complet repart : analyse candidat, signaux, panneau ATS.
+  </Step>
+</Steps>
+
+Ce reclassement est définitif : l'enregistrement ne repassera pas en réunion automatiquement.
+
+## Désactiver la détection
+
+Un administrateur peut couper la détection pour toute l'organisation : dans **Paramètres → Intégrations**, section **Réunions hors recrutement**, désactivez **Détection automatique**. Tous les enregistrements suivent alors le traitement d'entretien classique.
+
+## Bon à savoir
+
+- La détection est active par défaut.
+- Sur la page d'un enregistrement classé réunion, le panneau **Analyse** indique si la classification est automatique ou manuelle.
+- Le canal ne change rien : une réunion captée en visioconférence, en présentiel ou par import est traitée de la même façon.
+
+<CardGroup cols={2}>
+  <Card title="Choisir un template" icon="file-lines" href="/fr/comptes-rendus/choisir-un-template">
+    Appliquer un autre template au compte rendu d'une réunion.
+  </Card>
+
+  <Card title="Retrouver et suivre" icon="list" href="/fr/entretiens/retrouver-et-suivre">
+    La liste des enregistrements et ses filtres.
+  </Card>
+</CardGroup>
