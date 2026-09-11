@@ -1,0 +1,112 @@
+---
+title: "Record your first interview"
+sidebarTitle: "Quickstart"
+description: "Set up your workspace, record an interview, and read the interview notes it produces"
+icon: "rocket"
+---
+
+This page takes you from creating your account to your first reviewed interview notes. Follow it in order. Each step sets up the next one.
+
+## Before you start
+
+<Warning>
+Telling your candidate that the interview is recorded and transcribed is your responsibility. Hirify provides the technical means to record. It doesn't collect consent from the people being recorded. Tell them before you start recording. The [Inform your candidates](/en/trust/inform-your-candidates) page gives you what you need to do it.
+</Warning>
+
+## Create your account and workspace
+
+<Steps>
+  <Step title="Enter your name">
+    The first time you sign in, the **What's your name?** screen asks for your **First name** and **Last name**. Click **Continue**. Your team sees this name, and it appears on the interview notes you share.
+  </Step>
+  <Step title="Create your workspace or join your team's">
+    If colleagues already use Hirify with the same email domain, the **Your colleagues are already here** screen shows up first. Click **Request to join**. An administrator approves your arrival, and the **Request sent** screen confirms that your request went out. Otherwise, the **Your company** screen asks for the **Company name**, then **Continue**. You also reach it by clicking **Create my own organization**. If you work without a team, click **I work on my own** instead.
+  </Step>
+</Steps>
+
+Both screens are covered in detail in [Create your Hirify workspace](/en/getting-started/create-your-workspace) and [Join an existing organization](/en/getting-started/join-an-organization).
+
+{/* SCREENSHOT: the "What's your name?" screen, then the "Your colleagues are already here" screen and the "Your company" screen with the "I work on my own" button */}
+
+## Record the interview
+
+Everything starts from the **Dashboard**, in the **Start an interview** section. Here is the shortest path, for a video meeting that starts now.
+
+<Steps>
+  <Step title="Open the Dashboard">
+    It's the app's home page, the first item in the sidebar under **My workspace**.
+  </Step>
+  <Step title="Paste the meeting link">
+    In **Start an interview**, paste the address of the video meeting into the **Paste a Meet or Teams link** field.
+  </Step>
+  <Step title="Send the meeting assistant">
+    Confirm with the arrow on the right of the field. The meeting assistant asks to join the video meeting. Depending on the platform, the host has to let it in. Admit it as you would any other participant.
+  </Step>
+</Steps>
+
+<Note>
+Two other paths start from the same place:
+
+- **Schedule by email**: copy the address shown and add it as a guest to your calendar invitation. The meeting assistant joins the video meeting at the scheduled time.
+- **In person**: the **In-person interview** window asks for the **Interview title** and the number of **Participants**. **Generate** then creates a QR code to scan with a phone. On the phone, tap **Start recording**, then **Stop** at the end.
+
+All the ways to record are compared in [Choose how to record](/en/interviews/choose-how-to-record).
+</Note>
+
+{/* SCREENSHOT: the "In-person interview" window with the generated QR code */}
+
+## Track processing
+
+The interview appears under **Recent interviews** on the Dashboard and under **Interviews** in the sidebar. A badge shows where it stands.
+
+- **Pending**: the interview exists, but recording hasn't started.
+- **Assistant joined**, then **Meeting in progress**: the meeting assistant is in the video meeting.
+- **Processing transcript**: the audio is being transcribed.
+- **Generating**, then **Notes ready**: the interview notes are being written, then available.
+
+Three outcomes mean there won't be any interview notes:
+
+- **Too short**: the recording is too brief to transcribe.
+- **Assistant not admitted**: the host didn't let the meeting assistant in.
+- **Failed**: processing ran into an error.
+
+<Note>
+No email tells you that an interview has been processed. Stay on the page. The list updates by itself. The **Notifications** center, in your account menu, also tells you when the transcript and the interview notes are done.
+</Note>
+
+## Read the interview notes
+
+<Steps>
+  <Step title="Open the interview">
+    Click the interview in **Recent interviews** or in **Interviews**. An interview only opens once its processing is complete.
+  </Step>
+  <Step title="Go through the three views">
+    **Notes** shows the interview notes. **Key takeaways** gives a short version. **Transcript** shows the word-for-word record, turn by turn.
+  </Step>
+  <Step title="Open the Analysis panel">
+    On the right of the interview page, the **Analysis** panel brings together what the interview says about the candidate, the points to review, and the deal-breakers.
+  </Step>
+</Steps>
+
+## Name the speakers
+
+If some voices haven't been matched to a name, a banner at the top of the interview page tells you. Click **Identify speakers** and give each voice a name. Once the speakers are identified, the banner offers **Regenerate** so that the interview notes and key takeaways reflect them. The full procedure is in [Identify speakers](/en/interviews/identify-speakers).
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Choose a template" icon="file-lines" href="/en/notes/choose-a-template">
+    Decide on the structure your interview notes will follow.
+  </Card>
+  <Card title="Connect your calendar" icon="calendar" href="/en/integrations/connect-your-calendar">
+    See your upcoming interviews without pasting a link.
+  </Card>
+</CardGroup>
+
+## Good to know
+
+- Phone calls require a dedicated line, activated after a business verification. See [Get a phone number](/en/calling/get-a-phone-number).
+- A member only sees their own interviews. Managers and administrators see the interviews of the whole organization.
+- An in-person interview has no video meeting link, so it doesn't appear in the **Calendar**, which only lists online meetings.
+- The number of participants you enter before an in-person recording helps separate the voices. It is passed to the transcription as a hint.
+- By default, interview notes aren't sent to your ATS without your approval. Two writes do happen on their own after the analysis: summary tags added to the candidate's profile, and custom fields that were still empty getting filled in. With the Teamtailor Hirify card, a third setting can also send the analysis and the interview notes as soon as the interview ends. These settings are off by default. Only an administrator or a billing admin can turn them on. See [ATS automations](/en/integrations/ats-automations).

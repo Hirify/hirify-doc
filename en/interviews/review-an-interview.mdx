@@ -1,0 +1,103 @@
+---
+title: "Review an interview"
+sidebarTitle: "Review an interview"
+description: "Move between the three views of an interview, Notes, Key takeaways, and Transcript, and trace any sentence back to the moment it was said"
+icon: "file-lines"
+---
+
+The interview page gathers everything Hirify drew from the interview. Three views sit side by side: the interview notes, a short summary, and the word-for-word transcript. This page explains how to move between them and how to trace a statement back to the part of the conversation it comes from.
+
+## Open an interview
+
+<Steps>
+  <Step title="Open the interview list">
+    In the left menu, under **Interviews**, click **Interviews**.
+  </Step>
+  <Step title="Click the interview's row">
+    Only completed interviews open. An interview that's still processing, marked **Too short**, or marked **Failed** stays visible in the list but can't be opened.
+  </Step>
+  <Step title="Find the top bar">
+    The three tabs **Notes**, **Key takeaways**, and **Transcript** sit on the left of this bar. The interview title appears on the right, followed by its date and duration on wide screens.
+  </Step>
+</Steps>
+
+<Note>
+  On the right edge of the screen, a vertical bar opens three panels: **Actions**, **Analysis**, and **ATS** when your organization has connected its ATS. What the **Actions** panel contains depends on the open tab.
+</Note>
+
+{/* SCREENSHOT: an interview open on the Notes tab, with the three tabs on the left of the top bar and the vertical bar on the right. French capture: /images/fiche-entretien-notes.webp */}
+
+## The Notes view
+
+This is the view that opens by default. It shows the interview notes. You can edit the title with a click and the text line by line. Next to the title, a label shows **Saving…** while your changes are saved, then **Saved**.
+
+The interview notes Hirify produces on its own carry an **Auto** badge. A row of pills above the document lets you switch from one note to another. The **New note** button at the end of the row opens the **Pick a template** window. As soon as an interview has two or more notes, the **Notes** tab shows how many. On older interviews with no interview notes, the view offers **Generate interview notes** and **New note**.
+
+While generation is running, the view shows a waiting state with the key takeaways under the heading "In the meantime, key takeaways". If generation fails, a message says so and offers **Try again**. The transcript and the analysis aren't affected.
+
+To edit, rewrite, or translate interview notes, see [Read and edit interview notes](/en/notes/read-and-edit).
+
+## The Key takeaways view
+
+A paragraph, then a **Key points** list. It's the shortest read of the interview, meant to be skimmed between two meetings. The **Open interview notes** link at the bottom switches to the Notes view.
+
+Here the **Actions** panel offers a single command, **Copy key takeaways**, which copies the paragraph and the bullets to your clipboard.
+
+Three other situations can come up:
+
+- **No summary for this call**: either no candidate took part in the conversation, or its content isn't enough to produce a summary.
+- Generation in progress: a message says so, and the text appears as soon as it's ready.
+- **Key takeaways unavailable**: generation didn't complete. The **Try again** button starts it again.
+
+## The Transcript view
+
+The transcript lists each turn in order. Each line shows the speaker's name and the time range of their turn.
+
+Click the text of a line to correct it. Enter saves, Esc cancels. The **Done** and **Cancel** buttons do the same. If a CV was added to the interview, the words Hirify corrected from the CV are underlined with dots. Hover over them to see the original word and its correction.
+
+When you hover over a line, a button appears to the left of the avatar. It opens the actions for that line's speaker: **Rename**, **Candidate** or **Not the candidate**, **Swap with...**, and **Merge with...**. These actions are covered in [Identify speakers](/en/interviews/identify-speakers).
+
+The **Actions** panel offers **Copy transcript** and **Download as TXT**.
+
+{/* SCREENSHOT: the Transcript view, a hovered line with its action menu open */}
+
+## Switch views and trace back to the source
+
+The three tabs stay visible at all times. One click is enough. The page address remembers the open view and the selected note, so a link copied from your browser reopens the interview exactly where you left it.
+
+The most useful path starts from the **Analysis** panel. Everything Hirify puts forward there is backed by a quote from the interview:
+
+<Steps>
+  <Step title="Open the Analysis panel">
+    Click **Analysis** in the vertical bar on the right.
+  </Step>
+  <Step title="Expand the quote">
+    Click an item in the **To decide** or **Covered** list to expand it, then click **Show quote**. The quoted turn appears between the turn before it and the turn after it, with the speaker's name and the timestamp. **Hide quote** closes it.
+  </Step>
+  <Step title="Open the full passage">
+    If the excerpt isn't enough, click **Open in transcript**. Hirify switches to the **Transcript** tab, scrolls to the quoted line, and briefly highlights it.
+  </Step>
+</Steps>
+
+## Good to know
+
+- The interview page doesn't play back the audio. Tracing back to the source means finding the written sentence and its timestamp, not listening to the recording again.
+- The Transcript view has no search field. To find a passage, start from a quote in the **Analysis** panel or scroll through the turns.
+- Correcting the text of a line doesn't rerun the interview notes or the analysis. Documents already produced keep their original wording until you regenerate them.
+- Key takeaways don't exist for every interview. They aren't generated when no candidate took part in the conversation or when the content doesn't lend itself to a summary.
+- A member only sees their own interviews. Managers and administrators see the whole organization's interviews. See [Roles and access](/en/getting-started/roles-and-access).
+
+<CardGroup cols={2}>
+  <Card title="Identify speakers" icon="users" href="/en/interviews/identify-speakers">
+    Name each voice, fix a swap, and merge two speakers.
+  </Card>
+  <Card title="Read and edit interview notes" icon="file-pen" href="/en/notes/read-and-edit">
+    Touch up the text, rewrite a section, and change the format.
+  </Card>
+  <Card title="Candidate analysis" icon="user-magnifying-glass" href="/en/notes/candidate-analysis">
+    What the Analysis panel contains and how to read it.
+  </Card>
+  <Card title="Incomplete transcript" icon="life-ring" href="/en/help/incomplete-transcript">
+    What to do when part of the conversation is missing.
+  </Card>
+</CardGroup>

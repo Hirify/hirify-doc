@@ -1,0 +1,114 @@
+---
+title: "Find an interview and track its processing"
+sidebarTitle: "Find and track"
+description: "Find an interview in the list with search and filters, and follow its status until the interview notes are ready"
+icon: "list"
+---
+
+All your interviews end up in the same place, whatever channel recorded them. This page shows how to find the one you need and how to read its progress.
+
+## Your interview list
+
+In the sidebar, under **Interviews**, click **Interviews**.
+
+Each row shows the interview title, an icon for its channel, its date, its speakers when they're known, and a status on the right. The total appears above the list, for example "12 interviews".
+
+The order isn't simply chronological. Upcoming interviews with the meeting assistant already scheduled come first, from the nearest to the furthest. Past interviews follow, from the most recent to the oldest. Interviews that were created but haven't started recording yet close the list.
+
+The list loads fifteen rows at a time as you scroll.
+
+{/* SCREENSHOT: the Interviews page with its filter bar and a few interview rows. French capture: /images/transcriptions-liste.webp */}
+
+## Search for an interview
+
+The **Search interviews…** field, on the left of the filter bar, searches the interview title and the titles of its notes.
+
+It doesn't search the transcript. To ask about what candidates said, use the Assistant, available on the Hub plan.
+
+<CardGroup cols={1}>
+  <Card title="Ask a question" href="/en/assistant/ask-a-question">
+    Query the content of your interviews.
+  </Card>
+</CardGroup>
+
+## Filter by status, type, and user
+
+Three filters combine with each other and with the search.
+
+**Status** has four options:
+
+- **No notes**: finished interviews that have no interview notes.
+- **Completed**: interviews whose transcript is ready.
+- **In progress**: everything still on its way, from waiting to processing.
+- **Failed**: failures, recordings that were too short, and meetings the assistant wasn't admitted to.
+
+**Type** separates **Video call**, **Phone**, and **Recording**.
+
+The third filter is about the user who created the interview. It only appears if your role gives you access to the whole organization's interviews. It offers **Me**, **Whole team**, and the list of members by name, which you can check one by one.
+
+The **Reset** button returns the bar to its default state.
+
+## Processing statuses
+
+The status on the right of each row follows the interview from start to finish.
+
+| Status | What it means |
+| --- | --- |
+| **Pending** | The meeting assistant is scheduled and the meeting hasn't started |
+| **Assistant joined** | The assistant is in the video meeting |
+| **Meeting in progress** | The conversation is being recorded |
+| **Processing transcript** | The audio is being transcribed |
+| **Generating** | The transcript is ready and the interview notes are being written |
+| **Notes ready** | The interview notes are available |
+| **Draft** | Interview notes exist but aren't finalized |
+| **Notes failed** | The interview notes couldn't be written |
+
+Once the transcript is done, the status switches to the state of the interview notes. An interview that was transcribed but has no interview notes therefore shows no status at all. That's what the **No notes** filter collects.
+
+Three other states mean an interview couldn't be transcribed:
+
+| Status | What it means |
+| --- | --- |
+| **Too short** | The recording is under one minute and wasn't transcribed |
+| **Assistant not admitted** | The assistant wasn't let into the meeting |
+| **Failed** | The transcription failed |
+
+Hover over one of these three statuses to see the reason in a tooltip.
+
+## Follow progress without refreshing
+
+The list updates by itself, without reloading the page. A row refreshes as soon as the interview changes state, interview notes finish, or an analysis completes. A new interview that starts appears at the top of the list.
+
+If you leave the tab for a while and come back, Hirify reloads the list to catch up on what changed while you were away.
+
+Finished interviews and interview notes also leave an entry in the notification center. In your account menu, open **Notifications**. The **All**, **Transcripts**, and **Notes** tabs sort the entries.
+
+<Note>
+  The list leads you to the interview notes, but only an interview whose transcript is finished opens when you click it. A row that's still processing doesn't respond.
+</Note>
+
+## Who sees which interviews
+
+What you see depends on your role in the organization.
+
+| Role | What they see |
+| --- | --- |
+| Member | Their own interviews only |
+| Manager | The whole organization's interviews |
+| Administrator | The whole organization's interviews |
+
+Managers and administrators also get the user filter and the **Created by** column, which appears as soon as the filter covers more than your own interviews.
+
+<CardGroup cols={1}>
+  <Card title="Roles and access" href="/en/getting-started/roles-and-access">
+    What each role can do.
+  </Card>
+</CardGroup>
+
+## Good to know
+
+- Search covers titles, never the content of conversations.
+- Renaming an interview changes its title everywhere. Select it in the list, then click **Rename**.
+- Deleting is permanent. The confirmation says so: "This can't be undone."
+- Selecting two or more interviews shows **Merge**, to bring together an interview that was split across several recordings. See [Merge two interviews](/en/interviews/merge-two-interviews).
+- No status in the list shows that an interview was sent to your ATS. Sending interview notes or an evaluation is a separate action, which you start from the interview's ATS panel.

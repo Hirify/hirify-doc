@@ -1,0 +1,90 @@
+---
+title: "Save, share, and pin a dashboard"
+sidebarTitle: "Save, share, and pin"
+description: "Keep a dashboard, share it with your team, and pin it so you can find it again"
+icon: "thumbtack"
+---
+
+<Note>
+  Access: Hub plan, administrator or manager role.
+</Note>
+
+A dashboard you've built doesn't survive closing the page until it's saved.
+
+## Save a dashboard
+
+<Steps>
+  <Step title="Click Save">
+    The button is at the top right of the built dashboard.
+  </Step>
+  <Step title="Name the dashboard">
+    The **Save dashboard** window suggests a name, which you can rewrite.
+  </Step>
+  <Step title="Choose its visibility">
+    The **Share with your team** switch is described under its label: "Visible to your organization's admins and managers." Left off, the dashboard stays private.
+  </Step>
+  <Step title="Confirm">
+    Click **Save**. The dashboard then opens on its own page.
+  </Step>
+</Steps>
+
+## Share a dashboard with your team
+
+You can change visibility at any time. On the dashboard's page, open the actions menu (the **…** button, at the top right) and choose **Share with your team** or **Make private**. The same toggle exists in the menu of each row in your list of dashboards.
+
+A shared dashboard carries the **Shared** badge. When a colleague opens it, it shows **Shared by** followed by your name.
+
+<Note>
+  "Your team" here means your organization's administrators and managers, the only people with access to Analytics. A member doesn't see your dashboards, shared or not.
+</Note>
+
+A colleague who opens your shared dashboard can read it and duplicate it, but not edit it. If they start from your dashboard to build another one, saving creates their own copy. Your original isn't touched.
+
+A filtered dashboard link can be shared as is. The applied filters are written into the page address, and whoever opens the link sees the same view.
+
+## Pin a dashboard and set a default
+
+These are two separate settings, reserved for the dashboard's owner.
+
+- **Pin** moves the dashboard to the top of the list. In the list, the pin icon to the left of the name toggles pinning with one click. On a dashboard's page, the actions menu shows **Pin** or **Unpin**.
+- **Set as default** picks the dashboard that the sidebar's **Analytics** entry takes you to. The dashboard then carries the **Default** badge. **Remove as default** cancels that choice, and the **Analytics** entry takes you back to the list.
+
+A colleague reading a shared dashboard can't change either one.
+
+{/* SCREENSHOT: the list of dashboards, with a pinned row, a Default badge, and a Shared badge */}
+
+## Find your dashboards
+
+The sidebar's **Analytics** entry takes you to your default dashboard, or to the list if you haven't set one. The chevron to the right of the entry expands a panel listing the dashboards you have access to. Its **All dashboards** shortcut opens the Analytics page, where the full list appears.
+
+The page's table has three columns: **Name**, **Created by**, and **Last opened**. The toolbar offers a **Search** field and a sort, **Recent** or **Alphabetical**. Pinned dashboards, then the default dashboard, stay at the top whatever the sort.
+
+## Rename, duplicate, delete
+
+The actions menu at the top of a dashboard's page gathers these actions. The one at the end of each row in the list only offers some of them: **Rename**, **Duplicate**, **Set as default**, **Share with your team**, and **Delete**.
+
+- **Rename** opens a **Rename dashboard** window.
+- **Duplicate** creates a private copy that you own, named after the original followed by "(copy)". It's what to do on a dashboard a colleague shared before reworking it.
+- **Arrange blocks** opens direct editing: drag a block by its handle, set its size to **Small**, **Medium**, or **Full width**, rename it, or delete it. Nothing is saved until **Done**. **Cancel** discards the changes.
+- **Change blocks (via chat)** reopens the dashboard in the studio, where a new request in plain language rebuilds it.
+- **Delete** asks for confirmation: "This can't be undone."
+
+<Warning>
+  Deleting a dashboard is permanent. A shared dashboard also disappears for your colleagues.
+</Warning>
+
+## Good to know
+
+- Only a dashboard's owner can rename it, pin it, set it as default, change its visibility, or delete it. Others can read it, ask a question about it, and duplicate it.
+- A dashboard saves a layout, not figures. The data is recalculated each time it opens.
+- Targets set on blocks are part of the dashboard. They carry over to the copy when you duplicate it.
+- Applied filters aren't saved in the dashboard. They live in the page address, which makes them shareable but not persistent.
+
+<CardGroup cols={2}>
+  <Card title="Build a dashboard" icon="chart-line" href="/en/analytics/build-a-dashboard">
+    Build a dashboard, set a target, and ask for an analysis.
+  </Card>
+  <Card title="Roles and access" icon="user-shield" href="/en/getting-started/roles-and-access">
+    Who sees what in your organization.
+  </Card>
+</CardGroup>

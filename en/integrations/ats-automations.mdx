@@ -1,0 +1,146 @@
+---
+title: "Set up your ATS automations"
+sidebarTitle: "ATS automations"
+description: "Choose what Hirify does on its own after an interview: send the meeting assistant, add tags, suggest field values, and apply a template"
+icon: "sliders"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS.
+</Note>
+
+Once the connection is set up, four settings decide what Hirify does without asking you. All of them are optional and can be turned off at any time. None of them sends the interview notes. With Teamtailor, the Hirify card adds one setting that's the exception, described below.
+
+## Where to find the settings
+
+<Steps>
+  <Step title="Open the settings">
+    In **Settings**, go to **Integrations**.
+  </Step>
+  <Step title="Find your ATS card">
+    The **ATS** section lists the ATSs you can connect. The connected one shows **Connected** and four counters: **Candidates**, **Jobs**, **Applications**, and **Interviews**.
+  </Step>
+  <Step title="Scroll down to the Settings block">
+    It sits on the card, below the counters.
+  </Step>
+</Steps>
+
+These settings are reserved for the organization's administrators and billing admins. Other members see this at the bottom of the page: "ATS and CRM integrations are managed by your organization's admins."
+
+{/* SCREENSHOT: the Settings block of a connected ATS card, with its toggles and the template picker */}
+
+## Send the meeting assistant automatically
+
+The **Automatic meeting assistant** toggle decides whether the meeting assistant schedules itself. Its description says it applies to "ATS interviews that have a Google Meet or Microsoft Teams link".
+
+An interview appointment that comes from your ATS with a usable video link gets an assistant without anyone having to think about it. This setting is on by default.
+
+Turn it off if you'd rather decide interview by interview, or if not all of your interviews should be recorded.
+
+<Warning>
+  Recording an interview still requires informing the candidate. An automatic setting doesn't exempt you from telling them.
+</Warning>
+
+## Summary tags
+
+The **Automatic tags** toggle adds tags to the candidate profile after each analyzed interview. The setting describes them as "signal, deal-breakers".
+
+The tags are written under a reserved prefix, `Hirify · `. They keep their French names in your ATS:
+
+- **Hirify · Évalué** (evaluated), added as soon as an interview has been analyzed.
+- **Hirify · Signal positif**, **Hirify · Signal mitigé**, or **Hirify · Signal négatif** (positive, mixed, or negative signal), depending on the summary.
+- **Hirify · Point bloquant** (deal-breaker), as long as a deal-breaker remains.
+
+The set is recalculated at each analysis. A signal that improves or a deal-breaker that's lifted removes the tag that no longer holds. Tags outside this prefix (your own) are never added, removed, or reordered.
+
+<Note>
+  This toggle is off by default. Once an administrator or a billing admin turns it on, the tags go to the profile after each analyzed interview, with no approval interview by interview. The permission given once for the whole organization counts as approval. It only covers the tags with the reserved prefix, never the interview notes. Leave the toggle off if your organization doesn't want Hirify to add tags.
+</Note>
+
+## Fill in custom fields
+
+The **Fill in ATS fields** toggle opens the second write channel: the custom fields of your ATS, such as salary, availability, remote work, and anything you've added there.
+
+Once the toggle is on, a **Custom fields** block appears on the card. Hirify lists the fields it detected and suggests a source for each one, from two groups: **Artificial intelligence** or **Interview data**. Nothing is active until an administrator or a billing admin has decided.
+
+<Steps>
+  <Step title="Confirm the suggested fields">
+    A badge shows how many fields are waiting for confirmation. For each one, choose **Approve** or **Ignore**. **Approve all** handles the whole list at once.
+  </Step>
+  <Step title="Adjust the source if needed">
+    The picker lets you change the source or choose **Don't map**. The fields you leave aside collapse under the unmapped fields.
+  </Step>
+  <Step title="Decide on automatic filling">
+    Under **Filled in after each interview**, each field has an **Auto** toggle.
+  </Step>
+</Steps>
+
+The **Auto** toggle decides whether the field is filled in without any further action from you. Its tooltip spells out the rule: the field is filled in automatically after each analyzed interview, only when it's empty in the ATS and the information was stated explicitly, and the fill can be undone from the interview's ATS panel.
+
+Left off, the field is still suggested in the interview, and you decide.
+
+## Review the preview and undo
+
+Everything can be reviewed from the interview, in the **ATS** tab, **Fields to fill in** section.
+
+Each suggestion shows the field name, the current value struck through if there is one, the suggested value, and where the information comes from. When it exists, the sentence from the interview that carries the information is shown too. Two buttons come with each suggestion:
+
+- **Add** if the field is empty, or **Replace** if it already has a value.
+- **Skip** to dismiss the row.
+
+<Note>
+  The **Add all** button only handles empty fields. Overwriting an existing value is always done row by row, never in bulk.
+</Note>
+
+A row you've applied switches to **Filled in**. If the value changed in your ATS in the meantime, Hirify tells you and suggests again: "The value changed in your ATS. Suggestion refreshed."
+
+The fields filled in without you are grouped under **Filled in automatically**, each with an **Undo** button that restores the previous state. The interview's owner gets an **ATS fields filled in** notification that names the fields involved.
+
+## Default notes template
+
+The **Default notes template** picker closes the loop for interviews recorded without anyone stepping in. It's "applied to interviews recorded automatically from your ATS to generate interview notes without picking a template by hand".
+
+Only templates shared with the organization are listed. The default value is **No template**. If the chosen template is deleted or stops being shared, the picker shows **Template unavailable (deleted or not shared)**. Choose another one.
+
+## Interview notes and evaluation
+
+None of these four settings sends the interview notes or your evaluation. The interview notes go to the candidate profile when you share the analysis from the interview: you review the preview, give a verdict when your ATS accepts one, and confirm.
+
+With Teamtailor, the Hirify card adds a setting that's the exception. **Publish the analysis automatically** sends the analysis and the interview notes to the candidate profile as soon as the interview ends, without review. It's off by default. When it's off, nothing leaves until a recruiter has reviewed the notes and shared them from the interview page.
+
+## The settings available depend on your ATS
+
+A toggle that doesn't show up isn't a bug. Either the setting has no equivalent in your ATS, or the permissions granted to the connection don't cover it.
+
+<Tabs>
+  <Tab title="SmartRecruiters">
+    Summary tags and custom fields are available.
+  </Tab>
+  <Tab title="Teamtailor">
+    Custom fields are available. With the Hirify card enabled, the **Publish the analysis automatically** setting is added. Summary tags aren't offered.
+  </Tab>
+  <Tab title="Nicoka">
+    Custom fields are available. Summary tags aren't offered.
+  </Tab>
+</Tabs>
+
+Sending the meeting assistant automatically and the default template don't depend on the connected ATS.
+
+## Good to know
+
+- These settings apply to the whole organization. A member can't opt out for their own interviews.
+- The **Fields to fill in** section only shows up in an interview if an administrator or a billing admin has turned on **Fill in ATS fields** and the required permissions have been granted.
+- Automatic filling only targets empty fields. It never replaces a value already entered by someone on your team.
+- If the block says "No custom fields found in your ATS.", use **Refresh fields**. Detection dates from the last read.
+- A field marked **Needs review** is waiting for confirmation. Its definition changed on your ATS side.
+- Apart from these automations and what you share yourself, Hirify writes nothing to your ATS.
+
+<CardGroup cols={2}>
+  <Card title="Share the analysis" icon="star" href="/en/integrations/send-to-your-ats">
+    Send the interview notes and your verdict yourself.
+  </Card>
+
+  <Card title="Interviews from your ATS" icon="calendar-check" href="/en/interviews/automatic-from-your-ats">
+    What happens to an appointment that comes from your ATS.
+  </Card>
+</CardGroup>

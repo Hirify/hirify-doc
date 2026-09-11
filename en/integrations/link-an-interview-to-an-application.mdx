@@ -1,0 +1,95 @@
+---
+title: "Link an interview to an application"
+sidebarTitle: "Link to an application"
+description: "Attach an interview to the right candidate and the right job in your ATS"
+icon: "link"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS.
+</Note>
+
+An interview linked to an application gets its context back: the right candidate, the right job, and the ability to share the analysis. The link takes one click to add and just as little to change.
+
+## Where to add the link
+
+In your interview list, the ATS column shows a **Link** button for each completed interview that isn't linked yet. An interview that's already linked shows your ATS icon instead.
+
+Both open the interview on the **ATS** tab, in the vertical bar on the right of the page, with the search field ready for typing. The first section is called **Application**. That's where everything happens.
+
+{/* SCREENSHOT: the ATS column of the interview list, with a Link button and a row that's already linked */}
+
+## Link an interview by hand
+
+<Steps>
+  <Step title="Open the interview's ATS tab">
+    Click **Link** in the list, or the **ATS** tab in the vertical bar once the interview is open.
+  </Step>
+  <Step title="Search for the application">
+    The **Search by candidate or job…** field searches the synced applications. Type an email address, a job title, or part of either.
+  </Step>
+  <Step title="Spot the meeting attendees">
+    While the field is empty, a **Meeting attendees** group brings up the applications that match the attendees on the calendar invitation. Everything else appears under **All applications**, with active applications first.
+  </Step>
+  <Step title="Click the right row">
+    The link is added right away. An "Application linked to this interview" message confirms it, with an **Undo** button in case you picked the wrong row.
+  </Step>
+</Steps>
+
+Each row shows the candidate's email address, the job title, the current stage when there is one, and the application status, such as **New**, **In progress**, **Interview**, **Offer**, **Hired**, or **Rejected**. The list is capped. If you see "Refine your search to see more results.", narrow down what you typed.
+
+## When the link already exists
+
+Some interviews arrive already linked.
+
+- **From the calendar**: when the interview comes from an appointment pushed by your ATS, the application is identified without ambiguity. "Linked from the calendar" appears next to the status.
+- **From an attendee's email address**: when there's no matching appointment, Hirify can find the application from an attendee's email address. The card then says "Matched from the attendee's email, please confirm". That link still needs to be confirmed.
+
+A link you added by hand is never replaced by an automatic link. You have the final say.
+
+## Confirm an application matched by email
+
+The card of an application matched by email is highlighted and has two buttons:
+
+- **That's the one**: the link is confirmed and a "Link confirmed" message appears.
+- **Pick another**: the search field opens so you can select the right application.
+
+<Warning>
+  Until this link is confirmed, Hirify writes nothing to your ATS for this interview and doesn't fetch the candidate's CV from it. Sharing the analysis is blocked and the automations don't apply. Confirmation is the entry condition for every action that touches the candidate profile.
+</Warning>
+
+## What the link unlocks
+
+Once the application is linked, and confirmed if needed:
+
+- The interview's analysis can be shared to the candidate profile.
+- Hirify tries to fetch the CV attached to the application to feed the analysis.
+- The icon to the right of the candidate's email address opens the application in your ATS.
+- The automations set by an administrator or a billing admin apply to this application: summary tags and filling in empty custom fields. See [ATS automations](/en/integrations/ats-automations).
+
+## Change the application or unlink
+
+Below the application card, click **Change**. The search field opens under the card:
+
+- **Pick another row**: the new application replaces the previous one and an "Application replaced" message appears.
+- **Keep the current application**: closes the search without changing anything.
+- **Unlink**: opens the "Unlink this application?" confirmation. It reminds you that the ATS push history is kept and that you can link the interview again at any time.
+
+Unlinking doesn't delete anything in your ATS. Evaluations already sent stay there. To remove one, go through the push history.
+
+## Good to know
+
+- The **Link** button in the list only appears on completed interviews. An interview still being processed can be linked from the **ATS** tab of its own page.
+- Without a connected ATS, the section shows "No ATS connected" and a **Connect an ATS** button that leads to the settings.
+- An interview is linked to one application at a time. Picking another application replaces the existing link.
+- The search only covers applications already synced into Hirify. An application created a moment ago may only appear after the next sync.
+- The **Meeting attendees** group only relies on the attendees of the calendar invitation. An interview recorded without an invitation gets no suggestions.
+
+<CardGroup cols={2}>
+  <Card title="Share the analysis" icon="star" href="/en/integrations/send-to-your-ats">
+    Send the interview notes to the linked application yourself.
+  </Card>
+  <Card title="Connect your ATS" icon="plug" href="/en/integrations/connect-your-ats">
+    Set up the connection to your ATS.
+  </Card>
+</CardGroup>

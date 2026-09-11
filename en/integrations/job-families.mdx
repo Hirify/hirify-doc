@@ -1,0 +1,101 @@
+---
+title: "Organize your job families"
+sidebarTitle: "Job families"
+description: "Rename, add, or reassign the job families that group your organization's jobs"
+icon: "sitemap"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS. The settings are reserved for administrators and billing admins.
+</Note>
+
+Job families group your jobs into broad categories, such as occupations, practices, or specialties. They're the level that segments your dashboards. Hirify suggests them and you correct them.
+
+## How the taxonomy is built
+
+Hirify looks at the jobs synced from your ATS and derives a list of families from them. Two conditions apply:
+
+- At least twenty jobs must be synced for the taxonomy to be generated.
+- Each job is then assigned to a family, or left aside until the next pass.
+
+Before that threshold, the page says: "The taxonomy is generated automatically once enough jobs have been synced (at least 20)." Without a connected ATS, it shows "Connect your ATS to enable job families."
+
+## Read the page
+
+Open **Settings**, then **Job families**. Every member can view the page. Only an administrator or a billing admin can change it.
+
+The **Families** section lists each family, its description when it has one, and its number of **Jobs**. Below the table, a summary line gives the totals: how many jobs overall, how many in **Autre**, and how many unclassified.
+
+**Autre** (other) is the fallback family. It groups the jobs that don't fit any named category. A growing **Autre** count is the sign that a family is missing.
+
+{/* SCREENSHOT: the Families section with the table, the per-family counters, and the totals line */}
+
+## Add a family
+
+<Steps>
+  <Step title="Click Add">
+    The button is at the top of the **Families** section.
+  </Step>
+  <Step title="Name the family">
+    The **Family name** field takes up to 80 characters.
+  </Step>
+  <Step title="Describe it, if useful">
+    The **Description (optional)** field "helps automatic classification understand the family". It takes up to 300 characters.
+  </Step>
+  <Step title="Confirm">
+    The jobs currently classified in **Autre** are reconsidered for the new family.
+  </Step>
+</Steps>
+
+A taxonomy holds sixteen families at most. Beyond that, Hirify refuses the addition and tells you so.
+
+## Rename or merge
+
+The pencil at the end of the row opens **Rename**. The family's jobs follow the new name.
+
+<Tip>
+  Entering the name of a family that already exists merges the two. It's the way to fix a taxonomy that's split too finely without going job by job.
+</Tip>
+
+## Delete a family
+
+The trash icon opens a confirmation that tells you what will happen: the family's jobs "go back to automatic classification". They aren't lost. They can be assigned to another family again.
+
+A taxonomy must keep at least two families. The last two can't be deleted.
+
+## Fix a job
+
+When a job is filed in the wrong family, the **Fix a job** section puts it back in place.
+
+<Steps>
+  <Step title="Search for the job">
+    The **Search jobs by title…** field filters as you type.
+  </Step>
+  <Step title="Open the family picker">
+    It offers **Automatic (to be classified)**, each family in your taxonomy, and **Autre**.
+  </Step>
+  <Step title="Choose the right family">
+    The job is reassigned right away and gets a **manual** badge.
+  </Step>
+</Steps>
+
+A manual correction sticks. Automatic classification won't change it again. To hand a job back to Hirify, choose **Automatic (to be classified)** again.
+
+## Good to know
+
+- The page stays empty without a connected ATS. Families apply to the jobs that come from it.
+- Changing the taxonomy changes nothing in your ATS. It lives in Hirify and serves your dashboards.
+- Adding or deleting a family triggers a reclassification of the jobs involved, which isn't instant. The counters settle after the pass.
+- Unclassified jobs aren't errors. They're waiting for the next classification pass.
+- Two families minimum, sixteen maximum. A name that's already taken is refused. Use renaming to merge.
+- A manual correction doesn't carry over to other jobs with a similar title. It only applies to the job you corrected.
+
+<CardGroup cols={2}>
+  <Card title="Build a dashboard" icon="chart-line" href="/en/analytics/build-a-dashboard">
+    Where segmenting by family becomes visible.
+  </Card>
+
+  <Card title="Connect your ATS" icon="plug" href="/en/integrations/connect-your-ats">
+    Where the jobs Hirify classifies come from.
+  </Card>
+</CardGroup>

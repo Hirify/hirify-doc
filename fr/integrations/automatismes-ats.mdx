@@ -9,7 +9,7 @@ icon: "sliders"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Une fois la connexion en place, quatre réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs et se coupent à tout moment. Aucun ne concerne l'envoi du compte rendu.
+Une fois la connexion en place, quatre réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs et se coupent à tout moment. Aucun n'envoie le compte rendu. Avec Teamtailor, la carte Hirify ajoute un réglage qui fait exception, décrit plus bas.
 
 ## Où trouver les réglages
 
@@ -54,14 +54,14 @@ Les tags sont écrits sous un préfixe réservé, `Hirify · ` :
 Le jeu est recalculé à chaque analyse : un signal qui s'améliore ou un point bloquant qui se lève fait disparaître le tag devenu faux. Les tags qui n'appartiennent pas à ce préfixe — les vôtres — ne sont jamais ajoutés, retirés ni réordonnés.
 
 <Note>
-  Cet interrupteur est fermé par défaut. Une fois qu'un administrateur l'a ouvert, les tags partent sur la fiche après chaque entretien analysé, sans validation entretien par entretien. L'autorisation donnée une fois pour toute l'organisation vaut accord. Elle ne porte que sur les tags du préfixe réservé, jamais sur le compte rendu. Laissez l'interrupteur fermé si votre organisation ne souhaite pas que Hirify pose de tags.
+  Cet interrupteur est fermé par défaut. Une fois qu'un administrateur ou un admin facturation l'a ouvert, les tags partent sur la fiche après chaque entretien analysé, sans validation entretien par entretien. L'autorisation donnée une fois pour toute l'organisation vaut accord. Elle ne porte que sur les tags du préfixe réservé, jamais sur le compte rendu. Laissez l'interrupteur fermé si votre organisation ne souhaite pas que Hirify pose de tags.
 </Note>
 
 ## Compléter les champs personnalisés
 
 L'interrupteur **Compléter les champs ATS** ouvre le second canal d'écriture : les champs personnalisés de votre logiciel de recrutement — salaire, disponibilité, télétravail, et ce que vous y avez ajouté.
 
-Une fois l'interrupteur ouvert, un bloc **Champs personnalisés** apparaît sur la carte. Hirify y liste les champs détectés et propose pour chacun une source parmi deux familles : **Intelligence artificielle** ou **Données d'entretien**. Rien n'est actif tant qu'un administrateur n'a pas tranché.
+Une fois l'interrupteur ouvert, un bloc **Champs personnalisés** apparaît sur la carte. Hirify y liste les champs détectés et propose pour chacun une source parmi deux familles : **Intelligence artificielle** ou **Données d'entretien**. Rien n'est actif tant qu'un administrateur ou un admin facturation n'a pas tranché.
 
 <Steps>
   <Step title="Confirmez les champs proposés">
@@ -102,11 +102,11 @@ Le sélecteur **Template de compte rendu par défaut** ferme la boucle des entre
 
 Seuls les templates partagés avec l'organisation sont proposés. La valeur par défaut est **Aucun template**. Si le template retenu est supprimé ou cesse d'être partagé, le sélecteur affiche **Template indisponible (supprimé ou non partagé)** : choisissez-en un autre.
 
-## Le compte rendu n'est jamais envoyé automatiquement
+## Le compte rendu et l'évaluation
 
-Aucun de ces réglages n'envoie le compte rendu ni votre évaluation. Il n'existe pas d'interrupteur pour cela.
+Aucun de ces quatre réglages n'envoie le compte rendu ni votre évaluation. Le compte rendu part sur la fiche du candidat quand vous partagez l'analyse depuis l'entretien : vous relisez l'aperçu, vous posez un verdict quand votre logiciel l'accepte et vous confirmez.
 
-Le compte rendu part sur la fiche du candidat quand vous l'envoyez : vous choisissez la forme, vous posez un verdict, vous relisez un aperçu et vous confirmez.
+Avec Teamtailor, la carte Hirify ajoute un réglage qui fait exception. **Publier l'analyse automatiquement** envoie l'analyse et le compte rendu sur la fiche du candidat dès la fin de l'entretien, sans relecture. Il est désactivé par défaut. Désactivé, rien ne part tant qu'un recruteur n'a pas relu le compte rendu et partagé depuis la page de l'entretien.
 
 ## Les réglages disponibles dépendent de votre logiciel de recrutement
 
@@ -117,7 +117,7 @@ Un interrupteur qui ne s'affiche pas n'est pas un bug : le réglage n'a pas d'é
     Tags de synthèse et champs personnalisés sont disponibles.
   </Tab>
   <Tab title="Teamtailor">
-    Champs personnalisés disponibles, ainsi que le dépôt du compte rendu en note simple, sous réserve des accès accordés à la connexion. Les tags de synthèse ne sont pas proposés.
+    Champs personnalisés disponibles. Avec la carte Hirify activée, le réglage **Publier l'analyse automatiquement** s'ajoute. Les tags de synthèse ne sont pas proposés.
   </Tab>
   <Tab title="Nicoka">
     Champs personnalisés disponibles. Les tags de synthèse ne sont pas proposés.
@@ -129,15 +129,15 @@ L'envoi automatique de l'assistant de réunion et le template par défaut ne dé
 ## Bon à savoir
 
 - Ces réglages valent pour toute l'organisation. Un membre ne peut pas s'en écarter pour ses propres entretiens.
-- La section **Champs ATS à compléter** ne s'affiche dans un entretien que si un administrateur a ouvert **Compléter les champs ATS** et que les accès nécessaires ont été accordés.
+- La section **Champs ATS à compléter** ne s'affiche dans un entretien que si un administrateur ou un admin facturation a ouvert **Compléter les champs ATS** et que les accès nécessaires ont été accordés.
 - Le remplissage automatique ne vise que des champs vides. Il ne remplace jamais une valeur déjà saisie par un membre de votre équipe.
 - Si le bloc affiche « Aucun champ personnalisé détecté dans votre ATS. », utilisez **Actualiser les champs** : la détection date de la dernière lecture.
 - Un champ signalé **À revalider** attend une confirmation : sa définition a changé du côté de votre logiciel de recrutement.
-- En dehors des tags de synthèse, des champs personnalisés complétés et de ce que vous envoyez vous-même, Hirify n'écrit rien dans votre logiciel de recrutement.
+- En dehors de ces automatismes et de ce que vous partagez vous-même, Hirify n'écrit rien dans votre logiciel de recrutement.
 
 <CardGroup cols={2}>
-  <Card title="Renvoi d'évaluation" icon="star" href="/fr/integrations/renvoyer-une-evaluation">
-    Le seul chemin par lequel un compte rendu quitte Hirify.
+  <Card title="Partage de l'analyse" icon="star" href="/fr/integrations/renvoyer-une-evaluation">
+    Envoyer vous-même le compte rendu et votre verdict.
   </Card>
 
   <Card title="Entretiens depuis l'ATS" icon="calendar-check" href="/fr/entretiens/automatique-depuis-l-ats">

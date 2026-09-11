@@ -1,0 +1,88 @@
+---
+title: "My ATS isn't syncing anymore"
+sidebarTitle: "ATS out of sync"
+description: "Why your jobs and applications stopped arriving in Hirify, and how to restore the connection"
+icon: "arrows-rotate"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS.
+</Note>
+
+Your jobs, candidates, and applications stop updating. Before assuming an outage, open the connection card. It tells you what state it's in.
+
+## Read the connection status
+
+Open **Settings**, then **Integrations**. The **ATS** section lists the ATSs and details the connected one.
+
+Four things can be read there, from top to bottom.
+
+- A green dot followed by **Connected**. If it's gone and the button shows **Connect** again, the connection has been turned off.
+- A status line that describes the sync and ends with "Last checked", followed by how long ago the last check ran. A time that stops moving is the most reliable signal.
+- A red box, when there is one, showing the error message your ATS returned during the last exchange.
+- The four counters **Candidates**, **Jobs**, **Applications**, and **Interviews**.
+
+{/* SCREENSHOT: the card of an active ATS connection, with the Connected dot, the status line, and the four counters. French capture: /images/parametres-integrations.webp */}
+
+<Note>
+  If the page says "Couldn't check the status of your ATS connections.", the display failed, not the sync. Click **Try again**.
+</Note>
+
+## The connection was turned off
+
+Hirify regularly checks that its access still works. When authentication is refused, the connection is turned off and you get an "ATS connection disabled" notification with the reason:
+
+- **Token expired or revoked**: the access token is no longer valid. Generate a new one in your ATS.
+- **Token not renewed**: the authentication token expired and couldn't be renewed.
+- **Periodic check**: the regular check found an authentication problem.
+
+The card then falls back to **Connect**. Your data already imported stays in place, but nothing new comes in. Set up the connection again.
+
+<Tabs>
+  <Tab title="SmartRecruiters">
+    In your admin area, open **Apps**, then **OAuth Credentials**, and create a new app. Check the permissions listed in the Hirify wizard, copy the **Client ID** and **Client Secret**, then paste them into the **Connect SmartRecruiters** window.
+  </Tab>
+  <Tab title="Teamtailor">
+    In Teamtailor, open **Settings > Integrations > API keys** and create a key with the **Admin** scope and the **Read / Write** permission. Paste it into the **API key** field of the **Connect Teamtailor** window.
+  </Tab>
+  <Tab title="Nicoka">
+    First check that the dedicated API user still exists in Nicoka, under **Paramétrage**, then **Administration**, **Utilisateurs**, **Utilisateur API**. Generate a new access token, then enter your subdomain and this token in the **Connect Nicoka** window.
+  </Tab>
+</Tabs>
+
+<Warning>
+  Don't click **Disconnect** to "start from scratch" without reading the confirmation window. The checkbox there also deletes the imported candidates, jobs, and data. This can't be undone.
+</Warning>
+
+## The data arrives, but late
+
+The connection is active, yet new items take hours to show up. Look at the card's status line. It tells you how your ATS syncs.
+
+- "Real-time sync via webhooks.": changes arrive as soon as they happen.
+- "Periodic sync. Set up webhooks to enable real time.": the webhooks aren't in place or haven't sent anything yet.
+- "Automatic sync every day.": new items arrive once a day.
+
+In the periodic case, the **Webhook setup** block at the very bottom of the card shows a **To set up** badge. For Nicoka, it details two steps to complete in your ATS: create the webhooks, then the events that trigger them. For Teamtailor, you create the webhook in Teamtailor, then paste the signing key it generates into Hirify. Until that key is saved, Teamtailor events are rejected. Once the first events are received, the badge switches to **Setup detected**.
+
+## An import that never ends
+
+Right after connecting, the four counters are at zero and a box says the initial sync is in progress. That's normal. The talent pool comes in waves. The first import starts with recent applications, then goes back through the history, which can take a day for a large volume. The **Refresh** button updates the counters.
+
+If everything is still at zero several hours later, check that the account used on the ATS side has access to jobs, candidates, and applications. Partial access gives a valid connection that brings in nothing.
+
+## Good to know
+
+- There's no "sync now" button. Hirify runs its exchanges at the pace shown on the card's status line.
+- The **ATS** section only appears for administrators and billing admins. Other members see "ATS and CRM integrations are managed by your organization's admins."
+- Only one connection is active per organization. While an ATS is connected, the other cards show a grayed-out **Connect** button.
+- A restored connection doesn't instantly replay what was missed. The data comes in over the following checks.
+- While the connection is turned off, nothing can be shared from an interview. Reconnect your ATS, then share the analysis again if needed.
+
+<CardGroup cols={2}>
+  <Card title="Connect your ATS" href="/en/integrations/connect-your-ats">
+    The initial setup, ATS by ATS.
+  </Card>
+  <Card title="Contact support" href="/en/help/contact-support">
+    If reconnecting fails.
+  </Card>
+</CardGroup>

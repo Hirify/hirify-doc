@@ -1,0 +1,113 @@
+---
+title: "Disconnect a tool"
+sidebarTitle: "Disconnect"
+description: "Remove a calendar or an ATS from your organization, and know which data goes away"
+icon: "link-slash"
+---
+
+Disconnecting a tool stops the data exchange with Hirify. Depending on the tool, it's reversible in one click or it takes data with it. This page covers what each one involves.
+
+Everything happens in **Settings**, then **Integrations**.
+
+## Disconnect your calendar
+
+The **Calendars** section lists **Google Calendar** and **Microsoft Outlook**. The one connected to your account shows the address used. The **Disconnect** button is on the same row.
+
+<Steps>
+  <Step title="Open the Calendars section">
+    In **Settings**, then **Integrations**.
+  </Step>
+  <Step title="Click Disconnect">
+    On the row of the connected calendar.
+  </Step>
+</Steps>
+
+What happens next:
+
+- Hirify stops reading your calendar and the connection is turned off.
+- Your upcoming appointments no longer feed Hirify, and the meeting assistant is no longer scheduled for you from an appointment.
+- Interviews already recorded, their transcripts, and their interview notes aren't affected.
+
+<Note>
+  The calendar connection is personal. Disconnecting yours doesn't disconnect your colleagues' calendars.
+</Note>
+
+### Switch calendars
+
+Only one calendar is active at a time. While one of the two is connected, the other row stays inactive and shows **Active calendar:** followed by the name of the calendar in place. To switch, first disconnect the active one, then connect the other.
+
+To reconnect later, use the **Connect** button again.
+
+## Disconnect your ATS
+
+This is reserved for the organization's administrators and billing admins, and it applies to everyone. The connection belongs to the organization, not to a member.
+
+<Steps>
+  <Step title="Open the ATS section">
+    In **Settings**, then **Integrations**.
+  </Step>
+  <Step title="Click Disconnect">
+    On the card of the connected ATS.
+  </Step>
+  <Step title="Read the confirmation window">
+    It says: "This removes the connection and stops syncing. By default, data already synced is kept."
+  </Step>
+  <Step title="Decide what happens to the data">
+    Leave the box unchecked to keep the data, or check it to delete everything.
+  </Step>
+  <Step title="Confirm">
+    The button reads **Disconnect**, or **Disconnect and delete** if you checked the box.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the ATS disconnect confirmation window, with the data deletion checkbox */}
+
+### Simple disconnect
+
+Sync stops, the saved credentials are erased, and the connection becomes inactive. The candidates, jobs, applications, and interviews already imported stay in Hirify.
+
+These also stop working:
+
+- sharing the analysis
+- summary tags
+- field filling
+- automatic publishing of the analysis with Teamtailor
+- sending the meeting assistant to appointments from your ATS
+
+The **Job families** page goes back to its empty state.
+
+### Disconnect and delete the data
+
+The checkbox is explicit: **Also delete synced candidates, jobs and ATS data**.
+
+<Warning>
+  This can't be undone. It's meant to answer a data protection request or to clean up a test environment. The transcripts and interview notes produced by Hirify aren't affected.
+</Warning>
+
+This deletes:
+
+- the imported candidates, jobs, applications, interviews, evaluations, and attachments
+- the appointments created from your ATS interviews
+
+### Switch ATS
+
+Only one connection is active per organization. While an ATS is connected, the other cards show an inactive **Connect** button and the explanation: "Only one ATS can be connected at a time. Disconnect the current one to switch."
+
+## Good to know
+
+- Disconnecting doesn't cancel a subscription. That's handled on your subscription page.
+- Disconnecting an ATS doesn't remove anything Hirify wrote there. Evaluations, tags, and fields already sent stay there. Your tool owns them.
+- A reconnection starts over with a full sync. After deleting the data, Hirify reimports what your ATS exposes over the period this import covers. The oldest records may not come back.
+- If deleting the data fails, Hirify tells you. The connection is turned off, but support has to run the purge again.
+- Disconnecting a calendar offers no deletion option. There's no checkbox in that section.
+- A member who is neither an administrator nor a billing admin doesn't see the **ATS** section of the **Integrations** page, and so can't disconnect the ATS.
+
+<CardGroup cols={2}>
+  <Card title="Connect your calendar" icon="calendar" href="/en/integrations/connect-your-calendar">
+    Set up a calendar again, or switch to another one.
+  </Card>
+
+  <Card title="Your data" icon="shield" href="/en/trust/your-data">
+    What Hirify keeps, and for how long.
+  </Card>
+</CardGroup>

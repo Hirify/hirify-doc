@@ -1,0 +1,97 @@
+---
+title: "Invite a member to your organization"
+sidebarTitle: "Invites"
+description: "Send an invite to a colleague, give them a role, and track their arrival"
+icon: "user-plus"
+---
+
+Invites go out by email, with a role chosen from the start. An invite stays valid for seven days, and you track what happens to it from the **Members** page.
+
+## Send an invite
+
+<Steps>
+  <Step title="Open the Members page">
+    Click the menu with your name at the bottom of the sidebar, then **Manage members**. The header shows the number of active, inactive, and pending members.
+  </Step>
+  <Step title="Click Invite a member">
+    The **Invite a member** window opens. An **Available seats** box shows how many seats you have left on your subscription.
+  </Step>
+  <Step title="Enter the email address">
+    Fill in the **Email address** field. Only this address can use the invite link.
+  </Step>
+  <Step title="Choose a role">
+    The **Role** selector offers **Member**, **Manager**, **Admin**, and **Billing admin**. Below the selector, a card named after the role, such as **Member privileges**, lists what that role allows.
+  </Step>
+  <Step title="Send">
+    Click **Send invite**. The "Invite sent" message confirms that the email went out.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the "Invite a member" window with the role selector and the privileges card. French capture: /images/fenetre-inviter-un-membre.webp */}
+
+## Choose the role when you invite
+
+The role isn't final. An administrator can change it later. When you send the invite, keep two points in mind.
+
+- **Billing admin** doesn't use a seat. It's the role to give an accountant or a purchasing department that won't use the product.
+- The other three roles each use a seat. When none is left, the selector disables them.
+
+The full details are in [Choose each member's role](/en/getting-started/roles-and-access).
+
+## When no seats are left
+
+The box changes to **No seats available** and offers two ways forward:
+
+- Upgrade your plan to invite more members.
+- Invite a billing admin, who doesn't use a seat.
+
+The **Members** page shows a **Few seats left** banner as soon as fewer than three seats remain, and **Seat limit reached** when none is left.
+
+See [Subscription and billing](/en/account/subscription-and-billing).
+
+## Track pending invites
+
+The **Pending** tab lists the invites that haven't been accepted yet, with their recipient, their role, and the person who sent them. A badge sums up their state:
+
+- **Active**: the invite is still valid.
+- **Expiring soon**: less than twenty-four hours are left.
+- **Expired**: the deadline has passed.
+
+Each row has two actions:
+
+- **Resend invite**: the seven-day period starts over.
+- **Cancel invite**: the link stops working. The confirmation says so: "The invite is cancelled and its link stops working."
+
+{/* SCREENSHOT: the "Pending" tab of the Members page, with the status badges */}
+
+## What the invited person receives
+
+They receive an email with a link to a **You're invited** page. It names your organization, the person who invited them, the address the invite was sent to, and the time left before it expires.
+
+<Steps>
+  <Step title="If they aren't signed in to Hirify">
+    The button reads **Create an account and accept**. Their address is prefilled on the sign-up screen, with the note "Prefilled from your invite." They choose a password, enter their first and last name, and land straight in your workspace. If they already have a Hirify account, they have to sign in first, then open the invite link again. Sign-up will reject their address.
+  </Step>
+  <Step title="If they're already signed in">
+    The button reads **Accept invite**.
+  </Step>
+</Steps>
+
+If the link has expired or been canceled, the **Invalid invite** page tells them to come back to you for a new invite.
+
+## Good to know
+
+- An invite expires after seven days. After that, only resending it makes it valid again.
+- Only the **Admin** and **Billing admin** roles can invite, remove a member, or change a role. A **Manager** can view the member list but can't act on it. A **Member** has no access to it.
+- An invite is tied to one email address. It can't be passed on to a colleague.
+- Resending an invite doesn't create a new link. It extends the existing invite by seven days and sends the same email again. The address and the role stay the same.
+- Hirify doesn't import a directory or create accounts in bulk. Each member is invited one at a time or requests to join on their own.
+
+<CardGroup cols={2}>
+  <Card title="Roles and access" icon="users-gear" href="/en/getting-started/roles-and-access">
+    Compare the four roles before you invite.
+  </Card>
+  <Card title="Manage members" icon="users" href="/en/account/manage-members">
+    Deactivate, reactivate, or remove a member.
+  </Card>
+</CardGroup>

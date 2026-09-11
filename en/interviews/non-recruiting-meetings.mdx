@@ -1,0 +1,67 @@
+---
+title: "Record a non-hiring meeting"
+sidebarTitle: "Non-hiring meetings"
+description: "How Hirify recognizes meetings that aren't interviews and skips the candidate analysis"
+icon: "users"
+---
+
+Not every recording is an interview. A client check-in, a team debrief, or an internal meeting can be recorded through the same channels (video meeting, in person, or upload) without producing a candidate analysis that would make no sense. Hirify detects these meetings and adapts what it generates.
+
+## How detection works
+
+Classification is automatic. After transcription, Hirify looks at the content of the conversation and decides whether it's a hiring interview or a meeting. When in doubt, the recording is treated as an interview.
+
+Some cases never go through detection:
+
+- **An interview linked to an application** in your ATS is always treated as an interview.
+- **A manual choice** is final. A recording you reclassified yourself will never be reclassified automatically again.
+
+## What a meeting gets
+
+A meeting keeps most of the processing, without the candidate part:
+
+- **Notes suited to a meeting**: the **Meeting notes** template organizes the summary into context and participants, topics discussed, decisions, and action items. You can regenerate the notes with another template if you prefer.
+- **The transcript and Key takeaways**: available as for an interview.
+- **No candidate analysis**: the Analysis panel shows **No analysis generated**, with the reason for the classification.
+- **No ATS transfer**: nothing is offered for sending to your ATS.
+
+A meeting also stays out of your interview statistics, Sourcing, and candidate history.
+
+## Spot meetings in the list
+
+In the list of recordings, a meeting has the **Meeting** badge. The **Category** filter lets you show only interviews or only meetings.
+
+## Reclassify a meeting as an interview
+
+If a recording classified as a meeting was actually an interview, open its page. A **Non-hiring meeting** banner flags it at the top of the page.
+
+<Steps>
+  <Step title="Click Analyze anyway">
+    The button is in the banner, and also in the **Analysis** panel.
+  </Step>
+  <Step title="Let the analysis run again">
+    The recording is reclassified as an interview and the full processing starts over: candidate analysis, signals, and ATS panel.
+  </Step>
+</Steps>
+
+This reclassification is final. The recording won't switch back to a meeting automatically.
+
+## Turn off detection
+
+An administrator can turn off detection for the whole organization. In **Settings → Integrations**, under **Non-hiring meetings**, turn off **Automatic detection**. All recordings then go through the standard interview processing.
+
+## Good to know
+
+- Detection is on by default.
+- On the page of a recording classified as a meeting, the **Analysis** panel shows whether the classification was automatic or manual.
+- The channel makes no difference. A meeting recorded in a video call, in person, or by upload is handled the same way.
+
+<CardGroup cols={2}>
+  <Card title="Choose a template" icon="file-lines" href="/en/notes/choose-a-template">
+    Apply another template to a meeting's notes.
+  </Card>
+
+  <Card title="Find and track" icon="list" href="/en/interviews/find-and-track">
+    The list of recordings and its filters.
+  </Card>
+</CardGroup>

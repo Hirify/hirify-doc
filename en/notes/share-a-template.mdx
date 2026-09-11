@@ -1,0 +1,107 @@
+---
+title: "Share a template and import a scorecard"
+sidebarTitle: "Share a template"
+description: "Make a template visible to your team, set the one that applies by default, and import a scorecard from your ATS"
+icon: "users"
+---
+
+A template can stay yours or serve the whole team. This page explains how to set its visibility, choose the one that applies by default, and reuse a scorecard you already have in your ATS.
+
+## Personal or Team: who sees your templates
+
+The list on the left of the **Notes templates** page sorts templates into three groups.
+
+| Group | Who sees it |
+| --- | --- |
+| **Personal** | Only you. The list says so: "Only visible to you". |
+| **Team** | All members of your organization. On a colleague's template, their name shows on the right. |
+| **Curated by Hirify** | Everyone. These are the examples that come with the product. |
+
+{/* SCREENSHOT: the list on the left with its three groups expanded and the "Default" badge on a template */}
+
+## Share a template with your team
+
+Visibility is set in the editor, at the top right, with two tabs: **Team** and **Personal**.
+
+<Steps>
+  <Step title="Open the template">
+    Click its name in the list on the left.
+  </Step>
+  <Step title="Switch the visibility">
+    Under **Visibility**, click **Team** to share it, or **Personal** to keep it to yourself.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The template moves to its new group in the list.
+  </Step>
+</Steps>
+
+<Note>
+  A newly created template is set to **Team**. If you want one to stay private, switch the visibility before saving.
+</Note>
+
+A template shared by a colleague opens read-only. You see its structure, questions, and instructions, under "Shared by" followed by their name. The **Duplicate** button gives you an editable copy in your templates. The original stays managed by its creator. On a template curated by Hirify, the same button reads **Customize**.
+
+## Set your default template
+
+The default template applies to your interviews when no template was chosen. This setting is personal. It doesn't apply to anyone else.
+
+<Tabs>
+  <Tab title="On a template you edit">
+    Open the template. At the bottom of the editor, next to **Cancel**, turn on the **Default template** toggle.
+  </Tab>
+  <Tab title="On an example or a shared template">
+    Open it from the list. Under its title, turn on the **Use as default** toggle, described as "Applied to your interviews when no template is chosen."
+  </Tab>
+</Tabs>
+
+The selected template carries the **Default** badge in the list on the left. Only one can be the default: setting another one replaces the previous one. Turning the toggle off removes the default. Interviews without a template then get interview notes structured from their content alone, provided the analysis completed and the conversation has enough substance to summarize.
+
+One exception: on an interview created from your ATS, the default template set in its [automations](/en/integrations/ats-automations) takes precedence over yours.
+
+## Import a scorecard from your ATS
+
+If your ATS exposes its scorecards, you can reuse one as a template instead of typing it in again.
+
+<Steps>
+  <Step title="Start a new template">
+    On **Notes templates**, click the **+** button.
+  </Step>
+  <Step title="Open the list of scorecards">
+    At the very bottom of the pane, click **import a scorecard from your ATS**. This link only appears if scorecards are available.
+  </Step>
+  <Step title="Choose the scorecard">
+    Each card shows the scorecard's name and its size, in themes and questions. Click the one you want.
+  </Step>
+  <Step title="Import">
+    Click **Import this scorecard**. The template is created and opens right away in the editor, where you can adjust it.
+  </Step>
+</Steps>
+
+On import, each theme of the scorecard becomes a field of the template, its questions guide the writing, and a summary section is added with an overall opinion, strengths, and points of caution. The resulting template carries the **ATS** badge in the list.
+
+<Warning>
+  Importing a scorecard doesn't link anything: the interview notes it produces stay in Hirify. Sending them to your ATS goes through sharing the analysis from the interview's ATS panel, whether you use a scorecard or not. See [Share the analysis](/en/integrations/send-to-your-ats).
+</Warning>
+
+## Update a scorecard you already imported
+
+A scorecard you already imported carries the **Imported** badge. Select it again. This time the button reads **Update import**, and the existing template is realigned with the scorecard as it currently stands in your ATS.
+
+If a colleague imported it before you, the card reads **Imported by a member** and can't be selected. Ask them to share their template with the team, or duplicate it from the list.
+
+## Good to know
+
+- Only some ATSs expose their scorecards. When yours doesn't, or when no connection is active, the import link doesn't appear.
+- An organization has only one active ATS connection.
+- Sharing a template shares the outline, not the interview notes. What each person sees of the interviews depends on their role, described in [Roles and access](/en/getting-started/roles-and-access).
+- From the list, you can only delete or duplicate your own templates. A colleague's templates open read-only.
+- Deleting a template doesn't delete the interview notes already written with it.
+
+<CardGroup cols={2}>
+  <Card title="Create a template" icon="table-list" href="/en/notes/create-a-template">
+    Sections, questions, answer types, and instructions.
+  </Card>
+  <Card title="Connect your ATS" icon="plug" href="/en/integrations/connect-your-ats">
+    SmartRecruiters, Teamtailor, Nicoka.
+  </Card>
+</CardGroup>

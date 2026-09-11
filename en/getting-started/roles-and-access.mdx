@@ -1,0 +1,92 @@
+---
+title: "Choose each member's role"
+sidebarTitle: "Roles and access"
+description: "The four roles compared, and what each one can see and do in Hirify"
+icon: "users-gear"
+---
+
+Hirify has four organization roles. They decide which interviews you see and what you can do with members and the subscription.
+
+## The four roles
+
+The role is set when you invite someone and can be changed later. The labels below are the ones the interface shows.
+
+| Role | What it allows |
+| --- | --- |
+| **Member** | Access to their own interviews. Create and share notes. Use custom templates. |
+| **Manager** | Access to all team interviews. Edit and delete any member's interviews. View per-member analytics. No member or billing management. |
+| **Admin** | Invite and remove members. Manage member roles. Access organization settings. Full access to product features. |
+| **Billing admin** | Invite and remove members. Manage member roles, the subscription and billing, the organization settings, and the integrations. Doesn't use a seat. No access to product features. |
+
+{/* SCREENSHOT: the privileges card of the Invite a member window, for each of the four roles. French capture: /images/fenetre-inviter-un-membre.webp */}
+
+## Who sees which interviews
+
+This is the difference you notice most day to day.
+
+- A **Member** only sees the interviews they created.
+- A **Manager** and an **Admin** see all of the organization's interviews and can edit or delete them.
+- A **Billing admin** can't access any interview.
+
+<Warning>
+  Switching a member to **Manager** or **Admin** gives them access to every interview the organization has already recorded, including the ones from before their role changed.
+</Warning>
+
+## Who can manage members
+
+| Action | Member | Manager | Admin | Billing admin |
+| --- | --- | --- | --- | --- |
+| View the member list | No | Yes, read-only | Yes | Yes |
+| Invite, remove, change a role | No | No | Yes | Yes |
+| Manage the subscription and billing | No | No | Yes | Yes |
+| Access the organization settings | No | No | Yes | Yes |
+
+A **Manager** who opens the page sees the list of active members and their stats, without the management tabs or the **Invite a member** button. A **Member** doesn't have the entry in their menu. If they open the address directly, they get a **Restricted access** screen.
+
+## Change a member's role
+
+<Steps>
+  <Step title="Open the Members page">
+    Open the menu with your name at the bottom of the sidebar, then **Manage members**.
+  </Step>
+  <Step title="Find the person in the Active tab">
+    The search field accepts a name or an email address.
+  </Step>
+  <Step title="Change their role">
+    Select the new role on their row. The "Role updated" message confirms the change.
+  </Step>
+</Steps>
+
+Two safeguards apply:
+
+- You can't change your own role.
+- The last person who can manage the organization, an active **Admin** or **Billing admin**, can be neither demoted nor removed. You can still demote the last admin, though, as long as an active billing admin remains.
+
+## What depends on the plan
+
+Some features don't open with the role alone. They need the subscription first.
+
+- **Sourcing** and **Assistant** are available from the Hub plan. Without it, the entry stays visible in the sidebar, but grayed out and not clickable.
+- **Analytics** and **Data reliability** need both the Hub plan and the **Admin** or **Manager** role. If either condition is missing, the entry doesn't appear in the sidebar at all. Without the plan, opening the address directly takes you back to the dashboard. With the plan but without the role, you get a **Restricted access** screen. It reads "Dashboards are available to your organization's admins and managers only." on Analytics, and "Data reliability is available to your organization's admins and managers only." on Data reliability.
+- Single sign-on is part of the Volume plan.
+
+The plan details are in [Plans and access](/en/account/plans-and-access).
+
+## Good to know
+
+- The **Billing admin** role opens no product feature. The person is redirected to the members page. It does give access to the organization settings and the integrations, from the **Settings** entry in their sidebar. It suits an administrative profile, an accountant, or an office manager, not a recruiter.
+- It's the only role that doesn't use a seat on your subscription.
+- An organization can run without any admin, with billing admins only. They then manage members, the subscription, the settings, and the integrations, while recruiters use the product with the Member or Manager role.
+- The **Role** field on the Profile page is a free-text job title. It has nothing to do with the organization role described here and grants no rights.
+- A role applies to the whole organization. Hirify doesn't let you restrict a member to a given job, team, or client.
+- Changing the organization's custom vocabulary requires the **Admin** role.
+
+<CardGroup cols={2}>
+  <Card title="Invite a member" icon="user-plus" href="/en/getting-started/invite-a-member">
+    Set the role when you send the invite.
+  </Card>
+
+  <Card title="Plans and access" icon="star" href="/en/account/plans-and-access">
+    What each plan includes.
+  </Card>
+</CardGroup>

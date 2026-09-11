@@ -1,0 +1,95 @@
+---
+title: "Understand the role of AI in Hirify"
+sidebarTitle: "AI at Hirify"
+description: "What the AI produces, how to check its quotes, and why the decision stays yours"
+icon: "microchip"
+---
+
+Hirify's AI assists the recruiter. It doesn't decide for them.
+
+## What the AI produces
+
+From an interview transcript, the analysis produces a structured profile of the candidate, an overall assessment on a five-level scale, attention signals, and observations. Each extracted fact carries a confidence level. **The analysis doesn't produce an overall numerical score for the candidate.**
+
+The interview notes turn this analysis into a readable summary.
+
+Sourcing scores each candidate it keeps from zero to one hundred on four dimensions, then combines these scores into a weighted score that orders the list. Candidates are then grouped into display tiers.
+
+## What it doesn't do
+
+- **By default, it doesn't send the interview notes or the evaluation to your ATS without you.** You review them, then send them from the interview's ATS panel, after confirming.
+- **It doesn't send any message to a candidate.** A text it drafts goes out from your own tools, under your name.
+- **It doesn't rule anyone out.** In Sourcing, the job requirements are scoring criteria, not knockout filters. The least suitable profiles stay visible in a dedicated tier.
+- **It doesn't search outside your talent pool.** Sourcing queries your own data, never an external directory.
+- **It doesn't decide.** The decision on an application is made by a recruiter.
+
+Three writes are the exception:
+
+- **Summary tags**: they're added to the candidate's profile after each analyzed interview.
+- **Filling in custom fields that are still empty**: salary, availability, remote work.
+- **Automatic publishing of the analysis**: with the Teamtailor Hirify card, the analysis and the interview notes go to the candidate's profile as soon as the interview ends.
+
+These three writes happen without an approval for each interview. They're off by default, and only an administrator or a billing admin turns them on, per connection, in **Settings** \> **Integrations**. Filling in only touches empty fields, you're notified, and you can undo it from the interview's ATS panel. See [ATS automations](/en/integrations/ats-automations).
+
+<Note>
+  Producing the evaluation is automatic. What's done with it remains a human act. The control point sits at sending and at the decision, not at generation. For the three writes above, it sits at their activation by an administrator or a billing admin. This point is stated as is so that your company and its counsel can assess it.
+</Note>
+
+## How claims are grounded
+
+Extraction is grounded in quotes. The agents don't write the evidence text themselves. They return the indices of transcript segments, and the quoted text is then rebuilt from the actual segments.
+
+A fact without a valid anchor is discarded by a code rule, not by the model's judgment. The same removal applies to a fact with no usable value, a value out of range, or a fact attributed to the wrong speaker.
+
+The agents run at temperature zero under a strict schema. Their outputs are stable from one run to the next and follow an expected structure.
+
+Quality evaluators sample some of the analyses to measure faithfulness to the source, hallucination, and bias, and to detect drift. They don't judge the candidate and are never shown to you.
+
+## Check a claim yourself
+
+Every grounded claim can be traced back to its source without leaving the analysis panel.
+
+<Steps>
+  <Step title="Click Show quote">
+    The link appears under the claim. It opens the quoted passage with the turns around it, the speaker's name, and the timestamp.
+  </Step>
+  <Step title="Open the transcript if the excerpt isn't enough">
+    The **Open in transcript** button takes you to the right spot in the full interview.
+  </Step>
+</Steps>
+
+In the Assistant, a reference the AI cited without a tool actually producing it is removed. The removal is flagged under the answer instead of being hidden.
+
+{/* SCREENSHOT: a claim in the analysis panel, with its "Show quote" link open on the quoted passage */}
+
+## The safeguard against discrimination
+
+The agent that produces the insights applies coded rules that cite Article L1132-1 of the French Labor Code and Directive 2000/78/EC. Protected characteristics (health, age, family situation, origin, beliefs) can never be classified as a point of attention or a risk. They're only kept, in neutral terms, when they're strictly relevant to the job.
+
+When a protected criterion comes up during the interview, a **Legal watch-outs** section appears in the analysis panel. It names the criterion, describes the nature of the exchange, gives the verifiable quote, and cites the article. When the candidate raised the point spontaneously, it adds "Leave this out of the decision".
+
+These alerts describe how the interview was conducted, never the candidate. They stay out of the assessment made of the candidate.
+
+## Known limits
+
+**Speaker attribution is a residual risk.** Detection can attach segments to the wrong speaker, or swap the recruiter's and the candidate's roles. A misattributed statement can be wrongly discarded or skew the evaluation. Retry safeguards and a swap correction mechanism reduce how often this happens without eliminating it.
+
+**The AI receives identifying content.** Context from your ATS only passes structured fields, and the Assistant's tools only pass anonymous references. The interview analysis pipeline, on the other hand, passes the identifying transcript and the content of CVs. The model providers selected commit to not retaining any submitted content and to not training their models on the data sent.
+
+## Good to know
+
+- Generating these assessments and rankings is profiling within the meaning of Article 4(4) of the GDPR. The fact is stated, not qualified. The legal qualification is up to your counsel.
+- Nothing in the product requires you to review or acknowledge the AI's output before relying on it. This point is flagged as open.
+- The model version, the quoted segments, and the scores are logged for audit purposes.
+- The dedicated fairness assessment hasn't been carried out yet. No results are claimed at this stage.
+- Informing candidates about the use of AI is your responsibility. A notice template is provided on the Inform your candidates page.
+
+<CardGroup cols={2}>
+  <Card title="Inform your candidates" icon="bullhorn" href="/en/trust/inform-your-candidates">
+    The AI transparency template.
+  </Card>
+
+  <Card title="Check an answer" icon="magnifying-glass-chart" href="/en/assistant/check-an-answer">
+    Trace an Assistant answer back to its source.
+  </Card>
+</CardGroup>

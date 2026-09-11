@@ -1,0 +1,95 @@
+---
+title: "Connect your Google or Outlook calendar"
+sidebarTitle: "Calendar"
+description: "Connect Google Calendar or Microsoft Outlook, one at a time, to prepare your interviews from your calendar"
+icon: "calendar"
+---
+
+Hirify reads your calendar and brings your video meetings into the **Calendar** page. You then choose, meeting by meeting, which ones the meeting assistant should join.
+
+## What Hirify reads and what it doesn't write
+
+The permission Hirify asks for covers reading your events. Hirify doesn't create events, doesn't send invitations, and doesn't change anything in your calendar.
+
+Only the meetings in your calendar that carry a video meeting link show up in Hirify. A calendar meeting without a video link doesn't appear on the **Calendar** page. For those conversations, see [Record an in-person interview](/en/interviews/in-person). If your ATS is connected, the **Calendar** page also shows the interviews scheduled there. See [Record automatically from your ATS](/en/interviews/automatic-from-your-ats).
+
+## Connect Google Calendar or Microsoft Outlook
+
+Each person connects their own calendar. There's nothing to decide at the organization level.
+
+<Steps>
+  <Step title="Open Settings, then Integrations">
+    Click **Settings** at the bottom of the sidebar. Then open **Integrations** and scroll down to the **Calendars** section.
+  </Step>
+  <Step title="Click Connect">
+    Next to **Google Calendar** or **Microsoft Outlook**, click **Connect**. You're taken to your calendar provider to grant access, then brought back to Hirify.
+  </Step>
+  <Step title="Check the connection row">
+    The row shows the address of the connected account, the **Last synced** date, and the number of events synced. The **Connect** button is replaced by **Disconnect**.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the Calendars section of Settings > Integrations, with one connected row and one row still available */}
+
+## One active calendar at a time
+
+Google Calendar and Microsoft Outlook can't be connected together. As soon as one is connected, the other's button gives way to **Active calendar: Google Calendar** or **Active calendar: Microsoft Outlook** and becomes inactive.
+
+To switch calendars, first disconnect the active one, then connect the other.
+
+## Send the meeting assistant to a meeting
+
+Connecting your calendar doesn't start any recording. You pick each meeting.
+
+<Steps>
+  <Step title="Open Calendar">
+    In the sidebar, click **Calendar**. The view shows your week. The arrows move you from one week to the next, and **Today** brings you back to the current week.
+  </Step>
+  <Step title="Click the meeting">
+    A panel opens on the right with the meeting's title and time.
+  </Step>
+  <Step title="Choose a template, then add the meeting assistant">
+    Under **Notes template**, select the template to use for the interview notes, then click **Add the meeting assistant**. A **Meeting assistant scheduled** icon appears on the event.
+  </Step>
+</Steps>
+
+Until the meeting starts, the same panel offers **Update** to change the template and **Delete** to remove the assistant.
+
+{/* SCREENSHOT: the side panel of an event, with the template picker and the Add the meeting assistant button */}
+
+The three ways to bring in the assistant are covered together in [Record a video interview](/en/interviews/video-meetings).
+
+## When your calendar changes
+
+Hirify follows your events and adjusts the assistant accordingly.
+
+- **Meeting moved**: the assistant is rescheduled for the new time.
+- **Meeting canceled**: the assistant is removed.
+- **Video link removed from the event**: the assistant won't join.
+
+## Disconnect your calendar
+
+In **Settings**, **Integrations**, **Calendars** section, click **Disconnect** next to the connected calendar. The procedure and what it changes are described in [Disconnect a tool](/en/integrations/disconnect-a-tool).
+
+<Warning>
+  Let the candidate know before you record. What to tell them and sample notices are gathered in [Inform your candidates](/en/trust/inform-your-candidates).
+</Warning>
+
+## Good to know
+
+- Access is read-only. Hirify never writes to your calendar.
+- A meeting in your calendar without a video link doesn't show up. The **Calendar** page therefore doesn't show your whole week.
+- You can't add the assistant to a meeting that has ended. The panel shows **Event ended** and only a **Close** button.
+- Once the meeting has started and the assistant has joined, the panel only offers **Close**. The template can no longer be changed.
+- Connecting your calendar isn't enough to cover interviews scheduled in your ATS. That case depends on a separate setting, described in [ATS automations](/en/integrations/ats-automations).
+- The calendar is personal. The **Calendar** page shows your own events, not your colleagues' events.
+
+<CardGroup cols={2}>
+  <Card title="Record a video interview" icon="video" href="/en/interviews/video-meetings">
+    The three ways to bring in the meeting assistant.
+  </Card>
+
+  <Card title="Meeting assistant appearance" icon="image" href="/en/integrations/customize-the-meeting-assistant">
+    Choose the image participants see during the meeting.
+  </Card>
+</CardGroup>

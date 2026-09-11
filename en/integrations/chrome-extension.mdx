@@ -1,0 +1,87 @@
+---
+title: "Install the Chrome extension"
+sidebarTitle: "Chrome extension"
+description: "Install the extension from the Chrome Web Store and connect it to your Hirify account"
+icon: "puzzle-piece"
+---
+
+The extension opens Hirify in a side panel of your browser. You start an interview and query your talent pool without switching tabs.
+
+## Install the extension
+
+<Steps>
+  <Step title="Open the card from the dashboard">
+    On the **Dashboard**, in the **Go further** section, the **Hirify in your browser** card reads: "Record and transcribe your interviews straight from Chrome, without leaving your ATS." Click **Install the extension**.
+  </Step>
+  <Step title="Add the extension to Chrome">
+    The Chrome Web Store opens in a new tab, on the Hirify listing. Start the installation from that page.
+  </Step>
+  <Step title="Pin the icon">
+    Once the extension is installed, pin its icon to the Chrome toolbar. It opens and closes the side panel.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the "Hirify in your browser" card on the dashboard, with the Install the extension button */}
+
+## Connect the extension to your account
+
+<Note>
+  The extension panel is displayed in French. Its labels are given below as they appear, with their meaning in parentheses.
+</Note>
+
+The first time you open it, the panel shows a **Connexion** (sign in) screen. You can take one of two paths:
+
+- **Se connecter avec Hirify** (sign in with Hirify): the shortest. Your browser sends you to your Hirify workspace to sign in, then the panel opens on your account.
+- **Options avancées** (advanced options): expand it at the bottom of the screen if the first path fails (expired session, restrictive browser). Then sign in with an access token.
+
+## Sign in with an access token
+
+The token is a personal key created in Hirify that identifies you to the extension.
+
+<Steps>
+  <Step title="Create the token in Hirify">
+    Open **Settings**, then **Security**. The **Access tokens** section says: "Create a personal token to connect the browser extension or the API to your account. The token is shown only once." Click **Create a token**.
+  </Step>
+  <Step title="Name it">
+    Give it a name that means something to you, such as "Chrome extension". Confirm with **Create**.
+  </Step>
+  <Step title="Copy the value shown">
+    The **Your new token** window shows the key only once. Copy it, then click **Done**.
+  </Step>
+  <Step title="Paste it into the panel">
+    In the extension, under **Options avancées**, paste the key into the **Jeton d'accès** (access token) field and click **Se connecter par jeton** (sign in with token).
+  </Step>
+</Steps>
+
+<Warning>
+  A token gives access to your account. Don't share it and don't paste it into a shared document. If in doubt, revoke it: in **Settings**, **Security**, click the delete icon next to the token, then **Revoke**. Any application using it loses access immediately.
+</Warning>
+
+## What you can do from the panel
+
+Once you're signed in, the panel offers two tabs.
+
+- **Assistant**: ask your talent pool questions, just as in the app. See [Ask a question](/en/assistant/ask-a-question).
+- **Entretiens** (interviews): find your recent interviews and open one to review it.
+
+The **Démarrer** (start) button starts a new interview without going back to the app. You choose between **Visioconférence** (video meeting), **Entretien en présentiel** (in-person interview), and **Appel téléphonique** (phone call). The three channels and what each one requires are described in [Choose how to record](/en/interviews/choose-how-to-record).
+
+On a SmartRecruiters candidate profile, the panel shows the matching Hirify profile at the top when there is one.
+
+## Good to know
+
+- The extension is installed from the Chrome Web Store. It isn't distributed as a file.
+- If your plan doesn't include phone calls, the option stays visible in the creation menu but is inactive, marked "indisponible" (unavailable). See [Make a call](/en/calling/make-a-call).
+- Matching with a candidate profile currently only works on SmartRecruiters pages. Other ATSs don't show this banner.
+- The extension doesn't replace the app. Templates, analysis, Sourcing, and Analytics stay in Hirify.
+- The access token is shown only once. If you lose it, it can't be recovered. Create a new one and revoke the old one.
+- Installing the extension doesn't exempt you from informing the candidate before any recording.
+
+<CardGroup cols={2}>
+  <Card title="Secure your account" icon="lock" href="/en/getting-started/secure-your-account">
+    Password, access tokens, single sign-on.
+  </Card>
+  <Card title="Choose how to record" icon="microphone" href="/en/interviews/choose-how-to-record">
+    Video, in person, or phone: what each channel requires.
+  </Card>
+</CardGroup>

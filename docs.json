@@ -190,101 +190,273 @@
             ]
           }
         ]
+      },
+      {
+        "language": "en",
+        "navbar": {
+          "primary": {
+            "type": "button",
+            "label": "Open the app",
+            "href": "https://app.hirify.fr"
+          }
+        },
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Welcome",
+                "icon": "hand-wave",
+                "pages": [
+                  "en/index",
+                  "en/quickstart",
+                  "en/glossary"
+                ]
+              },
+              {
+                "group": "Getting started",
+                "icon": "rocket",
+                "pages": [
+                  "en/getting-started/create-your-workspace",
+                  "en/getting-started/join-an-organization",
+                  "en/getting-started/invite-a-member",
+                  "en/getting-started/roles-and-access",
+                  "en/getting-started/secure-your-account",
+                  "en/getting-started/improve-transcripts"
+                ]
+              },
+              {
+                "group": "Record an interview",
+                "icon": "microphone",
+                "pages": [
+                  "en/interviews/choose-how-to-record",
+                  "en/interviews/video-meetings",
+                  "en/interviews/in-person",
+                  "en/interviews/upload-audio",
+                  "en/interviews/automatic-from-your-ats",
+                  "en/interviews/non-recruiting-meetings",
+                  "en/interviews/find-and-track",
+                  "en/interviews/review-an-interview",
+                  "en/interviews/identify-speakers",
+                  "en/interviews/add-the-candidate-cv",
+                  "en/interviews/merge-two-interviews"
+                ]
+              },
+              {
+                "group": "Interview notes and analysis",
+                "icon": "file-lines",
+                "pages": [
+                  "en/notes/choose-a-template",
+                  "en/notes/create-a-template",
+                  "en/notes/share-a-template",
+                  "en/notes/read-and-edit",
+                  "en/notes/candidate-analysis",
+                  "en/notes/export-and-share"
+                ]
+              },
+              {
+                "group": "Connect your tools",
+                "icon": "plug",
+                "pages": [
+                  "en/integrations/connect-your-calendar",
+                  "en/integrations/connect-your-ats",
+                  "en/integrations/link-an-interview-to-an-application",
+                  "en/integrations/send-to-your-ats",
+                  "en/integrations/ats-automations",
+                  "en/integrations/job-families",
+                  "en/integrations/chrome-extension",
+                  "en/integrations/customize-the-meeting-assistant",
+                  "en/integrations/disconnect-a-tool"
+                ]
+              },
+              {
+                "group": "Calling",
+                "icon": "phone",
+                "pages": [
+                  "en/calling/get-a-phone-number",
+                  "en/calling/make-a-call"
+                ]
+              },
+              {
+                "group": "Use your talent pool",
+                "icon": "users-viewfinder",
+                "pages": [
+                  {
+                    "group": "Assistant",
+                    "icon": "comments",
+                    "pages": [
+                      "en/assistant/ask-a-question",
+                      "en/assistant/check-an-answer"
+                    ]
+                  },
+                  {
+                    "group": "Sourcing",
+                    "icon": "magnifying-glass",
+                    "pages": [
+                      "en/sourcing/start-a-search",
+                      "en/sourcing/weight-the-criteria",
+                      "en/sourcing/read-and-compare",
+                      "en/sourcing/write-an-outreach-message"
+                    ]
+                  },
+                  {
+                    "group": "Analytics",
+                    "icon": "chart-line",
+                    "pages": [
+                      "en/analytics/build-a-dashboard",
+                      "en/analytics/save-share-and-pin",
+                      "en/analytics/data-reliability"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Your account",
+                "icon": "gear",
+                "pages": [
+                  "en/account/plans-and-access",
+                  "en/account/manage-members",
+                  "en/account/subscription-and-billing",
+                  "en/account/notifications",
+                  "en/account/support-requests"
+                ]
+              },
+              {
+                "group": "Trust",
+                "icon": "shield-check",
+                "pages": [
+                  "en/trust/inform-your-candidates",
+                  "en/trust/your-data",
+                  "en/trust/ai-at-hirify"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Help",
+            "groups": [
+              {
+                "group": "Troubleshooting",
+                "icon": "life-ring",
+                "pages": [
+                  "en/help/faq",
+                  "en/help/interview-not-recorded",
+                  "en/help/incomplete-transcript",
+                  "en/help/speakers-mixed-up",
+                  "en/help/ats-not-syncing",
+                  "en/help/contact-support"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "What's new",
+            "groups": [
+              {
+                "group": "What's new",
+                "icon": "sparkles",
+                "pages": [
+                  "en/whats-new"
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "redirects": [
     {
       "source": "/introduction",
-      "destination": "/fr"
+      "destination": "/en"
     },
     {
       "source": "/quickstart",
-      "destination": "/fr/premiers-pas"
+      "destination": "/en/quickstart"
     },
     {
       "source": "/getting-started/account-setup",
-      "destination": "/fr/demarrer/creer-votre-espace"
+      "destination": "/en/getting-started/create-your-workspace"
     },
     {
       "source": "/getting-started/invite-team",
-      "destination": "/fr/demarrer/inviter-un-membre"
+      "destination": "/en/getting-started/invite-a-member"
     },
     {
       "source": "/features/interview-capture",
-      "destination": "/fr/entretiens/choisir-son-canal"
+      "destination": "/en/interviews/choose-how-to-record"
     },
     {
       "source": "/features/candidate-profiles",
-      "destination": "/fr/comptes-rendus/analyse-du-candidat"
+      "destination": "/en/notes/candidate-analysis"
     },
     {
       "source": "/features/talent-pool-chat",
-      "destination": "/fr/assistant/poser-une-question"
+      "destination": "/en/assistant/ask-a-question"
     },
     {
       "source": "/features/ats-integration",
-      "destination": "/fr/integrations/connecter-votre-ats"
+      "destination": "/en/integrations/connect-your-ats"
     },
     {
       "source": "/features/templates",
-      "destination": "/fr/comptes-rendus/choisir-un-template"
+      "destination": "/en/notes/choose-a-template"
     },
     {
       "source": "/integrations/ats-overview",
-      "destination": "/fr/integrations/connecter-votre-ats"
+      "destination": "/en/integrations/connect-your-ats"
     },
     {
       "source": "/integrations/connecting-your-ats",
-      "destination": "/fr/integrations/connecter-votre-ats"
+      "destination": "/en/integrations/connect-your-ats"
     },
     {
       "source": "/integrations/data-sync",
-      "destination": "/fr/integrations/connecter-votre-ats"
+      "destination": "/en/integrations/connect-your-ats"
     },
     {
       "source": "/compliance/gdpr",
-      "destination": "/fr/confiance/vos-donnees"
+      "destination": "/en/trust/your-data"
     },
     {
       "source": "/compliance/ai-act",
-      "destination": "/fr/confiance/l-ia-chez-hirify"
+      "destination": "/en/trust/ai-at-hirify"
     },
     {
       "source": "/compliance/data-hosting",
-      "destination": "/fr/confiance/vos-donnees"
+      "destination": "/en/trust/your-data"
     },
     {
       "source": "/compliance/sub-processors",
-      "destination": "/fr/confiance/vos-donnees"
+      "destination": "/en/trust/your-data"
     },
     {
       "source": "/account/plans",
-      "destination": "/fr/compte/offres-et-acces"
+      "destination": "/en/account/plans-and-access"
     },
     {
       "source": "/account/managing-users",
-      "destination": "/fr/compte/gerer-les-membres"
+      "destination": "/en/account/manage-members"
     },
     {
       "source": "/account/billing",
-      "destination": "/fr/compte/abonnement-et-facturation"
+      "destination": "/en/account/subscription-and-billing"
     },
     {
       "source": "/help/faq",
-      "destination": "/fr/aide/faq"
+      "destination": "/en/help/faq"
     },
     {
       "source": "/help/ats-connection-issues",
-      "destination": "/fr/aide/mon-ats-ne-se-synchronise-plus"
+      "destination": "/en/help/ats-not-syncing"
     },
     {
       "source": "/help/interview-recording",
-      "destination": "/fr/aide/l-entretien-n-a-pas-ete-enregistre"
+      "destination": "/en/help/interview-not-recorded"
     },
     {
       "source": "/help/contact-support",
-      "destination": "/fr/aide/contacter-le-support"
+      "destination": "/en/help/contact-support"
     }
   ],
   "logo": {

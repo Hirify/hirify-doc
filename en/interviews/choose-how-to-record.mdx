@@ -1,0 +1,97 @@
+---
+title: "Choose how to record your interview"
+sidebarTitle: "Ways to record"
+description: "Compare the ways to record an interview and pick the one that fits your situation"
+icon: "signs-post"
+---
+
+Hirify records and transcribes your interviews whatever the channel. This page helps you pick the right path for your situation before you open the detailed steps.
+
+Everything starts in the same place: the **Start an interview** section of the **Dashboard**.
+
+{/* SCREENSHOT: the "Start an interview" row of the Dashboard, with the link field and the Call, Schedule by email, and In person buttons. French capture: /images/tableau-de-bord.webp */}
+
+## The available paths
+
+| Situation | What you do | Where |
+| --- | --- | --- |
+| The video meeting is starting now | Paste the link into the **Paste a Meet or Teams link** field | Dashboard |
+| The interview is already in your calendar | Add the meeting assistant's address as a guest | **Schedule by email** button |
+| Your calendar is connected to Hirify | Click the event, then **Add the meeting assistant** | **Calendar** |
+| The interview happens face to face | Generate a QR code and record from a phone | **In person** button |
+| The interview was already recorded elsewhere | Upload the audio file | **Upload audio** button |
+| You're calling the candidate | Dial the number | Dashboard |
+| The interview is created in your ATS | Nothing, the meeting assistant is scheduled for you | Organization setting |
+
+## In a video meeting
+
+This is the most common case. A meeting assistant joins the video meeting, records it, and transcribes it. Three paths lead there: the link field on the Dashboard, the calendar invitation, and the Hirify **Calendar**.
+
+The first two need no prior connection. The **Calendar** requires Google Calendar or Outlook to be connected to your workspace.
+
+<CardGroup cols={2}>
+  <Card title="Record a video meeting" href="/en/interviews/video-meetings">
+    The three paths, step by step.
+  </Card>
+
+  <Card title="Connect your calendar" href="/en/integrations/connect-your-calendar">
+    Connect Google Calendar or Outlook.
+  </Card>
+</CardGroup>
+
+## In person
+
+For a face-to-face interview, Hirify generates a QR code. You scan it with a phone, choose the microphone, and start recording from the page that opens. There's nothing to install on the phone.
+
+<CardGroup cols={1}>
+  <Card title="Record an in-person interview" href="/en/interviews/in-person">
+    From the QR code to sending the recording.
+  </Card>
+</CardGroup>
+
+## From an audio file
+
+An interview already recorded elsewhere, on a voice recorder, a phone, or another tool, can be uploaded with the **Upload audio** button on the Dashboard. You give it a title, set the number of participants, and drop the file. Transcription and analysis work the same way as for the other channels.
+
+<CardGroup cols={1}>
+  <Card title="Upload an audio recording" href="/en/interviews/upload-audio">
+    Accepted formats, upload, and processing.
+  </Card>
+</CardGroup>
+
+## By phone
+
+Hirify places an outbound call from your line and transcribes the conversation. When a default outbound number is active, the Dashboard shows a field where you dial the number directly. Otherwise, the **Call** button opens the **Phone call** window, where you pick the line, the microphone, and the number to call.
+
+<CardGroup cols={2}>
+  <Card title="Get a phone number" href="/en/calling/get-a-phone-number">
+    Your line and its verification.
+  </Card>
+
+  <Card title="Make a call" href="/en/calling/make-a-call">
+    Dial and follow the call.
+  </Card>
+</CardGroup>
+
+## From your ATS
+
+If your ATS is connected to Hirify, interviews created there with a video meeting link can get the meeting assistant without any action on your part.
+
+<CardGroup cols={1}>
+  <Card title="Automatic from your ATS" href="/en/interviews/automatic-from-your-ats">
+    The setting, its conditions, and its limits.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Whatever the channel, informing candidates is your responsibility. Tell them about the recording before you start it. See [Inform your candidates](/en/trust/inform-your-candidates).
+</Warning>
+
+## Good to know
+
+- The Dashboard field expects a video meeting link. A link it doesn't recognize is rejected with the message "Invalid link. Use a Google Meet or Teams link."
+- A recording shorter than one minute isn't transcribed. The interview then shows **Too short**.
+- The meeting assistant must be let into the video meeting. If the host doesn't admit it, the interview shows **Assistant not admitted** and nothing is recorded.
+- Hirify never sends a message to the candidate, whatever the channel. The call you start from the Dashboard is an outbound call.
+- The interview notes and the evaluation only go to your ATS when you send them from the interview's ATS panel. Some automations are the exception: summary tags, filling in empty fields, and, with the Teamtailor Hirify card, automatic publishing of the analysis and interview notes. They're off by default and write without that approval once an administrator or a billing admin turns them on. See [ATS automations](/en/integrations/ats-automations).
+- The channel you choose changes nothing in the transcript, the interview notes, or the analysis.

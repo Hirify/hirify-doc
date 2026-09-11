@@ -1,0 +1,97 @@
+---
+title: "Identify the speakers in an interview"
+sidebarTitle: "Speakers"
+description: "Name each voice with “Who's speaking here?”, merge two speakers, and fix a swap"
+icon: "users"
+---
+
+Hirify separates the voices in an interview, but it doesn't know right away which name goes with each one. Naming them improves the interview notes and the key takeaways. What was said is attributed to the right person, and the analysis knows who the candidate is.
+
+## Name all the speakers at once
+
+When some voices have no name, a banner appears at the top of the **Notes** and **Key takeaways** views. It shows how many speakers aren't identified and reminds you that "Identifying them improves the interview notes and key takeaways."
+
+<Steps>
+  <Step title="Click Identify speakers">
+    The button is in the banner. The **Who's speaking here?** window opens on the first unnamed voice.
+  </Step>
+  <Step title="Read the excerpts">
+    Up to three of that speaker's longest turns are shown, with their timestamps. If they aren't enough, the **View in transcript** link closes the window and switches to the **Transcript** tab at the first excerpt. Go back to the **Notes** or **Key takeaways** tab to find the banner and reopen the window.
+  </Step>
+  <Step title="Enter the name">
+    Type in the **Speaker name** field, then move to the next step. For a video meeting, the names of the meeting participants are suggested below the field. Clicking one saves the name right away with the selected role and moves to the next voice. Pressing Enter in the field does the same. So pick the role before doing either.
+  </Step>
+  <Step title="Set the role">
+    Choose **Candidate** or **Recruiter**. An interview has only one candidate. Marking someone as the candidate turns the previous candidate back into a recruiter.
+  </Step>
+  <Step title="Confirm and move on">
+    **Confirm** saves and moves to the next voice. **Skip** moves on without saving anything. When no unnamed voices are left, the window closes. As soon as there's more than one voice to name, a counter at the top right shows where you are, and two arrows let you go back.
+  </Step>
+</Steps>
+
+Once everyone is named, the banner shows **Speakers identified** and offers **Regenerate**. That button rebuilds the interview notes and the key takeaways with the right names. **Later** closes the banner without rerunning anything.
+
+{/* SCREENSHOT: the "Who's speaking here?" window with the excerpts, the name field, the suggestions, and the role buttons */}
+
+<Note>
+  Naming a speaker doesn't change the interview notes or the analysis already produced. They keep the names they had until you regenerate them. The banner's **Regenerate** is the only action that rebuilds both the interview notes and the key takeaways.
+</Note>
+
+## Fix a voice from the transcript
+
+All these actions stay available line by line in the **Transcript** tab, even after you've closed the banner. Hover over a turn. A button appears to the left of the avatar and opens a menu that acts on that line's speaker, so on all of their turns.
+
+- **Rename**: opens a **Participant name** field with the same suggestions.
+- **Candidate** or **Not the candidate**: switches the role.
+- **Swap with...**: exchanges the names and roles of two speakers.
+- **Merge with...**: combines two speakers into one.
+
+These corrections don't bring the banner back. To have the interview notes pick up the right names, go back to the **Notes** tab, open the **Actions** panel on the right, and click **Regenerate** in the **Interview notes** section. This button rebuilds the interview notes on screen. It doesn't rebuild the key takeaways.
+
+## Fix a swap
+
+This is the most common case. Both people have a name, but they're on the wrong voices. Open a line's menu, choose **Swap with...**, then pick the other speaker. Both names and both roles are exchanged at once across the whole interview. There's no need to rename both by hand. If you got it wrong, swap them back the same way.
+
+## Merge two speakers
+
+The same person can be split into two voices after a microphone change or a long silence. Bring them back together.
+
+<Steps>
+  <Step title="Open the menu on one of their lines">
+    In the **Transcript** tab, hover over a turn from the duplicate you want to remove.
+  </Step>
+  <Step title="Choose Merge with...">
+    Then select the speaker to keep.
+  </Step>
+  <Step title="Confirm">
+    A window reminds you what the operation affects. Click **Merge**.
+  </Step>
+</Steps>
+
+<Warning>
+  Merging two speakers can't be undone. All of the source speaker's turns are reassigned to the target speaker, and adjacent turns are combined. There's no way to split them apart afterward.
+</Warning>
+
+## Good to know
+
+- Two speakers can't have the same name in an interview. Hirify refuses the duplicate and tells you.
+- The **Who's speaking here?** window only shows voices that still have no name. To change a name you already gave, use **Rename** in the **Transcript** tab.
+- **Later** hides the banner for this interview in this browser. The actions stay available from the transcript.
+- Name suggestions come from the video meeting participants. An in-person or phone interview doesn't offer any, so enter the name by hand.
+- Identification applies to one interview. It doesn't carry over to other interviews with the same person.
+- **Swap with...** and **Merge with...** only appear if the interview has at least two speakers.
+
+<CardGroup cols={2}>
+  <Card title="Review an interview" icon="file-lines" href="/en/interviews/review-an-interview">
+    Move between the Notes, Key takeaways, and Transcript views.
+  </Card>
+  <Card title="Speakers mixed up" icon="life-ring" href="/en/help/speakers-mixed-up">
+    Troubleshooting when the voice separation is clearly wrong.
+  </Card>
+  <Card title="Improve transcripts" icon="wand-magic-sparkles" href="/en/getting-started/improve-transcripts">
+    Company vocabulary and the settings that help recording.
+  </Card>
+  <Card title="Merge interviews" icon="code-merge" href="/en/interviews/merge-two-interviews">
+    Combine several recordings of the same conversation.
+  </Card>
+</CardGroup>

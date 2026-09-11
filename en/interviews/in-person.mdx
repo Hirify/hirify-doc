@@ -1,0 +1,100 @@
+---
+title: "Record an in-person interview"
+sidebarTitle: "In person"
+description: "Scan a QR code and record a face-to-face interview with your phone's microphone"
+icon: "qrcode"
+---
+
+For a face-to-face interview, Hirify generates a QR code. You scan it with a phone and record from the page that opens. There's nothing to install.
+
+## Generate the QR code
+
+<Steps>
+  <Step title="Open the Dashboard">
+    In the **Start an interview** row, click **In person**.
+  </Step>
+  <Step title="Name the interview">
+    Fill in the **Interview title**. The field suggests an example: "e.g. Interview with Alice Martin".
+  </Step>
+  <Step title="Set the number of participants">
+    The **Participants** menu goes from **1 person** to **5 people**. It helps Hirify separate the voices.
+  </Step>
+  <Step title="Click Generate">
+    The window shows "Your QR code is ready".
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the "In-person interview" window, with the Interview title field and the Participants menu. French capture: /images/fenetre-presentiel.webp */}
+
+## Open the recording page on the phone
+
+Scan the QR code with the phone's camera. The recording page opens in the browser.
+
+Two other options appear under the QR code:
+
+- **Open**: opens the page directly in a new tab, on the computer.
+- **Copy link**: copies the address to the clipboard so you can send it to another device.
+
+The **New** button takes you back to the form to generate another QR code. **Done** closes the window.
+
+## Record
+
+On the phone, the page shows the interview title and your name.
+
+<Steps>
+  <Step title="Choose the microphone">
+    The **Microphone** menu lists the available audio inputs. The browser asks for permission to use the microphone. Allow it.
+  </Step>
+  <Step title="Start recording">
+    Tap **Start recording**. A waveform and a timer appear.
+  </Step>
+  <Step title="Pause if needed">
+    **Pause** stops the capture and **Resume** starts it again. The "Saved automatically" label means the recording is kept on the device as the interview goes on.
+  </Step>
+  <Step title="Stop at the end">
+    **Stop** ends the capture and starts the upload. A progress bar shows how far along it is, then the page confirms "Recording sent" and "Transcribing".
+  </Step>
+</Steps>
+
+<Warning>
+  Keep the page open and the screen unlocked for the whole recording and during the upload. On an iPhone, the page suggests turning off auto-lock in **Settings → Display → Auto-Lock → Never**.
+</Warning>
+
+{/* SCREENSHOT: the recording page on a phone, mid-recording, with the timer and the Pause and Stop buttons */}
+
+## Resume an interrupted recording
+
+The recording page keeps what it captured. Two situations are handled when you reopen it.
+
+<AccordionGroup>
+  <Accordion title="Previous recording detected">
+    A recording was cut off before the end. The page offers **Recover** to pick it up again or **Start new** to start over.
+  </Accordion>
+  <Accordion title="Previous upload pending">
+    The recording is complete but the upload didn't go through. The page offers **Retry upload**, **Download** to get the audio file, or **Delete**.
+  </Accordion>
+</AccordionGroup>
+
+After a successful upload, the **Download recording** button stays available on the page.
+
+## Find the interview in Hirify
+
+The interview is created as soon as the QR code is generated. Until a recording is sent, it sits with no status at the bottom of the **Interviews** list. It joins the normal flow once the upload is done. In the filters, it falls under the **Recording** type.
+
+<CardGroup cols={2}>
+  <Card title="Find and track" href="/en/interviews/find-and-track">
+    The statuses and filters of the list.
+  </Card>
+  <Card title="Identify speakers" href="/en/interviews/identify-speakers">
+    Name the voices after transcription.
+  </Card>
+</CardGroup>
+
+## Good to know
+
+- A recording shorter than one minute isn't transcribed. The page says so on the phone, and the interview shows **Too short** in the list.
+- The number of participants helps separate the voices. It isn't a limit. The menu stops at five people, but one more speaker doesn't block the recording.
+- The quality of the phone's microphone determines the quality of the transcript. Place the device between the speakers, at an equal distance from each.
+- An in-person interview isn't linked to any calendar event. It doesn't appear in the **Calendar**.
+- If a single interview was split into two recordings, you can combine them. See [Merge two interviews](/en/interviews/merge-two-interviews).
+- Industry terms and your organization's proper names are transcribed better if you've added them. See [Improve transcripts](/en/getting-started/improve-transcripts).
