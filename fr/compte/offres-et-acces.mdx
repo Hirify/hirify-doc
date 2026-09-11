@@ -50,7 +50,8 @@ L'offre Hub reprend tout ce que contient Starter. L'offre Volume reprend tout ce
 
 ## Ce qui dépend de votre offre
 
-- **Assistant**, **Sourcing** et **Pilotage** demandent au minimum l'offre Hub. Sans elle, l'entrée n'apparaît pas dans la barre latérale.
+- **Assistant** et **Sourcing** demandent au minimum l'offre Hub. Sans elle, leurs entrées restent visibles dans la barre latérale mais grisées, avec la mention « Réservé au plan Teams » qui désigne l'offre Hub.
+- **Pilotage** et **Fiabilité** demandent l'offre Hub et le rôle administrateur ou manager. Sans ces deux conditions réunies, leurs entrées n'apparaissent pas.
 - **Templates personnalisés** et **téléphonie** demandent au minimum l'offre Starter. L'entrée **Téléphonie** ne s'affiche dans les **Paramètres** que si votre offre y donne droit.
 - La **connexion à votre logiciel de recrutement** relève de l'offre Hub.
 - Le **quota de minutes d'appels** ne concerne que l'offre Starter. Sur l'offre Hub, la page **Consommation** affiche « Minutes illimitées ce mois-ci ».
@@ -64,7 +65,7 @@ Quatre rôles existent : administrateur, manager, membre et admin facturation.
 - Un **administrateur** gère les membres, les rôles, les paramètres de l'organisation et l'abonnement. Il accède à tout le produit.
 - Un **admin facturation** gère les membres, l'abonnement, les paramètres de l'organisation et les intégrations, sans aucun accès au produit. Il n'occupe pas de place dans votre abonnement.
 
-Deux écrans cumulent les deux conditions : **Pilotage** et **Fiabilité** exigent l'offre Hub _et_ le rôle administrateur ou manager. Un membre y voit un message d'accès réservé.
+Deux écrans cumulent les deux conditions : **Pilotage** et **Fiabilité** exigent l'offre Hub _et_ le rôle administrateur ou manager. Un membre ne voit pas leurs entrées, et leur adresse ouverte directement affiche **Accès réservé**.
 
 Le détail des rôles est décrit dans [Rôles et accès](/fr/demarrer/roles-et-acces).
 
@@ -90,8 +91,8 @@ Le détail des rôles est décrit dans [Rôles et accès](/fr/demarrer/roles-et-
 - Le changement d'offre se fait sur la page **Abonnement** et n'est ouvert qu'à un administrateur ou à un admin facturation.
 - Une organisation ne peut connecter qu'un seul logiciel de recrutement à la fois, quelle que soit l'offre.
 - L'authentification unique se met en place avec l'équipe Hirify : aucun écran de configuration n'existe côté client.
-- Hirify ne décide jamais à votre place. Le compte rendu et l'évaluation ne partent dans votre logiciel de recrutement que sur un geste de votre part : vous les envoyez depuis le panneau ATS de l'entretien, et une confirmation vous est demandée.
-- Deux automatismes peuvent en revanche écrire sans validation entretien par entretien : les tags de synthèse posés sur la fiche du candidat après chaque entretien analysé et le remplissage des champs personnalisés restés vides. Les deux sont désactivés par défaut. Seul un administrateur ou un admin facturation les active dans **Paramètres** \> **Intégrations**, au niveau de la connexion. Le remplissage ne touche que les champs vides, vous êtes notifié et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- Hirify ne décide jamais à votre place. Par défaut, le compte rendu et l'évaluation ne partent dans votre logiciel de recrutement que sur un geste de votre part : vous les envoyez depuis le panneau ATS de l'entretien, et une confirmation vous est demandée.
+- Deux automatismes peuvent en revanche écrire sans validation entretien par entretien : les tags de synthèse posés sur la fiche du candidat après chaque entretien analysé et le remplissage des champs personnalisés restés vides. Avec la carte Hirify de Teamtailor, un troisième réglage, **Publier l'analyse automatiquement**, envoie aussi l'analyse et le compte rendu dès la fin de l'entretien. Tous sont désactivés par défaut. Seul un administrateur ou un admin facturation les active dans **Paramètres** \> **Intégrations**, au niveau de la connexion. Le remplissage ne touche que les champs vides, vous êtes notifié et vous pouvez l'annuler depuis le panneau ATS de l'entretien. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
 
 <CardGroup cols={2}>
   <Card title="Abonnement et facturation" icon="credit-card" href="/fr/compte/abonnement-et-facturation">

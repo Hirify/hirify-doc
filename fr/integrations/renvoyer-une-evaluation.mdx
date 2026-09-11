@@ -1,7 +1,7 @@
 ---
-title: "Renvoyer une évaluation vers votre logiciel de recrutement"
-sidebarTitle: "Renvoi d'évaluation"
-description: "Envoyer vous-même une évaluation ou une note simple sur la candidature, et suivre l'historique des envois"
+title: "Partager l'analyse dans votre logiciel de recrutement"
+sidebarTitle: "Partage de l'analyse"
+description: "Envoyer vous-même le compte rendu et votre verdict sur la fiche du candidat, puis suivre l'historique des envois"
 icon: "star"
 ---
 
@@ -9,100 +9,101 @@ icon: "star"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Le compte rendu d'un entretien peut repartir sur la fiche du candidat, accompagné de votre verdict. L'envoi part de vous, après un aperçu et une confirmation. Ni le compte rendu ni votre verdict ne partent sans ce geste.
+Le compte rendu d'un entretien peut rejoindre la fiche du candidat, avec votre verdict quand votre logiciel de recrutement en accepte un. L'envoi part de vous, après un aperçu et une confirmation. Vous n'avez pas de destination à choisir : Hirify la déduit de votre outil et des accès accordés à la connexion.
 
-## Avant d'envoyer
+## Avant de partager
 
-La section **Évaluation** vit dans l'onglet **ATS** de l'entretien, sous la candidature liée. Elle refuse de s'ouvrir tant que quelque chose manque et vous dit quoi :
+La section **Partage de l'analyse** se trouve dans l'onglet **ATS** de l'entretien, sous la section **Candidature**. Son bouton reste inactif tant que quelque chose manque, et la ligne placée dessous dit quoi faire :
 
 | Message affiché | Ce qu'il attend de vous |
 | --- | --- |
-| « Associez d'abord une candidature pour pouvoir l'évaluer. » | Liez l'entretien à une candidature. |
-| « Confirmez d'abord le lien ci-dessus pour pouvoir évaluer. » | Le lien a été déduit d'une adresse : confirmez-le. |
-| « Aucune note complétée n'est encore disponible. » | Générez un compte rendu pour cet entretien. |
-| « La note actuellement ouverte n'est pas finalisée. » | Sélectionnez un compte rendu terminé dans la barre latérale. |
+| « Associez d'abord une candidature pour partager l'analyse. » | Liez l'entretien à une candidature. |
+| « Confirmez d'abord la candidature ci-dessus. » | La candidature a été retrouvée par l'email d'un participant. Confirmez-la. |
+| « Ouvrez une note finalisée : c'est elle qui part. » | Ouvrez un compte rendu terminé. C'est la note affichée qui est envoyée. |
+| « Choisissez d'abord un verdict. » | Choisissez un verdict dans le sélecteur placé au-dessus du bouton. |
 
-{/* CAPTURE : la section Évaluation de l'onglet ATS, avec le sélecteur de verdict et le bouton d'envoi */}
+Quand rien ne manque, la même ligne résume ce qui partira, par exemple « Évaluation signée de votre nom, compte rendu en commentaire, après votre relecture. »
 
-## Envoyer une évaluation
+{/* CAPTURE : la section Partage de l'analyse de l'onglet ATS, avec le sélecteur de verdict et le bouton Partager l'analyse */}
+
+## Partager l'analyse
 
 <Steps>
   <Step title="Ouvrez l'onglet ATS de l'entretien">
-    Puis dépliez la section **Évaluation**.
+    Dans la barre verticale à droite de la page, cliquez sur **ATS**. La section **Partage de l'analyse** suit la section **Candidature**.
   </Step>
-  <Step title="Choisissez la forme de l'envoi">
-    Deux onglets apparaissent quand votre logiciel de recrutement et les accès accordés le permettent : **Évaluation** et **Note simple**. Sinon, seule l'évaluation est proposée.
-  </Step>
-  <Step title="Posez votre verdict">
-    Le sélecteur **Choisir un verdict** propose cinq positions, de **Très défavorable** à **Très favorable**. Chacune est assortie d'un rappel :
+  <Step title="Choisissez un verdict si le sélecteur est affiché">
+    Quand votre logiciel de recrutement exige un verdict, le sélecteur **Choisir un verdict** apparaît au-dessus du bouton. Il propose cinq positions, chacune assortie d'un rappel :
 
-    - « À écarter sans réserve »
-    - « Pas le bon match »
-    - « À discuter, signaux partagés »
-    - « Profil aligné, recommandé »
-    - « Profil idéal, à recruter sans attendre »
+    - **Très défavorable** : « À écarter sans réserve »
+    - **Défavorable** : « Pas le bon match »
+    - **Mitigé** : « À discuter, signaux partagés »
+    - **Favorable** : « Profil aligné, recommandé »
+    - **Très favorable** : « Profil idéal, à recruter sans attendre »
   </Step>
-  <Step title="Envoyez">
-    Le bouton **Envoyer à** porte le nom de votre logiciel de recrutement. En mode évaluation, il reste inactif tant qu'aucun verdict n'est choisi.
+  <Step title="Cliquez sur Partager l'analyse">
+    Une fenêtre de confirmation s'ouvre, titrée au nom de votre logiciel de recrutement. Elle rappelle la candidature visée et liste ce qui va partir, une ligne par destination.
   </Step>
-  <Step title="Relisez l'aperçu, puis confirmez">
-    Le dialogue **Confirmer l'envoi vers l'ATS** rappelle sur quelle candidature vous écrivez, affiche un extrait du compte rendu et précise : « Aperçu. Le compte rendu complet sera envoyé. » Cliquez sur **Confirmer l'envoi**.
+  <Step title="Relisez, puis confirmez">
+    **Relire la note** déplie le texte tel qu'il sera envoyé. Si votre outil accepte un avis noté sans l'exiger, cochez **Ajouter un avis noté** et choisissez un verdict. Cliquez ensuite sur **Partager**.
   </Step>
 </Steps>
 
+Le message « Analyse partagée » confirme l'envoi. La section affiche alors la date du partage, son auteur et un lien vers la fiche dans votre outil. Pendant l'envoi, elle indique « Envoi en cours » et se met à jour d'elle-même. Le bouton devient **Partager à nouveau**.
+
 <Warning>
-  Cette action est visible par l'équipe recrutement dans votre logiciel de recrutement. Elle n'est pas silencieuse.
+  Ce que vous partagez s'inscrit sur la fiche du candidat dans votre logiciel de recrutement. Relisez la note avant de confirmer.
 </Warning>
 
-## Évaluation ou note simple
-
-L'onglet **Note simple** dépose le compte rendu tel quel, sans verdict. C'est le bon choix quand l'entretien ne se conclut pas par une recommandation, ou quand une évaluation formelle a déjà été saisie par quelqu'un d'autre.
+## Ce qui part selon votre logiciel de recrutement
 
 <Tabs>
   <Tab title="SmartRecruiters">
-    L'envoi crée une évaluation portant votre verdict. Le dépôt en note simple n'est pas proposé.
+    Le verdict est obligatoire. L'envoi crée une évaluation signée de votre nom. Si la connexion dispose de la permission Messages, l'évaluation porte l'essentiel de l'entretien et le compte rendu rejoint les notes du candidat. Sans cette permission, le compte rendu part en commentaire de l'évaluation, et la section vous propose de reconnecter SmartRecruiters avec la permission Messages.
   </Tab>
   <Tab title="Teamtailor">
-    Les deux formes sont disponibles : évaluation avec verdict ou note simple sur la fiche du candidat, sous réserve des accès accordés à la connexion.
+    Le compte rendu part en note dans le fil du candidat, signée de votre nom. Vous pouvez y ajouter un avis noté depuis la fenêtre de confirmation. Si la carte Hirify est installée, la carte de la fiche se met aussi à jour avec le verdict de l'analyse, le nombre de points bloquants et un lien vers le compte rendu complet. Quand la connexion ne permet que la carte, la section vous invite à activer la clé d'API Admin de votre espace Teamtailor pour envoyer aussi la note et l'avis noté.
   </Tab>
   <Tab title="Nicoka">
-    Le compte rendu part sans note d'évaluation : la section affiche « Cet ATS reçoit le compte rendu sans note d'évaluation. » et le bouton d'envoi s'active sans verdict à choisir.
+    Nicoka ne reçoit pas de verdict. L'envoi dépose un avis dans le dossier du candidat, avec le compte rendu en commentaire. Le bouton **Partager l'analyse** s'active sans verdict à choisir.
   </Tab>
 </Tabs>
 
 ## Suivre l'historique des envois
 
-La section **Historique des envois** liste chaque tentative, la plus récente en premier, avec le nombre total en regard du titre. Tant que rien n'est parti, elle affiche « Aucune évaluation n'a encore été envoyée. »
+Le lien **Historique**, sur la ligne d'état de la section, ouvre la fenêtre **Historique des envois**. Elle liste les envois faits depuis cet entretien avec leur nombre. Tant que rien n'est parti, elle affiche « Aucun envoi pour le moment. »
 
 Chaque ligne porte un état :
 
-- **Envoyée** : l'évaluation est arrivée. Une icône **Voir dans l'ATS** ouvre la fiche.
-- **En attente** : « En attente de confirmation de … Actualisez dans un instant. » Le bouton de rafraîchissement, en haut de la section, relit l'état.
+- **Envoyée** : l'envoi est arrivé. Une icône ouvre la fiche dans votre logiciel de recrutement.
+- **En attente** : « En attente de confirmation de … Actualisez dans un instant. » L'icône de rafraîchissement, en haut de la fenêtre, relit l'état.
 - **Échec** : le message d'erreur s'affiche, avec un bouton **Réessayer**.
 - **Supprimée** : l'envoi a été retiré. La ligne reste, barrée.
 
-Passez la souris sur l'état pour voir qui a envoyé. Un envoi en note simple est signalé par la mention « Note simple ». Quand une évaluation existait déjà sur la candidature, la ligne précise « Envoyée en commentaire (une évaluation existait déjà) ». Au-delà de cinq entrées, un bouton **Voir plus** déplie le reste.
+Passez la souris sur l'état pour voir qui a envoyé. Le verdict envoyé suit l'état, ou la mention « Note » pour un envoi sans verdict. Quand une évaluation existait déjà sur la candidature, la ligne précise « Envoyée en commentaire (une évaluation existait déjà) ». Au-delà de cinq entrées, un bouton **Voir plus** déplie les suivantes.
 
 ## Retirer un envoi
 
-L'icône de suppression n'apparaît que sur un envoi **Envoyée** et seulement pour la personne qui l'a expédié.
+L'icône de suppression n'apparaît que sur un envoi **Envoyée** et seulement pour la personne qui l'a fait.
 
 <Warning>
-  Le dialogue **Supprimer cet envoi ?** est explicite : l'évaluation correspondante sera supprimée dans votre logiciel de recrutement, et l'action est irréversible. L'entrée reste visible dans l'historique avec le statut « Supprimée », et vous pourrez renvoyer une nouvelle évaluation par la suite.
+  La fenêtre **Supprimer cet envoi ?** est explicite : l'évaluation correspondante sera supprimée dans votre logiciel de recrutement, et l'action est irréversible. L'entrée reste visible dans l'historique avec le statut « Supprimée », et vous pourrez renvoyer une nouvelle évaluation par la suite. Confirmez avec **Supprimer l'envoi**.
 </Warning>
 
 ## Bon à savoir
 
-- Aucun compte rendu ne part de lui-même. L'envoi est toujours déclenché par une personne, après aperçu et confirmation.
-- Un compte rendu non finalisé ne peut pas être envoyé : Hirify n'envoie que des comptes rendus terminés.
+- Le compte rendu et votre verdict ne partent jamais d'eux-mêmes par ce partage. L'envoi est toujours déclenché par une personne, après aperçu et confirmation.
+- Seul un compte rendu terminé peut être partagé. C'est la note ouverte au moment du partage qui part.
+- Si l'aperçu ne se charge pas, la fenêtre affiche « L'aperçu n'a pas pu être chargé. » et le bouton **Partager** reste inactif. Fermez la fenêtre et recommencez.
+- Un compte rendu trop long pour votre outil est coupé à la limite qu'il accepte. La fenêtre de confirmation le signale, et le lien joint donne le compte rendu entier.
+- Dans une évaluation SmartRecruiters, l'essentiel part tel qu'il est au moment du partage. Le régénérer plus tard ne modifie pas l'évaluation déjà envoyée.
 - Vous ne pouvez pas supprimer l'envoi d'un collègue depuis Hirify. Passez par votre logiciel de recrutement ou demandez-lui de le retirer.
 - Dissocier l'entretien de la candidature n'efface pas l'historique des envois et ne retire rien de votre logiciel de recrutement.
-- L'aperçu peut être indisponible. Le dialogue de confirmation affiche alors « Aperçu indisponible. ». L'envoi reste possible, mais vous relisez le compte rendu dans l'éditeur avant de confirmer.
-- Ce qui part par cet envoi est le compte rendu sélectionné et votre verdict, rien d'autre. Deux automatismes peuvent écrire sur la fiche du candidat si un administrateur les a activés : les tags de synthèse et le remplissage des champs personnalisés restés vides. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- En dehors de ce partage, deux automatismes peuvent écrire sur la fiche du candidat si un administrateur ou un admin facturation les a activés : les tags de synthèse et le remplissage des champs personnalisés restés vides. Avec la carte Hirify de Teamtailor, le réglage **Publier l'analyse automatiquement** envoie aussi l'analyse et le compte rendu sur la fiche dès la fin de l'entretien. Il est désactivé par défaut. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
 
 <CardGroup cols={2}>
   <Card title="Lien avec une candidature" icon="link" href="/fr/integrations/lier-un-entretien-a-une-candidature">
-    Rattacher l'entretien avant de pouvoir l'évaluer.
+    Rattacher l'entretien avant de pouvoir partager l'analyse.
   </Card>
   <Card title="Automatismes ATS" icon="sliders" href="/fr/integrations/automatismes-ats">
     Ce que Hirify peut faire de lui-même après un entretien.

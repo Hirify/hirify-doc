@@ -19,11 +19,11 @@ Une fois la connexion établie :
 
 - Hirify importe vos postes, vos candidats, vos candidatures et vos entretiens. Il tient ensuite cet import à jour.
 - Un entretien enregistré peut être rattaché à une candidature, à la main ou depuis un entretien agendé.
-- Après analyse, vous pouvez renvoyer le compte rendu et votre évaluation dans la fiche du candidat.
+- Après analyse, vous pouvez partager l'analyse sur la fiche du candidat : le compte rendu, et votre verdict quand votre outil en accepte un.
 - Le vivier importé alimente l'Assistant, le Sourcing et le Pilotage.
 
 <Warning>
-  Le compte rendu n'est jamais poussé de lui-même dans votre logiciel de recrutement. Vous le relisez, vous choisissez un verdict et c'est vous qui déclenchez l'envoi.
+  Le compte rendu ne part pas de lui-même dans votre logiciel de recrutement. Vous le relisez et c'est vous qui déclenchez le partage. Seule exception, le réglage **Publier l'analyse automatiquement** de la carte Hirify pour Teamtailor, désactivé par défaut.
 </Warning>
 
 ## Avant de commencer : votre offre et votre rôle
@@ -47,32 +47,54 @@ Pour changer d'outil, déconnectez d'abord celui qui est actif. La marche à sui
     Dans **Paramètres**, **Intégrations**, section **ATS**, cliquez sur **Connecter** en face de SmartRecruiters. L'assistant s'ouvre sur l'étape **Préparer**.
   </Step>
   <Step title="Créez une application dans SmartRecruiters">
-    L'assistant vous emmène dans votre espace d'administration SmartRecruiters, rubrique **Apps**, puis **OAuth Credentials**, pour y créer une application. Cochez les permissions listées par l'assistant : il en affiche la liste exacte et signale celle qui n'est que recommandée. Sans une permission requise, la connexion est refusée.
+    L'assistant vous emmène dans votre espace d'administration SmartRecruiters, rubrique **Apps**, puis **OAuth Credentials**, pour y créer une application. Cochez les permissions listées par l'assistant. Deux d'entre elles portent une précision : la lecture de la configuration est recommandée pour le remplissage des champs personnalisés, et la permission Messages permet de déposer le compte rendu dans les notes du candidat. Sans une permission requise, la connexion est refusée.
   </Step>
   <Step title="Collez vos identifiants">
     Cliquez sur **J'ai mes identifiants**, collez le **Client ID** et le **Client Secret** générés, puis cliquez sur **Connecter**.
   </Step>
 </Steps>
 
-Si une permission manque, l'assistant affiche **Permissions insuffisantes** et pointe précisément celles à ajouter. Corrigez l'application côté SmartRecruiters, puis cliquez sur **Réessayer**.
+Si une permission manque, l'assistant affiche **Permissions insuffisantes** et pointe précisément celles à ajouter. Corrigez l'application côté SmartRecruiters, puis relancez la connexion depuis l'assistant.
 
 {/* CAPTURE : l'assistant de connexion SmartRecruiters, étape Connecter, avec les champs Client ID et Client Secret */}
 
 ## Connecter Teamtailor
 
-Teamtailor passe par sa marketplace, pas par des identifiants à copier.
+Teamtailor se connecte avec une clé d'API créée dans votre espace Teamtailor.
 
 <Steps>
-  <Step title="Récupérez votre code de connexion">
-    Dans **Paramètres**, **Intégrations**, cliquez sur **Connecter** en face de Teamtailor. Une fenêtre affiche un **code de connexion** propre à votre organisation, avec un bouton **Copier**.
+  <Step title="Créez une clé d'API dans Teamtailor">
+    Cliquez sur **Connecter** en face de Teamtailor. L'assistant s'ouvre sur l'étape **Préparer**. Le bouton **Ouvrir Teamtailor** mène aux clés d'API de votre espace, dans **Paramètres > Intégrations > Clés API**. Créez une clé avec la portée **Admin** et la permission **Lecture / Écriture**, puis copiez-la.
   </Step>
-  <Step title="Installez Hirify depuis la marketplace Teamtailor">
-    Dans votre espace Teamtailor, ouvrez la marketplace, cherchez Hirify et lancez l'installation.
+  <Step title="Collez la clé">
+    Cliquez sur **J'ai ma clé API**, collez la clé dans le champ **Clé API**, puis cliquez sur **Connecter**. Si la clé ne porte pas toutes les permissions requises, l'assistant affiche **Permissions insuffisantes** et liste celles qui manquent. Corrigez la clé dans Teamtailor, puis cliquez sur **Réessayer**.
   </Step>
-  <Step title="Collez le code demandé">
-    Le formulaire d'installation réclame un code de connexion : collez celui que vous venez de copier. Une fois l'installation validée dans Teamtailor, la connexion s'active dans Hirify.
+  <Step title="Configurez le webhook">
+    Après la connexion, la carte Teamtailor affiche un bloc **Configuration des webhooks dans Teamtailor**, marqué **À configurer**. Dans Teamtailor, ouvrez Réglages, Intégrations, Webhooks et créez un nouveau webhook avec l'URL indiquée et les ressources Candidats, Candidatures et Offres. Teamtailor affiche alors une clé de signature. Collez-la dans le champ **Clé de signature** du bloc, puis cliquez sur **Enregistrer**. Le badge passe à **Configuration détectée** dès que les premiers événements arrivent.
   </Step>
 </Steps>
+
+<Note>
+  La clé d'API donne à Hirify l'accès complet à vos données Teamtailor. Elle est chiffrée et ne sert qu'à votre organisation. Sans webhook, la synchronisation reste quotidienne. Tant que la clé de signature n'est pas enregistrée, les événements envoyés par Teamtailor sont refusés.
+</Note>
+
+## Activer la carte Hirify dans Teamtailor
+
+La carte Hirify est une option. Elle affiche l'analyse directement sur la fiche du candidat dans Teamtailor et déclenche l'envoi du CV à chaque étape d'entretien. Teamtailor l'active sur demande.
+
+<Steps>
+  <Step title="Obtenez le code d'activation">
+    Sur la carte Teamtailor connectée, le bloc **Carte Hirify dans Teamtailor** propose **Obtenir le code d'activation**. La fenêtre qui s'ouvre affiche un **Code de connexion** propre à votre organisation, avec un bouton **Copier**.
+  </Step>
+  <Step title="Faites ajouter l'intégration Hirify">
+    Demandez à votre interlocuteur Teamtailor d'ajouter l'intégration Hirify à votre compte. Dans Teamtailor, ouvrez ensuite Réglages, Intégrations, Hirify et lancez l'installation.
+  </Step>
+  <Step title="Collez le code">
+    Quand le formulaire d'installation demande un code de connexion, collez celui que vous avez copié. Il est valable 24 heures. Une fois l'installation validée, la carte s'active d'elle-même dans Hirify.
+  </Step>
+</Steps>
+
+Une fois la carte active, le réglage **Publier l'analyse automatiquement** apparaît parmi les réglages de la connexion. Activé, il envoie l'analyse et le compte rendu sur la fiche du candidat dès la fin de l'entretien. Désactivé, ce qui est le cas par défaut, rien ne part tant qu'un recruteur n'a pas partagé l'analyse depuis la page de l'entretien.
 
 ## Connecter Nicoka
 
@@ -81,7 +103,7 @@ Teamtailor passe par sa marketplace, pas par des identifiants à copier.
     Dans Nicoka, ouvrez **Paramétrage**, **Administration**, **Utilisateurs**, **Utilisateur API**. Créez-y un utilisateur API dédié. Générez ensuite un jeton d'accès pour cet utilisateur.
   </Step>
   <Step title="Renseignez votre espace et votre jeton">
-    Dans Hirify, cliquez sur **Connecter** en face de Nicoka. Saisissez le sous-domaine de votre espace Nicoka dans **Sous-domaine ou adresse Nicoka**, ou l'adresse complète s'il s'agit d'un compte d'essai. Collez ensuite la clé dans **Jeton d'accès API**.
+    Dans Hirify, cliquez sur **Connecter** en face de Nicoka. Saisissez le sous-domaine de votre espace Nicoka dans **Sous-domaine ou adresse Nicoka**, ou l'adresse complète s'il s'agit d'un compte d'essai. Collez ensuite le jeton dans **Jeton d'accès API**.
   </Step>
   <Step title="Configurez les webhooks">
     Après la connexion, la carte Nicoka affiche un bloc **Configuration des webhooks dans Nicoka**, marqué **À configurer**. Il donne les URL et la clé à recopier dans Nicoka, rubrique **Paramétrage**, **webHooks**. La configuration se fait en deux étapes : créer les webhooks, puis les évènements qui les déclenchent. Le badge passe à **Configuration détectée** dès qu'un premier appel signé arrive.
@@ -102,13 +124,13 @@ Dès la connexion établie, Hirify lance un premier import. La carte affiche « 
 
 Quatre compteurs se remplissent au fil de l'import : **Candidats**, **Postes**, **Candidatures**, **Entretiens**. Un vivier volumineux met du temps à remonter. Laissez tourner et revenez sur la page.
 
-Au-dessus de ces compteurs, une ligne indique le rythme retenu pour votre outil et le temps écoulé depuis la dernière vérification. Selon le cas, elle annonce :
+Au-dessus de ces compteurs, une ligne décrit la synchronisation de votre outil, suivie de « Dernière vérification » et du temps écoulé depuis le dernier contrôle. Elle affiche l'un de ces trois messages :
 
-- une synchronisation en temps réel par webhooks,
-- une synchronisation toutes les heures complétée chaque semaine,
-- une synchronisation périodique tant que les webhooks ne sont pas configurés.
+- « Synchronisation en temps réel via webhooks. »
+- « Synchronisation périodique. Configurez les webhooks pour activer le temps réel. »
+- « Synchronisation automatique chaque jour. »
 
-Ce rythme ne concerne que l'import. Le compte rendu et votre évaluation ne repartent vers votre outil que lorsque vous déclenchez l'envoi.
+Nicoka et Teamtailor restent sur le message de synchronisation périodique tant qu'aucun webhook n'est arrivé. Ce rythme ne concerne que l'import. Le compte rendu et votre verdict ne repartent vers votre outil que lorsque vous partagez l'analyse.
 
 <Frame>
   ![une carte ATS connectée, avec la mention Connecté, les quatre compteurs et la ligne de synchronisation](/images/parametres-integrations.webp)
@@ -119,7 +141,7 @@ Une fois une vingtaine de postes importés, Hirify propose une répartition de v
 ## Bon à savoir
 
 - Le premier import remonte vingt-quatre mois d'historique. Un candidat plus ancien entre dans Hirify le jour où une mise à jour le concernant arrive de votre logiciel de recrutement.
-- Le compte rendu et votre évaluation ne repartent dans votre logiciel de recrutement que lorsque vous déclenchez l'envoi. En revanche, si un administrateur a activé l'automatisme correspondant, certaines informations extraites (années d'expérience, prétentions salariales) remontent seules dans les champs de la fiche candidat : voir [Les automatismes de votre logiciel de recrutement](/fr/integrations/automatismes-ats).
+- Le compte rendu et votre verdict ne repartent dans votre logiciel de recrutement que lorsque vous partagez l'analyse. En revanche, si un administrateur ou un admin facturation les a activés, les tags de synthèse et le remplissage des champs personnalisés restés vides écrivent seuls sur la fiche du candidat : voir [Les automatismes de votre logiciel de recrutement](/fr/integrations/automatismes-ats).
 - Une seule connexion est active par organisation, et seuls un administrateur ou un admin facturation de l'organisation peuvent la mettre en place.
 - Boond Manager n'est pas connectable à ce jour.
 - Si la synchronisation s'interrompt, la carte affiche le message d'erreur renvoyé par votre outil. Voir [Mon ATS ne se synchronise plus](/fr/aide/mon-ats-ne-se-synchronise-plus).
@@ -129,8 +151,8 @@ Une fois une vingtaine de postes importés, Hirify propose une répartition de v
     Rattacher un entretien enregistré à la bonne candidature.
   </Card>
 
-  <Card title="Renvoyer une évaluation" icon="paper-plane" href="/fr/integrations/renvoyer-une-evaluation">
-    Relire le compte rendu, choisir un verdict, déclencher l'envoi.
+  <Card title="Partager l'analyse" icon="paper-plane" href="/fr/integrations/renvoyer-une-evaluation">
+    Relire le compte rendu, choisir un verdict, déclencher le partage.
   </Card>
 
   <Card title="Automatismes ATS" icon="toggle-on" href="/fr/integrations/automatismes-ats">
