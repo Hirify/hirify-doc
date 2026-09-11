@@ -1,0 +1,131 @@
+---
+title: "Start a search and refine the target profile"
+sidebarTitle: "Start a search"
+description: "Describe the job to fill, then adjust the requirements and set hard filters until you get the right list"
+icon: "magnifying-glass"
+---
+
+<Note>
+  Access: Hub plan.
+</Note>
+
+Sourcing finds the candidates in your own talent pool who come closest to an open job. You describe the need. Hirify goes through your analyzed interviews and the profiles in your ATS, then ranks what it found.
+
+## Describe the job
+
+<Steps>
+  <Step title="Open Sourcing">
+    In the sidebar, under **AI talent tools**, click **Sourcing**.
+  </Step>
+  <Step title="Type or paste">
+    In the **Describe the profile you're looking for or paste a job description…** field, write what you need or paste a full job ad. Below 20 characters, the reminder **Tell us a bit more about the profile (20 characters minimum)** appears and you can't send.
+  </Step>
+  <Step title="Choose who will see the search">
+    The **Team** or **Private** chip, under the field, sets the scope. You make this choice before you start. See [Read and compare](/en/sourcing/read-and-compare).
+  </Step>
+  <Step title="Send">
+    Press Cmd+Enter, Ctrl+Enter, or the arrow button. Enter on its own inserts a line break, which lets you paste a job description without starting the search.
+  </Step>
+</Steps>
+
+Under the field, a line recalls the scope: **Searching your talent pool · aiming for 10 qualified profiles**, followed by the number of searches you have left this hour.
+
+{/* SCREENSHOT: the empty Sourcing screen, with the input field, the Filters and Team chips, and the "Pick up where you left off" list. French capture: /images/sourcing-vide.webp */}
+
+## Start from a job in your ATS
+
+If your ATS is connected, the **ATS job** chip opens the list of your jobs, with their department and location. Pick one and it provides the body of the request.
+
+The field prompt becomes **Add anything you're looking for beyond this job (optional)…**, where you can add a location constraint, for example. The cross to the right of the chip removes the selected job.
+
+Starting from a real job has another effect: for a candidate already considered for that job, the origin line of their file ends with "Already seen:" followed by the reason (**Rejected** or **Withdrew**) and the stage they reached.
+
+## Follow the search's progress
+
+The search runs in three steps shown on screen: **Searching the talent pool**, then **Evaluating candidates**, then **Finalizing**. A counter tracks the profiles found, then the qualified profiles reached against the target.
+
+<Note>
+  You can close the tab. The search keeps running, and you'll find it in the **Pick up where you left off** list or in the sidebar.
+</Note>
+
+Opening another search doesn't stop it either. While it holds your search slot, an **A search is running** panel reminds you of it, with **Resume** and **Stop**.
+
+**Stop search** interrupts the process. As soon as the first profiles appear, progress moves to the results header, with a **Stop** button.
+
+## Review the target profile
+
+When you describe the job in the field, Hirify works out the requirements and starts the search right away. There's no confirmation screen.
+
+To work from fields rather than free text, click **Refine the profile**, under the field on the Sourcing home screen. The **Refine the profile** window shows the **Target profile** card:
+
+- **Job title**
+- **Minimum experience (years)** and **Seniority**: Not specified, Junior, Mid-level, Senior, Lead / Manager, Executive
+- **Location**
+- **Must-have skills**, **Nice-to-have skills**, **Industries**, **Soft skills**
+- **Key responsibilities**
+
+On the right, the **What will be searched** panel builds the sentence the search will receive. Fields that are still empty show as slots to fill in. Active hard filters are listed there too. **Run search** starts from these fields, without going through the analysis of a description.
+
+{/* SCREENSHOT: the "Refine the profile" window, with the fields on the left and the "What will be searched" preview on the right */}
+
+## Adjust the requirements
+
+In the **Target profile** card, you fill in each list from the keyboard: type in the **Add…** field, then confirm with Enter or the plus button. The cross on a tag removes it. Responsibilities go in **Add a responsibility…**.
+
+Every change shows up immediately in the **What will be searched** panel. Before you start, you read exactly what you're asking for.
+
+## Set hard filters
+
+The **Filters** chip, under the input field, opens the criteria that rule a profile out:
+
+- **Contract type**: Any, Permanent (CDI), Fixed-term (CDD), Temp, Internship, Apprenticeship, Student job, Freelance / Contractor
+- **Max annual budget (€)**
+- **Available before**
+- **Driver's license required** and **Vehicle required**
+
+The count on the chip shows how many filters are active, and **Clear all** removes them all.
+
+<Note>
+  Only a confirmed mismatch rules a candidate out. When the information is missing from the file, the profile goes through and is flagged for checking. Pre-screening settles it.
+</Note>
+
+In the results, the header shows how many profiles were ruled out and by which filter.
+
+## Run the search again after an adjustment
+
+On the results screen, the input field collapses. Click **Refine the search** to expand it, write a revised description, and send. A new search starts. This field always starts a search, even though its prompt also mentions questions. To ask about the profiles found, use the question field next to **Refine the search**: it opens the Assistant.
+
+Other buttons start the search again depending on the situation:
+
+- **Run search again**: when no profile came up and another try makes sense.
+- **Run again without filters**: when your hard filters ruled out every profile found.
+- **Resume**: after a search you stopped.
+- **Evaluate**: when profiles were found but not yet evaluated.
+- **New search**: to start again from a blank page.
+
+<Warning>
+  Each run uses one search from your hourly budget, which is capped at ten. Changing only the ranking order uses none. See [Weight the criteria](/en/sourcing/weight-the-criteria).
+</Warning>
+
+## Who can use Sourcing (from the Hub plan)
+
+Sourcing is available from the Hub plan. On a Starter plan, the **Sourcing** entry stays visible in the sidebar but is grayed out and inactive. Its tooltip says "Available on the Teams plan", which refers to the Hub plan.
+
+It also needs material to work on. If your talent pool doesn't contain any indexed profile yet, a **Your talent pool isn't indexed yet** panel appears, with a **Connect ATS** button. Run a first interview or [connect your ATS](/en/integrations/connect-your-ats) to feed the database.
+
+## Good to know
+
+- **Sourcing searches your talent pool, not the internet.** Not the web, not social networks. Only your analyzed interviews and the candidates in your ATS.
+- **Ten searches per hour, per user.** Once the quota is reached, the screen shows how long until the next one. The Assistant stays available, and **Switch to Assistant** takes you there.
+- **The target is ten qualified profiles.** The search stops when it has found them, when it has gone through everything your talent pool contains, or when its time runs out. In that last case, it shows the best profiles it got without saying so on screen. Only an interruption that happens before any evaluation warns you and invites you to run it again. That's also what sometimes leaves profiles found but not evaluated, which the **Evaluate** button picks up.
+- **A profile with no analyzed interview can still be evaluated**, but on its file alone. The interview signal is marked as not observed.
+- **Nothing is sent to anyone.** A search produces a list, not a contact.
+
+<CardGroup cols={2}>
+  <Card title="Weight the criteria" icon="scale-balanced" href="/en/sourcing/weight-the-criteria">
+    Shift weight between skills, experience, interview, and logistics.
+  </Card>
+  <Card title="Read and compare" icon="table-columns" href="/en/sourcing/read-and-compare">
+    Read the tiers, compare side by side, and share the search.
+  </Card>
+</CardGroup>

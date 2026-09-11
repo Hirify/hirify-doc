@@ -1,0 +1,84 @@
+---
+title: "Merge several recordings of the same interview"
+sidebarTitle: "Merge interviews"
+description: "Combine several recordings of the same conversation into a single transcript and a single set of interview notes"
+icon: "code-merge"
+---
+
+A call drops, a video meeting restarts on another link, or a break stops the recording. The same interview then ends up split into two or three interviews in Hirify. Merging brings them back into one, with a continuous transcript and interview notes that cover the whole conversation.
+
+## Merge recordings
+
+<Steps>
+  <Step title="Open the interview list">
+    In the left menu, under **Interviews**, click **Interviews**.
+  </Step>
+  <Step title="Check the recordings to combine">
+    Each row starts with a checkbox. It's only active on completed interviews. Check at least two and at most ten. A bar appears at the bottom of the screen and shows how many you've selected.
+  </Step>
+  <Step title="Click Merge">
+    The button only appears once two recordings are selected. The **Merge interviews** window opens.
+  </Step>
+  <Step title="Check the merge order">
+    By default, the order is chronological and the oldest recording is kept. The **Edit** button expands the list. The kept recording carries the **Kept** marker, and the arrows move the others up or down.
+  </Step>
+  <Step title="Check the speakers">
+    The **Speakers** line sums up how the voices match across recordings. **Adjust** expands it. For each voice from the added recordings, choose the speaker from the kept recording it matches, or **New speaker** to keep it separate. The matches are pre-filled. The list opens by itself when a voice has no obvious match.
+  </Step>
+  <Step title="Confirm">
+    The summary shows the total duration and the number of turns. Click **Merge and delete the source**. The button switches to the plural, **Merge and delete the sources**, if you added several recordings.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the "Merge interviews" window with the merge order collapsed and the deletion warning */}
+
+<Warning>
+  The added recordings are permanently deleted at the end of the operation. Only the recording marked **Kept** remains. The window tells you before you confirm, with how many interviews will disappear and their dates. A merge can't be undone.
+</Warning>
+
+## What happens to the merged interview
+
+The kept interview keeps its title and date. It receives all the turns in the chosen order. Its main note and its analysis are rebuilt from the full conversation. The list shows the **Regenerating** marker on that row until you reload the page.
+
+Notes from a template that the kept interview doesn't have are carried over to it. Their text is preserved, but they don't rebuild on their own. When both interviews have a note from the same template, only the kept interview's note remains.
+
+## When a merge is refused
+
+Only completed interviews can be selected. On any other interview the checkbox is disabled and the tooltip says "Only completed interviews can be merged". An interview that's being regenerated is grayed out too.
+
+If Hirify can't prepare the operation on a valid selection, the window shows **Merge not possible** and the reason. The most common cases:
+
+<AccordionGroup>
+  <Accordion title="These interviews have already been merged">
+    A recording already absorbed by the other can't be absorbed a second time, because its turns would be counted twice. The same applies if both interviews already contain a third recording in common.
+  </Accordion>
+  <Accordion title="One of the interviews has no turns">
+    A recording with no transcript has nothing to add. Delete it rather than merging it.
+  </Accordion>
+  <Accordion title="You don't have permission">
+    A merge edits the kept interview and deletes the others. So you need to be allowed to edit the first one and delete the others. A member can only merge their own interviews. Managers and administrators can merge interviews across the whole organization.
+  </Accordion>
+</AccordionGroup>
+
+## Good to know
+
+- Read the warning before you confirm. If one of the recordings is linked to a different application in your ATS, Hirify flags it. It's often a sign that it isn't the same interview.
+- Order matters. Recordings are joined end to end in the order shown, so a wrong order produces a conversation out of sequence. The default chronological order is almost always right.
+- Speaker matches are suggestions, not certainties. The voice separation in one recording knows nothing about the other. Expand **Adjust** and check, especially if the candidate's voice has different names from one recording to the next.
+- A note that doesn't rebuild on its own stays marked **Failed** on the kept interview. Its text from before the merge is kept, but it doesn't reflect the full conversation.
+- Merging is only for combining recordings of the same conversation. Two separate interviews with the same candidate shouldn't be merged. Each one keeps its own interview notes. If they're linked to the same application in your ATS, the analysis of the second one takes into account what the first had already established.
+
+<CardGroup cols={2}>
+  <Card title="Find and track your interviews" icon="list" href="/en/interviews/find-and-track">
+    The list, the statuses, and the filters.
+  </Card>
+  <Card title="Identify speakers" icon="users" href="/en/interviews/identify-speakers">
+    Name the voices before or after the merge.
+  </Card>
+  <Card title="Review an interview" icon="file-lines" href="/en/interviews/review-an-interview">
+    Check the continuous transcript once the merge is done.
+  </Card>
+  <Card title="Interview not recorded" icon="life-ring" href="/en/help/interview-not-recorded">
+    When all or part of a conversation is missing.
+  </Card>
+</CardGroup>

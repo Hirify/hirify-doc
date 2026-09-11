@@ -1,0 +1,71 @@
+---
+title: "Weight the ranking criteria"
+sidebarTitle: "Weight the criteria"
+description: "Split the weight between skills, experience, interview signal, and logistics, and watch the ranking update"
+icon: "scale-balanced"
+---
+
+<Note>
+  Access: Hub plan.
+</Note>
+
+The same list of candidates ranks differently depending on what matters to you. Weighting lets you shift the weight between four criteria and watch the order rearrange itself.
+
+## The four criteria
+
+| Criterion | What it covers |
+| --- | --- |
+| **Skills** | How well technical skills and soft skills match. |
+| **Experience** | Years, industries, scope of past roles, career path. |
+| **Interview signal** | The verdict of interviews already held: strengths and watch-outs. |
+| **Logistics** | Availability, salary, mobility, notice period. |
+
+By default, the split is 40 points for skills, 25 for experience, 20 for interview signal, and 15 for logistics.
+
+## Where to set the weights
+
+The **Weights** button is at the top right of the results screen, next to the count of evaluated profiles. It opens the **Score weights** panel, which re-sorts the profiles on screen without running the search again.
+
+There's no setting before you start. The first search runs on the default split, and you adjust afterward on the results, once you see who comes up.
+
+{/* SCREENSHOT: the Weights panel opened from the results header */}
+
+## Start from a preset
+
+At the top of the panel, the **Presets** row offers three ready-made splits.
+
+- **Balanced**: the default split.
+- **Management profile**: experience comes ahead of skills.
+- **Logistics first**: practical constraints come first, and the interview counts for little.
+
+One click applies the preset and re-ranks the list. The name of the active preset shows at the top of the panel. As soon as you change a number, it becomes **Custom**.
+
+## Split the points by hand
+
+Each criterion has a number field from 0 to 100. The points express relative priorities: their proportions count, not their sum. The percentage to the right of each field shows the actual share, scaled to 100%, and the bar under the list shows the split at a glance.
+
+Setting a criterion to 0 takes it out of the ranking. If you set everything to 0, the message **Give at least one point to a criterion to run the search.** appears in red and the ranking falls back to the default split.
+
+## What weighting changes and what it doesn't
+
+The ranking is recalculated on screen without running the search again. No search is taken from your hourly budget, and no profile is re-evaluated. A notification confirms the update.
+
+The setting is saved with the search. You get it back after a refresh and when you reopen the search from **Pick up where you left off**, and it applies to anyone who opens the shared link. If saving fails, a notification warns you that the new ranking only applies to the current screen.
+
+Because the tiers depend on this ranking, a candidate can move from **Worth considering** to **Strong match**, or the other way around, just because the weights changed. That's expected. The tier reflects the fit with the job as you've just weighted it, not the person's worth.
+
+## Good to know
+
+- **Weighting doesn't rerun anything.** It reorders profiles already evaluated. To widen the search, run it again. See [Start a search](/en/sourcing/start-a-search).
+- **No numeric score is shown for a candidate.** The panel's percentages describe the split between criteria, nothing else.
+- **The interview signal doesn't count without an interview.** A profile based only on its file shows **Not observed** on that dimension, and its score is calculated on the other three criteria. Changing the interview weight therefore doesn't change these profiles' score, only the score of profiles that have an interview.
+- **A rerun keeps the current weights.** You don't have to enter them again.
+
+<CardGroup cols={2}>
+  <Card title="Read and compare" icon="table-columns" href="/en/sourcing/read-and-compare">
+    The tiers, a candidate's file, and side-by-side comparison.
+  </Card>
+  <Card title="Start a search" icon="magnifying-glass" href="/en/sourcing/start-a-search">
+    Describe the job, set filters, and run the search again.
+  </Card>
+</CardGroup>

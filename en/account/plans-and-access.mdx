@@ -1,0 +1,105 @@
+---
+title: "Know what your plan includes"
+sidebarTitle: "Plans and access"
+description: "Compare the plans and spot the features reserved for certain plans or certain roles"
+icon: "table-list"
+---
+
+What you see in Hirify depends on two things: the plan your organization subscribes to and the role you have in it. This page helps you tell which of the two explains a feature missing from your screen.
+
+## The three plans
+
+|  | Starter | Hub | Volume |
+| --- | --- | --- | --- |
+| Price per seat, excluding VAT | €29 / month | €59 / month | on quote |
+| Positioning | Record and write up your interviews | The complete product, connected to your ATS | Several teams, tailored contract |
+
+The Hub plan includes everything in Starter. The Volume plan includes everything in Hub.
+
+## What each plan covers
+
+<AccordionGroup>
+  <Accordion title="Starter">
+    - Video and in-person interviews, with no limit on their number.
+    - Interview notes and analysis.
+    - Custom templates.
+    - Advanced export.
+    - A dedicated phone line with a quota of 300 call minutes per month.
+  </Accordion>
+
+  <Accordion title="Hub">
+    Everything in Starter, plus:
+
+    - Calls with no minute quota.
+    - The connection to your ATS.
+    - Assistant, Sourcing, and Analytics.
+    - Multi-seat collaboration.
+    - Priority support.
+  </Accordion>
+
+  <Accordion title="Volume">
+    Everything in Hub, plus:
+
+    - Single sign-on.
+    - A tailored contract and billing.
+    - Dedicated support.
+
+    The price shows as "Custom" and the **Talk to our team** button opens a contact form.
+  </Accordion>
+</AccordionGroup>
+
+## What depends on your plan
+
+- **Assistant** and **Sourcing** require at least the Hub plan. Without it, their entries stay visible in the sidebar but grayed out, with the tooltip "Available on the Teams plan", which refers to the Hub plan.
+- **Analytics** and **Data reliability** require the Hub plan and the administrator or manager role. Unless both conditions are met, their entries don't appear.
+- **Custom templates** and calling require at least the Starter plan. The **Calling** entry only shows in **Settings** if your plan includes it.
+- Connecting your ATS is part of the Hub plan.
+- The call minute quota only applies to the Starter plan. On the Hub plan, the **Usage** page shows "Unlimited minutes this month".
+
+## What depends on your role
+
+There are four roles: administrator, manager, member, and billing admin.
+
+- A **member** only sees their own interviews.
+- A **manager** sees the interviews of the whole organization and the statistics for each member, but manages neither members nor billing.
+- An **administrator** manages members, roles, organization settings, and the subscription, and has access to the whole product.
+- A **billing admin** manages members, the subscription, organization settings, and integrations, with no access to the product. A billing admin doesn't take up a seat in your subscription.
+
+Two screens combine both conditions. **Analytics** and **Data reliability** require the Hub plan _and_ the administrator or manager role. A member doesn't see their entries, and opening their address directly shows **Restricted access**.
+
+Roles are described in detail in [Roles and access](/en/getting-started/roles-and-access).
+
+## Check what you have
+
+<Steps>
+  <Step title="Open the Subscription page">
+    From your account menu at the bottom of the sidebar, choose **Manage subscription**. The entry only appears for administrators and billing admins.
+  </Step>
+  <Step title="Read the My plan tab">
+    The banner at the top of the page shows your plan name, its status, the next billing date, and the number of seats in use.
+  </Step>
+  <Step title="Compare">
+    Further down, the **All plans** section lists the plans side by side. The **Monthly** / **Annual** toggle recalculates the amounts and shows the discount for paying annually.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the "My plan" tab with the plan banner and the comparison grid. */}
+
+## Good to know
+
+- A missing feature can come from your plan or from your role. Start by checking your role on the members page, since it's more often the cause.
+- Changing plans happens on the **Subscription** page and is only open to an administrator or a billing admin.
+- An organization can connect only one ATS at a time, whatever the plan.
+- Single sign-on is set up with the Hirify team. There's no configuration screen on the customer side.
+- Hirify never decides for you. By default, the interview notes and the evaluation only go to your ATS when you act: you send them from the interview's ATS panel, and you're asked to confirm.
+- Two automations, however, can write without an approval for each interview: summary tags added to the candidate's profile after each analyzed interview, and custom fields that were still empty getting filled in. With the Teamtailor Hirify card, a third setting, **Publish the analysis automatically**, also sends the analysis and the interview notes as soon as the interview ends. All of them are off by default. Only an administrator or a billing admin turns them on, per connection, in **Settings** \> **Integrations**. Filling in only touches empty fields, you're notified, and you can undo it from the interview's ATS panel. See [ATS automations](/en/integrations/ats-automations).
+
+<CardGroup cols={2}>
+  <Card title="Subscription and billing" icon="credit-card" href="/en/account/subscription-and-billing">
+    Change plans, track your seats, and find your invoices.
+  </Card>
+
+  <Card title="Members and roles" icon="users" href="/en/account/manage-members">
+    Invite a colleague and give them the right role.
+  </Card>
+</CardGroup>

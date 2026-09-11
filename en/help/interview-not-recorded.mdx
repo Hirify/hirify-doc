@@ -1,0 +1,83 @@
+---
+title: "The interview wasn't recorded"
+sidebarTitle: "Interview not recorded"
+description: "Why no interview shows up after a meeting, and how to get recording working again"
+icon: "video-slash"
+---
+
+The interview is over and nothing shows up in Hirify. Two very different situations can be behind this. Either the interview exists but carries a failure label, or it was never created. Start by telling them apart.
+
+## Look for the interview before concluding
+
+Open **Interviews** in the left menu. The **Search interviews…** field and the **Status** and **Type** filters sit above the list.
+
+<Steps>
+  <Step title="Clear the status and type filters">
+    A **Status** filter left on **Completed** hides exactly what you're looking for.
+  </Step>
+  <Step title="Filter on Failed">
+    If the interview shows up there, it was recorded and the processing is what went wrong. The label on the right tells you what happened.
+  </Step>
+  <Step title="Check who owns it">
+    A member only sees their own interviews. If a colleague started the recording, the interview is in their list, not yours. Managers and administrators see the whole organization's interviews, but the list stays filtered on **Me** by default, even after you clear the filters. Open the user filter and choose **Whole team**.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the interview list with the Status and Type filter bar expanded */}
+
+## What the failure labels mean
+
+- **Assistant not admitted**: "The meeting assistant wasn't let into the meeting." The meeting assistant showed up, but nobody let it in. There's nothing to recover.
+- **Too short**: "The recording is too short to transcribe." The recording lasts less than a minute. This happens with a call hung up right away or a meeting opened by mistake.
+- **Failed**: "Transcription failed." The processing stopped. Hover over the label to read the message the processing returned, and pass it on to support.
+
+## The meeting assistant didn't join the video meeting
+
+Retrace the path you took.
+
+<AccordionGroup>
+  <Accordion title="You pasted a link from the dashboard">
+    The **Paste a Meet or Teams link** field doesn't accept every link. An unrecognized format shows "Invalid link. Use a Google Meet or Teams link." and nothing starts. An accepted link shows an invitation confirmation instead.
+
+    Also check that you pasted the link to the meeting itself, not the link to the calendar invitation or to a redirect page.
+  </Accordion>
+  <Accordion title="You added the assistant's address to your calendar invitation">
+    Open **Schedule by email** from the dashboard and compare the address shown with the one actually listed among your event's guests. Nothing happens if the address was retyped by hand, cc'd on the email instead of invited as a guest, or added after the invitation was sent.
+  </Accordion>
+  <Accordion title="You scheduled the assistant from the Calendar">
+    On the dashboard, the list of upcoming interviews shows an **Assistant scheduled** badge if scheduling worked, or an **Add the assistant** button if it didn't. For details, open **Calendar** and click the event. The panel offers **Add the meeting assistant** if nothing is scheduled, and **Update** or **Delete** if the meeting assistant is already expected. An event without a video meeting link can't be recorded this way.
+  </Accordion>
+  <Accordion title="The interview came from your ATS">
+    Scheduling depends on the **Automatic meeting assistant** setting, under **Settings** then **Integrations**. It only covers interviews with a Google Meet or Microsoft Teams link.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Always tell the people in the meeting before you bring in the meeting assistant. A participant who finds out about the recording during the meeting has good reason to refuse it. Informing them is your responsibility, not Hirify's.
+</Warning>
+
+## The in-person recording didn't start
+
+The phone that scanned the QR code shows the reason itself:
+
+- **Microphone access denied**: the browser doesn't have permission.
+- **Recording blocked**: the recorder didn't send any sound.
+- **Upload interrupted**: the file couldn't be sent.
+
+In that last case, the screen offers to download the audio from the phone before you leave the page. Do it. If you've already left, reopen the page on the same phone within twenty-four hours. It shows "An interrupted recording was found. Do you want to recover it?" and the **Recover** button restarts the upload.
+
+## Good to know
+
+- An interview missing from the list was never created. There's no hidden archive to restore.
+- There's no button to rerun a missed recording. A failed interview can't be replayed. Only a new recording will produce a transcript.
+- The meeting assistant joins video meetings. It doesn't dial phone numbers and doesn't enter physical rooms.
+- The list updates by itself during processing. An interview showing **Processing transcript** isn't lost. It just isn't finished yet.
+
+<CardGroup cols={2}>
+  <Card title="Record a video meeting" href="/en/interviews/video-meetings">
+    The three ways to bring in the meeting assistant.
+  </Card>
+  <Card title="Incomplete transcript" href="/en/help/incomplete-transcript">
+    When the interview exists but the text is missing.
+  </Card>
+</CardGroup>

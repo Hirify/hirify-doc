@@ -1,0 +1,89 @@
+---
+title: "Choose a template for an interview"
+sidebarTitle: "Choose a template"
+description: "Pick the template that structures the interview notes, or record the interview without one"
+icon: "clipboard-list"
+---
+
+A template sets the outline of the interview notes: their sections, their questions, and how each answer is written. This page shows where to pick one and what happens when you don't.
+
+## Three moments to pick a template
+
+You pick the template at one of these three moments:
+
+- **Before the interview**: from the **Calendar**, you attach a template to the event.
+- **After the interview**: from the interview page, you create a note from a template.
+- **Neither**: your default template takes over.
+
+## Before the interview, from the calendar
+
+<Steps>
+  <Step title="Open the event">
+    In the sidebar, click **Calendar**, then the event. A panel opens on the right with the event title and time.
+  </Step>
+  <Step title="Browse your templates">
+    Under **Notes template**, three tabs split the list: **Yours**, **Shared**, and **Library**. The **Search notes templates...** field filters all three by name, description, and tags.
+  </Step>
+  <Step title="Select, then confirm">
+    Click the card of the template you want. Then click **Add the meeting assistant** to send the meeting assistant with that template. If the meeting assistant is already scheduled for this event, the button reads **Update** and stays disabled until you change something.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the event side panel, "Notes template" section, with the three tabs and the "Add the meeting assistant" button */}
+
+<Note>
+  Once the event has started, you can no longer change the template of a meeting assistant that's already scheduled. The panel only offers **Close**. As long as no meeting assistant is scheduled, you can still pick a template and click **Add the meeting assistant**, and the meeting assistant joins right away. On an event that has ended, the panel shows "Notes templates can't be changed once the event has ended."
+</Note>
+
+## After the interview, from the interview page
+
+A processed interview can get another note, built on a different template. Each new note is added to the existing ones. None is replaced.
+
+<Steps>
+  <Step title="Open the Actions panel">
+    On the interview page, click **Actions** in the vertical bar on the right.
+  </Step>
+  <Step title="Create a note">
+    In the **Notes** section, click the **+** button.
+  </Step>
+  <Step title="Pick the template">
+    The **Pick a template** window has the same **Yours**, **Shared**, and **Library** tabs. Click a template and generation starts.
+  </Step>
+</Steps>
+
+<Note>
+  The **No template** option isn't offered here. You're explicitly asking for a note, so it needs an outline.
+</Note>
+
+## Your default template
+
+If no template is attached to the interview, Hirify applies the one you set as your default. This setting is personal. It applies to your interviews, not to your colleagues' interviews. You set it from **Notes templates**, with the **Use as default** toggle on a template you're viewing, or with **Default template** at the bottom of the editor. [Share a template](/en/notes/share-a-template) walks you through it.
+
+## Record the interview without a template
+
+In the calendar panel, the first card in the list is **No template**. Choosing it attaches no outline to the event.
+
+Interview notes are still produced in most cases. Hirify then applies, in this order:
+
+- On an interview created from your ATS, the default template set in its [automations](/en/integrations/ats-automations).
+- Otherwise, your default template if you have one.
+- Otherwise, interview notes structured from the content of the interview itself.
+
+In that last case, the notes are labeled "Generated automatically". This fallback requires a completed analysis and a conversation with enough substance to summarize. An interview that's too short, or whose analysis failed, gets no interview notes.
+
+## Good to know
+
+- The interview notes are written **after** the interview, once the recording is transcribed. Nothing is written while you talk.
+- When information the template asks for wasn't discussed, the notes say it wasn't covered in the interview. Nothing is filled in by guesswork.
+- The interview notes only go to your ATS when you share them, unless automatic publishing for the Teamtailor Hirify card is on. See [Share the analysis](/en/integrations/send-to-your-ats).
+- The calendar picker only shows the templates you have access to: yours, those shared by your team, and those curated by Hirify.
+- On an event that already has a saved template, switching back to **No template** and clicking **Update** doesn't detach that template. To change the outline, select another template.
+
+<CardGroup cols={2}>
+  <Card title="Create a template" icon="table-list" href="/en/notes/create-a-template">
+    Build your own outline, from a document or a description.
+  </Card>
+  <Card title="Read and edit" icon="pen-to-square" href="/en/notes/read-and-edit">
+    Review the interview notes, correct them, and regenerate them.
+  </Card>
+</CardGroup>

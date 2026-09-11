@@ -1,0 +1,91 @@
+---
+title: "Read the candidate analysis"
+sidebarTitle: "Candidate analysis"
+description: "Go through the signals found and the legal watch-outs, and trace each item back to its original quote"
+icon: "magnifying-glass-chart"
+---
+
+Alongside the interview notes, Hirify produces an analysis built for decisions: what's still to decide, what's already covered, and the details of the profile. Each item links back to the sentence in the interview it comes from.
+
+## Open the analysis
+
+On an interview page, click **Analysis** in the vertical bar on the right. The panel opens under the title **Candidate analysis**. You can widen the panel by dragging its left edge. The width you choose is kept for your next interviews.
+
+{/* SCREENSHOT: the "Candidate analysis" panel open, with the header showing the verdict and counters, then the lists. French capture: /images/fiche-entretien-notes.webp */}
+
+## The header: the verdict and why
+
+The top of the panel doesn't scroll. It shows the candidate's first name and current job, then the verdict and the sentence that justifies it.
+
+There are five possible verdicts: **Strong match**, **Likely match**, **Match to weigh**, **Weak match**, and **Not enough data**.
+
+<Note>
+  The verdict describes the fit with the job, never the person. It's what the analysis can back up with its quotes. The rest is up to you.
+</Note>
+
+Below the verdict, two counters sum up the balance: "N to decide" and "N covered". Click either one to open the matching list and jump straight to it.
+
+## To decide
+
+This is the only list you need to read in full. It gathers what isn't settled: reservations raised during the interview, gaps between what was said and what the CV shows, and blocking points.
+
+Click a line to expand it. Depending on the item, you'll find the details, a side-by-side **Interview** / **CV** comparison when the two contradict each other, and the original quote.
+
+Two badges appear only on items that state an unfavorable fact: **Deal-breaker** and **CV mismatch**.
+
+## Covered
+
+The counterpart of the previous list: what the interview established and doesn't need checking again. Lines expand the same way.
+
+Some lines are marked "Noted by the recruiter". They expand like the others.
+
+## Legal watch-outs
+
+This section only appears when a criterion protected by article L1132-1 of the French Labor Code came up during the interview. It's a safeguard, not a reproach.
+
+Each line names the criterion. Expanded, it specifies the nature of the exchange: a question asked during the interview, a remark made during the interview, or a topic brought up spontaneously by the candidate. It then summarizes the exchange, shows the quote, and reminds you that this criterion can't be the basis of a hiring decision. When the topic came from the candidate, the line adds "Leave this out of the decision".
+
+These alerts describe how the interview was conducted. They're not part of the verdict, nor of the **To decide** and **Covered** lists.
+
+## Trace an item back to its quote
+
+Under an expanded item, click **Show quote**. An inset shows the quoted passage with the turns just before and after it, the speaker's name, and the timestamp. You can judge a statement without leaving the panel.
+
+If the excerpt isn't enough, click **Open in transcript**. Hirify switches to the **Transcript** tab and highlights the passage.
+
+## The profile
+
+Everything that isn't the verdict or the decision is filed under **Profile**, collapsed by default. When you open it, you'll find:
+
+- **To verify**: points to check after the interview.
+- **Practical details**: availability, location, and salary expectations.
+- **Career**: jobs, projects, education, skills, and languages.
+- **Motivations & processes**.
+
+You upload the CV from the same panel, with **Add the CV**. It fills in dates, employers, and degrees, and it brings out any gaps with what was said. See [Add the candidate's CV](/en/interviews/add-the-candidate-cv).
+
+## When the analysis isn't ready yet
+
+Right after the interview, the panel shows **Analysis in progress** and the list of steps under way. It fills in without you having to reload the page.
+
+If it fails, the panel shows **Analysis unavailable** or "The analysis didn't complete". The **Run the analysis again** button only appears if the interview itself can be used. When the recording failed, the interview is too short, or the meeting assistant was never admitted to the meeting, the panel only invites you to contact support.
+
+## Good to know
+
+- The analysis helps you read the interview. It isn't a decision. Hirify doesn't rank candidates and doesn't recommend any next step. See [AI at Hirify](/en/trust/ai-at-hirify).
+- A section with no content doesn't show at all. A panel without **Legal watch-outs** simply means no criterion came up.
+- The analysis covers what was said during the interview, plus the CV when you uploaded it. It doesn't pull information from anywhere else.
+- **Run the analysis again** is only offered when the analysis failed. After renaming a speaker, you regenerate the interview notes and **Key takeaways** instead, from the banner that offers it.
+- By default, the interview notes and the evaluation only go to your ATS if you send them from the interview's ATS panel, after confirming. Some automations are the exception, described in [ATS automations](/en/integrations/ats-automations). They're off by default, and an administrator or a billing admin turns them on in **Settings** > **Integrations**, on the connection:
+  - **Automatic tags**: adds summary tags to the candidate's profile after each analyzed interview.
+  - **Fill in ATS fields**: fills in custom fields that are still empty and notifies you.
+  - **Publish the analysis automatically**: with the Teamtailor Hirify card, sends the analysis and the interview notes to the candidate's profile as soon as the interview ends.
+
+<CardGroup cols={2}>
+  <Card title="Read and edit" icon="pen-to-square" href="/en/notes/read-and-edit">
+    Correct and regenerate the interview notes.
+  </Card>
+  <Card title="Identify speakers" icon="users-rectangle" href="/en/interviews/identify-speakers">
+    Who's speaking and how to fix it.
+  </Card>
+</CardGroup>

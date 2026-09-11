@@ -1,0 +1,105 @@
+---
+title: "The speakers are mixed up"
+sidebarTitle: "Speakers mixed up"
+description: "Fix speech attributed to the wrong person to get accurate interview notes back"
+icon: "right-left"
+---
+
+Hirify separates the voices in an interview, but it doesn't know who they belong to until you tell it. Three symptoms can be fixed from the interview page: unnamed speakers, two people swapped, and one person split in two.
+
+{/* SCREENSHOT: warning banner at the top of an interview page, with the Identify speakers button */}
+
+## Identify unnamed speakers
+
+A banner appears at the top of the interview: "2 speakers aren't identified", with the note "Identifying them improves the interview notes and key takeaways."
+
+<Steps>
+  <Step title="Open the identification window">
+    Click **Identify speakers** in the banner. The **Who's speaking here?** window opens.
+  </Step>
+  <Step title="Recognize who's speaking from what they said">
+    The window shows the person's three most substantial turns, with their timestamps. **View in transcript** takes you to the right spot if the excerpt isn't enough.
+  </Step>
+  <Step title="Name the person">
+    Enter the name in the **Speaker name** field. When participants are known, they're suggested below the field, one click away.
+  </Step>
+  <Step title="Set the role">
+    Choose **Candidate** or **Recruiter** next to **Role**, then click **Confirm**.
+  </Step>
+  <Step title="Move to the next one">
+    The "1 of 3" counter and the arrows take you through the remaining speakers. **Skip** leaves this one aside.
+  </Step>
+</Steps>
+
+<Note>
+  Two speakers can't have the same name. If you reuse a name that's already assigned, Hirify shows "This name is already assigned to another speaker".
+</Note>
+
+## Two people were swapped
+
+This is the typical case. What the candidate said is attributed to the recruiter, and the other way around. You fix both at once.
+
+<Steps>
+  <Step title="Open the Transcript view">
+    On the interview page, switch to the **Transcript** tab.
+  </Step>
+  <Step title="Open the menu on a turn">
+    Hover over a passage attributed to the wrong person. An actions button appears to the left of the avatar.
+  </Step>
+  <Step title="Swap the two speakers">
+    Choose **Swap with...**, then select the person this passage belongs to. All the turns of both speakers swap their attribution.
+  </Step>
+</Steps>
+
+The same menu offers two other actions:
+
+- **Rename**: fix a single name.
+- **Candidate** / **Not the candidate**: a shortcut to mark or unmark the candidate.
+
+## The same person appears twice
+
+When a voice was split in two, for example after a microphone change or a call picked up again, the same person has two separate entries. Merge them.
+
+<Steps>
+  <Step title="Open the menu on a turn">
+    Still in the **Transcript** view, hover over a passage from the entry you want to remove.
+  </Step>
+  <Step title="Choose the target">
+    Click **Merge with...**, then the speaker to keep.
+  </Step>
+  <Step title="Confirm">
+    The **Merge speakers** window warns you: "This can't be undone. Every segment from the source speaker will be reassigned to the target speaker, and adjacent segments will be merged." Click **Merge**.
+  </Step>
+</Steps>
+
+<Warning>
+  Merging two speakers can't be reversed. Check that you're merging the same person before you confirm.
+</Warning>
+
+## Carry the fix over to the interview notes
+
+Fixing speakers doesn't rewrite interview notes that were already generated. If you just used **Identify speakers**, the banner changes to "Speakers identified", with the prompt "Regenerate the interview notes and key takeaways to reflect them." The banner has two buttons:
+
+- **Regenerate**: reruns generation with the right names.
+- **Later**: closes the banner.
+
+After a fix made from a turn's menu (**Rename**, **Swap with...**, **Merge with...**), this banner doesn't appear. In that case, rerun generation with the **Regenerate** action, under **Interview notes**, in the interview's side panel.
+
+{/* SCREENSHOT: the Speakers identified banner with the Later and Regenerate buttons */}
+
+## Good to know
+
+- Identification applies to the open interview, not to others. A candidate heard in two interviews is named in each one.
+- Speaker fixes don't change interview notes already sent to your ATS. Regenerate, review, then send them again yourself.
+- Regenerating replaces the existing interview notes. Your manual edits to those notes are lost.
+- In person, the number chosen in **Participants** when you generate the QR code helps separate the voices, but doesn't guarantee it. A very short turn or two very similar voices are still hard cases.
+- If the transcript itself is empty or cut off, identification won't change anything. See the page below first.
+
+<CardGroup cols={2}>
+  <Card title="Identify speakers" href="/en/interviews/identify-speakers">
+    The full procedure, outside troubleshooting.
+  </Card>
+  <Card title="Incomplete transcript" href="/en/help/incomplete-transcript">
+    When the problem comes from the recording.
+  </Card>
+</CardGroup>

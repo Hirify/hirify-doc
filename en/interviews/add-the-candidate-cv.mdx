@@ -1,0 +1,83 @@
+---
+title: "Add the candidate's CV"
+sidebarTitle: "Candidate CV"
+description: "Attach the candidate's CV to an interview to enrich the candidate analysis"
+icon: "paperclip"
+---
+
+An interview says a lot, but rarely the exact dates, the full job titles, or the degrees. The CV brings them. Attached to an interview, it completes the candidate's profile and flags the gaps between what's written and what was said.
+
+## Upload a CV
+
+You upload the CV from the **Analysis** panel of the interview.
+
+<Steps>
+  <Step title="Open the Analysis panel">
+    On the interview page, click **Analysis** in the vertical bar on the right.
+  </Step>
+  <Step title="Find the Add the CV bar">
+    It sits at the top of the panel, with a dotted border and the hint "Fills in dates and degrees, flags gaps with the interview".
+  </Step>
+  <Step title="Drop the file">
+    Click **Upload** to pick a file, or drag the PDF straight onto the bar.
+  </Step>
+  <Step title="Let the processing run">
+    The bar shows the progress: **Uploading file**, then **Reading the content**, **Structuring the profile**, and **Enriching the profile**.
+  </Step>
+</Steps>
+
+The file must be a PDF of 10 MB at most. Any other format is refused with the message "Only PDF files are accepted".
+
+{/* SCREENSHOT: the Analysis panel with the "Add the CV" bar and its dotted border. French capture: /images/fiche-entretien-notes.webp */}
+
+<Warning>
+  Uploading a CV regenerates all the interview notes already produced for this interview, so they take into account what the CV brings. Any edits you made to those notes are replaced. Upload the CV before you rework the text.
+</Warning>
+
+## What the CV changes
+
+Once processing is done, the bar shows **CV analyzed** and sums up what the CV added, for example "4 fields filled in · 2 transcript corrections". Three effects add up:
+
+- **The profile is completed.** Jobs, dates, education, certifications, and languages are enriched from the CV. The panel's **Profile** section opens to show you the result.
+- **Gaps come up.** When the CV contradicts the interview, the item appears in the **To decide** list with the **CV mismatch** marker. When you expand it, you see side by side what was said on the **Interview** line and what's written on the **CV** line. Hirify flags the difference. It doesn't settle it for you.
+- **The transcript is corrected.** Proper names and terms misheard during the interview are fixed from the CV. In the **Transcript** tab, these words are underlined with dots. Hover over them to see the original version and the correction.
+
+## Replace or delete the CV
+
+Once the candidate analysis is available, the bar disappears and the CV folds into the **CV analyzed** marker in the panel header. Click it. The menu shows the file name, the date it was added, and its page count. It offers **Replace the CV** and **Delete the CV**.
+
+As long as the panel has no candidate analysis to show, the bar stays in place under the **CV analyzed** title. It has a **Replace** button and, on hover, a trash icon that deletes the CV.
+
+<Note>
+  Deleting the CV removes it and clears from the analysis the gaps it had flagged. Name corrections already applied to the transcript are kept.
+</Note>
+
+## When processing fails
+
+The bar stays on screen and gives the reason: **Password-protected file**, **Unsupported file format**, **Couldn't read the content**, **File too large**, **Network error**, or **Processing failed**. The **Replace** button lets you send another file.
+
+A password-protected CV, or one made of poor-quality images, can't be read. Export it again as a PDF from the original document, or carry on without it. The interview is still analyzed.
+
+## Good to know
+
+- You can only upload a CV to a completed interview.
+- One CV per interview. To change it, use **Replace the CV**. The previous one is overwritten.
+- While a CV is being processed, Hirify refuses a new upload and tells you so.
+- If the interview is linked to an application in your ATS, Hirify fetches the CV attached to that application. A CV you upload yourself always wins. It will never be replaced by the one from the application.
+- The CV feeds the candidate analysis for this interview. It isn't sent back to your ATS.
+- Accepted format: PDF only. Word processor files must be exported to PDF before you upload them.
+
+<CardGroup cols={2}>
+  <Card title="Candidate analysis" icon="user-magnifying-glass" href="/en/notes/candidate-analysis">
+    Read the Analysis panel, its lists, and its quotes.
+  </Card>
+  <Card title="Review an interview" icon="file-lines" href="/en/interviews/review-an-interview">
+    Move between the Notes, Key takeaways, and Transcript views.
+  </Card>
+  <Card title="Link an interview to an application" icon="link" href="/en/integrations/link-an-interview-to-an-application">
+    Attach the interview to the candidate's record in your ATS.
+  </Card>
+  <Card title="Read and edit interview notes" icon="file-pen" href="/en/notes/read-and-edit">
+    Touch up the text once the CV is taken into account.
+  </Card>
+</CardGroup>

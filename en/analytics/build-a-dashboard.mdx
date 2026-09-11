@@ -1,0 +1,114 @@
+---
+title: "Build a dashboard, set a target, and get it analyzed"
+sidebarTitle: "Build a dashboard"
+description: "Describe in plain language what you want to track, set a target on a metric, and ask for an analysis of your dashboard"
+icon: "chart-line"
+---
+
+<Note>
+  Access: Hub plan, administrator or manager role.
+</Note>
+
+Analytics builds a recruiting dashboard from a sentence written in plain language.
+
+## Describe your dashboard in plain language
+
+<Steps>
+  <Step title="Open Analytics">
+    In the sidebar, under **My workspace**, click **Analytics**. If you haven't saved a dashboard yet, the studio opens straight away. Otherwise, click **New dashboard**.
+  </Step>
+  <Step title="Pick a starting point or describe your own">
+    Under **Starting points**, five cards are offered: **Pipeline health**, **Velocity and delays**, **Sourcing and quality**, **Staffing cockpit**, and **Interview activity**. One click opens the matching dashboard without a generation step.
+  </Step>
+  <Step title="Or write your request">
+    Under **Or describe it**, the field shows the hint "Describe the dashboard you want to build". Write what you want to track, then click **Generate**. The <kbd>/</kbd> key puts the cursor in this field from anywhere on the page.
+  </Step>
+  <Step title="Follow the build">
+    The steps show as they happen, then the blocks appear. **Stop** interrupts the build and takes you back to the studio.
+  </Step>
+</Steps>
+
+Each card carries a badge: **Available**, **Partial**, **Waiting for data**, or **Requires a connected ATS**. A waiting card can't be clicked. When data is missing, the **See how to unlock →** link leads to the Data reliability page. On a **Requires a connected ATS** card, that link doesn't show. What's expected there is connecting your ATS.
+
+{/* SCREENSHOT: the Analytics studio, with the "Needs your attention" banner and the five starting points with their status badges. French capture: /images/pilotage-atelier.webp */}
+
+## Read the resulting dashboard
+
+The dashboard has a title, a summary sentence, then a discreet line showing **Built in N s** or **Instant render**, followed by the number of blocks. After a build, the **Step details** button reopens the list of steps followed. A dashboard opened from a starting point shows instantly, with no steps to detail, so the button doesn't appear.
+
+Blocks take the form that best suits the measure: key figures in a strip, bars, line charts, conversion funnels, histograms, and tables.
+
+Until you click **Save**, the dashboard only exists on this page.
+
+## Adjust the dashboard with a new request
+
+The bottom bar shows the hint "Refine: “add the rejection rate by department, switch to 6 months”". Write your correction, then click **Send**. Each applied request stays displayed above the bar, prefixed with "You:".
+
+**Back to the studio** starts again from a blank page.
+
+<Warning>
+  Leaving the page after a build or an adjustment asks for confirmation: "This dashboard isn't saved. Leave without saving?" The browser's Back button doesn't trigger this confirmation.
+</Warning>
+
+## Set a target on a metric
+
+A target goes on a saved dashboard that you own. It only goes on a block that shows a single number.
+
+<Steps>
+  <Step title="Open the saved dashboard">
+    From the sidebar or from your list of dashboards.
+  </Step>
+  <Step title="Click the target icon">
+    It appears in the block's header, with the tooltip **Set a target**.
+  </Step>
+  <Step title="Enter the value">
+    The **Block target** window shows the block's title and asks for a **Target value**. The block's unit shows to the right of the field. Click **Save**.
+  </Step>
+</Steps>
+
+The block then shows a **Target** badge followed by the value. When the measure has a known direction of improvement, its color shows whether the target is met.
+
+## Edit or remove a target
+
+Open the same block again. The icon now has the tooltip **Edit target**. Change the value and click **Save**, or click **Remove** to clear it. The block goes straight back to showing no target.
+
+## Get the dashboard analyzed
+
+On a saved dashboard, the **Analyze this dashboard** button asks for a reading of the figures shown. While it runs, it shows **Analyzing…**.
+
+The analysis covers the current view, filters included. Observations appear in two places:
+
+- Those about a specific block sit behind that block's info marker.
+- The others show in a banner above the dashboard.
+
+A line sums up the result: **Analysis · 1 observation**, **Analysis · N observations**, or **Analysis · nothing to report**.
+
+Once the analysis is in, the button becomes **Run analysis again**. The **Refresh** button next to it recalculates the figures. The **Refreshed at** mention gives the time of the last calculation.
+
+{/* SCREENSHOT: a saved dashboard, with the observations banner, a Target badge, and the Analyze this dashboard button */}
+
+## Who can use Analytics (from the Hub plan, admin or manager role)
+
+Analytics requires two conditions together: an organization on the Hub plan or above, and the **Admin** or **Manager** role. The **Analytics** and **Data reliability** entries only appear in the sidebar when both are met.
+
+A member who reaches the page anyway sees a **Restricted access** screen: "Dashboards are available to your organization's admins and managers only."
+
+The difference between administrator and manager is about access, not content. Both roles see the same figures.
+
+## Good to know
+
+- A target only goes on a single-number block. Charts, funnels, and tables don't accept one.
+- Targets go on a saved dashboard. In the studio, the target icon isn't offered.
+- The analysis only reads the data shown on screen, filters included. It doesn't look anywhere else.
+- Without a connected ATS, your dashboards only cover interviews run in Hirify. A banner at the top of the studio reminds you.
+- A built dashboard doesn't save itself. Without a click on **Save**, it's lost when you leave the page.
+- The starting-point cards depend on the data actually in your account. A grayed-out card isn't a malfunction. It's data that's missing.
+
+<CardGroup cols={2}>
+  <Card title="Save, share, and pin" icon="thumbtack" href="/en/analytics/save-share-and-pin">
+    Keep a dashboard, share it, and find it again.
+  </Card>
+  <Card title="Data reliability" icon="list-check" href="/en/analytics/data-reliability">
+    See what's available and the action that unlocks the rest.
+  </Card>
+</CardGroup>

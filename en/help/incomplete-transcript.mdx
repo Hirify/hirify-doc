@@ -1,0 +1,79 @@
+---
+title: "The transcript is incomplete or empty"
+sidebarTitle: "Incomplete transcript"
+description: "Find what limited an interview's transcript and what you can still get from it"
+icon: "closed-captioning"
+---
+
+The interview is in Hirify, but the text stops too early, skips passages, or doesn't exist. Whatever is missing from the transcript will also be missing from the interview notes and the analysis. So that's where to start.
+
+## An interview marked Too short
+
+The **Too short** label shows when the recording lasts less than a minute. It also covers a recording of normal length in which no speech was picked up, for example when the microphone stayed muted or the wrong audio input was selected.
+
+There's nothing to recover in that case. Check the equipment, then start a new recording.
+
+## The text stops partway through the interview
+
+There are three common causes. Rule them out in this order.
+
+<AccordionGroup>
+  <Accordion title="The interview was split in two">
+    A video meeting restarted after a drop, or a call that was redialed, creates two separate interviews. Each one only holds its half. You can combine them. Open **Interviews**, select both, then click **Merge**.
+  </Accordion>
+  <Accordion title="The meeting assistant left before the end">
+    If it was removed from the video meeting, or if the meeting was closed and reopened on another link, the recording stops there. The rest of the conversation doesn't exist anywhere.
+  </Accordion>
+  <Accordion title="The recording phone went to sleep">
+    In person, recording relies on the phone's browser. A locked screen, an incoming call, or switching apps can interrupt it. Keep the page in the foreground for the whole interview.
+  </Accordion>
+</AccordionGroup>
+
+## The text is there, but wrong
+
+The transcription hears correctly but writes what it knows: mangled client names, unrecognizable internal job titles, and industry acronyms turned into something else. Your organization's vocabulary fixes this.
+
+<Steps>
+  <Step title="Open the vocabulary">
+    An administrator opens **Settings**, then **Custom vocabulary**.
+  </Step>
+  <Step title="Add your terms">
+    In **Terms specific to your company**, click **Add**, then enter the proper names, products, and job titles that come up in your interviews.
+  </Step>
+  <Step title="Check the industry vocabularies">
+    The **Enabled industry vocabularies** section shows the fields already covered for your organization.
+  </Step>
+</Steps>
+
+<Note>
+  The vocabulary applies to interviews recorded afterward. It doesn't rewrite a transcript that already exists.
+</Note>
+
+{/* SCREENSHOT: the Custom vocabulary page with the Terms specific to your company section. French capture: /images/parametres-vocabulaire.webp */}
+
+## What a poor transcript brings down with it
+
+When the transcript is poor, the screens that depend on it say so plainly instead of making things up.
+
+- **Key takeaways** can show "This call doesn't have enough content to generate a summary." Another message says that no speaker was marked as the candidate: "Key takeaways are only generated for interviews with a candidate present."
+- The analysis can show **Analysis unavailable**. A **Run the analysis again** button appears when another attempt makes sense.
+- The interview notes can show "Interview notes generation failed", with "The transcript and the analysis aren't affected." and a **Try again** button.
+
+Another attempt starts from the same transcript. If that transcript is too poor, the result won't change.
+
+## Good to know
+
+- A transcript can't be transcribed again. The audio is processed once. What wasn't picked up can't be recovered.
+- In person, the number chosen in **Participants** when you generate the QR code helps separate the voices. It's a help, not a guarantee.
+- A partial transcript is still usable. The interview notes and the analysis rely on what exists and point out what they didn't find rather than filling the gap.
+- If passages are attributed to the wrong person, that's not a transcription problem but a speaker identification problem.
+- A noisy room, a loudspeaker placed far away, or several people talking at once degrade the recording before processing even starts.
+
+<CardGroup cols={2}>
+  <Card title="Improve transcripts" href="/en/getting-started/improve-transcripts">
+    The vocabulary, in detail.
+  </Card>
+  <Card title="Merge two interviews" href="/en/interviews/merge-two-interviews">
+    Join an interview that was split in two.
+  </Card>
+</CardGroup>

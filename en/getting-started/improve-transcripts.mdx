@@ -1,0 +1,84 @@
+---
+title: "Help Hirify recognize your industry terms"
+sidebarTitle: "Custom vocabulary"
+description: "Add your industry vocabulary and in-house terms so they're transcribed correctly"
+icon: "spell-check"
+---
+
+Your clients' names, your internal projects, and your in-house jargon aren't in the standard dictionary. The **Custom vocabulary** page lets you declare them so they're transcribed correctly.
+
+## Where to find the vocabulary
+
+Click **Settings** at the bottom of the sidebar, then open **Custom vocabulary**. The page has two sections.
+
+**Enabled industry vocabularies** lists, as tags, the industry vocabularies Hirify has prepared for your organization. You don't edit them yourself. Contact support if you want them adjusted. When none is enabled, the section shows "No industry vocabulary enabled for your organization."
+
+**Terms specific to your company** is the part you fill in. Its description says so: "Client names, internal projects, in-house jargon. These terms are added on top of the industry vocabularies above."
+
+{/* SCREENSHOT: the Settings > Custom vocabulary page, with its two sections. French capture: /images/parametres-vocabulaire.webp */}
+
+## Add a term
+
+<Steps>
+  <Step title="Open the add window">
+    In the **Terms specific to your company** section, click **Add**. If the list is empty, the button is called **Add the first term**.
+  </Step>
+  <Step title="Enter the word or phrase">
+    The **Word or phrase** field expects the correct spelling, the one you want to read in the transcript.
+  </Step>
+  <Step title="List the mistranscribed variants">
+    The **Spelling variants** field expects what you've seen appear by mistake, separated by commas. The instruction reads: "Mistranscribed variants to correct (comma-separated)". Write them the way the word sounds, not in phonetic notation.
+  </Step>
+  <Step title="Save">
+    Click **Add**. The "Term added" message confirms it.
+  </Step>
+</Steps>
+
+<Tip>
+  Read a recent transcript before you fill in the list. The most useful variants are the ones you've actually seen, not the ones you imagine.
+</Tip>
+
+{/* SCREENSHOT: the "Add a word" window with its two fields and the Advanced options link */}
+
+## Set the intensity
+
+In the add window, the **Advanced options** link reveals an **Intensity** setting with two values:
+
+- **Low**: the default value.
+- **Normal**: according to the app, this setting "gives the word more weight".
+
+Keep **Low**. Hirify caps the weight actually passed to the transcription, so **Normal** gives the same result in practice. If a term still comes out wrong, add to its **Spelling variants** instead, with the forms you've actually seen appear.
+
+## Edit or delete a term
+
+<Steps>
+  <Step title="Edit">
+    Click the edit action on the term's row. The **Edit word** window shows the saved values. Confirm with **Edit**. The "Term updated" message confirms it.
+  </Step>
+  <Step title="Delete">
+    Click the delete action. The **Delete term** window asks you to confirm and warns that "This can't be undone." The "Term deleted" message confirms it.
+  </Step>
+</Steps>
+
+<Note>
+  If you try to add a term that's already there, the app replies "This term already exists" and saves nothing.
+</Note>
+
+## Good to know
+
+- Changing the organization's vocabulary requires the **Admin** role. Other members open the page read-only, with no **Add** button and no edit action on the rows.
+- The vocabulary applies to the whole organization. There is no personal list per recruiter.
+- A term only applies to interviews transcribed after you add it. An interview that has already been processed isn't run through again, and its existing transcript stays as it is.
+- Terms shorter than four characters aren't kept, so very short acronyms you add yourself have no effect. The industry vocabularies prepared by Hirify do keep theirs.
+- This setting acts on the transcription, not on the interview notes. It doesn't fix interview notes that are already written and doesn't replace proofreading.
+- A list that's too long backfires. The more closely related terms it holds, the more likely mix-ups become. Only declare what really causes trouble.
+
+<CardGroup cols={2}>
+  <Card title="The transcript is incomplete" icon="life-ring" href="/en/help/incomplete-transcript">
+    When the problem doesn't come from the vocabulary.
+  </Card>
+
+  <Card title="Review an interview" icon="file-lines" href="/en/interviews/review-an-interview">
+    Go back to the exact passage in the transcript.
+  </Card>
+</CardGroup>

@@ -1,0 +1,117 @@
+---
+title: "Secure your account and access"
+sidebarTitle: "Secure your account"
+description: "Change your password, create the access tokens your extension and tools need, and request single sign-on for your organization"
+icon: "lock"
+---
+
+The **Security** page covers two things: your password and your access tokens. Open it from **Settings** at the bottom of the sidebar, then **Security**. Single sign-on is set up with the Hirify team.
+
+## Change your password
+
+The **Password** section states its purpose: "Change the password you use to sign in."
+
+<Steps>
+  <Step title="Enter your current password">
+    The **Current password** field checks that the session is really yours.
+  </Step>
+  <Step title="Choose the new one">
+    Fill in **New password**, then **Confirm**. The instruction below the fields reads: "Use at least 8 characters with letters, numbers and symbols."
+  </Step>
+  <Step title="Submit">
+    Click **Update**. The "Password changed" message confirms it, and the three fields are cleared.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the Settings > Security page, "Password" section. French capture: /images/parametres-securite.webp */}
+
+<Note>
+  Forgot your current password? The **Forgot your password?** link on the sign-in screen sends you an email to set a new one, without going through this page.
+</Note>
+
+## Create an access token for the extension or the API
+
+The **Access tokens** section explains what they're for: "Create a personal token to connect the browser extension or the API to your account. The token is shown only once."
+
+<Steps>
+  <Step title="Click Create a token">
+    The **Create an access token** window opens.
+  </Step>
+  <Step title="Give it a name">
+    The **Token name** field only helps you find your way around. Pick a name that says what the token is for, such as the name of the tool that will use it.
+  </Step>
+  <Step title="Create the token">
+    Click **Create**. The **Your new token** window shows the token's value, with a copy button.
+  </Step>
+  <Step title="Copy it right away">
+    "Copy this token now. For security reasons, it won't be shown again." Paste it into the tool that needs it, then click **Done**.
+  </Step>
+</Steps>
+
+<Warning>
+  A token gives access to your account. The app says it plainly: "Keep this token somewhere safe. Anyone who has it can access your account." Don't paste it into a ticket, a team chat, or a shared file.
+</Warning>
+
+Once created, the token appears in the list with its creation date. Its last-used date shows as soon as it has been used. That's the easiest way to spot a token you no longer need.
+
+{/* SCREENSHOT: the "Access tokens" section with a listed token and its last-used date */}
+
+## Revoke an access token
+
+Revoke a token as soon as you no longer need it, or at the slightest doubt about where it has been.
+
+<Steps>
+  <Step title="Find the token in the list">
+    The last-used date helps you spot one that has been idle for a long time.
+  </Step>
+  <Step title="Open the revoke window">
+    Click the delete icon on the token's row. The **Revoke token** window asks you to confirm and shows the token's name.
+  </Step>
+  <Step title="Confirm">
+    Click **Revoke**. The "Token revoked." message confirms it.
+  </Step>
+</Steps>
+
+<Warning>
+  "This can't be undone. Any application using this token loses access immediately." If the browser extension used this token, it stops working until you give it a new one.
+</Warning>
+
+## Set up single sign-on (SSO)
+
+Single sign-on lets your organization's identity provider decide who gets into Hirify. Your teams then sign in without a Hirify password.
+
+You don't set it up in the app. There is no customer screen to turn it on or configure it. The Hirify team sets it up with you by registering your domain and your identity provider's metadata. It is part of the Volume plan.
+
+Once the domain is registered, your teams have two paths.
+
+<Steps>
+  <Step title="From the sign-in screen">
+    The **Sign in with SSO** button leads to the **SSO sign in** screen. If the domain of the address entered on the sign-in screen is recognized, that screen switches to **Continue with SSO** by itself and no longer asks for a password.
+  </Step>
+  <Step title="From the SSO sign in screen">
+    Enter your work email address, then click **Continue with SSO**. You're redirected to your organization's identity provider.
+  </Step>
+</Steps>
+
+If the domain isn't registered, the screen replies "SSO isn't set up for this email domain". Get in touch with your administrator or your Hirify contact.
+
+{/* SCREENSHOT: the "SSO sign in" screen with the email address field and the Continue with SSO button */}
+
+## Good to know
+
+- A token created from this page has no expiration date. It stays valid until you revoke it, so clean up your tokens regularly.
+- You can't keep more than twenty active tokens. Beyond that, the app asks you to revoke one before you create a new one.
+- A token is personal. It carries your rights and only sees what you see. Don't share it with a colleague. Have them create their own.
+- A token's value is shown only once. If you lose it, it can't be recovered. Revoke the token and create another one.
+- Password and single sign-on are the two ways to sign in to Hirify.
+- An account's email address can't be changed, not even by an administrator.
+
+<CardGroup cols={2}>
+  <Card title="Browser extension" icon="puzzle-piece" href="/en/integrations/chrome-extension">
+    The tool that uses an access token day to day.
+  </Card>
+
+  <Card title="Your data" icon="shield-check" href="/en/trust/your-data">
+    What Hirify keeps and for how long.
+  </Card>
+</CardGroup>

@@ -1,0 +1,95 @@
+---
+title: "Record automatically from your ATS"
+sidebarTitle: "Automatic from your ATS"
+description: "Have the meeting assistant join the interviews created in your ATS, with no action on your part"
+icon: "bolt"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS.
+</Note>
+
+When your ATS is connected to Hirify, an interview scheduled there with a video meeting link can get the meeting assistant without anyone asking for it. You no longer paste a link. You just open your interview notes afterward.
+
+## The setting
+
+It applies to the whole organization and lives on your ATS connection card.
+
+<Steps>
+  <Step title="Open the integration settings">
+    Click **Settings** at the bottom of the sidebar, then **Integrations** in the left column.
+  </Step>
+  <Step title="Find your connection's settings">
+    Under the **ATS** section, your connection card shows a **Settings** block.
+  </Step>
+  <Step title="Check the toggle">
+    **Automatic meeting assistant** must be on. The text under the label states the rule: "Automatically schedules the meeting assistant on ATS interviews that have a Google Meet or Microsoft Teams link."
+  </Step>
+</Steps>
+
+<Note>
+  This setting is on by default. Only an administrator or a billing admin of the organization can reach it. Other roles don't see the **ATS** section and read this instead: "ATS and CRM integrations are managed by your organization's admins."
+</Note>
+
+{/* SCREENSHOT: the "Settings" block under the ATS section, with the "Automatic meeting assistant" toggle */}
+
+## Choose the template to apply
+
+An interview recorded without anyone stepping in has no template picked by hand. The **Default notes template** menu, in the same **Settings** block, sets the one to apply: "Applied to interviews recorded automatically from your ATS to generate interview notes without picking a template by hand. Only templates shared with the organization are listed."
+
+As long as this menu stays on **No template**, the interview is recorded and transcribed, but no interview notes are written. You can still ask for notes later from the interview page.
+
+<CardGroup cols={1}>
+  <Card title="Share a template with your team" href="/en/notes/share-a-template">
+    A personal template doesn't appear in this menu.
+  </Card>
+</CardGroup>
+
+## What triggers the meeting assistant
+
+The assistant is scheduled when all of these conditions are met:
+
+- the interview is scheduled in your ATS and hasn't been canceled or rescheduled
+- it includes a video meeting link
+- its start time is still ahead
+- no assistant is already scheduled on this interview
+- nobody removed it by hand from the matching event
+- the organization's subscription is active
+
+If any of them is missing, nothing happens and the interview can still be recorded through the other paths.
+
+## Remove the meeting assistant from a specific interview
+
+The setting applies to the whole organization, but you keep control interview by interview. You remove the assistant from the **Calendar**, which requires a calendar connected to your workspace.
+
+<Steps>
+  <Step title="Open the Calendar">
+    In the sidebar, under **My workspace**, click **Calendar**.
+  </Step>
+  <Step title="Click the event">
+    The side panel opens.
+  </Step>
+  <Step title="Click Delete">
+    A confirmation appears: "The meeting assistant won't join this meeting anymore. This can't be undone."
+  </Step>
+</Steps>
+
+This removal sticks. Hirify won't schedule the assistant on this interview again, even if your ATS updates it later.
+
+## Good to know
+
+- An interview created without a video meeting link isn't recorded. The setting's text names Google Meet and Microsoft Teams.
+- An interview with several people from your team produces a single recording, not one per person.
+- In Hirify, the interview is linked to the matching application as soon as the assistant is scheduled, so the job and candidate context is already there when you need it. This link writes nothing to your ATS.
+- Interview notes don't go back to your ATS on their own, unless automatic publishing for the Teamtailor Hirify card is on. Hirify prepares them and you decide to share them. See [Share the analysis](/en/integrations/send-to-your-ats).
+- An interview rescheduled or canceled in your ATS follows its status. The assistant is only scheduled on interviews that are planned and still ahead.
+
+<CardGroup cols={2}>
+  <Card title="Connect your ATS" href="/en/integrations/connect-your-ats">
+    Set up the connection.
+  </Card>
+
+  <Card title="ATS automations" href="/en/integrations/ats-automations">
+    Tags, fields, and the default template.
+  </Card>
+</CardGroup>

@@ -1,0 +1,99 @@
+---
+title: "Know what Hirify does with your data"
+sidebarTitle: "Your data"
+description: "What data is collected, how long it's kept, and how data subject rights are exercised"
+icon: "lock"
+---
+
+The full compliance file is available on request for an IT department or a data protection officer.
+
+## Who does what
+
+Hirify acts as a processor. Your company, which decides to record and analyze interviews and sets the purpose, is the controller. This split is set out in the data processing agreement. Two obligations explicitly fall to you: the legal basis for recording and informing the data subjects.
+
+## What is processed
+
+| Category | Content |
+| --- | --- |
+| User accounts | Name, email address, login metadata, authentication secrets |
+| Transcripts | Full text of the interview, not anonymized |
+| Analyses | Structured profile, signals, overall assessment |
+| Interview notes | Notes written from the analysis |
+| Recordings | Interview audio |
+| CVs and documents | Document retrieved to enrich an analysis, and its extracted text |
+| Calendar events | Participant addresses, times, meeting URL |
+| Phone data | Numbers, call identifiers, audio |
+| Data imported from your ATS | Minimized data, email address, source, education, and experience |
+| Search embeddings | Text derived from transcripts, notes, and analyses |
+
+During an interview, a candidate may spontaneously disclose something that falls under a special category of data, such as health or origin. That information then ends up in the transcript. This case is handled through minimization and processing instructions, not through dedicated processing.
+
+## Where the data resides
+
+Hirify uses subprocessors for some technical functions, described here by their role and location. The list of named entities comes with the signed contract, in line with Article 28 of the GDPR.
+
+The most direct data is processed in the European Union: the interview audio, the transcript, and the CVs that go with it. Recording, transcription, analysis, text recognition on CVs, file storage, and hosting all run there. Large candidate content doesn't leave the EU.
+
+Transfers remain for less direct data:
+
+- embedding search and reranking, which receive text with reduced personal data
+- the calendar, which passes on metadata, tokens, and addresses
+- billing
+
+Meeting recording and calling rely on an entry point located in the EU, operated by a non-European entity whose access has yet to be formally governed. These transfers fall under Chapter V of the GDPR, and the mechanism chosen is set out in the appendix to the contract.
+
+## How long
+
+| Data | Retention |
+| --- | --- |
+| Raw recordings | Deleted once the transcript and the analysis are validated, or kept for a short, limited period |
+| Transcripts, analyses, and interview notes | For the duration of the relationship, then no more than two years after the last contact with the candidate |
+| Search embeddings | Deleted at the same time as their source |
+| Data imported from your ATS | Until disconnection or purge |
+
+<Warning>
+  This schedule is set by the data protection officer. The corresponding purge is planned but not in service yet. Apart from a few processes that are already automated, deletion is currently done on request through support.
+</Warning>
+
+## Delete data
+
+Several deletions are already built in:
+
+- Deleting a CV erases the document from storage, along with its metadata.
+- Disconnecting your ATS with the purge option erases the imported data and the related search indexes.
+- Deleting a user or an organization erases all the related data in cascade, including transcripts, interview notes, and calendar events.
+
+Two deletions go through support:
+
+- **Deleting your account or your organization**: it isn't available in the interface. Support handles it on request.
+- **Deleting the audio recording when a transcript is deleted**: it's planned. In the meantime, it's handled on request.
+
+## Exercise data subject rights
+
+For data that comes from your ATS, the ATS remains the system of record. Access and portability are exercised there, since Hirify only keeps a minimized copy. Bulk erasure goes through the connection purge. Erasing a single candidate means deleting them at the source.
+
+For interview data produced by Hirify, access is exercised through the account of the recruiter concerned. Rectification and erasure go through support. Restriction is obtained by deactivating a connection or suspending an access.
+
+Send any data protection request to **rgpd@hirify.fr**, the single point of contact.
+
+## Get your data back and leave
+
+On request, and no later than the end of the contract, Hirify makes the data processed on your behalf available within 30 days. You get a structured export of the metadata and text content, together with the source media files. There's no self-service export yet. The Hirify team takes care of it.
+
+Once the return is confirmed, or if no request is made, the data is deleted from production systems within 30 days. A certificate of destruction, signed by the President of the company, states the scope and the date.
+
+## Good to know
+
+- There's no retention settings screen and no GDPR configuration in the app. These topics go through the contract and support.
+- Data deleted in production remains in backups until they expire, which means the length of the contract plus thirty days. Hirify doesn't selectively erase data inside backups.
+- The exact location of storage and of the database depends on the deployment configuration and is stated in the contract.
+- If this page and the contract appendix differ, the appendix prevails.
+
+<CardGroup cols={2}>
+  <Card title="Inform your candidates" icon="bullhorn" href="/en/trust/inform-your-candidates">
+    Three notice templates.
+  </Card>
+  <Card title="Disconnect a tool" icon="plug-circle-xmark" href="/en/integrations/disconnect-a-tool">
+    Turn off an integration, with or without a purge.
+  </Card>
+</CardGroup>

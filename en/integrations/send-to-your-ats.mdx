@@ -1,0 +1,111 @@
+---
+title: "Share the analysis to your ATS"
+sidebarTitle: "Share the analysis"
+description: "Send the interview notes and your verdict to the candidate profile yourself, then follow the push history"
+icon: "star"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS.
+</Note>
+
+The interview notes can go to the candidate profile, along with your verdict when your ATS accepts one. You're the one who sends them, after a preview and a confirmation. You don't pick a destination: Hirify works it out from your ATS and the permissions granted to the connection.
+
+## Before you share
+
+The **Share the analysis** section sits in the interview's **ATS** tab, below the **Application** section. Its button stays inactive while something is missing, and the line below it tells you what to do:
+
+| Message shown | What it expects from you |
+| --- | --- |
+| "Link an application first to share the analysis." | Link the interview to an application. |
+| "Confirm the application above first." | The application was matched from an attendee's email. Confirm it. |
+| "Open a finalized note: that's what gets sent." | Open completed interview notes. The note on screen is the one that gets sent. |
+| "Pick a verdict first." | Pick a verdict in the selector above the button. |
+
+When nothing is missing, the same line sums up what will be sent, for example "Review signed with your name, interview notes as a comment, after your review."
+
+{/* SCREENSHOT: the Share the analysis section of the ATS tab, with the verdict selector and the Share the analysis button */}
+
+## Share the analysis
+
+<Steps>
+  <Step title="Open the interview's ATS tab">
+    In the vertical bar on the right of the page, click **ATS**. The **Share the analysis** section comes after the **Application** section.
+  </Step>
+  <Step title="Pick a verdict if the selector is shown">
+    When your ATS requires a verdict, the **Pick a verdict** selector appears above the button. It offers five positions, each with a reminder:
+
+    - **Strong no**: "Rule out without reservation"
+    - **No**: "Not the right match"
+    - **Maybe**: "Worth discussing, mixed signals"
+    - **Yes**: "Aligned profile, recommended"
+    - **Strong yes**: "Ideal profile, hire without delay"
+  </Step>
+  <Step title="Click Share the analysis">
+    A confirmation window opens, titled with the name of your ATS. It reminds you which application you're writing to and lists what will be sent, one line per destination.
+  </Step>
+  <Step title="Review, then confirm">
+    **Review the note** expands the text as it will be sent. If your ATS accepts a graded review without requiring one, check **Add a graded review** and pick a verdict. Then click **Share**.
+  </Step>
+</Steps>
+
+An "Analysis shared" message confirms the push. The section then shows when it was shared, who shared it, and a link to the profile in your ATS. While the push runs, it says "Pushing to" your ATS and updates on its own. The button becomes **Share again**.
+
+<Warning>
+  What you share is written to the candidate profile in your ATS. Review the note before you confirm.
+</Warning>
+
+## What gets sent, ATS by ATS
+
+<Tabs>
+  <Tab title="SmartRecruiters">
+    A verdict is required. The push creates a review signed with your name. If the connection has the Messages permission, the review carries the interview's key takeaways and the interview notes go to the candidate's notes. Without that permission, the interview notes go as a comment on the review, and the section suggests reconnecting SmartRecruiters with the Messages permission.
+  </Tab>
+  <Tab title="Teamtailor">
+    The interview notes go as a note in the candidate's activity feed, signed with your name. You can add a graded review from the confirmation window. If the Hirify card is installed, the card on the profile is updated too, with the analysis verdict, the number of deal-breakers, and a link to the full interview notes. When the connection only allows the card, the section asks you to enable the Admin API key for your Teamtailor workspace so the note and the graded review can go too.
+  </Tab>
+  <Tab title="Nicoka">
+    Nicoka doesn't take a verdict. The push adds a review to the candidate's file, with the interview notes as a comment. The **Share the analysis** button turns on without a verdict to pick.
+  </Tab>
+</Tabs>
+
+## Follow the push history
+
+The **History** link, on the section's status line, opens the **Push history** window. It lists the pushes made from this interview, with their count. As long as nothing has been sent, it says "Nothing pushed yet."
+
+Each row has a status:
+
+- **Sent**: the push arrived. An icon opens the profile in your ATS.
+- **Pending**: "Waiting for … to confirm. Refresh in a moment." The refresh icon at the top of the window reads the status again.
+- **Failed**: the error message appears, with a **Try again** button.
+- **Deleted**: the push was removed. The row stays, struck through.
+
+Hover over the status to see who sent it. The verdict that was sent follows the status, or "Note" for a push without a verdict. When an evaluation already existed on the application, the row says "Pushed as a comment (an evaluation already existed)". Beyond five entries, a **Show more** button expands the next ones.
+
+## Remove a push
+
+The delete icon only appears on a **Sent** push, and only for the person who made it.
+
+<Warning>
+  The **Delete this push?** window is explicit: the matching evaluation will be deleted in your ATS, and this can't be undone. The entry stays in the history with the "Deleted" status, and you can push a new evaluation later. Confirm with **Delete push**.
+</Warning>
+
+## Good to know
+
+- The interview notes and your verdict never leave on their own through this share. It's always triggered by a person, after a preview and a confirmation.
+- Only completed interview notes can be shared. The note open when you share is the one that gets sent.
+- If the preview doesn't load, the window says "The preview couldn't be loaded." and the **Share** button stays inactive. Close the window and start again.
+- Interview notes too long for your ATS are cut at the length it accepts. The confirmation window says so, and the attached link opens the full interview notes.
+- In a SmartRecruiters review, the key takeaways are sent as they stand when you share. Regenerating them later doesn't change the review that was sent.
+- You can't delete a colleague's push from Hirify. Go through your ATS, or ask them to remove it.
+- Unlinking the interview from the application doesn't erase the push history and doesn't remove anything from your ATS.
+- Outside this share, two automations can write to the candidate profile if an administrator or a billing admin has turned them on: summary tags and filling in custom fields that are still empty. With the Teamtailor Hirify card, the **Publish the analysis automatically** setting also sends the analysis and the interview notes to the profile as soon as the interview ends. It's off by default. See [ATS automations](/en/integrations/ats-automations).
+
+<CardGroup cols={2}>
+  <Card title="Link to an application" icon="link" href="/en/integrations/link-an-interview-to-an-application">
+    Link the interview before you can share the analysis.
+  </Card>
+  <Card title="ATS automations" icon="sliders" href="/en/integrations/ats-automations">
+    What Hirify can do on its own after an interview.
+  </Card>
+</CardGroup>

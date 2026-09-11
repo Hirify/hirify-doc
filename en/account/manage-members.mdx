@@ -1,0 +1,102 @@
+---
+title: "Manage your organization's members"
+sidebarTitle: "Members and roles"
+description: "Invite a colleague, change their role, remove a member, and track the seats in use"
+icon: "users"
+---
+
+The **Members** page brings together everything about your team: invites, roles, deactivated accounts, and the seats left on your subscription.
+
+## Open the members page
+
+In your account menu, at the bottom of the sidebar, choose **Manage members**. Managers can open it too, under **Team members**, but read-only. They see the list and the per-member statistics, without the actions.
+
+The header sums up the state of the team: the number of active members, inactive members, and pending invites.
+
+{/* SCREENSHOT: the Members page with its tabs and the Invite a member button. French capture: /images/gestion-des-membres.webp */}
+
+## Invite a member
+
+<Steps>
+  <Step title="Open the invite window">
+    Click **Invite a member**, at the top right.
+  </Step>
+  <Step title="Enter the address">
+    Fill in your colleague's **Email address**.
+  </Step>
+  <Step title="Choose the role">
+    The **Role** list offers **Member**, **Manager**, **Admin**, and **Billing admin**. Below the list, a privileges box, such as **Manager privileges**, describes what the selected role allows.
+  </Step>
+  <Step title="Send">
+    Click **Send invite**. The invite shows up right away in the **Pending** tab.
+  </Step>
+</Steps>
+
+## The four roles
+
+| Role | What it can do |
+| --- | --- |
+| **Member** | Accesses their own interviews, creates and shares notes, uses custom templates |
+| **Manager** | Accesses all of the team's interviews, edits and deletes them, views per-member statistics. Doesn't manage members or billing |
+| **Admin** | Invites and removes members, manages roles and organization settings, accesses every feature |
+| **Billing admin** | Manages members, the subscription, organization settings, and integrations, with no access to product features. Doesn't use a seat |
+
+<Note>
+  You can still invite a billing admin when every seat is taken. The invite window says "Billing admins don't use a seat."
+</Note>
+
+## Track pending invites
+
+The **Pending** tab lists the invites you sent, with the email address, the intended role, the person who sent the invite, and the expiry date. A badge shows the state of the link: **Active**, **Expiring soon**, or **Expired**.
+
+Each row offers two actions: **Resend invite** and **Cancel invite**. Canceling makes the link invalid immediately.
+
+## Respond to a request to join
+
+When a colleague creates an account with an email address on the same domain as yours, Hirify offers to let them ask to join your organization. These requests collect in the **Requests** tab, which only appears when there's at least one.
+
+Accept, and the person joins the organization with the **Member** role. Decline, and they're notified. They can then create their own organization.
+
+The requester's side is described in [Join an organization](/en/getting-started/join-an-organization).
+
+## Change a member's role
+
+In the **Active** tab, open the actions menu at the end of the row, then pick the new role under **Change role**. The change takes effect right away.
+
+## Remove or reactivate a member
+
+The same menu offers **Remove**. A confirmation warns that "The member loses access to the organization immediately."
+
+Removed accounts move to the **Inactive** tab, with the time since deactivation and the person who had invited them. The **Reactivate** button brings them back, provided a seat is free.
+
+<Warning>
+  Removing a member cuts off their access on the spot. First check who takes over their ongoing interviews. A member only sees their own interviews, and only managers and administrators see those of the whole organization.
+</Warning>
+
+## Track the seats in use
+
+The number of seats depends on your subscription. Two alerts warn you at the top of the page:
+
+- **Few seats left**: fewer than three seats are available.
+- **Seat limit reached**: none are left. A link then takes you to the **Subscription** page.
+
+The exact count is on the **Usage** tab of the **Subscription** page, under **Active members**.
+
+## Good to know
+
+- Only administrators and billing admins can invite, remove, or change the role of a member.
+- A manager can view the list and the per-member statistics but can't act on them.
+- A billing admin doesn't use a seat and has no access to the product. They're redirected to the members page. They do manage organization settings and integrations.
+- The last person who can manage the organization, administrator or billing admin, can't be demoted or removed.
+- An expired invite can't be extended. Resend it to generate a new link.
+- No seat is freed automatically. A member who no longer uses Hirify keeps a seat until they're deactivated.
+
+<CardGroup cols={2}>
+  <Card title="Invite a member" icon="user-plus" href="/en/getting-started/invite-a-member">
+    The invite flow, seen from the invited person's side.
+  </Card>
+
+  <Card title="Plans and access" icon="table-list" href="/en/account/plans-and-access">
+    What your plan and your role give you access to, screen by screen.
+  </Card>
+</CardGroup>

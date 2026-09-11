@@ -1,0 +1,92 @@
+---
+title: "Check the reliability of your data"
+sidebarTitle: "Data reliability"
+description: "See which analyses are available, which are still locked, and the action that unlocks them"
+icon: "list-check"
+---
+
+<Note>
+  Access: Hub plan, administrator or manager role.
+</Note>
+
+The Data reliability page shows what your dashboards can calculate today and the exact action that unlocks the rest. It doesn't grade your organization. It counts.
+
+## Open the page
+
+In the sidebar, under **Data**, click **Data reliability**. The toolbar offers a **Build a dashboard** shortcut to go straight back to Analytics.
+
+## Read the count
+
+At the top of the page, a sentence gives the count: **N of M analyses available**. The bar just below breaks down the split, repeated in the legend: "N available · N partial · N pending".
+
+On the right, **Synced from your ATS on** followed by a date shows how fresh the imported data is.
+
+There are only three states:
+
+| State | What it means |
+| --- | --- |
+| Available | The analysis can be calculated on your data. |
+| Partial | Only some of the rows carry the data needed. |
+| Pending | The data is missing entirely. |
+
+An available analysis whose coverage is below 100% shows its percentage on its badge.
+
+{/* SCREENSHOT: the count at the top of the page, with the breakdown bar and its legend. French capture: /images/fiabilite.webp */}
+
+## To unlock: the missing action
+
+The **To unlock** section gives one row to each locked analysis: what's blocking it and what to do. The action is spelled out, for example:
+
+- **Rejection reasons**: "Record the reason when rejecting in your ATS."
+- **Geographic breakdown**: "Fill in the job locations in your ATS."
+- **Contract types**: "Fill in the contract type of the jobs in your ATS."
+- **Interviews linked to the pipeline**: "Link each interview to its application from its page."
+- **Scheduled interviews (ATS)**: "Schedule interviews in your ATS."
+
+When the data is there but incomplete, the row shows the exact count, as **N of M**.
+
+One row stands apart. **Pipeline history** covers three analyses: "Unlocks pipeline progression, time to hire and offer acceptance on its own." It carries the **fills in on its own** tag. This history builds up as your ATS syncs to Hirify, with nothing to do on your side.
+
+## Available analyses
+
+The **Available** section gathers, as badges, what can already be calculated for you. Depending on your data, you'll find for example **Pipeline volumes**, **Conversion rates**, **Application sources**, **Profile families**, **Job salaries**, **Salary expectations**, **Interview evaluations**, or **Interviews run with Hirify**. Hovering over a badge shows the detailed figures.
+
+## What your ATS has sent
+
+The **ATS integration** section shows the volume already in place: jobs, candidates, applications, synced CVs, evaluations, and scheduled interviews.
+
+Below it, the **Ingested per day (last 14 days)** chart shows the pace at which data arrives. Under the chart, the "Last sync per source" line gives the date of the latest sync.
+
+Without a connected ATS, a banner appears at the top of the page. It says that no ATS is connected, that only analyses of interviews run in Hirify are available, and that connecting your applicant tracking system unlocks the rest.
+
+## Candidates excluded by consent
+
+At the bottom of the page, when it applies, a line shows how many candidates are excluded from profile search by consent, with this note: "A respected choice, not missing data. The analyses above count every candidate."
+
+## Dashboard reliability, block by block
+
+The same candor applies to every dashboard. When a dashboard has something to flag, a **Dashboard reliability** mention appears above the blocks, with a **Details** link to this page. It sums up the exceptions: blocks on partial data, blocks waiting for data, blocks that ignore some of the filters, and blocks that couldn't be calculated.
+
+At block level, a small info marker in the header opens the precise reason. A dashboard with no exceptions shows nothing. Silence means all clear.
+
+<Warning>
+  A block the engine couldn't calculate is never removed silently. It's counted in the dashboard's reliability mention, so you know something is missing.
+</Warning>
+
+## Good to know
+
+- The list of analyses is the same for every organization. Only the states change, which makes the "N of M" count comparable over time.
+- The count is a number of available analyses out of a total, never a quality score for your data.
+- A pending analysis isn't a malfunction. It's data that hasn't been entered yet, or hasn't been synced yet.
+- Without a connected ATS, only analyses of interviews run in Hirify are available. The others wait for a connection.
+- This page doesn't change anything. The actions it recommends happen in your ATS or on the page of the interview concerned.
+- If **Data profile unavailable** shows, the calculation didn't complete at that moment. Reload the page a few minutes later.
+
+<CardGroup cols={2}>
+  <Card title="Build a dashboard" icon="chart-line" href="/en/analytics/build-a-dashboard">
+    Build a dashboard, set a target, and ask for an analysis.
+  </Card>
+  <Card title="Link an interview to an application" icon="link" href="/en/integrations/link-an-interview-to-an-application">
+    The action that unlocks cross-referenced analyses.
+  </Card>
+</CardGroup>

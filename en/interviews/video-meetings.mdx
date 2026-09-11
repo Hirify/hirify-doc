@@ -1,0 +1,113 @@
+---
+title: "Record an interview in a video meeting"
+sidebarTitle: "Video meetings"
+description: "Bring the meeting assistant into your Meet or Teams call, whether it starts in five minutes or is already in your calendar"
+icon: "video"
+---
+
+The meeting assistant joins your video meeting, records it, and transcribes it. It shows up in the participant list like any other guest.
+
+## Three ways to bring in the meeting assistant
+
+| Path | When to use it | What you need |
+| --- | --- | --- |
+| Paste the link on the Dashboard | The meeting starts now or in a few minutes | The video meeting link |
+| Invite the assistant's address in the calendar invitation | The interview is already scheduled | Nothing else |
+| Add the assistant from the **Calendar** | You also want to choose the template for the interview notes | A connected calendar |
+
+All three lead to the same result: an interview that appears under **Interviews** and goes through the same processing.
+
+## Paste a Meet or Teams link from the Dashboard
+
+<Steps>
+  <Step title="Open the Dashboard">
+    It's the Hirify home page. Find the **Start an interview** row.
+  </Step>
+  <Step title="Paste the video meeting link">
+    In the **Paste a Meet or Teams link** field, paste the meeting address.
+  </Step>
+  <Step title="Confirm">
+    Press Enter or click the arrow on the right of the field. The message "Meeting assistant invited to the meeting" confirms it's on its way.
+  </Step>
+</Steps>
+
+If the link isn't recognized, Hirify replies "Invalid link. Use a Google Meet or Teams link." and nothing happens.
+
+{/* SCREENSHOT: the "Paste a Meet or Teams link" field on the Dashboard, with a link entered */}
+
+## Invite notes@bot.hirify.fr to your calendar invitation
+
+This is the simplest path for an interview that's already booked. You add the assistant like any other guest.
+
+<Steps>
+  <Step title="Open the Schedule by email window">
+    On the **Dashboard**, click **Schedule by email**.
+  </Step>
+  <Step title="Copy the address">
+    Click **Copy address**. The address shown is `notes@bot.hirify.fr`.
+  </Step>
+  <Step title="Add it as a guest">
+    In your calendar invitation, paste the address into the guest list, then send the invitation.
+  </Step>
+</Steps>
+
+The assistant joins the video meeting at the time set in the event.
+
+<Note>
+  This path needs no calendar connection. It works from any calendar tool, as long as the invitation contains a video meeting link and is sent from the email address of your Hirify account.
+</Note>
+
+## Add the meeting assistant to an event from the Calendar
+
+This path requires your calendar to be connected to Hirify. It offers something the other two don't: choosing the notes template right away.
+
+<Steps>
+  <Step title="Open the Calendar">
+    In the sidebar, under **My workspace**, click **Calendar**.
+  </Step>
+  <Step title="Click the event">
+    A panel opens on the right with the event title and time.
+  </Step>
+  <Step title="Choose a notes template">
+    Under **Notes template**, select the one to apply. You can skip this and do it later.
+  </Step>
+  <Step title="Click Add the meeting assistant">
+    The message "Meeting assistant added" confirms it's scheduled.
+  </Step>
+</Steps>
+
+On an event that's already scheduled and hasn't started yet, the same panel offers **Update** to change the template and **Delete** to cancel. Deleting asks for confirmation: "The meeting assistant won't join this meeting anymore. This can't be undone." Once the event has started, the panel only offers **Close**.
+
+When your calendar is connected, the Dashboard also shows an **Agenda** block, split into **Today** and **Upcoming**. Each event without a scheduled assistant has an **Add the assistant** button, which takes you to the **Calendar** to finish.
+
+{/* SCREENSHOT: the side panel of a Calendar event, with the template picker and the Add the meeting assistant button */}
+
+## Check that the meeting assistant joined
+
+Two places tell you.
+
+In the Dashboard's **Agenda** block, an event with a scheduled assistant shows **Assistant scheduled** instead of the **Add the assistant** button. On the **Calendar**, it has a small robot icon in the top-right corner of the event tile.
+
+Under **Interviews**, the interview goes through **Pending**, **Assistant joined**, **Meeting in progress**, then **Processing transcript**. The list updates by itself.
+
+<Warning>
+  If the meeting screens people before letting them in, the host must admit the assistant like any other participant. Otherwise the interview stops at **Assistant not admitted** and no recording is kept.
+</Warning>
+
+## Good to know
+
+- The Dashboard field and its error message mention Google Meet and Teams.
+- Participants can see the meeting assistant. Tell them about the recording before you start it. See [Inform your candidates](/en/trust/inform-your-candidates).
+- A recording shorter than one minute isn't transcribed. The interview shows **Too short**.
+- Once the event has started, you can no longer change the template of a scheduled assistant. On an event that has ended, the panel shows "Notes templates can't be changed once the event has ended."
+- The **Calendar** is the only path that lets you choose the notes template when you schedule the assistant. The other two leave that choice for later.
+- You can change the image the assistant shows in meetings. See [Customize the meeting assistant](/en/integrations/customize-the-meeting-assistant).
+
+<CardGroup cols={2}>
+  <Card title="Find and track" href="/en/interviews/find-and-track">
+    The statuses and filters of the list.
+  </Card>
+  <Card title="The interview wasn't recorded" href="/en/help/interview-not-recorded">
+    When nothing came through.
+  </Card>
+</CardGroup>
