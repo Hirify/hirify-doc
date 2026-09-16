@@ -1,7 +1,7 @@
 ---
 title: "Régler les automatismes liés à votre logiciel de recrutement"
 sidebarTitle: "Automatismes ATS"
-description: "Choisissez ce que Hirify fait de lui-même après un entretien : envoyer l'assistant de réunion, poser des tags, proposer de compléter des champs, appliquer un template."
+description: "Choisissez ce que Hirify fait de lui-même après un entretien : envoyer l'assistant de réunion, poser des tags, proposer de compléter des champs, publier le compte rendu, appliquer un template."
 icon: "sliders"
 ---
 
@@ -9,7 +9,7 @@ icon: "sliders"
   Accès : offre Hub, avec un logiciel de recrutement connecté.
 </Note>
 
-Une fois la connexion en place, quatre réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs et se coupent à tout moment. Aucun n'envoie le compte rendu. Avec Teamtailor, la carte Hirify ajoute un réglage qui fait exception, décrit plus bas.
+Une fois la connexion en place, cinq réglages décident de ce que Hirify fait sans vous le demander. Tous sont facultatifs et se coupent à tout moment. Un seul envoie le compte rendu : **Publier le compte rendu automatiquement**, décrit plus bas. Les réglages proposés dépendent de votre logiciel de recrutement.
 
 ## Où trouver les réglages
 
@@ -31,9 +31,9 @@ Ces réglages sont réservés aux administrateurs et aux admins facturation de l
 
 ## Envoyer l'assistant de réunion automatiquement
 
-L'interrupteur **Bots de transcription automatiques** décide si l'assistant de réunion se programme seul. Le libellé le dit : il vise « les entretiens ATS dotés d'un lien Google Meet ou Microsoft Teams ».
+L'interrupteur **Assistant sur les entretiens planifiés** décide si l'assistant de réunion se programme seul. Sa description le résume : « Visios Meet et Teams créées depuis l'ATS. »
 
-Un rendez-vous d'entretien qui remonte de votre logiciel de recrutement et porte un lien de visioconférence exploitable se voit attribuer un assistant sans que personne n'ait à y penser. Ce réglage est actif par défaut.
+Un rendez-vous d'entretien qui remonte de votre logiciel de recrutement et porte un lien de visioconférence exploitable se voit attribuer un assistant sans que personne n'ait à y penser. Ce réglage est actif par défaut. Il n'agit qu'avec SmartRecruiters et Nicoka : Teamtailor n'expose pas la planification des entretiens.
 
 Coupez-le si vous préférez décider entretien par entretien ou si tous vos entretiens ne doivent pas être enregistrés.
 
@@ -43,7 +43,7 @@ Coupez-le si vous préférez décider entretien par entretien ou si tous vos ent
 
 ## Tags de synthèse
 
-L'interrupteur **Tags automatiques** pose des tags sur la fiche du candidat après chaque entretien analysé. Le réglage les décrit ainsi : « signal, points bloquants ».
+L'interrupteur **Tags automatiques** pose des tags sur la fiche du candidat après chaque entretien analysé. Sa description les résume : « Signal et points bloquants sur la fiche du candidat. »
 
 Les tags sont écrits sous un préfixe réservé, `Hirify · ` :
 
@@ -98,15 +98,29 @@ Les champs remplis sans vous sont regroupés sous **Remplis automatiquement**, c
 
 ## Template de compte rendu par défaut
 
-Le sélecteur **Template de compte rendu par défaut** ferme la boucle des entretiens captés sans intervention : il est « appliqué aux entretiens enregistrés automatiquement depuis votre ATS pour générer un compte rendu sans sélection manuelle ».
+Le sélecteur **Template de compte rendu par défaut** ferme la boucle des entretiens captés sans intervention. Sa description le précise : « Entretiens enregistrés depuis l'ATS. Templates partagés seulement. »
 
 Seuls les templates partagés avec l'organisation sont proposés. La valeur par défaut est **Aucun template**. Si le template retenu est supprimé ou cesse d'être partagé, le sélecteur affiche **Template indisponible (supprimé ou non partagé)** : choisissez-en un autre.
 
-## Le compte rendu et l'évaluation
+## Publier le compte rendu automatiquement
 
-Aucun de ces quatre réglages n'envoie le compte rendu ni votre évaluation. Le compte rendu part sur la fiche du candidat quand vous partagez l'analyse depuis l'entretien : vous relisez l'aperçu, vous posez un verdict quand votre logiciel l'accepte et vous confirmez.
+Le réglage **Publier le compte rendu automatiquement** envoie le compte rendu sur la fiche du candidat dès qu'il est prêt, sans relecture. C'est le seul des cinq réglages qui écrit le compte rendu lui-même.
 
-Avec Teamtailor, la carte Hirify ajoute un réglage qui fait exception. **Publier l'analyse automatiquement** envoie l'analyse et le compte rendu sur la fiche du candidat dès la fin de l'entretien, sans relecture. Il est désactivé par défaut. Désactivé, rien ne part tant qu'un recruteur n'a pas relu le compte rendu et partagé depuis la page de l'entretien.
+- Il ne concerne qu'un entretien lié à une candidature. Si le lien est posé plus tard, le compte rendu part au moment du lien.
+- Il part une seule fois par entretien et par candidature.
+- Il n'ajoute jamais d'avis noté. Le verdict reste un geste du recruteur, depuis le partage de l'analyse.
+
+Sa description indique où le compte rendu arrive, selon la connexion :
+
+- Avec SmartRecruiters, Nicoka ou Teamtailor sans carte Hirify : « En note sur la fiche du candidat dès qu'il est prêt. »
+- Avec Teamtailor, la clé Admin et la carte Hirify : « En note dans l'Activité du candidat, badge et lien sur la carte Hirify. »
+- Avec la carte Hirify de Teamtailor sans clé Admin : « Carte Hirify seulement, badge et lien. Ajoutez une clé Admin pour publier la note. »
+
+Il est désactivé par défaut. Désactivé, rien ne part tant qu'un recruteur n'a pas partagé l'analyse depuis la page de l'entretien. Les quatre autres réglages n'envoient ni le compte rendu ni votre évaluation.
+
+<Note>
+  Une fois qu'un administrateur ou un admin facturation l'a activé, le compte rendu part sur la fiche du candidat sans validation entretien par entretien. L'autorisation donnée une fois pour toute l'organisation vaut accord. Laissez-le désactivé si chaque compte rendu doit être relu avant d'entrer dans votre logiciel de recrutement.
+</Note>
 
 ## Les réglages disponibles dépendent de votre logiciel de recrutement
 
@@ -114,17 +128,17 @@ Un interrupteur qui ne s'affiche pas n'est pas un bug : le réglage n'a pas d'é
 
 <Tabs>
   <Tab title="SmartRecruiters">
-    Tags de synthèse et champs personnalisés sont disponibles.
+    Tags de synthèse, champs personnalisés, publication automatique du compte rendu et assistant sur les entretiens planifiés sont disponibles. Les champs personnalisés demandent la permission Access Company Settings. La publication automatique demande la permission Messages. Voir [SmartRecruiters](/fr/integrations/ats/smartrecruiters).
   </Tab>
   <Tab title="Teamtailor">
-    Champs personnalisés disponibles. Avec la carte Hirify activée, le réglage **Publier l'analyse automatiquement** s'ajoute. Les tags de synthèse ne sont pas proposés.
+    Avec la clé Admin, les tags de synthèse, les champs personnalisés et la publication automatique du compte rendu en note sont disponibles. Avec la carte Hirify seule, sans clé Admin, seule la publication automatique est proposée et elle met à jour la carte. L'assistant sur les entretiens planifiés n'agit pas, car Teamtailor n'expose pas la planification des entretiens. Voir [Teamtailor](/fr/integrations/ats/teamtailor).
   </Tab>
   <Tab title="Nicoka">
-    Champs personnalisés disponibles. Les tags de synthèse ne sont pas proposés.
+    Champs personnalisés, publication automatique du compte rendu et assistant sur les entretiens planifiés sont disponibles. Les tags de synthèse ne sont pas proposés. Voir [Nicoka](/fr/integrations/ats/nicoka).
   </Tab>
 </Tabs>
 
-L'envoi automatique de l'assistant de réunion et le template par défaut ne dépendent pas du logiciel connecté.
+Le template par défaut ne dépend pas du logiciel connecté.
 
 ## Bon à savoir
 

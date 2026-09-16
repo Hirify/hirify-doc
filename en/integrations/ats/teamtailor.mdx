@@ -1,0 +1,118 @@
+---
+title: "Teamtailor"
+sidebarTitle: "Teamtailor"
+description: "Connect Teamtailor to Hirify with an Admin key, set up the webhook, add the Hirify card, and troubleshoot the integration"
+icon: "/images/integrations/teamtailor.png"
+---
+
+<Note>
+  Access: Hub plan. Only administrators and billing admins of the organization can set up the connection.
+</Note>
+
+Hirify integrates with Teamtailor through an API key you create in your workspace. The integration imports your jobs, candidates, and applications with their stage history. It publishes the interview notes to the candidate's Activity and can add the Hirify card to their profile.
+
+## Connect Teamtailor
+
+You need administrator access to Teamtailor to create the key.
+
+<Steps>
+  <Step title="Open the connection wizard">
+    In **Settings**, **Integrations**, **ATS** section, click **Connect** next to Teamtailor. The wizard opens on the **Prepare** step.
+  </Step>
+  <Step title="Create an API key in Teamtailor">
+    The **Open Teamtailor** button leads to the API keys of your workspace, under **Settings > Integrations > API keys**. Create a key with the **Admin** scope and the **Read / Write** permission, then copy it. A read-only key is refused.
+  </Step>
+  <Step title="Paste the key">
+    Click **I have my API key**, paste the key into the **API key** field, and click **Connect**.
+  </Step>
+</Steps>
+
+If the key doesn't carry every required permission, the wizard shows **Insufficient permissions** and lists the missing ones. Fix the key in Teamtailor and try again. To switch keys later, use **Change key** on the Teamtailor card.
+
+The first import is described in [Connect your ATS](/en/integrations/connect-your-ats#follow-the-first-import-of-your-talent-pool).
+
+{/* SCREENSHOT: the Teamtailor connection wizard, Connect step, with the API key field */}
+
+## Set up the webhook
+
+Without the webhook, Teamtailor syncs once a day. The webhook makes it real time. You only set it up once.
+
+<Steps>
+  <Step title="Create the webhook in Teamtailor">
+    On the connected Teamtailor card, the **Webhook setup in Teamtailor** block is marked **To set up**. The **Open Webhook settings** button leads to Teamtailor. Create a new webhook with the URL shown in the block and the Candidates, Applications, and Jobs resources.
+  </Step>
+  <Step title="Paste the signing key">
+    Once the webhook is created, Teamtailor shows its signing key. Paste it into the **Signing key** field of the block and save.
+  </Step>
+</Steps>
+
+The badge switches to **Setup detected** as soon as the first events arrive. Until the key is saved, the events Teamtailor sends are rejected.
+
+## Permissions
+
+The API key gives Hirify full access to your Teamtailor data. It's encrypted, only used for your organization, and can be revoked from Teamtailor at any time.
+
+<Accordion title="View the list of permissions">
+  The key needs the Admin scope and the Read / Write permission. Hirify checks this access when you connect:
+
+  | Access checked | Used to |
+  | --- | --- |
+  | Read candidates (Admin scope) | Import candidates, their resumes, and their custom fields |
+  | Read jobs | Import jobs |
+  | Read job applications (Admin scope) | Import applications and their stage history |
+  | Update job applications (Read/Write permission) | Check that the key can write, for summary tags and custom fields |
+  | Read users (Admin scope) | Attribute the interview notes to the right team member |
+  | Write notes and reviews (Read/Write permission) | Publish the interview notes and the graded review |
+</Accordion>
+
+## What the integration does
+
+- **Import**: jobs, candidates, applications with their stage history, resumes, and attached documents.
+- **Sync**: real time with the webhook, once a day without it.
+- **Sharing the analysis**: the interview notes go as a note in the candidate's Activity, signed with your name. A graded review can come with it. See [Share the analysis](/en/integrations/send-to-your-ats).
+- **Automations**: automatic tags, filling in custom fields, and automatic publishing of the interview notes. See [ATS automations](/en/integrations/ats-automations).
+- **Talent pool**: imported candidates feed Assistant, Sourcing, Analytics, and Data reliability.
+
+Teamtailor doesn't expose interview scheduling. The meeting assistant therefore isn't scheduled from Teamtailor. Use your calendar or a meeting link instead. See [Choose how to record](/en/interviews/choose-how-to-record).
+
+## Add the Hirify card
+
+The Hirify card is optional. It shows a fit grade, the interview's key takeaways, and a link to the full interview notes on the candidate profile. A Hirify trigger set on a job stage also sends the candidate and their resume to Hirify.
+
+<Steps>
+  <Step title="Get the activation code">
+    On the Teamtailor card, click **Get the activation code**. The window shows your **Connection code**, valid for 24 hours.
+  </Step>
+  <Step title="Have the Hirify integration added">
+    A company admin of your Teamtailor account asks your Teamtailor contact to add the Hirify integration.
+  </Step>
+  <Step title="Activate Hirify in Teamtailor">
+    In the Teamtailor marketplace, select Hirify, start the activation, and paste the connection code.
+  </Step>
+</Steps>
+
+Once the installation is confirmed, the Teamtailor card in Hirify shows **Hirify card installed in Teamtailor**. How the card works and the data it exchanges are detailed in [Hirify for Teamtailor](/en/integrations/hirify-for-teamtailor).
+
+The card also works without an Admin key. In that case, only candidates sent by the trigger are visible in Hirify, and sharing the analysis only updates the card.
+
+## Troubleshooting
+
+- **Read-only key**: create the key again with the Read / Write permission and try again.
+- **Insufficient permissions**: the key doesn't have the Admin scope. Create it again with the Admin scope and the Read / Write permission.
+- **The badge stays on To set up**: check that the signing key is saved in the webhook block and that the three resources are checked in Teamtailor.
+- **A change doesn't arrive right away**: adding a tag alone doesn't trigger any event in Teamtailor. It arrives with the daily sync.
+- **Sync stopped**: the card shows the message returned by Teamtailor. See [My ATS isn't syncing anymore](/en/help/ats-not-syncing).
+
+If the problem persists, [contact support](/en/help/contact-support) with the interview concerned and the Teamtailor IDs of the candidate and the job.
+
+## Disconnect Teamtailor
+
+In **Settings**, **Integrations**, click **Disconnect** on the Teamtailor card. By default, data already synced is kept. Check the box in the confirmation window to delete it as well. If the Hirify card is installed, uninstall it from Teamtailor too: a trigger won't reactivate the connection. See [Disconnect a tool](/en/integrations/disconnect-a-tool).
+
+To cut access on the Teamtailor side, revoke the API key under **Settings > Integrations > API keys**.
+
+## Good to know
+
+- An organization connects one ATS at a time.
+- The first import brings in twenty-four months of history. An older candidate enters Hirify the day they're updated in Teamtailor.
+- When the webhook is set up, a candidate deleted in Teamtailor is also deleted from Hirify.

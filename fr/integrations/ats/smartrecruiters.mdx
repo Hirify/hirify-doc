@@ -1,0 +1,93 @@
+---
+title: "SmartRecruiters"
+sidebarTitle: "SmartRecruiters"
+description: "Connecter SmartRecruiters à Hirify, les permissions à accorder, ce que l'intégration permet et comment la dépanner"
+icon: "/images/integrations/smartrecruiters.png"
+---
+
+<Note>
+  Accès : offre Hub. La connexion est réservée aux administrateurs et aux admins facturation de l'organisation.
+</Note>
+
+Hirify s'intègre à SmartRecruiters. L'intégration importe vos postes, vos candidats, vos candidatures et vos entretiens planifiés. Elle programme l'assistant de réunion sur ces entretiens et renvoie votre évaluation et le compte rendu sur la fiche du candidat.
+
+## Connecter SmartRecruiters
+
+Préparez un accès administrateur à SmartRecruiters : c'est là que l'application et ses identifiants se créent.
+
+<Steps>
+  <Step title="Ouvrez l'assistant de connexion">
+    Dans **Paramètres**, **Intégrations**, section **ATS**, cliquez sur **Connecter** en face de SmartRecruiters. L'assistant s'ouvre sur l'étape **Préparer**.
+  </Step>
+  <Step title="Créez une application dans SmartRecruiters">
+    Le bouton **Ouvrir SmartRecruiters** mène à votre espace d'administration. Allez dans **Apps**, puis **OAuth Credentials**, et créez une nouvelle application. Cochez toutes les permissions listées par l'assistant. Elles sont détaillées plus bas.
+  </Step>
+  <Step title="Collez vos identifiants">
+    Copiez le **Client ID** et le **Client Secret** générés par SmartRecruiters. Dans l'assistant, cliquez sur **J'ai mes identifiants**, collez-les puis cliquez sur **Connecter**.
+  </Step>
+</Steps>
+
+Si une permission manque, l'assistant affiche **Permissions insuffisantes** et désigne celles à ajouter. Corrigez l'application dans SmartRecruiters puis relancez la connexion.
+
+Une fois connecté, Hirify crée lui-même l'abonnement aux webhooks de SmartRecruiters. La synchronisation passe en temps réel sans autre réglage de votre part. Le premier import est décrit dans [Connecter votre logiciel de recrutement](/fr/integrations/connecter-votre-ats#suivre-le-premier-import-de-votre-vivier).
+
+{/* CAPTURE : l'assistant de connexion SmartRecruiters, étape Connecter, avec les champs Client ID et Client Secret */}
+
+## Permissions
+
+Les noms sont ceux affichés par SmartRecruiters au moment de cocher les permissions. Hirify n'utilise que les accès listés ici.
+
+<Accordion title="Voir la liste des permissions">
+  **Requises**, la connexion est refusée sans elles :
+
+  | Permission SmartRecruiters | Utilisée pour |
+  | --- | --- |
+  | Access Candidates | Importer les candidats |
+  | Manage Candidate Status and Properties | Écrire sur la fiche du candidat, dont les tags de synthèse |
+  | Access Jobs | Importer les postes |
+  | Access job applications | Importer les candidatures et leurs étapes |
+  | Manage job applications | Écrire sur la candidature, dont les champs personnalisés |
+  | Access Interviews and Timeslots | Importer les entretiens planifiés |
+  | Access Reviews | Lire les évaluations existantes |
+  | Create, update and delete reviews | Envoyer et retirer votre évaluation |
+  | Access Users | Attribuer l'évaluation au bon membre et vérifier la connexion |
+  | View, create and delete webhook subscriptions | Synchroniser en temps réel |
+  | Send and manage messages | Déposer et retirer le compte rendu dans les notes du candidat |
+
+  **Recommandée** :
+
+  | Permission SmartRecruiters | Utilisée pour |
+  | --- | --- |
+  | Access Company Settings | Remplir les champs personnalisés. Sans elle, le réglage **Compléter les champs ATS** reste indisponible. |
+</Accordion>
+
+## Ce que l'intégration permet
+
+- **Import** : postes, candidats, candidatures avec leur historique d'étapes, entretiens planifiés et CV.
+- **Synchronisation en temps réel** : les changements faits dans SmartRecruiters arrivent dans Hirify par webhook.
+- **Assistant sur les entretiens planifiés** : tant que ce réglage est actif, un entretien planifié dans SmartRecruiters avec un lien Meet ou Teams reçoit l'assistant de réunion. Voir [Entretiens depuis l'ATS](/fr/entretiens/automatique-depuis-l-ats).
+- **Partage de l'analyse** : une évaluation signée de votre nom, avec l'essentiel de l'entretien et un verdict obligatoire. Le compte rendu part dans les notes du candidat. Voir [Partage de l'analyse](/fr/integrations/renvoyer-une-evaluation).
+- **Automatismes** : tags automatiques, remplissage des champs personnalisés et publication automatique du compte rendu. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- **Vivier** : les candidats importés alimentent l'Assistant, le Sourcing, le Pilotage et la Fiabilité.
+
+Un entretien rattaché à une candidature SmartRecruiters affiche la candidature dans son onglet **ATS**, avec un lien vers la fiche dans SmartRecruiters.
+
+## Dépannage
+
+- **Permissions insuffisantes à la connexion** : l'assistant liste les permissions manquantes. Ajoutez-les à l'application dans SmartRecruiters puis relancez la connexion.
+- **Le réglage Compléter les champs ATS est indisponible** : la permission Access Company Settings manque. Ajoutez-la à l'application, déconnectez SmartRecruiters en conservant les données puis reconnectez-le.
+- **Le compte rendu part en commentaire de l'évaluation** : la connexion n'a pas la permission Send and manage messages. Ajoutez-la de la même façon.
+- **Un entretien n'est pas rattaché à sa candidature** : l'entretien n'a pas été planifié dans SmartRecruiters ou ses participants ne correspondent pas au candidat. Rattachez-le à la main, voir [Lier un entretien à une candidature](/fr/integrations/lier-un-entretien-a-une-candidature).
+- **La synchronisation s'est arrêtée** : la carte affiche le message renvoyé par SmartRecruiters. Voir [Mon ATS ne se synchronise plus](/fr/aide/mon-ats-ne-se-synchronise-plus).
+
+Si le problème persiste, [contactez le support](/fr/aide/contacter-le-support) en précisant l'entretien concerné et les identifiants SmartRecruiters du candidat et de la candidature.
+
+## Déconnecter SmartRecruiters
+
+Dans **Paramètres**, **Intégrations**, cliquez sur **Déconnecter** sur la carte SmartRecruiters. Par défaut, les données déjà synchronisées sont conservées. Cochez la case de la fenêtre de confirmation pour les supprimer aussi. Les entretiens et les comptes rendus Hirify ne sont pas touchés. Voir [Déconnecter un outil](/fr/integrations/deconnecter-un-outil).
+
+## Bon à savoir
+
+- Une organisation ne connecte qu'un logiciel de recrutement à la fois.
+- Le premier import remonte vingt-quatre mois d'historique.
+- Le verdict est obligatoire pour partager l'analyse dans SmartRecruiters.

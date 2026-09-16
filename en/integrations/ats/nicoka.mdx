@@ -1,0 +1,95 @@
+---
+title: "Nicoka"
+sidebarTitle: "Nicoka"
+description: "Connect Nicoka to Hirify with an API user, set up the webhooks, what the integration does, and how to troubleshoot it"
+icon: "/images/integrations/nicoka.png"
+---
+
+<Note>
+  Access: Hub plan. Only administrators and billing admins of the organization can set up the connection.
+</Note>
+
+Hirify integrates with Nicoka through a dedicated API user. The integration imports your jobs, candidates, applications, and the interviews in your Nicoka calendar. It sends the meeting assistant to those interviews and adds your evaluation and the interview notes to the candidate's file.
+
+## Connect Nicoka
+
+You need administrator access to Nicoka to create the API user.
+
+<Steps>
+  <Step title="Create an API user in Nicoka">
+    In Nicoka, open **Paramétrage**, **Administration**, **Utilisateurs**, **Utilisateur API** and create a dedicated API user. Give it the access listed below.
+  </Step>
+  <Step title="Generate an access token">
+    On that user, generate an access token with **Générer un jeton d'accès** and copy it.
+  </Step>
+  <Step title="Enter your workspace and your token">
+    In Hirify, in **Settings**, **Integrations**, **ATS** section, click **Connect** next to Nicoka, then **I have my credentials**. Enter your subdomain in **Nicoka subdomain or address**, for example `myagency` for `myagency.nicoka.com`. For a trial account, enter the full address of the workspace. Paste the token into **API access token** and click **Connect**.
+  </Step>
+</Steps>
+
+If the API user doesn't have all the required access, the wizard shows **Insufficient permissions** and lists what's missing. Fix the user in Nicoka and try again.
+
+The first import is described in [Connect your ATS](/en/integrations/connect-your-ats#follow-the-first-import-of-your-talent-pool).
+
+{/* SCREENSHOT: the Nicoka connection wizard, Connect step, with the Nicoka subdomain or address and API access token fields */}
+
+## Set up the webhooks
+
+Without webhooks, Nicoka syncs periodically. Webhooks make it real time. You set them up once, in two steps.
+
+<Steps>
+  <Step title="Create the webhooks">
+    On the connected Nicoka card, the **Webhook setup in Nicoka** block is marked **To set up**. The **Open the WebHooks page** button leads to Nicoka, under **Paramétrage**, **webHooks**. Create one webhook per row of the table shown in the block, with the row's URL and the header name and value shown. Leave SSL certificate verification on.
+  </Step>
+  <Step title="Create the trigger events">
+    A webhook alone sends nothing. The **Open the Events page** button leads to the page where you create one event per webhook. Pick the change on create and update, delivery in 15 minutes, and leave the rules and targets at their defaults.
+  </Step>
+</Steps>
+
+The badge switches to **Setup detected** as soon as a first signed call arrives.
+
+{/* SCREENSHOT: the Webhook setup in Nicoka block, with the table of webhooks to create */}
+
+## Permissions
+
+The token is encrypted and only used for your organization. You can revoke it from Nicoka.
+
+<Accordion title="View the list of access">
+  Hirify checks this access for the API user when you connect:
+
+  | Nicoka access | Used to |
+  | --- | --- |
+  | Access to jobs | Import jobs |
+  | Access to candidates | Import candidates and their applications |
+  | Access to users | Link jobs and evaluations to team members |
+  | Access to candidate actions (evaluations) | Read evaluations and add yours |
+</Accordion>
+
+## What the integration does
+
+- **Import**: jobs, candidates, applications with their stage history, and interviews in your Nicoka calendar.
+- **Sync**: real time with the webhooks, periodic without them.
+- **Assistant on scheduled interviews**: while this setting is on, an interview in your Nicoka calendar with a Meet or Teams link gets the meeting assistant. See [Interviews from your ATS](/en/interviews/automatic-from-your-ats).
+- **Sharing the analysis**: an evaluation in the candidate's file, with the interview notes as a comment. Nicoka doesn't take a verdict. See [Share the analysis](/en/integrations/send-to-your-ats).
+- **Automations**: filling in custom fields and automatic publishing of the interview notes. Summary tags aren't offered. See [ATS automations](/en/integrations/ats-automations).
+- **Talent pool**: imported candidates feed Assistant, Sourcing, Analytics, and Data reliability.
+
+## Troubleshooting
+
+- **Insufficient permissions**: the API user doesn't have all the access. Add what the wizard lists and try again.
+- **The connection fails on a trial account**: enter the full address of the workspace instead of the subdomain alone.
+- **The badge stays on To set up**: check that each webhook has its trigger event and that the header carries the value shown in the block.
+- **An interview isn't linked to its application**: link it by hand. See [Link an interview to an application](/en/integrations/link-an-interview-to-an-application).
+- **Sync stopped**: the card shows the message returned by Nicoka. See [My ATS isn't syncing anymore](/en/help/ats-not-syncing).
+
+If the problem persists, [contact support](/en/help/contact-support) with the interview concerned and the Nicoka IDs of the candidate and the job.
+
+## Disconnect Nicoka
+
+In **Settings**, **Integrations**, click **Disconnect** on the Nicoka card. By default, data already synced is kept. Check the box in the confirmation window to delete it as well. Remember to delete the webhooks you created in Nicoka. See [Disconnect a tool](/en/integrations/disconnect-a-tool).
+
+## Good to know
+
+- An organization connects one ATS at a time.
+- The first import brings in twenty-four months of history.
+- Sharing the analysis to Nicoka doesn't require a verdict.

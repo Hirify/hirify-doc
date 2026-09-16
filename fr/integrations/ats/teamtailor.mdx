@@ -1,0 +1,118 @@
+---
+title: "Teamtailor"
+sidebarTitle: "Teamtailor"
+description: "Connecter Teamtailor à Hirify avec une clé Admin, configurer le webhook, ajouter la carte Hirify et dépanner l'intégration"
+icon: "/images/integrations/teamtailor.png"
+---
+
+<Note>
+  Accès : offre Hub. La connexion est réservée aux administrateurs et aux admins facturation de l'organisation.
+</Note>
+
+Hirify s'intègre à Teamtailor avec une clé d'API que vous créez dans votre espace. L'intégration importe vos offres, vos candidats et vos candidatures avec leur historique d'étapes. Elle publie le compte rendu dans l'Activité du candidat et peut ajouter la carte Hirify sur sa fiche.
+
+## Connecter Teamtailor
+
+Il faut un accès administrateur à Teamtailor pour créer la clé.
+
+<Steps>
+  <Step title="Ouvrez l'assistant de connexion">
+    Dans **Paramètres**, **Intégrations**, section **ATS**, cliquez sur **Connecter** en face de Teamtailor. L'assistant s'ouvre sur l'étape **Préparer**.
+  </Step>
+  <Step title="Créez une clé d'API dans Teamtailor">
+    Le bouton **Ouvrir Teamtailor** mène aux clés d'API de votre espace, dans **Paramètres > Intégrations > Clés API**. Créez une clé avec la portée **Admin** et la permission **Lecture / Écriture**, puis copiez-la. Une clé en lecture seule est refusée.
+  </Step>
+  <Step title="Collez la clé">
+    Cliquez sur **J'ai ma clé API**, collez la clé dans le champ **Clé API** puis cliquez sur **Connecter**.
+  </Step>
+</Steps>
+
+Si la clé ne porte pas toutes les permissions requises, l'assistant affiche **Permissions insuffisantes** et liste celles qui manquent. Corrigez la clé dans Teamtailor puis réessayez. Pour changer de clé plus tard, utilisez **Modifier la clé** sur la carte Teamtailor.
+
+Le premier import est décrit dans [Connecter votre logiciel de recrutement](/fr/integrations/connecter-votre-ats#suivre-le-premier-import-de-votre-vivier).
+
+{/* CAPTURE : l'assistant de connexion Teamtailor, étape Connecter, avec le champ Clé API */}
+
+## Configurer le webhook
+
+Sans webhook, la synchronisation avec Teamtailor a lieu une fois par jour. Le webhook la fait passer en temps réel. La configuration se fait une seule fois.
+
+<Steps>
+  <Step title="Créez le webhook dans Teamtailor">
+    Sur la carte Teamtailor connectée, le bloc **Configuration des webhooks dans Teamtailor** est marqué **À configurer**. Le bouton **Ouvrir les réglages Webhooks** mène à Teamtailor. Créez un nouveau webhook avec l'URL indiquée dans le bloc et les ressources Candidats, Candidatures et Offres.
+  </Step>
+  <Step title="Collez la clé de signature">
+    Une fois le webhook créé, Teamtailor affiche sa clé de signature. Collez-la dans le champ **Clé de signature** du bloc puis enregistrez.
+  </Step>
+</Steps>
+
+Le badge passe à **Configuration détectée** dès que les premiers événements arrivent. Tant que la clé n'est pas enregistrée, les événements envoyés par Teamtailor sont refusés.
+
+## Permissions
+
+La clé d'API donne à Hirify l'accès complet à vos données Teamtailor. Elle est chiffrée, ne sert qu'à votre organisation et se révoque à tout moment depuis Teamtailor.
+
+<Accordion title="Voir la liste des permissions">
+  La clé doit avoir la portée Admin et la permission Lecture / Écriture. Hirify vérifie les accès suivants à la connexion :
+
+  | Accès vérifié | Utilisé pour |
+  | --- | --- |
+  | Lecture des candidats (portée Admin) | Importer les candidats, leurs CV et leurs champs personnalisés |
+  | Lecture des offres | Importer les offres |
+  | Lecture des candidatures (portée Admin) | Importer les candidatures et leur historique d'étapes |
+  | Modification des candidatures (permission Lecture/Écriture) | Vérifier que la clé peut écrire, pour les tags de synthèse et les champs personnalisés |
+  | Lecture des utilisateurs (portée Admin) | Attribuer le compte rendu au bon membre de l'équipe |
+  | Écriture des notes et évaluations (permission Lecture/Écriture) | Publier le compte rendu et l'avis noté |
+</Accordion>
+
+## Ce que l'intégration permet
+
+- **Import** : offres, candidats, candidatures avec leur historique d'étapes, CV et documents joints.
+- **Synchronisation** : en temps réel avec le webhook, une fois par jour sans lui.
+- **Partage de l'analyse** : le compte rendu part en note dans l'Activité du candidat, signée de votre nom. Un avis noté peut l'accompagner. Voir [Partage de l'analyse](/fr/integrations/renvoyer-une-evaluation).
+- **Automatismes** : tags automatiques, remplissage des champs personnalisés et publication automatique du compte rendu. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- **Vivier** : les candidats importés alimentent l'Assistant, le Sourcing, le Pilotage et la Fiabilité.
+
+Teamtailor n'expose pas la planification des entretiens. L'assistant de réunion ne se programme donc pas depuis Teamtailor : passez par votre agenda ou un lien de réunion. Voir [Choisir son canal](/fr/entretiens/choisir-son-canal).
+
+## Ajouter la carte Hirify
+
+La carte Hirify est une option. Elle affiche sur la fiche du candidat un niveau d'adéquation, l'essentiel de l'entretien et un lien vers le compte rendu complet. Un déclencheur Hirify posé sur une étape d'un poste envoie aussi le candidat et son CV à Hirify.
+
+<Steps>
+  <Step title="Obtenez le code d'activation">
+    Sur la carte Teamtailor, cliquez sur **Obtenir le code d'activation**. La fenêtre affiche votre **Code de connexion**, valable 24 heures.
+  </Step>
+  <Step title="Faites ajouter l'intégration Hirify">
+    Un administrateur de votre compte Teamtailor demande à votre interlocuteur Teamtailor d'ajouter l'intégration Hirify.
+  </Step>
+  <Step title="Activez Hirify dans Teamtailor">
+    Dans la marketplace de Teamtailor, sélectionnez Hirify, lancez l'activation et collez le code de connexion.
+  </Step>
+</Steps>
+
+Une fois l'installation validée, la carte Teamtailor de Hirify affiche **Carte Hirify installée dans Teamtailor**. Le détail du fonctionnement de la carte et des données qu'elle échange est dans [Hirify pour Teamtailor](/fr/integrations/hirify-pour-teamtailor).
+
+La carte fonctionne aussi sans clé Admin. Dans ce cas, seuls les candidats envoyés par le déclencheur sont visibles dans Hirify et le partage de l'analyse ne met à jour que la carte.
+
+## Dépannage
+
+- **Clé en lecture seule** : recréez la clé avec la permission Lecture / Écriture puis réessayez.
+- **Permissions insuffisantes** : la clé n'a pas la portée Admin. Recréez-la avec la portée Admin et la permission Lecture / Écriture.
+- **Le badge reste sur À configurer** : vérifiez que la clé de signature est enregistrée dans le bloc du webhook et que les trois ressources sont cochées dans Teamtailor.
+- **Un changement n'arrive pas tout de suite** : l'ajout d'un tag seul ne déclenche aucun événement côté Teamtailor. Il arrive avec la synchronisation quotidienne.
+- **La synchronisation s'est arrêtée** : la carte affiche le message renvoyé par Teamtailor. Voir [Mon ATS ne se synchronise plus](/fr/aide/mon-ats-ne-se-synchronise-plus).
+
+Si le problème persiste, [contactez le support](/fr/aide/contacter-le-support) en précisant l'entretien concerné et les identifiants Teamtailor du candidat et de l'offre.
+
+## Déconnecter Teamtailor
+
+Dans **Paramètres**, **Intégrations**, cliquez sur **Déconnecter** sur la carte Teamtailor. Par défaut, les données déjà synchronisées sont conservées. Cochez la case de la fenêtre de confirmation pour les supprimer aussi. Si la carte Hirify est installée, désinstallez-la aussi depuis Teamtailor : un déclencheur ne réactive pas la connexion. Voir [Déconnecter un outil](/fr/integrations/deconnecter-un-outil).
+
+Pour couper l'accès côté Teamtailor, révoquez la clé d'API dans **Paramètres > Intégrations > Clés API**.
+
+## Bon à savoir
+
+- Une organisation ne connecte qu'un logiciel de recrutement à la fois.
+- Le premier import remonte vingt-quatre mois d'historique. Un candidat plus ancien entre dans Hirify le jour où il est mis à jour dans Teamtailor.
+- Un candidat supprimé dans Teamtailor est aussi supprimé de Hirify quand le webhook est configuré.

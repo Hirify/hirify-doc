@@ -1,0 +1,95 @@
+---
+title: "Nicoka"
+sidebarTitle: "Nicoka"
+description: "Connecter Nicoka à Hirify avec un utilisateur API, configurer les webhooks, ce que l'intégration permet et comment la dépanner"
+icon: "/images/integrations/nicoka.png"
+---
+
+<Note>
+  Accès : offre Hub. La connexion est réservée aux administrateurs et aux admins facturation de l'organisation.
+</Note>
+
+Hirify s'intègre à Nicoka avec un utilisateur API dédié. L'intégration importe vos missions, vos candidats, vos candidatures et les entretiens de votre agenda Nicoka. Elle programme l'assistant de réunion sur ces entretiens et dépose votre avis et le compte rendu dans le dossier du candidat.
+
+## Connecter Nicoka
+
+Il faut un accès administrateur à Nicoka pour créer l'utilisateur API.
+
+<Steps>
+  <Step title="Créez un utilisateur API dans Nicoka">
+    Dans Nicoka, ouvrez **Paramétrage**, **Administration**, **Utilisateurs**, **Utilisateur API** et créez un utilisateur API dédié. Donnez-lui les accès listés plus bas.
+  </Step>
+  <Step title="Générez un jeton d'accès">
+    Sur cet utilisateur, générez un jeton d'accès avec **Générer un jeton d'accès** et copiez-le.
+  </Step>
+  <Step title="Renseignez votre espace et votre jeton">
+    Dans Hirify, dans **Paramètres**, **Intégrations**, section **ATS**, cliquez sur **Connecter** en face de Nicoka, puis sur **J'ai mes identifiants**. Saisissez votre sous-domaine dans **Sous-domaine ou adresse Nicoka**, par exemple `moncabinet` pour `moncabinet.nicoka.com`. Pour un compte d'essai, saisissez l'adresse complète de l'espace. Collez le jeton dans **Jeton d'accès API** puis cliquez sur **Connecter**.
+  </Step>
+</Steps>
+
+Si l'utilisateur API n'a pas tous les accès requis, l'assistant affiche **Permissions insuffisantes** et liste ceux qui manquent. Corrigez l'utilisateur dans Nicoka puis réessayez.
+
+Le premier import est décrit dans [Connecter votre logiciel de recrutement](/fr/integrations/connecter-votre-ats#suivre-le-premier-import-de-votre-vivier).
+
+{/* CAPTURE : l'assistant de connexion Nicoka, étape Connecter, avec les champs Sous-domaine ou adresse Nicoka et Jeton d'accès API */}
+
+## Configurer les webhooks
+
+Sans webhooks, la synchronisation avec Nicoka reste périodique. Les webhooks la font passer en temps réel. La configuration se fait une seule fois, en deux étapes.
+
+<Steps>
+  <Step title="Créez les webhooks">
+    Sur la carte Nicoka connectée, le bloc **Configuration des webhooks dans Nicoka** est marqué **À configurer**. Le bouton **Ouvrir la page WebHooks** mène à Nicoka, dans **Paramétrage**, **webHooks**. Créez un webhook par ligne du tableau affiché dans le bloc, avec l'URL de la ligne ainsi que le nom et la valeur d'en-tête indiqués. Laissez la vérification du certificat SSL activée.
+  </Step>
+  <Step title="Créez les évènements déclencheurs">
+    Un webhook seul n'émet rien. Le bouton **Ouvrir la page Évènements** mène à la page où créer un évènement par webhook. Choisissez le changement à la création et la modification, la diffusion dans 15 minutes, et laissez les règles et cibles par défaut.
+  </Step>
+</Steps>
+
+Le badge passe à **Configuration détectée** dès qu'un premier appel signé arrive.
+
+{/* CAPTURE : le bloc Configuration des webhooks dans Nicoka, avec le tableau des webhooks à créer */}
+
+## Permissions
+
+Le jeton est chiffré et ne sert qu'à votre organisation. Il se révoque depuis Nicoka.
+
+<Accordion title="Voir la liste des accès">
+  Hirify vérifie ces accès de l'utilisateur API à la connexion :
+
+  | Accès Nicoka | Utilisé pour |
+  | --- | --- |
+  | Accès aux missions | Importer les missions |
+  | Accès aux candidats | Importer les candidats et leurs candidatures |
+  | Accès aux utilisateurs | Rattacher les missions et les avis aux membres de l'équipe |
+  | Accès aux actions candidats (évaluations) | Lire les évaluations et déposer votre avis |
+</Accordion>
+
+## Ce que l'intégration permet
+
+- **Import** : missions, candidats, candidatures avec leur historique d'étapes et entretiens de l'agenda Nicoka.
+- **Synchronisation** : en temps réel avec les webhooks, périodique sans eux.
+- **Assistant sur les entretiens planifiés** : tant que ce réglage est actif, un entretien de l'agenda Nicoka avec un lien Meet ou Teams reçoit l'assistant de réunion. Voir [Entretiens depuis l'ATS](/fr/entretiens/automatique-depuis-l-ats).
+- **Partage de l'analyse** : un avis dans le dossier du candidat, avec le compte rendu en commentaire. Nicoka ne prend pas de verdict. Voir [Partage de l'analyse](/fr/integrations/renvoyer-une-evaluation).
+- **Automatismes** : remplissage des champs personnalisés et publication automatique du compte rendu. Les tags de synthèse ne sont pas proposés. Voir [Automatismes ATS](/fr/integrations/automatismes-ats).
+- **Vivier** : les candidats importés alimentent l'Assistant, le Sourcing, le Pilotage et la Fiabilité.
+
+## Dépannage
+
+- **Permissions insuffisantes** : l'utilisateur API n'a pas tous les accès. Ajoutez ceux que liste l'assistant puis réessayez.
+- **La connexion échoue sur un compte d'essai** : saisissez l'adresse complète de l'espace au lieu du seul sous-domaine.
+- **Le badge reste sur À configurer** : vérifiez que chaque webhook a son évènement déclencheur et que l'en-tête porte la valeur indiquée dans le bloc.
+- **Un entretien n'est pas rattaché à sa candidature** : rattachez-le à la main, voir [Lier un entretien à une candidature](/fr/integrations/lier-un-entretien-a-une-candidature).
+- **La synchronisation s'est arrêtée** : la carte affiche le message renvoyé par Nicoka. Voir [Mon ATS ne se synchronise plus](/fr/aide/mon-ats-ne-se-synchronise-plus).
+
+Si le problème persiste, [contactez le support](/fr/aide/contacter-le-support) en précisant l'entretien concerné et les identifiants Nicoka du candidat et de la mission.
+
+## Déconnecter Nicoka
+
+Dans **Paramètres**, **Intégrations**, cliquez sur **Déconnecter** sur la carte Nicoka. Par défaut, les données déjà synchronisées sont conservées. Cochez la case de la fenêtre de confirmation pour les supprimer aussi. Pensez à supprimer les webhooks créés dans Nicoka. Voir [Déconnecter un outil](/fr/integrations/deconnecter-un-outil).
+
+## Bon à savoir
+
+- Une organisation ne connecte qu'un logiciel de recrutement à la fois.
+- Le premier import remonte vingt-quatre mois d'historique.
+- Le partage de l'analyse ne demande pas de verdict avec Nicoka.

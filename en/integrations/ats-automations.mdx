@@ -1,7 +1,7 @@
 ---
 title: "Set up your ATS automations"
 sidebarTitle: "ATS automations"
-description: "Choose what Hirify does on its own after an interview: send the meeting assistant, add tags, suggest field values, and apply a template"
+description: "Choose what Hirify does on its own after an interview: send the meeting assistant, add tags, suggest field values, publish the interview notes, and apply a template"
 icon: "sliders"
 ---
 
@@ -9,7 +9,7 @@ icon: "sliders"
   Access: Hub plan, with a connected ATS.
 </Note>
 
-Once the connection is set up, four settings decide what Hirify does without asking you. All of them are optional and can be turned off at any time. None of them sends the interview notes. With Teamtailor, the Hirify card adds one setting that's the exception, described below.
+Once the connection is set up, five settings decide what Hirify does without asking you. All of them are optional and can be turned off at any time. Only one sends the interview notes: **Publish the interview notes automatically**, described below. The settings offered depend on your ATS.
 
 ## Where to find the settings
 
@@ -31,9 +31,9 @@ These settings are reserved for the organization's administrators and billing ad
 
 ## Send the meeting assistant automatically
 
-The **Automatic meeting assistant** toggle decides whether the meeting assistant schedules itself. Its description says it applies to "ATS interviews that have a Google Meet or Microsoft Teams link".
+The **Assistant on scheduled interviews** toggle decides whether the meeting assistant schedules itself. Its description sums it up: "Meet and Teams calls created from the ATS."
 
-An interview appointment that comes from your ATS with a usable video link gets an assistant without anyone having to think about it. This setting is on by default.
+An interview appointment that comes from your ATS with a usable video link gets an assistant without anyone having to think about it. This setting is on by default. It only acts with SmartRecruiters and Nicoka, because Teamtailor doesn't expose interview scheduling.
 
 Turn it off if you'd rather decide interview by interview, or if not all of your interviews should be recorded.
 
@@ -43,7 +43,7 @@ Turn it off if you'd rather decide interview by interview, or if not all of your
 
 ## Summary tags
 
-The **Automatic tags** toggle adds tags to the candidate profile after each analyzed interview. The setting describes them as "signal, deal-breakers".
+The **Automatic tags** toggle adds tags to the candidate profile after each analyzed interview. Its description sums them up: "Signal and red flags on the candidate's profile."
 
 The tags are written under a reserved prefix, `Hirify · `. They keep their French names in your ATS:
 
@@ -98,15 +98,29 @@ The fields filled in without you are grouped under **Filled in automatically**, 
 
 ## Default notes template
 
-The **Default notes template** picker closes the loop for interviews recorded without anyone stepping in. It's "applied to interviews recorded automatically from your ATS to generate interview notes without picking a template by hand".
+The **Default notes template** picker closes the loop for interviews recorded without anyone stepping in. Its description reads: "Interviews recorded from the ATS. Shared templates only."
 
 Only templates shared with the organization are listed. The default value is **No template**. If the chosen template is deleted or stops being shared, the picker shows **Template unavailable (deleted or not shared)**. Choose another one.
 
-## Interview notes and evaluation
+## Publish the interview notes automatically
 
-None of these four settings sends the interview notes or your evaluation. The interview notes go to the candidate profile when you share the analysis from the interview: you review the preview, give a verdict when your ATS accepts one, and confirm.
+The **Publish the interview notes automatically** setting sends the interview notes to the candidate profile as soon as they're ready, without review. It's the only one of the five settings that writes the interview notes themselves.
 
-With Teamtailor, the Hirify card adds a setting that's the exception. **Publish the analysis automatically** sends the analysis and the interview notes to the candidate profile as soon as the interview ends, without review. It's off by default. When it's off, nothing leaves until a recruiter has reviewed the notes and shared them from the interview page.
+- It only applies to an interview linked to an application. If the link is added later, the interview notes go out when it's added.
+- It sends them once per interview and application.
+- It never adds a graded review. The verdict stays a recruiter's action, through sharing the analysis.
+
+Its description tells you where the interview notes land, depending on the connection:
+
+- With SmartRecruiters, Nicoka, or Teamtailor without the Hirify card: "As a note on the candidate's profile as soon as they are ready."
+- With Teamtailor, the Admin key, and the Hirify card: "As a note in the candidate's Activity, badge and link on the Hirify card."
+- With the Teamtailor Hirify card and no Admin key: "Hirify card only, badge and link. Add an Admin key to publish the note."
+
+It's off by default. When it's off, nothing leaves until a recruiter has shared the analysis from the interview page. The other four settings send neither the interview notes nor your evaluation.
+
+<Note>
+  Once an administrator or a billing admin turns it on, the interview notes go to the candidate profile with no approval interview by interview. The permission given once for the whole organization counts as approval. Leave it off if every set of interview notes should be reviewed before it enters your ATS.
+</Note>
 
 ## The settings available depend on your ATS
 
@@ -114,17 +128,17 @@ A toggle that doesn't show up isn't a bug. Either the setting has no equivalent 
 
 <Tabs>
   <Tab title="SmartRecruiters">
-    Summary tags and custom fields are available.
+    Summary tags, custom fields, automatic publishing of the interview notes, and the assistant on scheduled interviews are available. Custom fields need the Access Company Settings permission. Automatic publishing needs the Messages permission. See [SmartRecruiters](/en/integrations/ats/smartrecruiters).
   </Tab>
   <Tab title="Teamtailor">
-    Custom fields are available. With the Hirify card enabled, the **Publish the analysis automatically** setting is added. Summary tags aren't offered.
+    With the Admin key, summary tags, custom fields, and automatic publishing of the interview notes as a note are available. With the Hirify card alone, without an Admin key, only automatic publishing is offered, and it updates the card. The assistant on scheduled interviews doesn't act, because Teamtailor doesn't expose interview scheduling. See [Teamtailor](/en/integrations/ats/teamtailor).
   </Tab>
   <Tab title="Nicoka">
-    Custom fields are available. Summary tags aren't offered.
+    Custom fields, automatic publishing of the interview notes, and the assistant on scheduled interviews are available. Summary tags aren't offered. See [Nicoka](/en/integrations/ats/nicoka).
   </Tab>
 </Tabs>
 
-Sending the meeting assistant automatically and the default template don't depend on the connected ATS.
+The default template doesn't depend on the connected ATS.
 
 ## Good to know
 
