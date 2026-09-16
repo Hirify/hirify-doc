@@ -1,0 +1,124 @@
+---
+title: "Hirify for Teamtailor"
+sidebarTitle: "Hirify for Teamtailor"
+description: "What the Hirify integration does in Teamtailor, how to enable it, which data it exchanges, and how to get help"
+icon: "id-card"
+---
+
+<Note>
+  Access: Hub plan. In Teamtailor, a company admin role.
+</Note>
+
+## About Hirify
+
+Hirify records and transcribes recruiting interviews held by video meeting, by phone, or in person. From each transcript, Hirify writes interview notes that follow your templates and an analysis of the candidate. Everything the analysis puts forward is backed by a quote from the interview.
+
+## How the integration works
+
+The integration adds a Hirify trigger to your Teamtailor jobs. When a candidate reaches a stage that carries the trigger, Teamtailor sends the candidate, the job, the resume, and the documents attached to the profile to Hirify. The candidate is then ready to be linked to an interview in Hirify.
+
+Once the interview is analyzed and the analysis is shared, Hirify fills in the Hirify card on the candidate profile in Teamtailor:
+
+- **Fit grade**: top fit, might be fit, or might not be fit.
+- **Summary**: the key takeaways of the interview.
+- **Details**: the deal-breakers, then the interview notes, one line per fact.
+- **Link**: the full interview notes, readable in a browser without a Hirify account.
+
+{/* SCREENSHOT: the Hirify card on a Teamtailor candidate profile, with the fit grade, the summary, and the link */}
+
+## Enable the integration
+
+Before you start:
+
+- **In Teamtailor**: installing the integration requires the company admin role.
+- **In Hirify**: the **ATS** section of the **Integrations** page is reserved for administrators and billing admins.
+- **Availability**: Teamtailor enables the Hirify integration on your account at the request of one of your company admins.
+
+<Steps>
+  <Step title="Get your connection code in Hirify">
+    In **Settings**, **Integrations**, **ATS** section, find the Teamtailor card. Under **The Hirify card in Teamtailor, optional**, click **Get the activation code**. The window shows your **Connection code** with a **Copy** button. The code is valid for 24 hours.
+  </Step>
+  <Step title="Have Teamtailor enable Hirify">
+    A company admin of your Teamtailor account asks your Teamtailor contact to add the Hirify integration to the account.
+  </Step>
+  <Step title="Activate Hirify in Teamtailor">
+    In Teamtailor, open the marketplace, select Hirify, and start the activation. Choose the API key the form offers, paste the connection code, and confirm.
+  </Step>
+  <Step title="Add the trigger to a job stage">
+    Open a job in Teamtailor, then its triggers. On the stage where you interview candidates, add the Hirify trigger. From then on, every candidate moved to this stage is sent to Hirify. You can also send a single candidate from their profile.
+  </Step>
+</Steps>
+
+Once the activation is confirmed, the Teamtailor card in Hirify shows **Hirify card installed in Teamtailor**.
+
+{/* SCREENSHOT: the Teamtailor card in Hirify Settings, Integrations, with the Get the activation code button */}
+
+## Fill in the card after an interview
+
+<Steps>
+  <Step title="Record the interview in Hirify">
+    Use any recording channel. See [Choose how to record](/en/interviews/choose-how-to-record).
+  </Step>
+  <Step title="Link the interview to the application">
+    Open the interview's **ATS** tab. In the **Application** section, search by candidate or job, then select the application. When Hirify recognizes the candidate from the meeting invitation, it suggests the application with **Link and send** and **Link only**. See [Link an interview to an application](/en/integrations/link-an-interview-to-an-application).
+  </Step>
+  <Step title="Send the analysis">
+    In the **Share the analysis** section, click **Send to Teamtailor**. Hirify updates the card on the candidate profile.
+  </Step>
+</Steps>
+
+The **Publish the interview notes automatically** setting, on the Teamtailor card in Hirify, skips the last step: the card is updated as soon as the interview notes are ready, without review. It's off by default. An administrator or a billing admin can turn it on.
+
+## Data exchanged
+
+### From Teamtailor to Hirify
+
+When the trigger fires, Teamtailor sends the candidate profile. Hirify keeps:
+
+- **Candidate**: the Teamtailor ID, email address, tags, department, and role.
+- **Links**: the addresses of the candidate profile and of the application in Teamtailor.
+- **Job**: its ID, title, and stage, and whether the candidate was rejected.
+- **Files**: a copy of the resume and of the documents attached to the profile.
+- **Company**: its Teamtailor ID and name.
+
+Hirify doesn't keep the first name, last name, phone number, picture, recruiter, referrals, answers to questions, or custom field values sent with the trigger. With the API key chosen during the activation, Hirify also reads your jobs and your Teamtailor users.
+
+### From Hirify to Teamtailor
+
+Hirify writes only to the Hirify card of the candidate profile:
+
+- **Status**: completed once the analysis is sent.
+- **Fit grade**: a strongly positive or positive analysis gives top fit, a mixed one gives might be fit, and a negative one gives might not be fit. A single deal-breaker caps the grade at might be fit.
+- **Summary**: the key takeaways of the interview.
+- **Details**: each deal-breaker on its own line, or a line saying there's none, then the interview notes, one fact per line.
+- **Link**: the address of the full interview notes.
+
+Hirify doesn't move candidates between stages, doesn't create or delete candidates, and doesn't send any message to candidates.
+
+## Support
+
+For help with the activation, the configuration, or an error:
+
+- **In Hirify**: click your name at the bottom of the sidebar, then **Contact support**. See [Contact support](/en/help/contact-support).
+- **By email**: [support@hirify.fr](mailto:support@hirify.fr).
+
+Common issues:
+
+- **The connection code is refused**: the code expires after 24 hours. Get a new one from the Teamtailor card in Hirify and paste it again.
+- **The candidate doesn't show up in Hirify**: check that the trigger is set on the stage the candidate was moved to. A bulk send from Teamtailor carries no job, so Hirify receives the candidate without an application.
+- **The card stays empty after the interview**: link the interview to the application, then send the analysis, or turn on automatic publishing.
+
+## Good to know
+
+- The card isn't filled in when the analysis doesn't have enough data to assess the candidate.
+- Sending the analysis again updates the same card. It doesn't add a second one.
+- If you disconnect Teamtailor in Hirify, uninstall Hirify in Teamtailor as well. A trigger won't reactivate the connection.
+
+<CardGroup cols={2}>
+  <Card title="Link to an application" icon="link" href="/en/integrations/link-an-interview-to-an-application">
+    Link the interview before you send the analysis.
+  </Card>
+  <Card title="Contact support" icon="life-ring" href="/en/help/contact-support">
+    Reach the support team from Hirify.
+  </Card>
+</CardGroup>

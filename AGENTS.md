@@ -22,8 +22,8 @@ Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher d
 
 **Écritures vers le logiciel de recrutement — la distinction est à faire, toujours.** Ne jamais écrire « Hirify n'écrit rien sans votre validation » : c'est faux.
 
-- **Le compte rendu et l'évaluation ne partent pas sans un geste du recruteur, sauf l'exception Teamtailor ci-dessous.** L'envoi passe par le partage de l'analyse, depuis le panneau ATS de l'entretien, avec un aperçu et une confirmation.
-- **Avec la carte Hirify de Teamtailor, un réglage envoie le compte rendu lui-même** : **Publier l'analyse automatiquement** pousse l'analyse et le compte rendu sur la fiche du candidat dès la fin de l'entretien, sans relecture (`push_teamtailor_partner_result_job.ts`). Il est désactivé par défaut et activé par un administrateur ou un admin facturation.
+- **Le compte rendu et l'évaluation ne partent pas sans un geste du recruteur, sauf la publication automatique ci-dessous.** L'envoi passe par le partage de l'analyse, depuis le panneau ATS de l'entretien, avec un aperçu et une confirmation.
+- **Un réglage envoie le compte rendu lui-même** : **Publier le compte rendu automatiquement** envoie le compte rendu sur la fiche du candidat dès qu'il est prêt, sans relecture (`auto_publish_analysis_job.ts`), avec tout logiciel dont la connexion peut écrire le compte rendu. Avec la carte Hirify de Teamtailor sans clé Admin, il met seulement la carte à jour. Il n'ajoute jamais d'avis noté. Il est désactivé par défaut et activé par un administrateur ou un admin facturation.
 - **Deux automatismes écrivent d'eux-mêmes, si un administrateur ou un admin facturation les a activés** : les tags de synthèse posés sur la fiche du candidat, et le remplissage des champs personnalisés restés vides — réversible depuis le panneau ATS, avec une notification. Les deux sont désactivés par défaut ; l'envoi automatique de l'assistant de réunion, lui, est actif par défaut.
 
 ## Style
@@ -61,7 +61,7 @@ Documentation destinée à l'utilisateur final. **Ne rien documenter** du back-o
 
 ## English version
 
-The English pages under `en/` carry the same facts as the French pages under `fr/`, written for an English-speaking recruiter. They are an adaptation, not a translation: keep the meaning, every fact and every limit, and write the sentence an English technical writer would write. The absolute rules above apply unchanged, including the distinction between the interview notes and evaluation (shared by a user action) and the ATS automations written on their own once an administrator or a billing admin turns them on: summary tags, empty custom fields, and, with the Teamtailor Hirify card, the analysis and interview notes themselves.
+The English pages under `en/` carry the same facts as the French pages under `fr/`, written for an English-speaking recruiter. They are an adaptation, not a translation: keep the meaning, every fact and every limit, and write the sentence an English technical writer would write. The absolute rules above apply unchanged, including the distinction between the interview notes and evaluation (shared by a user action) and the ATS automations written on their own once an administrator or a billing admin turns them on: summary tags, empty custom fields, and the interview notes themselves through automatic publishing.
 
 French stays the default language. When a French page changes, update its English counterpart in the same pull request.
 
@@ -99,6 +99,10 @@ The English slugs are English. The language switcher cannot pair pages by path, 
 | `fr/comptes-rendus/exporter-et-partager` | `en/notes/export-and-share` |
 | `fr/integrations/connecter-votre-agenda` | `en/integrations/connect-your-calendar` |
 | `fr/integrations/connecter-votre-ats` | `en/integrations/connect-your-ats` |
+| `fr/integrations/ats/smartrecruiters` | `en/integrations/ats/smartrecruiters` |
+| `fr/integrations/ats/teamtailor` | `en/integrations/ats/teamtailor` |
+| `fr/integrations/ats/nicoka` | `en/integrations/ats/nicoka` |
+| `fr/integrations/hirify-pour-teamtailor` (hidden, out of navigation) | `en/integrations/hirify-for-teamtailor` (hidden, out of navigation) |
 | `fr/integrations/lier-un-entretien-a-une-candidature` | `en/integrations/link-an-interview-to-an-application` |
 | `fr/integrations/renvoyer-une-evaluation` | `en/integrations/send-to-your-ats` |
 | `fr/integrations/automatismes-ats` | `en/integrations/ats-automations` |
@@ -147,7 +151,7 @@ A bold label in an English page is the exact string the English interface shows.
 | Transcriptions (entrée de la barre latérale) | **Interviews** |
 | Calendrier, Ajouter le bot | **Calendar**, **Add the meeting assistant** |
 | Bot connecté, Bot non accepté | **Assistant joined**, **Assistant not admitted** |
-| Bots de transcription automatiques | **Automatic meeting assistant** |
+| Assistant sur les entretiens planifiés, Publier le compte rendu automatiquement | **Assistant on scheduled interviews**, **Publish the interview notes automatically** |
 | Notes, L'essentiel, Transcription (vues d'une fiche entretien) | **Notes**, **Key takeaways**, **Transcript** |
 | Compte-rendu, Nouvelle note | **Interview notes**, **New note** |
 | Templates de notes, Sans template | **Notes templates**, **No template** |

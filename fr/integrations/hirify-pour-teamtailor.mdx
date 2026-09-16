@@ -1,0 +1,124 @@
+---
+title: "Hirify pour Teamtailor"
+sidebarTitle: "Hirify pour Teamtailor"
+description: "Ce que fait l'intégration Hirify dans Teamtailor, comment l'activer, quelles données elle échange et comment obtenir de l'aide"
+icon: "id-card"
+---
+
+<Note>
+  Accès : offre Hub. Dans Teamtailor, un rôle d'administrateur de l'entreprise.
+</Note>
+
+## Hirify en bref
+
+Hirify enregistre et retranscrit les entretiens de recrutement menés en visioconférence, par téléphone ou en présentiel. À partir de chaque transcription, Hirify rédige un compte rendu qui suit vos templates et une analyse du candidat. Tout ce que l'analyse met en avant s'appuie sur une citation de l'entretien.
+
+## Le fonctionnement de l'intégration
+
+L'intégration ajoute un déclencheur Hirify à vos postes Teamtailor. Quand un candidat arrive sur une étape qui porte ce déclencheur, Teamtailor envoie à Hirify le candidat, le poste, le CV et les documents joints à la fiche. Le candidat est alors prêt à être lié à un entretien dans Hirify.
+
+Une fois l'entretien analysé et l'analyse partagée, Hirify remplit la carte Hirify de la fiche candidat dans Teamtailor :
+
+- **Niveau d'adéquation** : top fit, might be fit ou might not be fit.
+- **Résumé** : l'essentiel de l'entretien.
+- **Détails** : les points bloquants puis le compte rendu, un fait par ligne.
+- **Lien** : le compte rendu complet, lisible dans un navigateur sans compte Hirify.
+
+{/* CAPTURE : la carte Hirify sur une fiche candidat Teamtailor, avec le niveau d'adéquation, le résumé et le lien */}
+
+## Activer l'intégration
+
+Avant de commencer :
+
+- **Dans Teamtailor** : l'installation demande le rôle d'administrateur de l'entreprise.
+- **Dans Hirify** : la section **ATS** de la page **Intégrations** est réservée aux administrateurs et aux admins facturation.
+- **Disponibilité** : Teamtailor active l'intégration Hirify sur votre compte à la demande d'un de vos administrateurs.
+
+<Steps>
+  <Step title="Obtenir votre code de connexion dans Hirify">
+    Dans **Paramètres**, **Intégrations**, section **ATS**, repérez la carte Teamtailor. Sous **La carte Hirify dans Teamtailor, en option**, cliquez sur **Obtenir le code d'activation**. La fenêtre affiche votre **Code de connexion** avec un bouton **Copier**. Le code est valable 24 heures.
+  </Step>
+  <Step title="Faire activer Hirify par Teamtailor">
+    Un administrateur de votre compte Teamtailor demande à votre interlocuteur Teamtailor d'ajouter l'intégration Hirify au compte.
+  </Step>
+  <Step title="Activer Hirify dans Teamtailor">
+    Dans Teamtailor, ouvrez la marketplace, sélectionnez Hirify et lancez l'activation. Choisissez la clé d'API que propose le formulaire, collez le code de connexion puis validez.
+  </Step>
+  <Step title="Ajouter le déclencheur à une étape du poste">
+    Ouvrez un poste dans Teamtailor, puis ses déclencheurs. Sur l'étape où vous menez les entretiens, ajoutez le déclencheur Hirify. Chaque candidat déplacé sur cette étape est désormais envoyé à Hirify. Vous pouvez aussi envoyer un seul candidat depuis sa fiche.
+  </Step>
+</Steps>
+
+Une fois l'activation validée, la carte Teamtailor de Hirify affiche **Carte Hirify installée dans Teamtailor**.
+
+{/* CAPTURE : la carte Teamtailor dans Paramètres, Intégrations de Hirify, avec le bouton Obtenir le code d'activation */}
+
+## Remplir la carte après un entretien
+
+<Steps>
+  <Step title="Enregistrer l'entretien dans Hirify">
+    Tous les canaux d'enregistrement conviennent. Voir [Choisir son canal](/fr/entretiens/choisir-son-canal).
+  </Step>
+  <Step title="Lier l'entretien à la candidature">
+    Ouvrez l'onglet **ATS** de l'entretien. Dans la section **Candidature**, cherchez par candidat ou par poste puis sélectionnez la candidature. Quand Hirify reconnaît le candidat à partir de l'invitation, il propose la candidature avec **Lier et envoyer** et **Lier seulement**. Voir [Lier un entretien à une candidature](/fr/integrations/lier-un-entretien-a-une-candidature).
+  </Step>
+  <Step title="Envoyer l'analyse">
+    Dans la section **Partage de l'analyse**, cliquez sur **Envoyer dans Teamtailor**. Hirify met à jour la carte de la fiche candidat.
+  </Step>
+</Steps>
+
+Le réglage **Publier le compte rendu automatiquement**, sur la carte Teamtailor de Hirify, supprime la dernière étape : la carte est mise à jour dès que le compte rendu est prêt, sans relecture. Il est désactivé par défaut. Un administrateur ou un admin facturation peut l'activer.
+
+## Les données échangées
+
+### De Teamtailor vers Hirify
+
+Quand le déclencheur part, Teamtailor envoie la fiche du candidat. Hirify conserve :
+
+- **Candidat** : l'identifiant Teamtailor, l'adresse email, les tags, le département et le rôle.
+- **Liens** : les adresses de la fiche candidat et de la candidature dans Teamtailor.
+- **Poste** : son identifiant, son intitulé, l'étape et le refus éventuel du candidat.
+- **Fichiers** : une copie du CV et des documents joints à la fiche.
+- **Entreprise** : son identifiant Teamtailor et son nom.
+
+Hirify ne conserve pas le prénom, le nom, le téléphone, la photo, le recruteur, les recommandations, les réponses aux questions ni les valeurs des champs personnalisés envoyés avec le déclencheur. Avec la clé d'API choisie lors de l'activation, Hirify lit aussi vos postes et vos utilisateurs Teamtailor.
+
+### De Hirify vers Teamtailor
+
+Hirify n'écrit que dans la carte Hirify de la fiche candidat :
+
+- **Statut** : terminé une fois l'analyse envoyée.
+- **Niveau d'adéquation** : une analyse très positive ou positive donne top fit, une analyse mitigée donne might be fit et une analyse négative donne might not be fit. Un seul point bloquant plafonne le niveau à might be fit.
+- **Résumé** : l'essentiel de l'entretien.
+- **Détails** : chaque point bloquant sur sa ligne, ou une ligne indiquant qu'il n'y en a pas, puis le compte rendu, un fait par ligne.
+- **Lien** : l'adresse du compte rendu complet.
+
+Hirify ne déplace aucun candidat d'une étape à l'autre, ne crée ni ne supprime de candidat et n'envoie aucun message aux candidats.
+
+## Support
+
+Pour une aide sur l'activation, la configuration ou une erreur :
+
+- **Dans Hirify** : cliquez sur votre nom en bas de la barre latérale, puis sur **Contacter le support**. Voir [Contacter le support](/fr/aide/contacter-le-support).
+- **Par email** : [support@hirify.fr](mailto:support@hirify.fr).
+
+Problèmes fréquents :
+
+- **Le code de connexion est refusé** : il expire au bout de 24 heures. Obtenez-en un nouveau depuis la carte Teamtailor de Hirify et collez-le de nouveau.
+- **Le candidat n'apparaît pas dans Hirify** : vérifiez que le déclencheur est posé sur l'étape où le candidat a été déplacé. Un envoi groupé depuis Teamtailor ne porte aucun poste. Hirify reçoit alors le candidat sans candidature.
+- **La carte reste vide après l'entretien** : liez l'entretien à la candidature puis envoyez l'analyse, ou activez la publication automatique.
+
+## Bon à savoir
+
+- La carte n'est pas remplie quand l'analyse manque de matière pour évaluer le candidat.
+- Envoyer de nouveau l'analyse met à jour la même carte. Elle n'en ajoute pas une deuxième.
+- Si vous déconnectez Teamtailor dans Hirify, désinstallez aussi Hirify dans Teamtailor. Un déclencheur ne réactive pas la connexion.
+
+<CardGroup cols={2}>
+  <Card title="Lier à une candidature" icon="link" href="/fr/integrations/lier-un-entretien-a-une-candidature">
+    Liez l'entretien avant d'envoyer l'analyse.
+  </Card>
+  <Card title="Contacter le support" icon="life-ring" href="/fr/aide/contacter-le-support">
+    Joindre l'équipe support depuis Hirify.
+  </Card>
+</CardGroup>

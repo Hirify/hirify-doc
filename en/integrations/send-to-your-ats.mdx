@@ -62,7 +62,7 @@ An "Analysis shared" message confirms the push. The section then shows when it w
     A verdict is required. The push creates a review signed with your name. If the connection has the Messages permission, the review carries the interview's key takeaways and the interview notes go to the candidate's notes. Without that permission, the interview notes go as a comment on the review, and the section suggests reconnecting SmartRecruiters with the Messages permission.
   </Tab>
   <Tab title="Teamtailor">
-    The interview notes go as a note in the candidate's activity feed, signed with your name. You can add a graded review from the confirmation window. If the Hirify card is installed, the card on the profile is updated too, with the analysis verdict, the number of deal-breakers, and a link to the full interview notes. When the connection only allows the card, the section asks you to enable the Admin API key for your Teamtailor workspace so the note and the graded review can go too.
+    The interview notes go as a note in the candidate's activity feed, signed with your name. You can add a graded review from the confirmation window. If the Hirify card is installed, the card on the profile is updated too, with a fit grade (top fit, might be fit, or might not be fit), the interview's key takeaways, the deal-breakers and interview notes in its details, and a link to the full interview notes. When the connection only allows the card, the section asks you to enable the Admin API key for your Teamtailor workspace so the note and the graded review can go too.
   </Tab>
   <Tab title="Nicoka">
     Nicoka doesn't take a verdict. The push adds a review to the candidate's file, with the interview notes as a comment. The **Share the analysis** button turns on without a verdict to pick.
@@ -99,7 +99,7 @@ The delete icon only appears on a **Sent** push, and only for the person who mad
 - In a SmartRecruiters review, the key takeaways are sent as they stand when you share. Regenerating them later doesn't change the review that was sent.
 - You can't delete a colleague's push from Hirify. Go through your ATS, or ask them to remove it.
 - Unlinking the interview from the application doesn't erase the push history and doesn't remove anything from your ATS.
-- Outside this share, two automations can write to the candidate profile if an administrator or a billing admin has turned them on: summary tags and filling in custom fields that are still empty. With the Teamtailor Hirify card, the **Publish the analysis automatically** setting also sends the analysis and the interview notes to the profile as soon as the interview ends. It's off by default. See [ATS automations](/en/integrations/ats-automations).
+- Outside this share, two automations can write to the candidate profile if an administrator or a billing admin has turned them on: summary tags and filling in custom fields that are still empty. The **Publish the interview notes automatically** setting also sends the interview notes to the candidate profile as soon as they're ready, without review. It's off by default. See [ATS automations](/en/integrations/ats-automations).
 
 <CardGroup cols={2}>
   <Card title="Link to an application" icon="link" href="/en/integrations/link-an-interview-to-an-application">

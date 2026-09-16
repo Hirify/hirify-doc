@@ -87,7 +87,16 @@
                 "icon": "plug",
                 "pages": [
                   "fr/integrations/connecter-votre-agenda",
-                  "fr/integrations/connecter-votre-ats",
+                  {
+                    "group": "Logiciels de recrutement",
+                    "icon": "plug",
+                    "pages": [
+                      "fr/integrations/connecter-votre-ats",
+                      "fr/integrations/ats/smartrecruiters",
+                      "fr/integrations/ats/teamtailor",
+                      "fr/integrations/ats/nicoka"
+                    ]
+                  },
                   "fr/integrations/lier-un-entretien-a-une-candidature",
                   "fr/integrations/renvoyer-une-evaluation",
                   "fr/integrations/automatismes-ats",
@@ -259,7 +268,16 @@
                 "icon": "plug",
                 "pages": [
                   "en/integrations/connect-your-calendar",
-                  "en/integrations/connect-your-ats",
+                  {
+                    "group": "ATS",
+                    "icon": "plug",
+                    "pages": [
+                      "en/integrations/connect-your-ats",
+                      "en/integrations/ats/smartrecruiters",
+                      "en/integrations/ats/teamtailor",
+                      "en/integrations/ats/nicoka"
+                    ]
+                  },
                   "en/integrations/link-an-interview-to-an-application",
                   "en/integrations/send-to-your-ats",
                   "en/integrations/ats-automations",

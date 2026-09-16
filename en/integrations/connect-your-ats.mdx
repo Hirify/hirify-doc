@@ -1,6 +1,6 @@
 ---
 title: "Connect your ATS"
-sidebarTitle: "Connect your ATS"
+sidebarTitle: "Overview"
 description: "Connect SmartRecruiters, Teamtailor, or Nicoka to Hirify to find your jobs, candidates, and applications right in the app"
 icon: "plug"
 ---
@@ -23,7 +23,7 @@ Once the connection is set up:
 - The imported talent pool feeds Assistant, Sourcing, and Analytics.
 
 <Warning>
-  The interview notes don't go to your ATS on their own. You review them and you're the one who shares them. The one exception is the **Publish the analysis automatically** setting of the Hirify card for Teamtailor, which is off by default.
+  The interview notes go to your ATS when you share the analysis. The one exception is the **Publish the interview notes automatically** setting, off by default, which sends them as soon as they're ready.
 </Warning>
 
 ## Before you start: your plan and your role
@@ -40,79 +40,34 @@ An organization connects one ATS at a time. If a connection already exists, the 
 
 To change tools, first disconnect the active one. The steps, and the choice to keep or delete the imported data, are described in [Disconnect a tool](/en/integrations/disconnect-a-tool).
 
-## Connect SmartRecruiters
+## Choose your ATS
 
-<Steps>
-  <Step title="Open the connection wizard">
-    In **Settings**, **Integrations**, **ATS** section, click **Connect** next to SmartRecruiters. The wizard opens on the **Prepare** step.
-  </Step>
-  <Step title="Create an app in SmartRecruiters">
-    The wizard takes you to your SmartRecruiters admin area, under **Apps**, then **OAuth Credentials**, to create an app. Check the permissions the wizard lists. Two of them come with a note: reading the configuration is recommended for filling in custom fields, and the Messages permission lets the interview notes go to the candidate's notes. Without a required permission, the connection is refused.
-  </Step>
-  <Step title="Paste your credentials">
-    Click **I have my credentials**, paste the generated **Client ID** and **Client Secret**, then click **Connect**.
-  </Step>
-</Steps>
+Each ATS has its own page: the connection step by step, the permissions to grant, what the integration does, troubleshooting, and how to disconnect.
 
-If a permission is missing, the wizard shows **Insufficient permissions** and points to exactly which ones to add. Fix the app in SmartRecruiters, then run the connection again from the wizard.
+<CardGroup cols={3}>
+  <Card title="SmartRecruiters" icon="/images/integrations/smartrecruiters.png" href="/en/integrations/ats/smartrecruiters">
+    OAuth application and real-time sync.
+  </Card>
+  <Card title="Teamtailor" icon="/images/integrations/teamtailor.png" href="/en/integrations/ats/teamtailor">
+    Admin key, webhook, and optional Hirify card.
+  </Card>
+  <Card title="Nicoka" icon="/images/integrations/nicoka.png" href="/en/integrations/ats/nicoka">
+    API user and webhooks.
+  </Card>
+</CardGroup>
 
-{/* SCREENSHOT: the SmartRecruiters connection wizard, Connect step, with the Client ID and Client Secret fields */}
+## What each ATS supports
 
-## Connect Teamtailor
-
-Teamtailor connects with an API key created in your Teamtailor workspace.
-
-<Steps>
-  <Step title="Create an API key in Teamtailor">
-    Click **Connect** next to Teamtailor. The wizard opens on the **Prepare** step. The **Open Teamtailor** button leads to the API keys of your workspace, under **Settings > Integrations > API keys**. Create a key with the **Admin** scope and the **Read / Write** permission, then copy it.
-  </Step>
-  <Step title="Paste the key">
-    Click **I have my API key**, paste the key into the **API key** field, then click **Connect**. If the key doesn't carry every required permission, the wizard shows **Insufficient permissions** and lists the missing ones. Fix the key in Teamtailor, then click **Try again**.
-  </Step>
-  <Step title="Set up the webhook">
-    After connecting, the Teamtailor card shows a **Webhook setup in Teamtailor** block, marked **To set up**. In Teamtailor, open Settings, Integrations, Webhooks and create a new webhook with the URL shown and the Candidates, Applications, and Jobs resources. Teamtailor then shows a signing key. Paste it into the **Signing key** field of the block, then click **Save**. The badge switches to **Setup detected** as soon as the first events arrive.
-  </Step>
-</Steps>
-
-<Note>
-  The API key gives Hirify full access to your Teamtailor data. It's encrypted and only used for your organization. Without the webhook, sync stays daily. Until the signing key is saved, the events Teamtailor sends are rejected.
-</Note>
-
-## Enable the Hirify card in Teamtailor
-
-The Hirify card is optional. It shows the analysis right on the candidate profile in Teamtailor and sends the resume at every interview stage. Teamtailor enables it on request.
-
-<Steps>
-  <Step title="Get the activation code">
-    On the connected Teamtailor card, the **Hirify card in Teamtailor** block offers **Get the activation code**. The window that opens shows a connection code specific to your organization, with a **Copy** button.
-  </Step>
-  <Step title="Have the Hirify integration added">
-    Ask your Teamtailor contact to add the Hirify integration to your account. Then, in Teamtailor, open Settings, Integrations, Hirify and start the installation.
-  </Step>
-  <Step title="Paste the code">
-    When the installation form asks for a connection code, paste the one you copied. It's valid for 24 hours. Once the installation is confirmed, the card turns on by itself in Hirify.
-  </Step>
-</Steps>
-
-Once the card is active, the **Publish the analysis automatically** setting appears among the connection settings. When it's on, it sends the analysis and the interview notes to the candidate profile as soon as the interview ends. When it's off, which is the default, nothing leaves until a recruiter has shared the analysis from the interview page.
-
-## Connect Nicoka
-
-<Steps>
-  <Step title="Create an API user in Nicoka">
-    In Nicoka, open **Paramétrage**, **Administration**, **Utilisateurs**, **Utilisateur API**. Create a dedicated API user there. Then generate an access token for this user.
-  </Step>
-  <Step title="Enter your workspace and your token">
-    In Hirify, click **Connect** next to Nicoka. Enter your Nicoka workspace subdomain in **Nicoka subdomain or address**, or the full address for a trial account. Then paste the token into **API access token**.
-  </Step>
-  <Step title="Set up the webhooks">
-    After connecting, the Nicoka card shows a **Webhook setup in Nicoka** block, marked **To set up**. It gives the URLs and the key to copy into Nicoka, under **Paramétrage**, **webHooks**. Setup takes two steps: create the webhooks, then the events that trigger them. The badge switches to **Setup detected** as soon as a first signed call arrives.
-  </Step>
-</Steps>
-
-<Note>
-  The API user needs access to jobs, candidates, users, and candidate actions. Without the webhook setup, sync stays periodic.
-</Note>
+| | SmartRecruiters | Teamtailor | Nicoka |
+| --- | --- | --- | --- |
+| Connection | OAuth application | Admin API key | API user |
+| Real time | Automatic | Webhook to set up | Webhooks to set up |
+| Scheduled interviews imported | Yes | No | Yes |
+| Sharing the analysis | Evaluation with a required verdict, interview notes in the candidate's notes | Note in the Activity, optional graded review | Evaluation without a verdict, interview notes as a comment |
+| Automatic tags | Yes | Yes | No |
+| Custom fields | Yes, with the Access Company Settings permission | Yes | Yes |
+| Automatic publishing of the interview notes | Yes | Yes | Yes |
+| Card on the candidate profile | No | Optional Hirify card | No |
 
 ## Boond Manager: coming soon
 
@@ -124,13 +79,12 @@ As soon as the connection is set up, Hirify starts a first import. The card show
 
 Four counters fill up as the import runs: **Candidates**, **Jobs**, **Applications**, and **Interviews**. A large talent pool takes time to come in. Let it run and come back to the page later.
 
-Above the counters, a line describes how your ATS syncs, followed by "Last checked" and how long ago the last check ran. It shows one of these three messages:
+At the top of the card, a line describes how your ATS syncs, followed by when it was last checked. It shows one of these states:
 
-- "Real-time sync via webhooks."
-- "Periodic sync. Set up webhooks to enable real time."
-- "Automatic sync every day."
+- **Real time**: changes arrive through webhooks.
+- **Periodic, webhooks to set up**: Nicoka and Teamtailor stay in this state until a first webhook arrives.
 
-Nicoka and Teamtailor stay on the periodic sync message until a first webhook arrives. This pace only applies to the import. The interview notes and your verdict only go back to your ATS when you share the analysis.
+Webhook setup is described on each ATS page. This pace only applies to the import.
 
 {/* SCREENSHOT: a connected ATS card, with the Connected label, the four counters, and the sync line. French capture: /images/parametres-integrations.webp */}
 
@@ -139,7 +93,7 @@ Once about twenty jobs have been imported, Hirify suggests grouping your jobs in
 ## Good to know
 
 - The first import brings in twenty-four months of history. An older candidate enters Hirify the day an update about them arrives from your ATS.
-- The interview notes and your verdict only go back to your ATS when you share the analysis. However, if an administrator or a billing admin has turned them on, summary tags and filling in custom fields that are still empty write to the candidate profile on their own. See [ATS automations](/en/integrations/ats-automations).
+- The interview notes and your verdict only go back to your ATS when you share the analysis. However, if an administrator or a billing admin has turned them on, summary tags, filling in custom fields that are still empty, and automatic publishing of the interview notes write to the candidate profile on their own. See [ATS automations](/en/integrations/ats-automations).
 - Only one connection is active per organization, and only an administrator or a billing admin of the organization can set it up.
 - Boond Manager can't be connected yet.
 - If sync stops, the card shows the error message returned by your tool. See [My ATS isn't syncing anymore](/en/help/ats-not-syncing).
