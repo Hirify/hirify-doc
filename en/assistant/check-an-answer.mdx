@@ -9,46 +9,43 @@ icon: "circle-check"
   Access: Hub plan.
 </Note>
 
-An Assistant answer reads from top to bottom: what it looked at, its written answer, then what that answer relies on. This page shows you how to recognize each part and trace any statement back to its source.
+An Assistant answer reads from top to bottom: its written answer, the documents it produced, then what that answer relies on. This page shows you how to recognize each part and trace any statement back to its source.
 
-## Answer formats
+## What an answer contains
 
-While the Assistant works, a line shows the current step, for example **Searching your data…** or **Reading the analysis…**. Once the answer is done, that line sums up what it looked at and how long it took, for example "2 interviews found · 2 analyses read · 8s". One click expands it into the steps and what it searched for.
+While the Assistant works, a line says what it's doing, for example **Reading the interview's analysis…** or **Updating the interview notes…**. It disappears when the answer arrives.
 
-The written answer comes next. Depending on the request, it's followed by three kinds of items:
+The written answer comes next. Depending on the request, it's followed by:
 
-- **Interview passages**: the quoted excerpts, each with its speaker.
-- **Documents**: the interview notes, brief, outreach draft, note, or dashboard you asked for. Each one opens in a card whose header names the document, the person or job it's about, and its actions. The chevron collapses or expands the card.
-- **Sources**: below the answer, the **Sources** line has one chip per item consulted.
+- **A document**: the interview notes, brief, interview prep, outreach draft, or dashboard you asked for. It appears as a row with its name and version, for example **Interview notes · Camille Durand**, **Version 2**. One click opens it in the right-hand panel.
+- **A question**: when the request is ambiguous, the Assistant asks it and suggests ready-made answers.
+- **One or two suggestions** for what to do next. They fill in the input field without sending it.
 
-{/* SCREENSHOT: a full answer, with the activity line, the written answer, an Interview notes card, and the Sources line */}
+Below the answer, the **Copy the answer** icon grabs the text, and the **N sources** button opens the list of what it looked at.
 
-## Candidate analyses and profiles
+{/* SCREENSHOT: a full answer, with a document and the sources button */}
 
-When the Assistant has read an interview analysis or a candidate's profile, the **Sources** line carries a chip with their name. The chip's icon and tooltip give its type. One click expands the details below the line, one chip at a time.
+## Open a document
 
-| Type | What the chip expands |
+The document opens in the right-hand panel, next to the conversation. Its title opens a menu listing the conversation's documents and their versions: a requested change produces a new version without erasing the previous one. At the top of the panel, **Copy** puts the document on your clipboard, and the cross closes the panel.
+
+Interview notes written in the conversation offer **Save as note**, which files them with the interview's notes. A change requested on interview notes already saved applies directly to the note: the panel shows **Saved in the notes** and offers **Undo** as long as the note hasn't changed since.
+
+## An answer's sources
+
+The **N sources** button below the answer opens the **Sources** panel. Each item consulted has its own row, which expands with a click:
+
+| Source | What the row expands |
 | --- | --- |
-| **Candidate analysis** | The interview verdict, strengths, watch-outs, deal-breakers, and assessed skills |
+| **Interview analysis** | The verdict, strengths, watch-outs, deal-breakers, and assessed skills |
+| **Interview passages** | The excerpts found, each with its speaker and minute |
 | **ATS profile** | The candidate's record in your ATS: experience, education, applications, and scorecards |
-| **Candidate timeline** | The candidate's history in your ATS: applications, interviews, scorecards, offer, hire, or rejection |
-| **Deal-breakers** | The deal-breakers found in the interview |
+| **Search** | The results: interviews, notes, profiles, jobs, each one opens with a click |
+| **Help center** | The Hirify documentation pages the answer relies on, with their link |
 
 At the top of an analysis, a badge sums up the verdict: **Strong match**, **Likely match**, **Possible match**, **Weak match**, or **Not enough data**. Next to it, a percentage followed by a level shows the average confidence of the facts extracted from the interview. It isn't a score for the candidate.
 
-## Tables and result lists
-
-A search's chip expands the **Results** list: interviews, notes, profiles, jobs. Each row shows its type and title. Click a row to open it.
-
-Interviews the Assistant found appear as chips, each leading to its interview. A comparison of several candidates shows as a table in the written answer.
-
-## Signal cards
-
-The **Deal-breakers** chip expands what could stop an application: an incompatible notice period, salary expectations outside the range, a missing key skill. Each signal has a title, a severity (**Critical**, **High**, **Medium**, or **Low**), and, when there is one, the exact sentence spoken in the interview.
-
-At the bottom, **Average confidence** rates how solid the whole set is: high, moderate, or low.
-
-If nothing was found, the details show **No deal-breakers**.
+A deal-breaker has a title, a severity (**Critical**, **High**, **Medium**, or **Low**), and, when there is one, the exact sentence spoken in the interview.
 
 <Warning>
   A deal-breaker is an alert to check, not a verdict. Confirm it with the candidate before you act on it.
@@ -56,20 +53,21 @@ If nothing was found, the details show **No deal-breakers**.
 
 ## Trace a statement back to its source
 
-In the written answer, mentions of a candidate, a job, a note, or an interview appear as chips. Hover over one to open a preview showing the item's type (**Analysis**, **Transcript**, **Note**, **Candidate**, **Job**, **Application**) and enough detail to identify it.
+In the written answer, a candidate's name is underlined. Hover over it to open a card with their current role, their experience, the interview verdict, a summary, and the useful facts (target role, availability, salary expectations, location, points to watch). At the bottom, **Open the interview** takes you to the interview page.
 
-The chips on the **Sources** line show the same preview on hover. Those with details expand them with a click, and the others lead straight to the item. **Open in the ATS** takes you to the original record in your ATS.
+Mentions of a job, a note, or an application show a preview on hover in the same way. **Open in the ATS** takes you to the original record in your ATS.
 
-{/* SCREENSHOT: a hovered source chip, with its preview card */}
+{/* SCREENSHOT: a hovered candidate name, with its card */}
 
 ## Timestamped excerpts
 
-A statement drawn from an interview carries a quote chip. Click it to open the quote card, which shows:
+A statement drawn from an interview is followed by its minute, in `3:24` format. Hover over it or click it to open a card that shows:
 
-- the speaker, as a tag, for example the candidate or the recruiter
-- the minute, in `3:24` format
+- the speaker, the minute, and the interview the passage comes from
 - the verbatim quote, in quotation marks
-- the **View in interview** link, which opens the transcript at the right spot.
+- the **Open the interview at 3:24** link, which opens the transcript at the right spot.
+
+From an interview's Assistant tab, that link switches to the **Transcript** tab of the same interview and highlights the passage, without leaving the page.
 
 When the quote couldn't be matched, the card shows **Quote unavailable.** instead. The statement stays on screen, but you know it isn't backed by a specific passage.
 
@@ -78,7 +76,7 @@ When the quote couldn't be matched, the card shows **Quote unavailable.** instea
 Hirify checks every cited reference before showing you the answer. If a reference doesn't match anything actually consulted during the exchange, it is removed and a discreet banner says so below the answer: **1 candidate reference removed (not found in the tools used)**, or the plural count.
 
 <Note>
-  This banner isn't an error on your side. It signals a cleanup. A sentence without a chip is better than a chip that leads nowhere.
+  This banner isn't an error on your side. It signals a cleanup. A sentence without a link is better than a link that leads nowhere.
 </Note>
 
 ## What to do if an answer doesn't convince you
@@ -87,18 +85,15 @@ Hirify checks every cited reference before showing you the answer. If a referenc
   <Step title="Reread the sources">
     Open the quoted excerpts. A wrong answer often comes from a source read the wrong way, and the quote makes that visible right away.
   </Step>
-  <Step title="Regenerate">
-    The retry icon under the latest answer, **Regenerate the answer**, runs the same request again.
-  </Step>
   <Step title="Rephrase">
-    Specify the person, the time period, or the format you expect. The suggestions shown below the answer fill in the input field without sending it.
+    Specify the person, the time period, or the format you expect. To target a specific interview, mention it with `@`. The suggestions shown below the answer fill in the input field without sending it.
   </Step>
-  <Step title="Give your feedback">
-    Under each answer, the thumbs-up, **Helpful answer**, or the thumbs-down, **Unhelpful answer**, sends your feedback to the team. You can give one rating per answer.
+  <Step title="Fix the document">
+    Interview notes the Assistant changed can be restored with one click, then edited by hand like any other note.
   </Step>
 </Steps>
 
-The copy icon, **Copy the answer**, grabs the text so you can paste it elsewhere. If a technical error occurs, a red banner appears below the conversation with **Try again**.
+If a technical error occurs, a red banner appears below the conversation with **Try again**.
 
 ## Good to know
 
@@ -106,7 +101,7 @@ The copy icon, **Copy the answer**, grabs the text so you can paste it elsewhere
 - **The Assistant doesn't decide for you.** It gathers and cites. The call is yours.
 - **An answer is only as good as its data.** Without a connected ATS, its answers lack candidate profiles and applications. An interview that hasn't been analyzed is missing too, without a word. The answer will be partial and nothing will flag it.
 - **An answer writes nothing to your ATS.** Interview notes produced here stay in Hirify until you push them yourself.
-- **A missing chip has no hidden equivalent.** An **ATS profile** or **Candidate timeline** chip, like a **Job pipeline** card, is missing for one of two reasons: the data wasn't found, or your ATS isn't connected.
+- **A missing source has no hidden equivalent.** An ATS profile or a job's pipeline is missing for one of two reasons: the data wasn't found, or your ATS isn't connected. The Assistant says so in its answer.
 
 <CardGroup cols={2}>
   <Card title="Ask a question" icon="comments" href="/en/assistant/ask-a-question">
