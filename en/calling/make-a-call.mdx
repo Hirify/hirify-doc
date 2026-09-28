@@ -1,7 +1,7 @@
 ---
-title: "Make a call and choose the caller ID"
+title: "Make a call from your Hirify line"
 sidebarTitle: "Make a call"
-description: "Call a candidate from the dashboard, follow the transcription during the call, and decide which number shows on their phone"
+description: "Call a candidate from the dashboard with your Hirify line and follow the transcription during the call"
 icon: "phone-volume"
 ---
 
@@ -9,7 +9,7 @@ icon: "phone-volume"
   Access: Starter and Hub plans.
 </Note>
 
-A call made from Hirify becomes an interview like any other. It's recorded, transcribed, then analyzed. This page covers placing the call and setting the number your candidate sees.
+A call made from Hirify becomes an interview like any other. It's recorded, transcribed, then analyzed. This page covers the call itself, from dialing to the interview notes.
 
 <Warning>
   Tell your candidate before you call. The call is recorded and transcribed, and informing them is your responsibility. See [Inform your candidates](/en/trust/inform-your-candidates).
@@ -21,7 +21,7 @@ On the **Dashboard**, the **Start an interview** block brings together all the w
 
 <Steps>
   <Step title="Enter the number">
-    If a calling line is already set as default, a field starting with **+33** waits for the candidate's number in the format "6 12 34 56 78". Otherwise, click **Call** to open the call window and enter the number there.
+    If your Hirify line is active, a field starting with **+33** waits for the candidate's number in the format "6 12 34 56 78". Otherwise, click **Call** to open the call window and enter the number there.
   </Step>
   <Step title="Confirm">
     Press Enter or click the arrow in the field. A malformed number triggers the message "Invalid French number. Expected format: 6 12 34 56 78."
@@ -38,10 +38,10 @@ On the **Dashboard**, the **Start an interview** block brings together all the w
 The **Phone call** window brings together three settings:
 
 - **Number to call**: 9 digits. The error messages guide you: "The number must have 9 digits", "The number can't exceed 9 digits", and "The number must start with 1, 2, 3, 4, 5, 6 or 7".
-- **Caller ID**: the line shown to the candidate. Your dedicated line carries the **Hirify** badge and comes first in the list.
+- **Caller ID**: your Hirify line, marked with the **Hirify** badge. It's the number the candidate sees. Every call goes out from this line.
 - **Microphone**: the audio input used. The **Check audio** link expands two tabs, **Mic** and **Speakers**, so you can test before dialing.
 
-Click **Start the call**. If no line is set up, the window shows "No line." and a **Set up** shortcut to the calling settings.
+Click **Start the call**. If your line isn't active yet, the window shows "No line." and a **Set up** shortcut to the **Calling** page. See [Get a phone number](/en/calling/get-a-phone-number).
 
 ## Follow the live transcription
 
@@ -57,57 +57,12 @@ Hang up. The window switches to **Call ended**, shows the duration, and displays
 
 The interview joins your interview list under the title "Call with" followed by the number. Processing continues in the background. The transcript, then the interview notes, appear on the interview page when they're ready. See [Review an interview](/en/interviews/review-an-interview).
 
-## Choose the number shown to the candidate
-
-The **Caller ID** list in the call window brings together two kinds of lines:
-
-- Your Hirify line: your dedicated line, marked with the **Hirify** badge.
-- Your **Secondary caller IDs**: numbers you already own and have had verified.
-
-Select the line just before dialing. The choice applies to the current call.
-
-## Add and verify a secondary caller ID
-
-Your existing numbers can still be used for outbound calls, as long as you prove they're yours.
-
-<Steps>
-  <Step title="Open the section">
-    Go to **Settings**, **Calling**, the **Secondary caller IDs** section, then click **Add a number**.
-  </Step>
-  <Step title="Enter the number">
-    The **Add a caller ID** window expects 9 digits after **+33**. An incorrect format shows "Invalid number (9 digits required)".
-  </Step>
-  <Step title="Choose the verification method">
-    **Verification method** offers **Text message** or **Voice call**. Click **Send the code**.
-  </Step>
-  <Step title="Enter the code">
-    Type the 5-digit code received on that number. The screen specifies "The code is checked automatically. The message can take up to 2 minutes to arrive."
-  </Step>
-</Steps>
-
-The secondary caller ID table lists the **Number**, the person it's **Assigned to**, and its **Status**: **Verified**, **Pending**, or **Failed**. From the actions menu, you can resume a pending verification with **Enter the code**, use **Edit name** on a verified number, or **Delete** it. After a deletion, you have to verify the number again to reuse it.
-
-## Set the preferred number
-
-A verified number can become the one Hirify offers by default. In the secondary caller ID table, open the line's menu and choose **Set as preferred**. The **Preferred** badge shows next to its status.
-
-The same setting is available without leaving the call window. In the **Caller ID** list, the **Set** badge appears when you hover over a line, and **Default** marks the one already selected.
-
-This preferred number also controls the call shortcut on the dashboard. The **+33** field only appears if a dedicated line is active or a secondary caller ID is marked as preferred.
-
-## Caller ID display depends on carriers
-
-The **Secondary caller IDs** section says it plainly: "These numbers show up for most recipients, but in some cases the call may appear as a private number. For guaranteed display, use your Hirify number."
-
-A secondary caller ID depends on the network that carries the call. If the display matters to you, use your dedicated line.
-
 ## Good to know
 
 - Only French numbers can be dialed from the app.
 - The Starter plan includes a monthly quota of 300 call minutes. The Hub plan has no quota. The counter is under **Usage** on the **Subscription** page.
 - A call that's too short isn't transcribed.
-- Hirify never sends a message to a candidate. The verification text message goes to your own number, never to theirs.
-- The controls to add, verify, and delete a secondary caller ID only show for the organization's administrators.
+- Hirify never sends a message to a candidate.
 
 <CardGroup cols={2}>
   <Card title="Get a phone number" icon="phone" href="/en/calling/get-a-phone-number">
