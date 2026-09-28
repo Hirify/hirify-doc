@@ -160,8 +160,11 @@ A bold label in an English page is the exact string the English interface shows.
 | Signaux bloquants, Bloquant, Écart CV | **Deal-breakers**, **Deal-breaker**, **CV mismatch** |
 | Identifier les intervenants, Qui parle ici ?, Inverser avec..., Fusionner avec..., Non-candidat | **Identify speakers**, **Who's speaking here?**, **Swap with...**, **Merge with...**, **Not the candidate** |
 | Assistant, Sourcing, Pilotage, Fiabilité | **Assistant**, **Sourcing**, **Analytics**, **Data reliability** |
-| Forte correspondance, À considérer, Réserve | **Strong match**, **Worth considering**, **Weak match** |
-| Profil recherché, Rédiger un message, Brouillon de message | **Target profile**, **Write a message**, **Outreach draft** |
+| Groupes du Sourcing : Retenus, Correspondent, À vérifier, Écartés | **Shortlisted**, **Match**, **To check**, **Ruled out** |
+| Verdicts par critère : Établi, Partiel, Rien au dossier, Contredit | **Established**, **Partial**, **Nothing on file**, **Contradicted** |
+| Niveaux de critère : Indispensable, Important, Bonus (abrégés Indisp., Import., Bonus) | **Must-have**, **Important**, **Bonus** (short: **Must**, **Key**, **Bonus**) |
+| Retenir, Retenu, Écarter (dossier d'un profil) | **Shortlist**, **Shortlisted**, **Rule out**. The button **Rule out** is not the group **Ruled out**. |
+| Rédiger un message, Brouillon de message | **Write a message**, **Outreach draft** |
 | Paramètres : Profil, Sécurité, Intégrations, Téléphonie, Vocabulaire, Familles de profils | **Settings**: **Profile**, **Security**, **Integrations**, **Calling**, **Custom vocabulary**, **Job families** |
 | Jetons d'accès, Continuer avec le SSO | **Access tokens**, **Continue with SSO** |
 | Numéro affiché, Identifiants secondaires, Vérification entreprise | **Caller ID**, **Secondary caller IDs**, **Business verification** |

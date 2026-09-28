@@ -1,7 +1,7 @@
 ---
-title: "Read results, compare candidates, and share a search"
-sidebarTitle: "Read and compare"
-description: "Read the results by tier, compare candidates side by side, build a shortlist, and decide who on your team can see it"
+title: "Read the results and share a search"
+sidebarTitle: "Read the results"
+description: "Read profiles group by group and criterion by criterion, open their file, build a shortlist, and share the search"
 icon: "table-columns"
 ---
 
@@ -9,111 +9,119 @@ icon: "table-columns"
   Access: Hub plan.
 </Note>
 
-The results screen has two panes: the ranked list on the left and the selected candidate's file on the right. This page walks you through both, then shows how to pull out a shortlist and share it.
+The results screen has two panes: the list of profiles on the left and the selected profile's file on the right. Each criterion of your search has its own column, and each profile gets a verdict in it. No numeric score is shown.
 
-## Result tiers
+{/* SCREENSHOT: the results screen, with the criteria bar at the top, the list by group on the left with one column per criterion, and the profile's file on the right */}
 
-At the top of the list, the **Shortlisted** group gathers the profiles you added to the shortlist. The tiers follow, from best to weakest.
+## The verdicts
 
-| Group in the list | Badge on the candidate |
-| --- | --- |
-| **Strong matches** | **Strong match** |
-| **Worth considering** | **Worth considering** |
-| **Weak matches** | **Weak match** |
+For each criterion, Hirify says what the profile's file establishes:
 
-A profile only gets **Strong match** when its skills or experience are confirmed and it isn't located far from the job with no stated willingness to relocate. Otherwise it stays **Worth considering**.
+- **Established**: the file shows the criterion is met.
+- **Partial**: the file meets it in part.
+- **Nothing on file**: the file says nothing about this criterion.
+- **Contradicted**: the file holds information that goes against the criterion.
 
-Each group header collapses with one click. Once the search is complete, **Weak matches** collapse on their own whenever better tiers exist, to make triage easier.
+Missing information is never treated as contrary information. **Nothing on file** points to a question to ask, not a flaw in the candidate. A legend of the verdicts is repeated at the bottom of the list.
 
-At the top of the screen, a summary line shows the number of evaluated profiles, the number shortlisted, the count per tier, and, when relevant, how many profiles were ruled out and by which hard filter. Below it, the job's first must-have skills remind you what's being searched for.
+## The four groups
 
-{/* SCREENSHOT: the results screen, with the tiered list on the left and the candidate file on the right */}
+Profiles fall into four groups. Only **Must-have** criteria decide the group:
 
-## Read a result row
+- **Shortlisted**: your pick for this job. A profile you shortlist moves here, whatever its verdicts.
+- **Match**: no must-have is contradicted or without proof. A **Partial** verdict on a must-have keeps the profile in this group.
+- **To check**: a must-have is still **Nothing on file**.
+- **Ruled out**: a must-have is **Contradicted** by the file.
 
-A row holds two pieces of information: the candidate's name and their current job with their company. On the right, four colored dots sum up the four criteria of the file: skills, experience, interview, and logistics. On hover, they give way to a checkbox, the one used for comparison.
+For contract, availability, day rate, and salary conditions, only contrary information counts. Missing information doesn't put the profile in **To check**. It joins the points to confirm in the profile's file.
 
-The Up and Down arrow keys move the selection through the list, and the file on the right follows.
+Each group collapses with **Hide** and expands with **Show**. The **Ruled out** group starts collapsed, and you can still open its profiles.
 
-## Open a candidate's file
+Within a group, the order follows the verdicts: must-haves first, then **Important** criteria, which weigh on the order of the list, then **Bonus** criteria, which break ties between close profiles.
 
-Click a row to show the file in the right-hand pane.
+<Tip>
+  You change a criterion's level from the **Criteria** bar at the top of the results. The list regroups without running the search again. See [Criterion levels](/en/sourcing/weight-the-criteria).
+</Tip>
 
-At the top, the header shows the candidate's name, a line of facts (current job, company, years of experience, location), and the email address when it's known. Next to it, depending on the profile:
+## Read the list
 
-- **View interview**: opens the analyzed interview, if you have access to it.
-- **ATS profile**: opens the record in your ATS.
-- **Write a message**: prepares a draft, for a candidate linked to an interview.
-- **Shortlist**: adds the profile to the search's shortlist. The button changes to **Shortlisted**, and another click removes it.
-- **The three-dot menu**: offers **Exclude**.
+At the top of the list, **Ranked on must-haves** recalls the grouping rule. On the right, one column per criterion, must-haves first. Hover over a column header to read the full criterion, its level, and what the brief requires.
 
-Below the header, a strip gives the **Verdict**, meaning the tier, then the status of each of the four criteria: **Confirmed**, **Partial**, or **Not observed**. Hover over a criterion to see what it covers, what the file establishes (**Established**), and what's missing (**Missing**).
+Each row shows:
 
-Then come the profile summary and an origin line saying where the verdict comes from: the interview, with its date and the recruiter who led it, or the ATS record and when it was last updated. For a candidate already considered for the job, that line ends with "Already seen:" and the reason. **Strengths** and **Watch-outs** follow, with three items at most each. Watch-outs also flag a location far from the job with no stated willingness to relocate, and conditions missing from the file, marked **Not provided**.
+- **The profile's name**, followed by their current job and company.
+- **One mark per column**: the profile's verdict on that criterion.
+- **Applied before**: the profile already applied to the ATS job attached to the search.
+- **Interview**: the profile has an analyzed interview.
 
-Each statement ends with its source, which you can click: **Interview** followed by the minute, **CV**, or **ATS record**. A click opens the excerpt: the interview quote with the speaker, the minute, and a **View in interview** link, or the passage from the CV or the ATS record. If the interview belongs to a colleague and you don't have access to it, a padlock marks the source and the screen tells you access is restricted.
+From eight criteria on, the first six keep their own column and the rest are grouped in an **Others** column. It counts the established criteria and flags a contradicted one. On hover, it lists each criterion with its verdict.
 
-## Compare candidates side by side
+The Up and Down arrow keys move from one profile to the next, and the file on the right follows. While evaluation is still running, the bottom of the list shows how many profiles are left to evaluate.
+
+## Open a profile's file
+
+Click a row. The right-hand pane shows the file, from top to bottom:
+
+- **The header**: the profile's name, current job, and company. An origin line says where the file comes from: the interview, with its date and the recruiter who led it, or the ATS record and the date it was last updated. The email address shows when it's known, with a button to copy it.
+- **The group in one sentence**: a panel explains why the profile is in its group. For a profile to check or ruled out, it names the must-haves at stake. The profile summary follows.
+- **Criterion by criterion**: each criterion with its level, what the brief requires, the verdict spelled out, and what the file says about it. Under the verdict, the excerpt that proves it and its sources: **Interview** with the minute, **CV**, or **ATS record**. An interview source opens the transcript at the quoted passage.
+- **Ask at the next conversation**: what the file can't settle, including conditions to confirm such as **To confirm: Contract**. When the file covers every criterion, the section says so.
+- **With you**: this profile's applications and interviews in your organization, most recent first, with the job, the stage reached, and the recruiter.
+
+If the proof comes from a colleague's interview you don't have access to, a padlock marks the source.
+
+At the top of the file, depending on the profile:
+
+- **ATS record**: opens the record in your ATS.
+- **Rule out**: removes the profile from this search's results. It disappears from the list and doesn't join the **Ruled out** group. A notification offers **Cancel**.
+- **Shortlist**: moves the profile to the **Shortlisted** group. The button changes to **Shortlisted**, and another click removes it.
+- **More actions**: the three-dot menu offers **Write a message** and, for a profile with an interview, **View the interview**.
+
+## Ask a question about the profiles
+
+At the bottom of the file, a field opens the Assistant in a conversation linked to the search. With a profile selected, the question is about that profile. With no selection, it's about all the profiles found.
+
+## Share the search
+
+The **Share** button, at the top right of the results, brings together the visibility setting and three ways to get the shortlist out.
 
 <Steps>
-  <Step title="Check the profiles">
-    Hover over a row and check the box. Once a profile is checked, the boxes stay visible across the whole list. You can compare up to four candidates.
+  <Step title="Choose the visibility">
+    Under **Visibility**, choose **Only me** or **Whole team**. With **Whole team**, your colleagues find the search in their history. Only the search's author can change this setting.
   </Step>
-  <Step title="Open the comparison">
-    From two checked profiles, the **Compare** button appears at the top right with their count. Click it.
+  <Step title="Copy the link">
+    **Copy link** puts the search's address on your clipboard. A search set to **Only me** only opens for you.
   </Step>
-  <Step title="Read the table">
-    The **Candidate comparison** window puts one candidate per column, with their tier badge, and one row per criterion: **Skills**, **Experience**, **Interview signal**, **Logistics**, then **Strengths** and **Watch-outs**. The sources of strengths and watch-outs stay clickable there.
+  <Step title="Copy the shortlist">
+    **Copy shortlist** produces text formatted for an email. For each profile: name, email address when there is one, source, group, summary, established criteria, and criteria that are contradicted or without proof.
   </Step>
-  <Step title="Remove a candidate">
-    The cross at the top of a column removes it from the comparison without closing the window.
+  <Step title="Download the table">
+    **Download as CSV** exports the same profiles with one column per criterion and its verdict, along with the group, whether the profile is shortlisted, any previous application, unverified conditions, the summary, and the link to the ATS record.
   </Step>
 </Steps>
 
-{/* SCREENSHOT: the "Candidate comparison" window, with three columns and the criteria rows */}
-
-## Build and copy a shortlist
-
-Add the profiles you're interested in with **Shortlist**, in their file's header. They join the **Shortlisted** group at the top of the list. Set aside what doesn't fit: **Exclude**, in the file's three-dot menu, removes the candidate from this search's results. A notification offers **Cancel** if you made a mistake.
-
-Then, in the three-dot menu at the top right of the results, choose **Copy shortlist**. You get a formatted summary, ready to paste into an email or a message. For each profile: name, email address when there is one, source, tier, summary, strengths, and watch-outs.
-
 <Note>
-  The copy takes the profiles you shortlisted. If you haven't shortlisted any, it takes the **Strong match** and **Worth considering** tiers, and failing that, all evaluated profiles.
+  The copy and the table take the profiles you shortlisted. If you haven't shortlisted any, they take the evaluated profiles outside **Ruled out**, and failing that, all evaluated profiles.
 </Note>
 
-The same menu offers **Download as CSV**: a table of the same profiles with, for each one, the score, the tier, the status of the four criteria, whether it's shortlisted, any previous application, unverified conditions, the summary, and the link to the ATS record.
+A search is visible to the whole team by default. A brief that asks for a confidential search shows the **Private search** chip and creates a search set to **Only me**.
 
-## Private search or visible to your team
+## Earlier searches
 
-You choose the scope before starting the search, with the chip under the input field on the Sourcing home screen. It shows the current setting (**Team** or **Private**) and opens on two options:
-
-- **Visible to your team**: "Everyone in your organization can find it."
-- **Private**: "Only you can see this search and its results."
-
-Once the search has started, the chip disappears from the results screen. The scope is fixed for that search. To change it, start a new one with the other setting.
-
-## Share a search link
-
-In the same three-dot menu, **Copy link** puts the search's address on your clipboard. The text under the option reminds you who can open it: any colleague in the organization, or only you if the search is private.
-
-Whoever opens the link sees the search as it is, including the current weights.
-
-From the results, the question field at the bottom of the screen opens the Assistant in a conversation linked to this search and sends it your question about the profiles found.
+A search run before the switch to criteria shows **This search predates the criteria model**. Click **Run search again** to get a verdict for each criterion. The rerun uses one search from your hourly budget.
 
 ## Good to know
 
-- **No numeric score is shown on screen.** The tier places the fit with the job as you described and weighted it. It's neither an assessment of the person nor a decision. Only the CSV export includes the calculated score.
-- **Excluding only affects this search.** The candidate stays in your talent pool and will come up in other searches.
-- **A private search stays private.** The copied link doesn't open it for anyone but you.
+- **No numeric score.** The group and the verdicts place the profile against the job as you described it. They're neither an assessment of the person nor a decision.
+- **A filter rules profiles out before evaluation.** A profile that contradicts a filter from the brief doesn't show in the list. The results header shows how many profiles were filtered out and by which filter. See [Start a search](/en/sourcing/start-a-search).
+- **Ruling out only affects this search.** The profile stays in your talent pool and will come up in other searches.
 - **Nothing is sent to the candidate or written to your ATS.** The shortlist is text you paste wherever you want.
-- **A profile with no analyzed interview keeps an unobserved interview signal.** It's missing data, not a bad mark.
 
 <CardGroup cols={2}>
-  <Card title="Outreach message" icon="envelope-open-text" href="/en/sourcing/write-an-outreach-message">
-    Prepare a first-contact draft from a candidate's file.
+  <Card title="Criterion levels" icon="scale-balanced" href="/en/sourcing/weight-the-criteria">
+    Set a criterion to Must-have, Important, or Bonus without running the search again.
   </Card>
-  <Card title="Weight the criteria" icon="scale-balanced" href="/en/sourcing/weight-the-criteria">
-    Change the ranking order without running the search again.
+  <Card title="Outreach message" icon="envelope-open-text" href="/en/sourcing/write-an-outreach-message">
+    Prepare a first-contact draft from a profile's file.
   </Card>
 </CardGroup>
