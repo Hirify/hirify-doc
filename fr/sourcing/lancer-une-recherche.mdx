@@ -1,7 +1,7 @@
 ---
-title: "Lancer une recherche et affiner le profil recherché"
+title: "Lancer une recherche à partir d'un brief"
 sidebarTitle: "Lancer une recherche"
-description: "Décrivez le poste à pourvoir, puis ajustez les exigences et posez les filtres éliminatoires jusqu'à obtenir la bonne liste."
+description: "Décrivez le profil en une phrase, vérifiez ce qu'Hirify a compris, rattachez un poste de votre logiciel de recrutement et suivez la recherche."
 icon: "magnifying-glass"
 ---
 
@@ -9,104 +9,95 @@ icon: "magnifying-glass"
   Accès : offre Hub.
 </Note>
 
-Le Sourcing retrouve dans votre propre vivier les candidats les plus proches d'un poste à pourvoir. Vous décrivez le besoin, Hirify parcourt vos entretiens analysés et les profils de votre logiciel de recrutement, puis classe ce qu'il a trouvé.
+Le Sourcing retrouve dans votre propre vivier les profils les plus proches d'un poste à pourvoir. Vous décrivez le besoin dans un seul champ de texte. Hirify parcourt vos entretiens analysés et les profils de votre logiciel de recrutement, puis juge chaque profil critère par critère.
 
-## Décrire le poste
+## Écrire le brief
 
 <Steps>
   <Step title="Ouvrez le Sourcing">
     Dans la barre latérale, sous **Talents IA**, cliquez sur **Sourcing**.
   </Step>
   <Step title="Écrivez ou collez">
-    Dans le champ **Décrivez le profil recherché ou collez une fiche de poste…**, écrivez votre besoin ou collez une annonce entière. En dessous de 20 caractères, le rappel **Décrivez un peu plus le profil (20 caractères minimum)** s'affiche et l'envoi reste bloqué.
+    Dans le champ **Décrivez le profil recherché ou collez une fiche de poste…**, écrivez votre besoin en une phrase ou collez une annonce entière. Le texte est la seule saisie : il n'y a rien à choisir à côté.
   </Step>
-  <Step title="Choisissez qui verra la recherche">
-    La pastille **Équipe** ou **Privée**, sous le champ, décide de la portée. Ce choix se fait avant de lancer : voir [Lire et comparer](/fr/sourcing/lire-et-comparer).
+  <Step title="Vérifiez ce qu'Hirify a compris">
+    Dès que vous cessez d'écrire, Hirify relit le brief et affiche sous le champ ce qu'il a compris. Voir [la lecture en direct](#la-lecture-en-direct-du-brief).
   </Step>
   <Step title="Envoyez">
-    Utilisez Cmd+Entrée, Ctrl+Entrée ou le bouton fléché. La touche Entrée seule insère un retour à la ligne : c'est ce qui vous permet de coller une fiche de poste sans déclencher la recherche.
+    Utilisez ⌘ ou Ctrl+Entrée, ou le bouton fléché. La touche Entrée seule insère un retour à la ligne : vous pouvez coller une fiche de poste sans déclencher la recherche. Sous 20 caractères, l'envoi reste bloqué, sauf si un poste est rattaché.
   </Step>
 </Steps>
 
-Sous le champ, une ligne rappelle le cadre : **Recherche dans votre vivier · 10 profils qualifiés visés**, suivie du nombre de recherches qu'il vous reste dans l'heure.
+Quand le brief couvre les quatre points, une ligne sous le champ rappelle le cadre : **Recherche dans votre vivier · 10 profils qualifiés visés**, suivie du nombre de recherches qu'il vous reste dans l'heure.
 
-<Frame>
-  <img src="/images/sourcing-vide.webp" alt="l'écran Sourcing vide, avec le champ de saisie, les pastilles Filtres et Équipe, la liste Reprendre" />
-</Frame>
+{/* CAPTURE : l'écran Sourcing avec un brief saisi et les pastilles Lieu, Langues, TJM / salaire, Contrat et dispo sous le champ, la liste Reprendre en dessous */}
 
-## Partir d'un poste de votre logiciel de recrutement
+## La lecture en direct du brief
 
-Si votre logiciel de recrutement est connecté, la pastille **Poste ATS** ouvre la liste de vos postes, avec leur service et leur localisation. Choisissez-en un : il fournit le corps de la demande.
+Sous le champ, quatre pastilles montrent ce qu'Hirify a lu dans votre texte :
 
-L'invite du champ devient **Précisez ce que vous cherchez en plus de ce poste (facultatif)…** et vous pouvez y ajouter une contrainte de lieu, par exemple. La croix à droite de la pastille retire le poste sélectionné.
+- **Lieu**
+- **Langues**
+- **TJM / salaire**
+- **Contrat et dispo**
 
-Partir d'un poste réel a un autre effet : pour un candidat déjà vu sur ce poste, la ligne d'origine de son dossier se termine par « Déjà passé : » suivi du motif (**Recalé** ou **Désisté**) et de l'étape atteinte.
+Une pastille cochée a trouvé son information. Cliquez dessus pour lire la valeur retenue, sa provenance (**Lu dans votre texte**, avec l'extrait, ou **Depuis la fiche du poste rattachée.**) et son effet sur la recherche. Pour changer la valeur, modifiez le texte.
 
-## Suivre l'avancement de la recherche
+Une pastille en pointillés signale un point absent du brief. Un clic ajoute sa ligne au texte, par exemple « Lieu : », que vous complétez. Tant qu'un point manque, la ligne sous le champ l'annonce à la place du rappel du cadre : « Sans lieu, la recherche ne tiendra pas compte de ces points. » Un point manquant ne bloque jamais le lancement.
 
-La recherche se déroule en trois étapes affichées à l'écran : **Recherche dans le vivier**, puis **Évaluation des candidats**, puis **Finalisation**. Un compteur suit les profils trouvés, puis les profils qualifiés atteints sur la cible.
+Si la lecture échoue, le message **Analyse indisponible, la recherche reste possible.** s'affiche. Vous pouvez lancer quand même.
 
-<Note>
-  Vous pouvez fermer l'onglet : la recherche se poursuit, et vous la retrouverez dans la liste **Reprendre** ou dans la barre latérale.
-</Note>
+## Filtre ou critère
 
-Ouvrir une autre recherche ne l'arrête pas non plus. Tant qu'elle occupe votre créneau de recherche, un encart **Une recherche est en cours** vous la rappelle, avec **Reprendre** et **Arrêter**.
+Une condition de rémunération, de contrat ou de disponibilité écrite comme impérative, par exemple « TJM 650 € max », devient un **Filtre**. Sa pastille porte alors la mention **Filtre**.
 
-**Arrêter la recherche** interrompt le traitement. Dès que les premiers profils s'affichent, la progression passe dans l'en-tête des résultats, avec un bouton **Arrêter**.
+- **Un filtre** écarte, avant l'évaluation, les profils dont le dossier contredit la condition. Un profil dont l'information est inconnue n'est jamais écarté.
+- **Un critère** ne retire jamais un profil de la liste. En niveau **Indispensable**, un critère contredit range le profil dans le groupe **Écartés**, qui reste consultable. En niveau **Important** ou **Bonus**, il ne joue que sur l'ordre.
 
-## Relire le Profil recherché
+Pour qu'un filtre devienne une simple préférence, ouvrez sa pastille et cliquez sur **Assouplir en critère**. Le critère partira en niveau **Important** : voir [Les niveaux de critère](/fr/sourcing/ponderer-les-criteres).
 
-Quand vous décrivez le poste dans le champ, Hirify en déduit les exigences et lance la recherche dans la foulée : il n'y a pas d'écran de confirmation.
+Le lieu et les langues ne sont jamais des filtres. Ils deviennent des critères de la recherche : les langues en **Indispensable**, le lieu en **Indispensable** quand le poste demande une présence physique.
 
-Pour travailler à partir des champs plutôt que d'un texte, cliquez sur **Préciser le profil**, sous le champ de l'écran d'accueil du Sourcing. La fenêtre **Préciser le profil** affiche la carte **Profil recherché** :
+## Rattacher un poste de votre logiciel de recrutement
 
-- **Intitulé du poste**
-- **Expérience minimum (ans)** et **Niveau recherché** : Non précisé, Junior, Confirmé, Senior, Lead / Manager, Direction
-- **Localisation**
-- **Compétences indispensables**, **Compétences appréciées**, **Secteurs**, **Soft skills**
-- **Responsabilités clés**
+Si votre logiciel de recrutement est connecté, tapez **@** dans le champ, ou cliquez sur le bouton **@** (**Mentionner un poste**). La liste de vos postes s'ouvre, avec leur service, leur localisation et leur référence. Tapez un intitulé ou une référence pour la filtrer, puis choisissez un poste : il s'insère dans le texte.
 
-À droite, l'encart **Ce qui sera cherché** compose la phrase que la recherche recevra. Les champs encore vides y apparaissent comme des emplacements à remplir. Les filtres éliminatoires actifs y sont rappelés. **Lancer la recherche** part de ces champs, sans repasser par l'analyse d'une description.
+- **Un seul poste par recherche** : en rattacher un autre remplace le premier.
+- **La fiche du poste complète le brief** : avec un poste rattaché, le texte peut rester vide. Ajoutez-y ce que la fiche ne dit pas, une contrainte de lieu par exemple.
+- **Une référence citée dans le texte** : si votre brief mentionne la référence d'un poste, Hirify propose **Rattacher « … »**. **Ignorer la suggestion** la retire.
 
-{/* CAPTURE : la fenêtre « Préciser le profil » — champs à gauche, aperçu « Ce qui sera cherché » à droite */}
+Partir d'un poste réel a un autre effet : un profil qui a déjà candidaté à ce poste porte la mention **Déjà candidat** dans les résultats.
 
-## Ajuster les exigences
+## Qui verra la recherche
 
-Dans la carte **Profil recherché**, chaque liste se complète au clavier : tapez dans le champ **Ajouter…** puis validez avec Entrée ou le bouton plus. La croix sur une étiquette la retire. Les responsabilités se saisissent dans **Ajouter une responsabilité…**.
+Une recherche est visible par toute votre équipe par défaut. Si votre brief demande une recherche confidentielle, par exemple « mandat confidentiel », la pastille **Recherche privée** s'affiche et vous seul verrez la recherche. L'auteur de la recherche peut changer ce réglage ensuite, depuis **Partager** : voir [Lire les résultats](/fr/sourcing/lire-et-comparer#partager-la-recherche).
 
-Chaque modification se répercute aussitôt dans l'encart **Ce qui sera cherché**. Avant de lancer, vous lisez exactement ce que vous demandez.
+## Suivre l'avancement
 
-## Poser des filtres éliminatoires
+En haut à droite des résultats, une ligne suit la recherche : **Recherche dans le vivier**, puis **Évaluation en cours** avec le nombre de profils évalués sur le nombre trouvé. Les profils s'affichent au fil de leur évaluation. Le bouton **Arrêter** interrompt la recherche : les évaluations déjà lancées se terminent.
 
-La pastille **Filtres**, sous le champ de saisie, ouvre les critères qui écartent un profil :
-
-- **Type de contrat** : Indifférent, CDI, CDD, Intérim, Stage, Alternance, Job étudiant, Freelance / Indépendant
-- **Budget annuel max (€)**
-- **Disponible avant le**
-- **Permis B requis** et **Véhicule requis**
-
-Le compteur sur la pastille indique le nombre de filtres actifs, et **Tout effacer** les retire tous.
+Une fois la recherche finie, la ligne indique le nombre de profils évalués et depuis quand, puis, le cas échéant, combien de profils ont été écartés et par quel filtre.
 
 <Note>
-  Seul un écart avéré écarte un candidat. Une information absente du dossier laisse passer le profil, signalé à vérifier : c'est à la préqualification de trancher.
+  Vous pouvez fermer l'onglet : la recherche se poursuit. Vous la retrouverez dans la liste **Reprendre**, sous le champ de l'écran d'accueil du Sourcing.
 </Note>
 
-Sur les résultats, l'en-tête indique combien de profils ont été écartés et par quel filtre.
+Une seule recherche tourne à la fois. Si vous en lancez une pendant qu'une autre tourne, un encart vous le signale avec **Voir cette recherche** et **Arrêter l'autre et lancer**. En haut de l'écran, **1 recherche en cours** ramène à celle qui tourne.
 
-## Relancer la recherche après un ajustement
+## Relancer ou repartir d'un nouveau brief
 
-Sur l'écran de résultats, le champ de saisie se replie. Cliquez sur **Affiner la recherche** pour le déplier, écrivez une description révisée et envoyez : une nouvelle recherche part. Ce champ lance toujours une recherche, même si son invite parle aussi de question. Pour interroger les profils trouvés, utilisez le champ de question placé à côté de **Affiner la recherche** : il ouvre l'Assistant.
+Pour changer le brief, lancez une nouvelle recherche : cliquez sur **Sourcing** dans le fil d'Ariane ou dans la barre latérale pour revenir au champ de saisie. Pour changer seulement le niveau d'un critère, inutile de relancer : voir [Les niveaux de critère](/fr/sourcing/ponderer-les-criteres).
 
 D'autres boutons relancent selon la situation :
 
-- **Relancer la recherche** : quand aucun profil n'est ressorti et qu'un nouvel essai a du sens.
-- **Relancer sans les filtres** : quand vos filtres éliminatoires ont écarté tous les profils trouvés.
+- **Relancer la recherche** : quand aucun profil n'a pu être évalué, ou pour une recherche lancée avant le passage aux critères.
+- **Relancer sans les filtres** : quand vos filtres ont écarté tous les profils trouvés.
 - **Reprendre** : après une recherche que vous avez arrêtée.
 - **Évaluer** : quand des profils ont été trouvés mais pas encore évalués.
 - **Nouvelle recherche** : pour repartir d'une page blanche.
 
 <Warning>
-  Chaque lancement consomme une recherche de votre budget horaire, limité à dix. Modifier seulement l'ordre du classement n'en consomme aucune : voir [Pondération des critères](/fr/sourcing/ponderer-les-criteres).
+  Chaque lancement consomme une recherche de votre budget horaire, limité à dix. Changer le niveau d'un critère n'en consomme aucune.
 </Warning>
 
 ## Qui a accès au Sourcing (à partir de l'offre Hub)
@@ -119,15 +110,15 @@ Il faut aussi de la matière. Si votre vivier ne contient encore aucun profil in
 
 - **Le Sourcing cherche dans votre vivier, pas sur internet.** Ni le web, ni les réseaux sociaux : uniquement vos entretiens analysés et les candidats de votre logiciel de recrutement.
 - **Dix recherches par heure et par utilisateur.** Le quota atteint, l'écran annonce le délai avant la suivante. L'Assistant reste accessible et **Passer en Assistant** vous y emmène.
-- **La cible est de dix profils qualifiés.** La recherche s'arrête quand elle les a réunis, quand elle a épuisé ce que votre vivier contient, ou quand le temps imparti est écoulé. Dans ce dernier cas, elle affiche les meilleurs profils obtenus sans le signaler à l'écran. Seule une interruption survenue avant toute évaluation vous prévient et vous invite à relancer. C'est aussi ce qui laisse parfois des profils trouvés mais non évalués, que le bouton **Évaluer** reprend.
-- **Un profil sans entretien analysé reste évaluable**, mais sur son dossier seul : le signal d'entretien y est marqué comme non observé.
+- **La cible est de dix profils qualifiés.** La recherche s'arrête quand elle les a réunis, quand elle a épuisé ce que votre vivier contient, ou quand le temps imparti est écoulé. Dans ce dernier cas, elle affiche les meilleurs profils obtenus.
+- **Un profil sans entretien analysé reste évaluable** sur son CV et sa fiche ATS. Un critère que ces documents ne couvrent pas y est marqué **Rien au dossier**, ce qui n'est pas un mauvais point.
 - **Rien n'est envoyé à personne.** Une recherche produit une liste, pas un contact.
 
 <CardGroup cols={2}>
-  <Card title="Pondération des critères" icon="scale-balanced" href="/fr/sourcing/ponderer-les-criteres">
-    Déplacer le poids entre compétences, expérience, entretien et logistique.
+  <Card title="Lire les résultats" icon="table-columns" href="/fr/sourcing/lire-et-comparer">
+    Les groupes, les verdicts par critère, le dossier d'un profil, le partage.
   </Card>
-  <Card title="Lire et comparer" icon="table-columns" href="/fr/sourcing/lire-et-comparer">
-    Lire les paliers, comparer côte à côte, partager la recherche.
+  <Card title="Les niveaux de critère" icon="scale-balanced" href="/fr/sourcing/ponderer-les-criteres">
+    Passer un critère en Indispensable, Important ou Bonus sans relancer.
   </Card>
 </CardGroup>

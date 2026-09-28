@@ -1,7 +1,7 @@
 ---
-title: "Pondérer les critères de classement"
-sidebarTitle: "Pondération des critères"
-description: "Répartir le poids entre compétences, expérience, signal entretien et logistique, et voir le classement se recalculer"
+title: "Régler le niveau des critères"
+sidebarTitle: "Niveaux de critère"
+description: "Passer un critère en Indispensable, Important ou Bonus, voir quels profils changent de groupe et regrouper la liste sans relancer la recherche"
 icon: "scale-balanced"
 ---
 
@@ -9,63 +9,64 @@ icon: "scale-balanced"
   Accès : offre Hub.
 </Note>
 
-Une même liste de candidats ne se classe pas de la même façon selon ce qui compte pour vous. La pondération vous laisse déplacer le poids entre quatre critères et voir l'ordre se refaire sous vos yeux.
+Chaque recherche porte des critères, lus dans votre brief. Chacun a un niveau, qui dit ce qu'il fait à la liste. Il n'y a ni pondération ni note : le niveau suffit à ranger les profils.
 
-## Les quatre critères
+## Les trois niveaux
 
-| Critère | Ce qu'il recouvre |
-| --- | --- |
-| **Compétences** | Correspondance des compétences techniques et soft skills. |
-| **Expérience** | Années, secteurs, envergure des postes, trajectoire. |
-| **Signal entretien** | Verdict des entretiens déjà menés : forces et points de vigilance. |
-| **Logistique** | Disponibilité, salaire, mobilité, préavis. |
+- **Indispensable** : écarte le profil qui le contredit. Les indispensables décident seuls du groupe d'un profil.
+- **Important** : pèse dans l'ordre de la liste.
+- **Bonus** : départage deux profils proches.
 
-Par défaut, la répartition est de 40 points pour les compétences, 25 pour l'expérience, 20 pour le signal entretien et 15 pour la logistique.
+Les groupes qui en découlent sont décrits dans [Lire les résultats](/fr/sourcing/lire-et-comparer).
 
-## Où régler la pondération
+## Le niveau de départ
 
-Le bouton **Pondération** se trouve en haut à droite de l'écran de résultats, à côté du décompte des profils évalués. Il ouvre le panneau **Pondération du score**, qui re-trie les profils à l'écran sans relancer la recherche.
+Hirify attribue un niveau à chaque critère d'après votre brief :
 
-Il n'y a pas de réglage avant le lancement : la première recherche part sur la répartition par défaut, et vous ajustez ensuite sur les résultats, une fois que vous voyez qui remonte.
+- **Indispensable** : les compétences exigées, les langues, les conditions de contrat, de disponibilité, de TJM ou de salaire posées comme filtre, et le lieu quand le poste demande une présence physique, même partielle : sur site, en hybride ou en déplacements réguliers.
+- **Important** : les mêmes conditions quand le brief les formule comme une préférence, le lieu d'un poste en télétravail complet, et l'expérience.
+- **Bonus** : les compétences appréciées et les secteurs.
 
-{/* CAPTURE : le panneau Pondération ouvert depuis l'en-tête des résultats */}
+Avant de lancer, **Assouplir en critère** fait d'un filtre une préférence : le critère part alors en **Important**. Voir [Lancer une recherche](/fr/sourcing/lancer-une-recherche).
 
-## Partir d'un profil type
+## Changer le niveau d'un critère
 
-En haut du panneau, la ligne **Profils types** propose trois répartitions prêtes à l'emploi.
+<Steps>
+  <Step title="Repérez le critère">
+    En haut des résultats, la barre **Critères** montre un critère par puce, avec l'abrégé de son niveau (**Indisp.**, **Import.** ou **Bonus**) et la valeur exigée. Les critères qui n'ont pas leur colonne dans la liste sont derrière **+N critères**.
+  </Step>
+  <Step title="Ouvrez la puce">
+    La fenêtre **Niveau de « … »** propose les trois niveaux, avec ce que chacun fait à la liste.
+  </Step>
+  <Step title="Lisez l'aperçu">
+    Sous **Si vous changez de niveau**, chaque autre niveau annonce le principal déplacement qu'il provoquerait, par exemple « 3 profils : Correspondent → À vérifier », ou **aucun changement de groupe**.
+  </Step>
+  <Step title="Choisissez le niveau">
+    La liste se regroupe aussitôt.
+  </Step>
+</Steps>
 
-- **Équilibré** : la répartition par défaut.
-- **Profil management** : l'expérience passe devant les compétences.
-- **Logistique d'abord** : les contraintes matérielles priment, l'entretien pèse peu.
+{/* CAPTURE : la barre Critères, une puce ouverte sur le choix du niveau et l'aperçu « Si vous changez de niveau » */}
 
-Un clic applique le profil type et reclasse la liste. Le nom du profil actif s'affiche en haut du panneau. Dès que vous modifiez un chiffre, il devient **Personnalisé**.
+## Ce qu'un changement de niveau change et ce qu'il ne change pas
 
-## Répartir les points à la main
+Changer un niveau regroupe les profils sans les réévaluer. Le verdict d'un profil sur un critère ne dépend pas du niveau de ce critère : seul son effet sur le groupe et sur l'ordre change. Aucune recherche n'est consommée sur votre budget horaire.
 
-Chaque critère porte un champ numérique entre 0 et 100. Les points expriment des priorités relatives : ce sont leurs proportions qui comptent, pas leur somme. Le pourcentage affiché à droite de chaque champ montre la part réelle, ramenée à 100 %, et la barre sous la liste donne la répartition d'un coup d'œil.
+Le niveau est enregistré sur la recherche : vous le retrouvez en la rouvrant, comme toute personne qui l'ouvre. Si l'enregistrement échoue, une notification vous prévient.
 
-Mettre un critère à 0 revient à le sortir du classement. Si vous mettez tout à 0, le message **Attribuez au moins un point à un critère pour lancer la recherche.** s'affiche en rouge et le classement repart sur la répartition par défaut.
-
-## Ce que la pondération change et ce qu'elle ne change pas
-
-Le classement se recalcule à l'écran sans relancer la recherche : aucune recherche n'est consommée sur votre budget horaire, et aucun profil n'est réévalué. Une notification confirme la mise à jour.
-
-Le réglage est conservé sur la recherche : vous le retrouvez après un rafraîchissement, en rouvrant la recherche depuis **Reprendre**, et il s'applique à qui ouvre le lien partagé. Si l'enregistrement échoue, une notification vous prévient que le nouveau classement ne vaut que pour l'écran en cours.
-
-Comme les paliers dépendent de ce classement, un candidat peut passer de **À considérer** à **Forte correspondance**, ou l'inverse, du seul fait d'un changement de pondération. C'est attendu : le palier dit l'adéquation au poste tel que vous venez de le pondérer, pas la valeur de la personne.
+Un profil peut donc passer de **Correspondent** à **À vérifier**, ou d'**Écartés** à **Correspondent**, du seul fait d'un changement de niveau. C'est attendu : le groupe dit l'adéquation au poste tel que vous l'avez réglé, pas la valeur de la personne.
 
 ## Bon à savoir
 
-- **La pondération ne relance rien.** Elle réordonne les profils déjà évalués. Pour élargir la recherche, il faut la relancer : voir [Lancer une recherche](/fr/sourcing/lancer-une-recherche).
-- **Aucune note chiffrée n'est affichée sur un candidat.** Les pourcentages du panneau décrivent la répartition entre critères, rien d'autre.
-- **Le signal entretien ne compte pas sans entretien.** Un profil issu du seul dossier porte la mention **Non observé** sur cette dimension, et son score se calcule sur les trois autres critères. Changer le poids de l'entretien ne modifie donc pas le score de ces profils, seulement celui des profils qui ont un entretien.
-- **Un relancement reprend la pondération en cours.** Vous n'avez pas à la ressaisir.
+- **Un niveau ne ramène pas un profil écarté par un filtre.** Un filtre écarte les profils qui le contredisent avant l'évaluation. Baisser ensuite le niveau du critère ne les fait pas revenir. Pour les garder, assouplissez le filtre en critère avant de lancer. Si les filtres ont écarté tous les profils trouvés, **Relancer sans les filtres** relance la recherche sans eux.
+- **Une donnée absente n'écarte jamais.** Un indispensable **Rien au dossier** met le profil dans **À vérifier**, pas dans **Écartés**.
+- **Pour changer les critères eux-mêmes, lancez une nouvelle recherche.** Le niveau se règle sur les résultats, la liste des critères vient du brief.
 
 <CardGroup cols={2}>
-  <Card title="Lire et comparer" icon="table-columns" href="/fr/sourcing/lire-et-comparer">
-    Les paliers, la fiche d'un candidat, la comparaison côte à côte.
+  <Card title="Lire les résultats" icon="table-columns" href="/fr/sourcing/lire-et-comparer">
+    Les verdicts, les groupes, le dossier d'un profil.
   </Card>
   <Card title="Lancer une recherche" icon="magnifying-glass" href="/fr/sourcing/lancer-une-recherche">
-    Décrire le poste, poser les filtres, relancer.
+    Écrire le brief, rattacher un poste, assouplir un filtre.
   </Card>
 </CardGroup>
