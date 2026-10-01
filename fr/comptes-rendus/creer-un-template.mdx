@@ -67,35 +67,33 @@ Cliquez sur **Ajouter une question**, saisissez son intitulé et validez. Hirify
 
 L'icône de corbeille supprime la question.
 
-## Choisir un type de réponse : Texte, Oui/Non, Choix unique, Choix multiple
+## Choisir le type de réponse
 
-Le premier réglage en bas de la carte fixe la forme de la réponse.
+En bas de la carte d'une question, **Réponse** propose trois valeurs :
 
-| Type | Ce que produit le compte rendu |
-| --- | --- |
-| **Texte** | Une réponse rédigée. |
-| **Oui/Non** | Une des deux valeurs. |
-| **Choix unique** | Une seule option de la liste que vous définissez. |
-| **Choix multiple** | Une ou plusieurs options de cette liste. |
+- **Texte** : une réponse rédigée, en paragraphe.
+- **Liste** : une réponse en liste à puces.
+- **Choix** : une ou plusieurs réponses parmi celles que vous définissez.
 
-Pour **Choix unique** et **Choix multiple**, le champ **Options** apparaît : renseignez une option par ligne, avec **Ajouter une option**.
+En **Choix**, les **Réponses possibles** apparaissent. Appuyez sur Entrée pour passer à la réponse suivante, ou collez-en plusieurs d'un coup, une par ligne. Activez **Plusieurs réponses** pour que le compte rendu puisse en retenir plusieurs. Le bouton **Oui / Non** transforme la question en une réponse par oui ou par non.
 
-## Régler le format et la longueur d'une réponse Texte
-
-Ces deux réglages n'existent que sur une question **Texte**.
-
-Le format se choisit entre deux valeurs :
-
-- **Réponse détaillée** : un paragraphe.
-- **Points clés** : une liste.
-
-La longueur se règle avec **Longueur auto**, **Courte**, **Moyenne** ou **Longue**. **Longueur auto** laisse Hirify calibrer selon ce qui a été dit.
+La longueur d'une réponse se précise dans les instructions de la question, par exemple « en une phrase » ou « trois points maximum ». Quand les instructions commencent par « Lister » et que la réponse est en **Texte**, l'éditeur propose **Passer en liste**.
 
 ## Ajouter une instruction à une question
 
 Le champ **Instructions pour l'IA** dit quoi chercher et comment le formuler. C'est le réglage qui pèse le plus sur la qualité du compte rendu : une instruction comme « distinguer les motivations liées au poste de celles liées au départ » change le résultat bien plus qu'un titre de question mieux tourné.
 
 Le bouton **Améliorer**, en haut à droite du champ, reformule ce que vous venez d'écrire. Il reste inactif tant que le champ est vide.
+
+## Définir les règles du compte rendu
+
+Le bloc **Règles du compte rendu**, en haut de l'éditeur sous le nom du template, fixe ce qui vaut pour tout le compte rendu. Ses trois réglages sont facultatifs :
+
+- **Consignes générales** : le ton, la mise en forme et les règles communes à toutes les questions. Exemple : « phrases courtes et factuelles, à la troisième personne ». Les instructions d'une question passent avant elles.
+- **Si une information manque, écrire** : le texte affiché pour une question que l'entretien n'a pas renseignée, par exemple « non communiqué ». Laissé vide, le compte rendu affiche « Information non disponible dans l'entretien ». Les questions à choix gardent « Non abordé dans l'entretien ».
+- **Ajouter les faits utiles hors modèle** : un fait utile qu'aucune question ne reprend (une réalisation, un signal, un contexte) est ajouté en fin de compte rendu, sous « Autres points à retenir ». Rien n'est ajouté s'il n'y en a pas. Ce réglage est désactivé par défaut.
+
+Les consignes générales règlent la forme du compte rendu. Elles n'y ajoutent aucune information : son contenu vient toujours de l'entretien.
 
 ## Les sections répétables
 
@@ -105,9 +103,13 @@ Un champ d'instructions apparaît alors, pour dire ce qui déclenche une répét
 
 ## Modifier un template existant
 
-Cliquez sur son nom dans la liste de gauche : il s'ouvre directement dans l'éditeur. Vos modifications se valident avec **Enregistrer**, en bas à droite. Sur un template en cours de création, le bouton s'appelle **Créer le template**. La mention **Modifications non sauvegardées** signale qu'il reste quelque chose à enregistrer.
+Cliquez sur son nom dans la liste de gauche : il s'ouvre en lecture, avec chaque question sur une ligne et ses instructions en entier. Cliquez sur une question pour la modifier sur place, puis sur **Réduire** ou Échap pour la refermer. Le bloc **Règles du compte rendu** et le nom du template se modifient de la même façon, d'un clic.
 
-Si vous quittez l'éditeur sans enregistrer, une fenêtre propose **Continuer l'édition** ou **Abandonner les modifications**. Un brouillon est conservé dans votre navigateur : à votre retour, un message **Brouillon disponible** propose **Restaurer** ou **Ignorer**.
+Dès qu'une modification est en cours, une barre apparaît en bas avec **Annuler** et **Enregistrer**, et la mention **Modifications non sauvegardées**. Après l'enregistrement, le template reste ouvert. Sur un template en cours de création, le bouton s'appelle **Créer le template**.
+
+Si vous quittez le template ou en ouvrez un autre sans enregistrer, une fenêtre propose **Continuer l'édition** ou **Abandonner les modifications**. Un brouillon est conservé dans votre navigateur : à votre retour, un message **Brouillon disponible** propose **Restaurer** ou **Ignorer**.
+
+Le menu **⋯**, en haut à droite, regroupe la visibilité, **Dupliquer** et **Supprimer**. La suppression demande une confirmation.
 
 ## Bon à savoir
 
