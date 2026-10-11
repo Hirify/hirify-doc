@@ -107,6 +107,7 @@ The English slugs are English. The language switcher cannot pair pages by path, 
 | `fr/integrations/renvoyer-une-evaluation` | `en/integrations/send-to-your-ats` |
 | `fr/integrations/automatismes-ats` | `en/integrations/ats-automations` |
 | `fr/integrations/familles-de-profils` | `en/integrations/job-families` |
+| `fr/integrations/envoyer-vers-notion` | `en/integrations/send-to-notion` |
 | `fr/integrations/extension-chrome` | `en/integrations/chrome-extension` |
 | `fr/integrations/personnaliser-l-assistant` | `en/integrations/customize-the-meeting-assistant` |
 | `fr/integrations/deconnecter-un-outil` | `en/integrations/disconnect-a-tool` |
