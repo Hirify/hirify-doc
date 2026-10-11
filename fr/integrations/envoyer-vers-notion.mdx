@@ -1,0 +1,118 @@
+---
+title: "Envoyer vos comptes rendus vers Notion"
+sidebarTitle: "Notion"
+description: "Relier l'espace Notion de votre organisation, choisir la base de destination et envoyer un compte rendu depuis l'entretien"
+icon: "file-export"
+---
+
+Hirify envoie un compte rendu dans une base Notion de votre organisation. Chaque compte rendu envoyé devient une page de cette base, avec son texte et les colonnes que vous choisissez de remplir.
+
+## Ce que Hirify écrit, ce qu'il ne fait pas
+
+L'envoi part toujours d'un geste du recruteur, compte rendu par compte rendu. Aucun compte rendu ne part de lui-même vers Notion.
+
+Hirify n'écrit que dans la base que vous lui partagez. Il lit la liste des bases partagées et leurs colonnes pour vous proposer la correspondance. Rien ne revient de Notion vers Hirify : une modification faite dans Notion ne change pas le compte rendu dans Hirify.
+
+<Warning>
+  Un compte rendu envoyé est visible par toutes les personnes qui ont accès à la base dans Notion, quels que soient leurs droits dans Hirify.
+</Warning>
+
+## Connecter Notion
+
+La connexion se fait une fois pour toute l'organisation. Elle est réservée à un administrateur ou à un admin facturation.
+
+<Steps>
+  <Step title="Ouvrez Paramètres, puis Intégrations">
+    Cliquez sur **Paramètres**, en bas de la barre latérale. Ouvrez ensuite **Intégrations** et descendez jusqu'à la section **Export des comptes rendus**.
+  </Step>
+  <Step title="Cliquez sur Connecter">
+    Sur la ligne **Notion**, cliquez sur **Connecter**. Vous êtes redirigé vers Notion.
+  </Step>
+  <Step title="Partagez la base dans Notion">
+    Choisissez votre espace de travail, puis sélectionnez la base qui recevra vos comptes rendus et autorisez l'accès. Vous êtes ramené dans Hirify, où la ligne **Notion** indique l'espace connecté.
+  </Step>
+</Steps>
+
+{/* CAPTURE : la section Export des comptes rendus de Paramètres > Intégrations, avec la ligne Notion connectée et repliée */}
+
+## Choisir la base et les colonnes
+
+Sur la ligne **Notion**, cliquez sur la flèche à droite pour afficher les réglages.
+
+<Steps>
+  <Step title="Choisissez la base de destination">
+    Dans **Base de destination**, sélectionnez la base partagée. Si la liste est vide, cliquez sur **Partager une autre base** pour retourner dans Notion et en partager une.
+  </Step>
+  <Step title="Associez les colonnes">
+    Sous **Colonnes remplies**, choisissez pour chaque information la colonne de votre base qui la reçoit. Laissez **Ne pas remplir** pour une information que vous ne voulez pas envoyer.
+  </Step>
+</Steps>
+
+Chaque choix est enregistré aussitôt. Le titre de la page Notion reprend toujours le titre du compte rendu.
+
+| Information | Ce que Hirify envoie | Type de colonne accepté dans Notion |
+| --- | --- | --- |
+| **Candidat** | Le nom du candidat de l'entretien | Texte |
+| **Poste** | Le poste lié à l'entretien dans votre logiciel de recrutement | Texte ou Sélection |
+| **Date d'entretien** | Le jour de l'entretien | Date |
+| **Recruteur** | L'auteur du compte rendu | Texte |
+| **Lien Hirify** | Le lien vers l'entretien dans Hirify | URL |
+
+Une colonne d'un autre type n'apparaît pas dans la liste proposée.
+
+{/* CAPTURE : la ligne Notion dépliée, avec la base de destination et les cinq colonnes associées */}
+
+## Envoyer un compte rendu
+
+Tout membre qui peut lire un compte rendu peut l'envoyer, une fois la base choisie par un administrateur.
+
+<Steps>
+  <Step title="Ouvrez l'entretien">
+    Affichez le compte rendu à envoyer. Il doit être terminé.
+  </Step>
+  <Step title="Ouvrez le menu du compte rendu">
+    Dans la barre au-dessus du compte rendu, cliquez sur le bouton **⋯**, puis sur **Envoyer vers Notion**.
+  </Step>
+  <Step title="Ouvrez la page créée">
+    Un message confirme l'envoi. Le même menu propose désormais **Ouvrir dans Notion**.
+  </Step>
+</Steps>
+
+{/* CAPTURE : le menu ⋯ du compte rendu, avec Envoyer vers Notion */}
+
+## Mettre à jour une page déjà envoyée
+
+Après un premier envoi, le menu propose **Mettre à jour dans Notion**. Hirify réécrit alors la même page avec le texte actuel du compte rendu et ses colonnes. Il ne crée pas de seconde page.
+
+<Warning>
+  La mise à jour remplace le contenu de la page. Ce que vous avez modifié à la main dans cette page Notion est perdu.
+</Warning>
+
+## Quand l'envoi est refusé
+
+- **Une colonne a été supprimée ou a changé de type dans Notion** : l'envoi s'arrête et un message le signale. Un administrateur revoit la correspondance dans **Paramètres**, **Intégrations**.
+- **La base est introuvable** : elle a été supprimée ou n'est plus partagée avec Hirify. Partagez-la de nouveau depuis **Partager une autre base**, ou choisissez-en une autre.
+- **L'accès a été retiré côté Notion** : la ligne **Notion** affiche **À reconnecter**. Un administrateur clique sur **Reconnecter**. La base et la correspondance choisies sont conservées.
+
+## Déconnecter Notion
+
+Dans **Paramètres**, **Intégrations**, cliquez sur **Déconnecter** sur la ligne **Notion**. Les pages déjà créées restent dans votre base Notion. Hirify ne les supprime pas.
+
+## Bon à savoir
+
+- Le texte envoyé est celui du compte rendu tel qu'il s'affiche dans Hirify.
+- Une information que Hirify ne connaît pas laisse sa colonne vide. La colonne **Poste** n'est remplie que si l'entretien est lié à une candidature de votre logiciel de recrutement.
+- Une page mise à la corbeille dans Notion n'est pas restaurée : le prochain envoi du même compte rendu crée une nouvelle page.
+- Si un administrateur change de base de destination, un compte rendu déjà envoyé obtient une nouvelle page dans la nouvelle base à son prochain envoi.
+- Renommer une colonne dans Notion ne casse pas la correspondance.
+- Une organisation n'a qu'une base de destination à la fois.
+
+<CardGroup cols={2}>
+  <Card title="Exporter et partager" icon="share" href="/fr/comptes-rendus/exporter-et-partager">
+    Les autres façons de sortir un compte rendu de Hirify.
+  </Card>
+
+  <Card title="Déconnecter un outil" icon="plug" href="/fr/integrations/deconnecter-un-outil">
+    Ce que devient chaque connexion quand vous la retirez.
+  </Card>
+</CardGroup>

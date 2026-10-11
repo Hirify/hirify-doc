@@ -1,0 +1,118 @@
+---
+title: "Send your interview notes to Notion"
+sidebarTitle: "Notion"
+description: "Connect your organization's Notion workspace, pick the destination database, and send interview notes from an interview"
+icon: "file-export"
+---
+
+Hirify sends interview notes to a Notion database your organization chooses. Each set of notes you send becomes a page in that database, with its text and the columns you decide to fill.
+
+## What Hirify writes and what it doesn't do
+
+A recruiter sends each set of notes by hand. Nothing is sent to Notion on its own.
+
+Hirify only writes to the database you share with it. It reads the list of shared databases and their columns so it can offer the column mapping. Nothing comes back from Notion into Hirify: a change made in Notion doesn't change the interview notes in Hirify.
+
+<Warning>
+  Interview notes you send are visible to everyone who has access to the database in Notion, whatever their permissions in Hirify.
+</Warning>
+
+## Connect Notion
+
+You connect Notion once for the whole organization. Only an administrator or a billing admin can do it.
+
+<Steps>
+  <Step title="Open Settings, then Integrations">
+    Click **Settings** at the bottom of the sidebar. Open **Integrations** and scroll to the **Interview notes export** section.
+  </Step>
+  <Step title="Click Connect">
+    On the **Notion** row, click **Connect**. You are taken to Notion.
+  </Step>
+  <Step title="Share the database in Notion">
+    Pick your workspace, select the database that will receive your interview notes, and allow access. You are brought back to Hirify, where the **Notion** row shows the connected workspace.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the Interview notes export section of Settings > Integrations, with the Notion row connected and collapsed */}
+
+## Pick the database and the columns
+
+On the **Notion** row, click the arrow on the right to show the settings.
+
+<Steps>
+  <Step title="Select the destination database">
+    Under **Destination database**, select the database you shared. If the list is empty, click **Share another database** to go back to Notion and share one.
+  </Step>
+  <Step title="Match the columns">
+    Under **Columns filled**, choose which column of your database receives each piece of information. Keep **Leave empty** for information you don't want to send.
+  </Step>
+</Steps>
+
+Each choice is saved right away. The title of the Notion page is always the title of the interview notes.
+
+| Information | What Hirify sends | Column type accepted in Notion |
+| --- | --- | --- |
+| **Candidate** | The name of the interviewed candidate | Text |
+| **Job** | The job linked to the interview in your ATS | Text or Select |
+| **Interview date** | The day of the interview | Date |
+| **Recruiter** | The author of the interview notes | Text |
+| **Hirify link** | The link to the interview in Hirify | URL |
+
+A column of another type isn't offered in the list.
+
+{/* SCREENSHOT: the Notion row expanded, with the destination database and the five matched columns */}
+
+## Send interview notes
+
+Any member who can read a set of interview notes can send it, once an administrator has picked the database.
+
+<Steps>
+  <Step title="Open the interview">
+    Show the interview notes you want to send. They must be complete.
+  </Step>
+  <Step title="Open the notes menu">
+    In the bar above the interview notes, click the **⋯** button, then **Send to Notion**.
+  </Step>
+  <Step title="Open the page">
+    A message confirms the notes were sent. The same menu now offers **Open in Notion**.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: the ⋯ menu of the interview notes, with Send to Notion */}
+
+## Update a page you already sent
+
+After a first send, the menu offers **Update in Notion**. Hirify rewrites the same page with the current text of the interview notes and its columns. It doesn't create a second page.
+
+<Warning>
+  An update replaces the content of the page. Anything you edited by hand in that Notion page is lost.
+</Warning>
+
+## When a send is refused
+
+- **A column was deleted or changed type in Notion**: the send stops and a message says so. An administrator reviews the mapping in **Settings**, **Integrations**.
+- **The database can't be found**: it was deleted or is no longer shared with Hirify. Share it again from **Share another database**, or select another one.
+- **Access was removed in Notion**: the **Notion** row shows **Reconnect needed**. An administrator clicks **Reconnect**. The selected database and mapping are kept.
+
+## Disconnect Notion
+
+In **Settings**, **Integrations**, click **Disconnect** on the **Notion** row. Pages already created stay in your Notion database. Hirify doesn't delete them.
+
+## Good to know
+
+- The text sent is the interview notes as they appear in Hirify.
+- Information Hirify doesn't have leaves its column empty. The **Job** column is filled only when the interview is linked to an application in your ATS.
+- A page moved to the trash in Notion isn't restored: the next send of the same notes creates a new page.
+- If an administrator changes the destination database, notes already sent get a new page in the new database the next time they are sent.
+- Renaming a column in Notion doesn't break the mapping.
+- An organization has one destination database at a time.
+
+<CardGroup cols={2}>
+  <Card title="Export and share" icon="share" href="/en/notes/export-and-share">
+    The other ways to take interview notes out of Hirify.
+  </Card>
+
+  <Card title="Disconnect a tool" icon="plug" href="/en/integrations/disconnect-a-tool">
+    What happens to each connection when you remove it.
+  </Card>
+</CardGroup>

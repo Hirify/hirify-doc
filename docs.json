@@ -101,6 +101,7 @@
                   "fr/integrations/renvoyer-une-evaluation",
                   "fr/integrations/automatismes-ats",
                   "fr/integrations/familles-de-profils",
+                  "fr/integrations/envoyer-vers-notion",
                   "fr/integrations/extension-chrome",
                   "fr/integrations/personnaliser-l-assistant",
                   "fr/integrations/deconnecter-un-outil"
@@ -282,6 +283,7 @@
                   "en/integrations/send-to-your-ats",
                   "en/integrations/ats-automations",
                   "en/integrations/job-families",
+                  "en/integrations/send-to-notion",
                   "en/integrations/chrome-extension",
                   "en/integrations/customize-the-meeting-assistant",
                   "en/integrations/disconnect-a-tool"
