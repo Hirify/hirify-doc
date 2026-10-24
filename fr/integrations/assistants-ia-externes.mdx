@@ -1,0 +1,83 @@
+---
+title: "Connecter votre assistant IA externe"
+sidebarTitle: "Assistants IA externes"
+description: "Autoriser les membres à interroger leurs données Hirify depuis leur propre assistant IA, en lecture seule"
+icon: "link"
+---
+
+Chaque membre peut brancher son propre assistant IA sur les données qu'il voit déjà dans Hirify, à condition que cet assistant accepte les connecteurs MCP. Il interroge ensuite ses entretiens, ses candidats et ses recherches depuis cet assistant, sans copier-coller. L'accès est en lecture seule.
+
+## Ce que l'assistant peut lire
+
+L'assistant lit ce que le membre connecté voit dans Hirify, pas davantage :
+
+- **Entretiens** : vos entretiens, leurs analyses et leurs comptes rendus.
+- **Passages** : des extraits verbatim de vos entretiens, avec leur minutage.
+- **Logiciel de recrutement** : les candidats et les postes de l'ATS connecté, selon vos droits dans Hirify.
+- **Agenda** : vos entretiens à venir.
+- **Sourcing** : vos recherches de candidats et leurs profils retenus.
+
+Un membre lit ses propres entretiens. Un administrateur ou un manager lit ceux de toute l'organisation, comme dans Hirify.
+
+Ne passent jamais par ce connecteur :
+
+- la transcription complète d'un entretien
+- vos notes personnelles (**Mes notes**)
+- les adresses e-mail des participants de votre agenda
+- les profils trouvés sur LinkedIn par le Sourcing
+- les candidats qui ont refusé leur consentement ou qui ont été supprimés ou restreints dans votre ATS
+
+Rien ne peut être modifié, envoyé ni supprimé depuis l'assistant.
+
+<Warning>
+  Les données que l'assistant consulte sont transmises à l'éditeur de cet assistant et traitées par lui. Ce transfert se fait sous la responsabilité de votre organisation, responsable de traitement. Vérifiez que l'outil choisi respecte vos règles internes avant d'activer l'accès.
+</Warning>
+
+## Activer l'accès pour l'organisation
+
+L'accès est coupé par défaut. Seul un administrateur peut l'activer.
+
+<Steps>
+  <Step title="Ouvrez Paramètres, puis Intégrations">
+    Cliquez sur **Paramètres**, en bas de la barre latérale, puis sur **Intégrations**. Descendez jusqu'à la section **Assistants IA externes**.
+  </Step>
+  <Step title="Activez l'accès">
+    Activez **Autoriser les assistants IA externes**. Chaque membre peut désormais connecter son propre assistant.
+  </Step>
+</Steps>
+
+Désactiver l'accès coupe immédiatement toutes les connexions des membres de l'organisation. Si vous le réactivez, chacun devra connecter son assistant à nouveau.
+
+## Connecter votre assistant
+
+Chaque membre connecte son propre assistant, une fois.
+
+<Steps>
+  <Step title="Copiez le lien du connecteur">
+    Dans **Paramètres**, **Intégrations**, section **Assistants IA externes**, cliquez sur **Copier le lien** à côté de **Lien du connecteur**.
+  </Step>
+  <Step title="Ajoutez-le dans votre assistant">
+    Dans les réglages de votre assistant IA, ajoutez ce lien comme connecteur personnalisé. Selon l'assistant, l'option s'appelle connecteur personnalisé ou serveur MCP distant.
+  </Step>
+  <Step title="Autorisez l'accès dans Hirify">
+    Votre assistant ouvre une page Hirify qui demande l'accès à votre compte. Elle liste ce que l'assistant pourra lire, le compte et l'organisation concernés. Vérifiez le nom de l'application et l'adresse vers laquelle vous serez renvoyé, puis cliquez sur **Autoriser**.
+  </Step>
+</Steps>
+
+Posez ensuite vos questions dans votre assistant, par exemple sur un entretien ou un poste. Il interroge Hirify quand il en a besoin, et chaque élément qu'il lit porte un lien vers sa page dans Hirify.
+
+<Note>
+  N'autorisez une connexion que si vous venez de la lancer vous-même. Une page d'autorisation reçue par e-mail ou par message peut venir d'une autre personne.
+</Note>
+
+## Retirer l'accès d'un assistant
+
+La section **Vos assistants connectés** liste les assistants que vous avez connectés, avec leur date de connexion et leur dernière utilisation. Cliquez sur **Retirer l'accès** en face d'un assistant, puis confirmez. L'assistant ne peut plus rien lire dès sa prochaine demande. Vous pourrez le reconnecter plus tard.
+
+## Bon à savoir
+
+- Une connexion ne donne jamais accès aux données d'un autre membre.
+- Les informations du logiciel de recrutement ne sont lisibles que si un ATS est connecté à Hirify. Les recherches de candidats demandent l'accès au **Sourcing**.
+- L'assistant ne lit plus rien si l'abonnement de l'organisation n'est plus actif, si le membre est désactivé ou si l'accès est coupé.
+- Changer votre mot de passe coupe les connexions de vos assistants. Reconnectez-les ensuite.
+- Le connecteur suit la version la plus récente du protocole MCP. Un assistant qui ne la prend pas encore en charge ne peut pas s'y connecter.

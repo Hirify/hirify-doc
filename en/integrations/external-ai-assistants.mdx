@@ -1,0 +1,83 @@
+---
+title: "Connect your external AI assistant"
+sidebarTitle: "External AI assistants"
+description: "Let members query their Hirify data from their own AI assistant, read-only"
+icon: "link"
+---
+
+Each member can plug their own AI assistant into the data they already see in Hirify, as long as the assistant accepts MCP connectors. They can then ask about their interviews, candidates and searches from that assistant, without copying and pasting. Access is read-only.
+
+## What the assistant can read
+
+The assistant reads what the connected member sees in Hirify, and nothing more:
+
+- **Interviews**: your interviews, their analyses and their interview notes.
+- **Passages**: verbatim excerpts from your interviews, with their timestamps.
+- **ATS**: candidates and jobs from the connected ATS, within your Hirify permissions.
+- **Calendar**: your upcoming interviews.
+- **Sourcing**: your candidate searches and their shortlisted profiles.
+
+A member reads their own interviews. An administrator or a manager reads those of the whole organization, as in Hirify.
+
+The connector never shares:
+
+- the full transcript of an interview
+- your personal notes (**My notes**)
+- the email addresses of the people in your calendar events
+- profiles found on LinkedIn by Sourcing
+- candidates who refused consent, or who were deleted or restricted in your ATS
+
+Nothing can be changed, sent or deleted from the assistant.
+
+<Warning>
+  The data the assistant looks at is sent to the company behind that assistant and processed by it. This transfer happens under the responsibility of your organization, as the controller. Check that the tool you choose meets your internal rules before you turn access on.
+</Warning>
+
+## Turn access on for your organization
+
+Access is off by default. Only an administrator can turn it on.
+
+<Steps>
+  <Step title="Open Settings, then Integrations">
+    Click **Settings** at the bottom of the sidebar, then **Integrations**. Scroll down to the **External AI assistants** section.
+  </Step>
+  <Step title="Turn access on">
+    Turn on **Allow external AI assistants**. Each member can now connect their own assistant.
+  </Step>
+</Steps>
+
+Turning access off cuts every connection of your organization's members at once. If you turn it back on, each member has to connect their assistant again.
+
+## Connect your assistant
+
+Each member connects their own assistant, once.
+
+<Steps>
+  <Step title="Copy the connector link">
+    In **Settings**, **Integrations**, **External AI assistants** section, click **Copy link** next to **Connector link**.
+  </Step>
+  <Step title="Add it to your assistant">
+    In your AI assistant's settings, add this link as a custom connector. Depending on the assistant, the option is called custom connector or remote MCP server.
+  </Step>
+  <Step title="Authorize access in Hirify">
+    Your assistant opens a Hirify page asking for access to your account. It lists what the assistant will be able to read, and the account and organization concerned. Check the application name and the address you will be sent back to, then click **Authorize**.
+  </Step>
+</Steps>
+
+Then ask your questions in your assistant, about an interview or a job for example. It queries Hirify when it needs to, and every item it reads carries a link to its page in Hirify.
+
+<Note>
+  Only authorize a connection you just started yourself. An authorization page you receive by email or message may come from someone else.
+</Note>
+
+## Remove an assistant's access
+
+The **Your connected assistants** section lists the assistants you connected, with the date you connected them and when they were last used. Click **Remove access** next to an assistant, then confirm. The assistant can no longer read anything from its next request on. You can connect it again later.
+
+## Good to know
+
+- A connection never gives access to another member's data.
+- ATS information is only readable when an ATS is connected to Hirify. Candidate searches require access to **Sourcing**.
+- The assistant can no longer read anything if your organization's subscription is no longer active, if the member is deactivated or if access is turned off.
+- Changing your password cuts your assistants' connections. Connect them again afterwards.
+- The connector follows the latest version of the MCP protocol. An assistant that does not support it yet cannot connect.
