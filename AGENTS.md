@@ -108,6 +108,7 @@ The English slugs are English. The language switcher cannot pair pages by path, 
 | `fr/integrations/automatismes-ats` | `en/integrations/ats-automations` |
 | `fr/integrations/familles-de-profils` | `en/integrations/job-families` |
 | `fr/integrations/envoyer-vers-notion` | `en/integrations/send-to-notion` |
+| `fr/integrations/assistants-ia-externes` | `en/integrations/external-ai-assistants` |
 | `fr/integrations/extension-chrome` | `en/integrations/chrome-extension` |
 | `fr/integrations/personnaliser-l-assistant` | `en/integrations/customize-the-meeting-assistant` |
 | `fr/integrations/deconnecter-un-outil` | `en/integrations/disconnect-a-tool` |
@@ -168,6 +169,7 @@ A bold label in an English page is the exact string the English interface shows.
 | Rédiger un message, Brouillon de message | **Write a message**, **Outreach draft** |
 | Paramètres : Profil, Sécurité, Intégrations, Téléphonie, Vocabulaire, Familles de profils | **Settings**: **Profile**, **Security**, **Integrations**, **Calling**, **Custom vocabulary**, **Job families** |
 | Jetons d'accès, Continuer avec le SSO | **Access tokens**, **Continue with SSO** |
+| Assistants IA externes, Autoriser les assistants IA externes, Lien du connecteur, Copier le lien, Vos assistants connectés, Retirer l'accès, Autoriser | **External AI assistants**, **Allow external AI assistants**, **Connector link**, **Copy link**, **Your connected assistants**, **Remove access**, **Authorize** |
 | Numéro affiché, Identifiants secondaires, Vérification entreprise | **Caller ID**, **Secondary caller IDs**, **Business verification** |
 | Tags automatiques, Compléter les champs ATS, Historique des envois, Profil ATS | **Automatic tags**, **Fill in ATS fields**, **Push history**, **ATS profile** |
 | Gérer l'abonnement, Abonnement, Mon plan, Consommation, Facturation | **Manage subscription**, **Subscription**, **My plan**, **Usage**, **Billing** |
