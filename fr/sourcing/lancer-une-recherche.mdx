@@ -9,7 +9,7 @@ icon: "magnifying-glass"
   Accès : offre Hub.
 </Note>
 
-Le Sourcing retrouve dans votre propre vivier les profils les plus proches d'un poste à pourvoir. Vous décrivez le besoin dans un seul champ de texte. Hirify parcourt vos entretiens analysés et les profils de votre logiciel de recrutement, puis juge chaque profil critère par critère.
+Le Sourcing retrouve les profils les plus proches d'un poste à pourvoir. Vous décrivez le besoin dans un seul champ de texte. Hirify parcourt vos entretiens analysés et les profils de votre logiciel de recrutement, et LinkedIn si vous l'ajoutez aux sources, puis juge chaque profil critère par critère.
 
 ## Écrire le brief
 
@@ -18,7 +18,7 @@ Le Sourcing retrouve dans votre propre vivier les profils les plus proches d'un 
     Dans la barre latérale, sous **Talents IA**, cliquez sur **Sourcing**.
   </Step>
   <Step title="Écrivez ou collez">
-    Dans le champ **Décrivez le profil recherché ou collez une fiche de poste…**, écrivez votre besoin en une phrase ou collez une annonce entière. Le texte est la seule saisie : il n'y a rien à choisir à côté.
+    Dans le champ **Décrivez le profil recherché ou collez une fiche de poste…**, écrivez votre besoin en une phrase ou collez une annonce entière. Le bouton des sources, à côté du bouton d'envoi, dit où la recherche cherchera. Voir [Choisir les sources](#choisir-les-sources).
   </Step>
   <Step title="Vérifiez ce qu'Hirify a compris">
     Dès que vous cessez d'écrire, Hirify relit le brief et affiche sous le champ ce qu'il a compris. Voir [la lecture en direct](#la-lecture-en-direct-du-brief).
@@ -27,8 +27,6 @@ Le Sourcing retrouve dans votre propre vivier les profils les plus proches d'un 
     Utilisez ⌘ ou Ctrl+Entrée, ou le bouton fléché. La touche Entrée seule insère un retour à la ligne : vous pouvez coller une fiche de poste sans déclencher la recherche. Sous 20 caractères, l'envoi reste bloqué, sauf si un poste est rattaché.
   </Step>
 </Steps>
-
-Quand le brief couvre les quatre points, une ligne sous le champ rappelle le cadre : **Recherche dans votre vivier · 10 profils qualifiés visés**, suivie du nombre de recherches qu'il vous reste dans l'heure.
 
 {/* CAPTURE : l'écran Sourcing avec un brief saisi et les pastilles Lieu, Langues, TJM / salaire, Contrat et dispo sous le champ, la liste Reprendre en dessous */}
 
@@ -43,7 +41,7 @@ Sous le champ, quatre pastilles montrent ce qu'Hirify a lu dans votre texte :
 
 Une pastille cochée a trouvé son information. Cliquez dessus pour lire la valeur retenue, sa provenance (**Lu dans votre texte**, avec l'extrait, ou **Depuis la fiche du poste rattachée.**) et son effet sur la recherche. Pour changer la valeur, modifiez le texte.
 
-Une pastille en pointillés signale un point absent du brief. Un clic ajoute sa ligne au texte, par exemple « Lieu : », que vous complétez. Tant qu'un point manque, la ligne sous le champ l'annonce à la place du rappel du cadre : « Sans lieu, la recherche ne tiendra pas compte de ces points. » Un point manquant ne bloque jamais le lancement.
+Une pastille en pointillés signale un point absent du brief. Un clic ajoute sa ligne au texte, par exemple « Lieu : », que vous complétez. Tant qu'un point manque, la ligne sous le champ l'annonce : « Sans lieu, la recherche ne tiendra pas compte de ces points. » Un point manquant ne bloque jamais le lancement. Seul un brief qui ne nomme ni poste ni compétence est refusé au lancement, avec un message qui demande de le préciser.
 
 Si la lecture échoue, le message **Analyse indisponible, la recherche reste possible.** s'affiche. Vous pouvez lancer quand même.
 
@@ -68,6 +66,19 @@ Si votre logiciel de recrutement est connecté, tapez **@** dans le champ, ou cl
 
 Partir d'un poste réel a un autre effet : un profil qui a déjà candidaté à ce poste porte la mention **Déjà candidat** dans les résultats.
 
+## Choisir les sources
+
+Par défaut, une recherche porte sur votre vivier : vos entretiens analysés et les candidats de votre logiciel de recrutement. Elle peut aussi porter sur LinkedIn, avec votre propre compte LinkedIn Recruiter ou Sales Navigator, connecté depuis **Paramètres**, puis **Intégrations**.
+
+Le bouton des sources, à côté du bouton d'envoi, affiche celles de la prochaine recherche : **Vivier**, ou le nom de votre logiciel de recrutement s'il est connecté, et **LinkedIn** s'il est actif. Un clic ouvre le menu **Chercher dans**, qui liste deux sources, chacune avec son interrupteur :
+
+- **Mon vivier** : vos candidats et vos entretiens analysés.
+- **LinkedIn** : la recherche passe par votre compte. Sans compte Recruiter ou Sales Navigator en état de chercher, par exemple en pause ou à reconnecter, la ligne affiche **Compte non connecté** et un bouton **Connecter**.
+
+Une source reste toujours active. Vous pouvez chercher dans votre vivier seul, sur LinkedIn seul ou dans les deux. Votre choix est retenu dans ce navigateur pour les recherches suivantes.
+
+Quand LinkedIn est actif, l'interrupteur **Masquer les profils déjà vus ou contactés** écarte de la recherche LinkedIn les personnes que vous avez déjà consultées ou à qui vous avez écrit. Il est activé par défaut. Un rappel indique aussi que la recherche passe par votre session LinkedIn : vérifiez-y le contrat utilisé et n'y lancez rien d'autre pendant la recherche.
+
 ## Qui verra la recherche
 
 Une recherche est visible par toute votre équipe par défaut. Si votre brief demande une recherche confidentielle, par exemple « mandat confidentiel », la pastille **Recherche privée** s'affiche et vous seul verrez la recherche. L'auteur de la recherche peut changer ce réglage ensuite, depuis **Partager** : voir [Lire les résultats](/fr/sourcing/lire-et-comparer#partager-la-recherche).
@@ -77,6 +88,8 @@ Une recherche est visible par toute votre équipe par défaut. Si votre brief de
 En haut à droite des résultats, une ligne suit la recherche : **Recherche dans le vivier**, puis **Évaluation en cours** avec le nombre de profils évalués sur le nombre trouvé. Les profils s'affichent au fil de leur évaluation. Le bouton **Arrêter** interrompt la recherche : les évaluations déjà lancées se terminent.
 
 Une fois la recherche finie, la ligne indique le nombre de profils évalués et depuis quand, puis, le cas échéant, combien de profils ont été écartés et par quel filtre.
+
+Quand LinkedIn fait partie des sources, une ligne suit aussi la recherche sur votre compte LinkedIn.
 
 <Note>
   Vous pouvez fermer l'onglet : la recherche se poursuit. Vous la retrouverez dans la liste **Reprendre**, sous le champ de l'écran d'accueil du Sourcing.
@@ -108,7 +121,7 @@ Il faut aussi de la matière. Si votre vivier ne contient encore aucun profil in
 
 ## Bon à savoir
 
-- **Le Sourcing cherche dans votre vivier, pas sur internet.** Ni le web, ni les réseaux sociaux : uniquement vos entretiens analysés et les candidats de votre logiciel de recrutement.
+- **Le Sourcing ne cherche pas sur le web.** Il cherche dans votre vivier, c'est-à-dire vos entretiens analysés et les candidats de votre logiciel de recrutement. Il cherche sur LinkedIn seulement si vous l'ajoutez aux sources, avec votre propre compte.
 - **Dix recherches par heure et par utilisateur.** Le quota atteint, l'écran annonce le délai avant la suivante. L'Assistant reste accessible et **Passer en Assistant** vous y emmène.
 - **La cible est de dix profils qualifiés.** La recherche s'arrête quand elle les a réunis, quand elle a épuisé ce que votre vivier contient, ou quand le temps imparti est écoulé. Dans ce dernier cas, elle affiche les meilleurs profils obtenus.
 - **Un profil sans entretien analysé reste évaluable** sur son CV et sa fiche ATS. Un critère que ces documents ne couvrent pas y est marqué **Rien au dossier**, ce qui n'est pas un mauvais point.

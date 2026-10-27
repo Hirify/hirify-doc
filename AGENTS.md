@@ -18,7 +18,7 @@ Ces trois règles ont une raison d'être : les 23 pages générées le 27 août 
 
 Repris de l'interface, à ne pas traduire ni paraphraser : *entretien*, *compte rendu*, *template*, *vivier*, *intervenant*, *analyse*, *signaux*, *assistant de réunion* (le bouton s'appelle « Ajouter le bot »), *Sourcing*, *Assistant*, *Pilotage*, *Fiabilité*.
 
-Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher des profils hors du vivier, décider à la place du recruteur.
+Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher des profils sur le web, décider à la place du recruteur. Le Sourcing cherche dans le vivier et, seulement quand le recruteur l'ajoute aux sources d'une recherche ou d'un agent avec son propre compte LinkedIn Recruiter ou Sales Navigator, sur LinkedIn. Ne jamais écrire que Hirify ne cherche que dans le vivier.
 
 **Écritures vers le logiciel de recrutement — la distinction est à faire, toujours.** Ne jamais écrire « Hirify n'écrit rien sans votre validation » : c'est faux.
 
