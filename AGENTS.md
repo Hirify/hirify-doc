@@ -18,7 +18,7 @@ Ces trois règles ont une raison d'être : les 23 pages générées le 27 août 
 
 Repris de l'interface, à ne pas traduire ni paraphraser : *entretien*, *compte rendu*, *template*, *vivier*, *intervenant*, *analyse*, *signaux*, *assistant de réunion* (le bouton s'appelle « Ajouter le bot »), *Sourcing*, *Assistant*, *Pilotage*, *Fiabilité*.
 
-Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher des profils hors du vivier, décider à la place du recruteur.
+Ce que Hirify ne fait **jamais** : envoyer un message à un candidat, chercher des profils ailleurs que dans le vivier et sur LinkedIn, décider à la place du recruteur. LinkedIn n'est lu que par le compte que le recruteur a lui-même connecté, quand il l'active pour une recherche ou pour un agent de sourcing.
 
 **Écritures vers le logiciel de recrutement — la distinction est à faire, toujours.** Ne jamais écrire « Hirify n'écrit rien sans votre validation » : c'est faux.
 
@@ -120,6 +120,7 @@ The English slugs are English. The language switcher cannot pair pages by path, 
 | `fr/sourcing/ponderer-les-criteres` | `en/sourcing/weight-the-criteria` |
 | `fr/sourcing/lire-et-comparer` | `en/sourcing/read-and-compare` |
 | `fr/sourcing/rediger-un-message-d-approche` | `en/sourcing/write-an-outreach-message` |
+| `fr/sourcing/confier-un-poste-a-un-agent` | `en/sourcing/assign-a-job-to-an-agent` |
 | `fr/pilotage/composer-un-tableau-de-bord` | `en/analytics/build-a-dashboard` |
 | `fr/pilotage/enregistrer-partager-epingler` | `en/analytics/save-share-and-pin` |
 | `fr/pilotage/fiabilite-des-donnees` | `en/analytics/data-reliability` |
@@ -167,6 +168,7 @@ A bold label in an English page is the exact string the English interface shows.
 | Niveaux de critère : Indispensable, Important, Bonus (abrégés Indisp., Import., Bonus) | **Must-have**, **Important**, **Bonus** (short: **Must**, **Key**, **Bonus**) |
 | Retenir, Retenu, Écarter (dossier d'un profil) | **Shortlist**, **Shortlisted**, **Rule out**. The button **Rule out** is not the group **Ruled out**. |
 | Rédiger un message, Brouillon de message | **Write a message**, **Outreach draft** |
+| Agents de sourcing : Retenir, Écarter, onglets Retenus et Écartés, niveaux Indispensable, Fait passer devant, Laissé de côté | **Shortlist**, **Dismiss**, tabs **Shortlisted** and **Set aside**, levels **Must-have**, **Moves up**, **Left aside**. An agent's **Dismiss** is not a search's **Rule out**. |
 | Paramètres : Profil, Sécurité, Intégrations, Téléphonie, Vocabulaire, Familles de profils | **Settings**: **Profile**, **Security**, **Integrations**, **Calling**, **Custom vocabulary**, **Job families** |
 | Jetons d'accès, Continuer avec le SSO | **Access tokens**, **Continue with SSO** |
 | Assistants IA externes, Autoriser les assistants IA externes, Lien du connecteur, Copier le lien, Vos assistants connectés, Retirer l'accès, Autoriser | **External AI assistants**, **Allow external AI assistants**, **Connector link**, **Copy link**, **Your connected assistants**, **Remove access**, **Authorize** |
