@@ -1,7 +1,7 @@
 ---
 title: "Read the results and share a search"
 sidebarTitle: "Read the results"
-description: "Read profiles group by group and criterion by criterion, open their file, build a shortlist, and share the search"
+description: "Read profiles group by group, open their file criterion by criterion, build a shortlist, ask AI about the search, and share it"
 icon: "table-columns"
 ---
 
@@ -9,20 +9,55 @@ icon: "table-columns"
   Access: Hub plan.
 </Note>
 
-The results screen has two panes: the list of profiles on the left and the selected profile's file on the right. Each criterion of your search has its own column, and each profile gets a verdict in it. No numeric score is shown.
+The results screen has two panes side by side: the list of profiles on the left and the selected profile's file on the right. Each pane scrolls on its own, under a header and a criteria bar that stay in place. Profiles are sorted into groups based on what their file establishes about your must-have criteria. No score is shown. The list only counts the must-have criteria that are established.
 
-{/* SCREENSHOT: the results screen, with the criteria bar at the top, the list by group on the left with one column per criterion, and the profile's file on the right */}
+{/* SCREENSHOT: the results screen, with the header and criteria bar at the top, the list by group on the left with avatars and must-have segments, and the profile's file on the right */}
+
+## The results header
+
+At the top left, **Searches** takes you back to the search field so you can run another search. Next comes the job title, or **Results** until it's known, then a status pill:
+
+- **Running**: the search is under way. A progress bar shows how many profiles are evaluated out of those found, and **Stop** interrupts the search.
+- **Done**: followed by the number of profiles evaluated.
+- **Stopped**: you stopped the search.
+- **Failed**: the search failed.
+- **Interrupted**: the server didn't finish the search.
+
+Once the search is over, a line under the title adds, where relevant:
+
+- **Profiles filtered out by your filters**: how many, and the filters applied.
+- **Profiles ruled out by a rejection reason**: how many. See "Good to know" at the bottom of the page.
+- **Not all of your data could be searched in time, so some profiles may be missing**: the search couldn't read all of your data in time.
+- **The LinkedIn reading**: where it stands, when LinkedIn is one of the sources. See [Start a search](/en/sourcing/start-a-search).
+
+On the right, **Share** and **Refine with AI** are described further down.
+
+## Criteria and their levels
+
+Under the header, the **Criteria** bar shows one chip per criterion, must-haves first. The dot before the criterion's name gives its level:
+
+- **Must-have**: a filled dot.
+- **Important**: a ring.
+- **Bonus**: a dashed ring.
+
+Up to seven criteria, each one has its own chip. Beyond that, the first six stay visible and the rest are grouped behind **+N criteria**.
+
+Click a chip to open the **Level of “…”** window. It shows the value the brief requires, the choice between the three levels, and what the current level does. Under **If you change the level**, each other level shows the main group change it would cause.
+
+<Tip>
+  Changing a criterion's level regroups the list without running the search again. See [Criterion levels](/en/sourcing/weight-the-criteria).
+</Tip>
 
 ## The verdicts
 
-For each criterion, Hirify says what the profile's file establishes:
+For each criterion, Hirify says what the profile's file establishes. Each verdict has its own mark in the file:
 
-- **Established**: the file shows the criterion is met.
-- **Partial**: the file meets it in part.
-- **Nothing on file**: the file says nothing about this criterion.
-- **Contradicted**: the file holds information that goes against the criterion.
+- **Established**: a filled green circle. The file shows the criterion is met.
+- **Partial**: a half-filled orange circle. The file meets it in part.
+- **Nothing on file**: a dashed gray circle. The file says nothing about this criterion.
+- **Contradicted**: a red cross. The file holds information that goes against the criterion.
 
-Missing information is never treated as contrary information. **Nothing on file** points to a question to ask, not a flaw in the candidate. A legend of the verdicts is repeated at the bottom of the list.
+Missing information is never treated as contrary information. **Nothing on file** points to a question to ask, not a flaw in the candidate.
 
 ## The four groups
 
@@ -33,53 +68,96 @@ Profiles fall into four groups. Only **Must-have** criteria decide the group:
 - **To check**: a must-have is still **Nothing on file**.
 - **Ruled out**: a must-have is **Contradicted** by the file.
 
-For contract, availability, day rate, and salary conditions, only contrary information counts. Missing information doesn't put the profile in **To check**. It joins the points to confirm in the profile's file.
+If no criterion is a must-have, every evaluated profile is a match.
 
-Each group collapses with **Hide** and expands with **Show**. The **Ruled out** group starts collapsed, and you can still open its profiles.
+For contract, availability, day rate, salary, driving license, and vehicle conditions, only contrary information counts. Missing information doesn't put the profile in **To check**. It joins the questions to ask in the profile's file.
 
-Within a group, the order follows the verdicts: must-haves first, then **Important** criteria, which weigh on the order of the list, then **Bonus** criteria, which break ties between close profiles.
+Each group has a colored dot and its number of profiles. The **Ruled out** group starts collapsed. Click **Show** to expand it and **Hide** to collapse it. You can still open its profiles.
 
-<Tip>
-  You change a criterion's level from the **Criteria** bar at the top of the results. The list regroups without running the search again. See [Criterion levels](/en/sourcing/weight-the-criteria).
-</Tip>
+Within a group, the order follows the verdicts. Must-haves count the most, **Important** criteria weigh on the order of the list, and **Bonus** criteria break ties between close profiles.
 
 ## Read the list
 
-At the top of the list, **Ranked on must-haves** recalls the grouping rule. On the right, one column per criterion, must-haves first. Hover over a column header to read the full criterion, its level, and what the brief requires.
-
 Each row shows:
 
-- **The profile's name**, followed by their current job and company.
-- **One mark per column**: the profile's verdict on that criterion.
-- **Applied before**: the profile already applied to the ATS job attached to the search.
-- **Interview**: the profile has an analyzed interview.
+- **An illustrated avatar**: always the same one for the same person. A badge in its corner shows where the profile comes from: the LinkedIn logo, your ATS's logo, or the Hirify logo for an analyzed interview.
+- **The profile's name**: followed, when the file has them, by their current job, company, years of experience, and location. **partial profile** marks a LinkedIn profile that wasn't read in full.
+- **Established must-haves**: one segment per must-have criterion, then the number of established must-haves out of the total, for example "3 of 4". A segment is green for **Established**, half orange for **Partial**, gray for **Nothing on file**, and red for **Contradicted**. With no must-have criterion, every criterion counts.
 
-From eight criteria on, the first six keep their own column and the rest are grouped in an **Others** column. It counts the established criteria and flags a contradicted one. On hover, it lists each criterion with its verdict.
+The criterion-by-criterion detail is in the file.
 
-The Up and Down arrow keys move from one profile to the next, and the file on the right follows. While evaluation is still running, the bottom of the list shows how many profiles are left to evaluate.
+The Up and Down arrow keys move from one profile to the next, and the file on the right follows. They skip the **Ruled out** group while it's collapsed.
+
+While the search runs, the list shows on its own and fills up as profiles are evaluated. The bottom of the list shows how many profiles are still being evaluated. Click a profile to open its file without waiting. Once the search is over, the file opens on the first profile in the list.
 
 ## Open a profile's file
 
 Click a row. The right-hand pane shows the file, from top to bottom:
 
-- **The header**: the profile's name, current job, and company. An origin line says where the file comes from: the interview, with its date and the recruiter who led it, or the ATS record and the date it was last updated. The email address shows when it's known, with a button to copy it.
-- **The group in one sentence**: a panel explains why the profile is in its group. For a profile to check or ruled out, it names the must-haves at stake. The profile summary follows.
-- **Criterion by criterion**: each criterion with its level, what the brief requires, the verdict spelled out, and what the file says about it. Under the verdict, the excerpt that proves it and its sources: **Interview** with the minute, **CV**, or **ATS record**. An interview source opens the transcript at the quoted passage.
-- **Ask at the next conversation**: what the file can't settle, including conditions to confirm such as **To confirm: Contract**. When the file covers every criterion, the section says so.
-- **With you**: this profile's applications and interviews in your organization, most recent first, with the job, the stage reached, and the recruiter.
+- **The header**: the avatar, name, current job, company, years of experience, and location, then the action buttons. The avatar opens the profile's source in a new tab: its LinkedIn page, its record in your ATS, or its interview if you have access to it.
+- **Follow-up**: when the profile has an application in your ATS, a banner says who is following it. See "Who's already following this profile" below.
+- **The verdict**: a banner in the group's color gives the group and the reason. For a profile to check or ruled out, it names the must-haves at stake, for example "To check: nothing on file for …". On the right, one segment per must-have and the number of established must-haves. The profile summary follows.
+- **What the file says**: one row per criterion, must-haves first. Each row shows the verdict mark, the criterion's name, what the brief requires and, for a criterion that isn't a must-have, its level. Then what the file says about it, followed by its sources. A criterion the file says nothing about shows **Nothing on file for this criterion.**
+- **Ask at the next conversation**: a numbered list of what the file can't settle, including conditions to confirm such as **To confirm: Contract**. When nothing is missing, the section shows **The file covers every criterion.**
+- **With you**: the profile's history in your organization, most recent first. Each application shows the job, its status, the stage reached, and the recruiters handling the job. Each interview shows the recruiter who led it and opens in one click if you have access to it. Comments left in your ATS also appear, under **Comment in the ATS**, and **Show more** expands a long comment.
+- **The footer**: where the file comes from. That's the interview, with its date and the recruiter who led it, your ATS record and the date it was last updated, or the LinkedIn profile and the day it was read. For a LinkedIn profile read in part, the footer adds **partial profile, assessed on the search preview**. The email address follows when it's known, with a button to copy it.
 
-If the proof comes from a colleague's interview you don't have access to, a padlock marks the source.
+When the pane is wide, the follow-up banner, the questions to ask, and the history move to a column on the right of the criteria.
+
+{/* SCREENSHOT: a profile's file, with the follow-up banner, the verdict and its segments, the What the file says table, Ask at the next conversation, and With you */}
+
+### The evidence
+
+Each source after a statement opens, in one click, the excerpt it rests on:
+
+- **Interview**, with the minute: the quote and who said it, then **Open the interview at …**, which opens the transcript at the quoted passage.
+- **CV**: the excerpt from the CV.
+- **ATS record**, or the name of your ATS: the excerpt from the record.
+- **LinkedIn profile**: the excerpt from the profile.
+
+If the proof comes from a colleague's interview you don't have access to, the **Interview** source has a padlock. It says access is restricted and doesn't show the quote.
+
+When the search has more than six must-haves, the table splits into sections:
+
+- **To look at**: the must-haves that aren't established, in full.
+- **Established**: the established must-haves, one line each. Beyond six, a button shows the rest.
+- **Important** and **Bonus**: the other criteria, one line each.
+
+In **Established**, **Important**, and **Bonus**, an arrow at the end of a line expands it so you can read the full sentence and its sources.
+
+### Who's already following this profile
+
+The follow-up banner keeps two recruiters from working the same candidate without knowing it. It shows the recruiter, the job, and the date of the last move:
+
+- **"… is already following this profile"**: a colleague has an application in progress with this profile. This is the only case where the banner is colored.
+- **"You are already following this profile"**: the application in progress is yours.
+- **"An application is already in progress"**: no recruiter is named on that application.
+- **"Available, last followed by …"** or **"Available, no application in progress"**: the last application is closed.
+
+Hover over the banner to read the details: the job and its city, the stage, and the last move.
+
+### File actions
 
 At the top of the file, depending on the profile:
 
-- **ATS record**: opens the record in your ATS.
-- **Rule out**: removes the profile from this search's results. It disappears from the list and doesn't join the **Ruled out** group. A notification offers **Cancel**.
+- **Open in …**, with the name of your ATS, or **ATS record**: opens the candidate's record in a new tab.
+- **Open in LinkedIn**: for a profile found on LinkedIn, opens its LinkedIn page in a new tab. A profile found with LinkedIn Recruiter opens in Recruiter, which takes a Recruiter seat.
+- **Rule out**: removes the profile from this search's results. It disappears from the list and doesn't join the **Ruled out** group. The file moves to the next profile, and the **Candidate excluded from this search** notification offers **Cancel**.
 - **Shortlist**: moves the profile to the **Shortlisted** group. The button changes to **Shortlisted**, and another click removes it.
-- **More actions**: the three-dot menu offers **Write a message** and, for a profile with an interview, **View the interview**.
+- **More actions**: for a profile with an analyzed interview, the three-dot menu offers **Write a message** and, if you have access to the interview, **View the interview**.
 
-## Ask a question about the profiles
+## Refine with AI
 
-At the bottom of the file, a field opens the Assistant in a conversation linked to the search. With a profile selected, the question is about that profile. With no selection, it's about all the profiles found.
+The **Refine with AI** button, at the top right of the results, opens a panel next to the list and the file. You ask your questions about the search there without leaving the screen.
+
+- **About the open profile**: the question is about the profile shown in the file, and the field says "Question about" followed by their name. The AI reads their record, their resume, and their evaluation for this search.
+- **About the whole search**: while no file is open, the field says "Question about these … profiles". The AI reads the evaluated profiles and what their file establishes.
+
+An empty conversation suggests sample questions, such as "What should I check first on the phone?" or "Who should I call first, and why?". A click puts the question in the field without sending it.
+
+When you start a search, the panel opens on its own with your brief, then the search's steps as they progress: from **Brief understood** to the evaluation of the profiles, and to the LinkedIn reading when LinkedIn is one of the sources.
+
+The panel's three-dot menu offers **Close panel** and, once the conversation has started, **New chat**.
 
 ## Share the search
 
@@ -96,7 +174,7 @@ The **Share** button, at the top right of the results, brings together the visib
     **Copy shortlist** produces text formatted for an email. For each profile: name, email address when there is one, source, group, summary, established criteria, and criteria that are contradicted or without proof.
   </Step>
   <Step title="Download the table">
-    **Download as CSV** exports the same profiles with one column per criterion and its verdict, along with the group, whether the profile is shortlisted, any previous application, unverified conditions, the summary, and the link to the ATS record.
+    **Download as CSV** exports the same profiles with one column per criterion and its verdict. It adds the name, email address, source, group, whether the profile is shortlisted, any previous application to the attached job, unverified conditions, the summary, and the link to the ATS record.
   </Step>
 </Steps>
 
@@ -108,12 +186,13 @@ A search is visible to the whole team by default. A brief that asks for a confid
 
 ## Earlier searches
 
-A search run before the switch to criteria shows **This search predates the criteria model**. Click **Run search again** to get a verdict for each criterion. The rerun uses one search from your hourly budget.
+A search run before the switch to criteria shows **This search predates the criteria model**. Click **Run search again** to get a verdict for each criterion. Like any search, the rerun counts against your hourly search budget and uses the credits of its [depth](/en/sourcing/start-a-search#choose-the-depth) once it evaluates a profile.
 
 ## Good to know
 
-- **No numeric score.** The group and the verdicts place the profile against the job as you described it. They're neither an assessment of the person nor a decision.
-- **A filter rules profiles out before evaluation.** A profile that contradicts a filter from the brief doesn't show in the list. The results header shows how many profiles were filtered out and by which filter. See [Start a search](/en/sourcing/start-a-search).
+- **No overall score.** "3 of 4" counts established must-haves, nothing more. The group and the verdicts place the profile against the job as you described it. They're neither an assessment of the person nor a decision.
+- **A filter rules profiles out before evaluation.** A profile that contradicts a filter from the brief doesn't show in the list. The results header shows how many profiles were filtered out and by which filters. See [Start a search](/en/sourcing/start-a-search).
+- **A rejection reason can rule profiles out too.** A candidate rejected in your ATS for a reason picked in **Settings**, **Integrations**, under **Rejection reasons that rule a candidate out of Sourcing**, doesn't show in the list of searches run afterward. A candidate still in progress on another job stays in the results.
 - **Ruling out only affects this search.** The profile stays in your talent pool and will come up in other searches.
 - **Nothing is sent to the candidate or written to your ATS.** The shortlist is text you paste wherever you want.
 

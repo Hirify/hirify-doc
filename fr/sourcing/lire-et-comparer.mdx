@@ -1,7 +1,7 @@
 ---
 title: "Lire les résultats et partager une recherche"
 sidebarTitle: "Lire les résultats"
-description: "Lisez les profils groupe par groupe et critère par critère, ouvrez leur dossier, constituez une shortlist et partagez la recherche."
+description: "Lisez les profils groupe par groupe, ouvrez leur dossier critère par critère, constituez une shortlist, interrogez l'IA sur la recherche et partagez-la."
 icon: "table-columns"
 ---
 
@@ -9,20 +9,55 @@ icon: "table-columns"
   Accès : offre Hub.
 </Note>
 
-L'écran de résultats se lit en deux volets : la liste des profils à gauche, le dossier du profil sélectionné à droite. Chaque critère de votre recherche a sa colonne, et chaque profil y reçoit un verdict. Aucune note chiffrée n'est affichée.
+L'écran de résultats se lit en deux volets côte à côte : la liste des profils à gauche, le dossier du profil sélectionné à droite. Chaque volet défile seul, sous l'en-tête et la barre des critères qui restent en place. Les profils sont rangés en groupes d'après ce que leur dossier établit de vos critères indispensables. Aucune note n'est affichée : la liste compte seulement les critères indispensables établis.
 
-{/* CAPTURE : l'écran de résultats, barre des critères en haut, liste par groupes à gauche avec une colonne par critère, dossier du profil à droite */}
+{/* CAPTURE : l'écran de résultats, en-tête et barre des critères en haut, liste par groupes à gauche avec les avatars et les traits des indispensables, dossier du profil à droite */}
+
+## L'en-tête des résultats
+
+En haut à gauche, **Recherches** vous ramène au champ de saisie pour lancer une autre recherche. Suit le titre du poste, ou **Résultats** tant qu'il n'est pas connu, puis une pastille d'état :
+
+- **En cours** : la recherche tourne. Une barre d'avancement indique combien de profils sont évalués sur le nombre trouvé, et **Arrêter** interrompt la recherche.
+- **Terminée** : suivie du nombre de profils évalués.
+- **Arrêtée** : vous avez arrêté la recherche.
+- **Échec** : la recherche a échoué.
+- **Interrompue** : le serveur n'a pas terminé la recherche.
+
+Une fois la recherche finie, une ligne sous le titre précise selon le cas :
+
+- **Les profils écartés par vos filtres** : leur nombre et les filtres appliqués.
+- **Les profils écartés pour un motif de refus** : leur nombre. Voir « Bon à savoir », en bas de page.
+- **Recherche incomplète dans vos données, des profils ont pu être manqués** : la recherche n'a pas pu lire toutes vos données à temps.
+- **La lecture de LinkedIn** : où elle en est, quand LinkedIn fait partie des sources. Voir [Lancer une recherche](/fr/sourcing/lancer-une-recherche).
+
+À droite, **Partager** et **Affiner avec l'IA** sont décrits plus bas.
+
+## Les critères et leurs niveaux
+
+Sous l'en-tête, la barre **Critères** montre une pastille par critère, les indispensables d'abord. Le point devant le nom du critère dit son niveau :
+
+- **Indispensable** : un point plein.
+- **Important** : un anneau.
+- **Bonus** : un anneau en pointillés.
+
+Jusqu'à sept critères, chacun a sa pastille. Au-delà, les six premiers restent visibles et les autres se rangent derrière **+N critères**.
+
+Cliquez sur une pastille pour ouvrir la fenêtre **Niveau de « … »**. Elle donne la valeur exigée par le brief, le choix entre les trois niveaux et ce que fait le niveau actuel. Sous **Si vous changez de niveau**, chaque autre niveau annonce le principal changement de groupe qu'il provoquerait.
+
+<Tip>
+  Changer le niveau d'un critère regroupe la liste sans relancer la recherche : voir [Les niveaux de critère](/fr/sourcing/ponderer-les-criteres).
+</Tip>
 
 ## Les verdicts
 
-Pour chaque critère, Hirify dit ce que le dossier du profil établit :
+Pour chaque critère, Hirify dit ce que le dossier du profil établit. Chaque verdict a son signe dans le dossier :
 
-- **Établi** : le dossier apporte la preuve que le critère est rempli.
-- **Partiel** : le dossier le remplit en partie.
-- **Rien au dossier** : le dossier ne dit rien sur ce critère.
-- **Contredit** : le dossier porte une information contraire au critère.
+- **Établi** : un rond plein, vert. Le dossier apporte la preuve que le critère est rempli.
+- **Partiel** : un rond à moitié plein, orange. Le dossier le remplit en partie.
+- **Rien au dossier** : un cercle gris en pointillés. Le dossier ne dit rien sur ce critère.
+- **Contredit** : une croix rouge. Le dossier porte une information contraire au critère.
 
-Une donnée manquante n'est jamais une donnée contraire. **Rien au dossier** signale une question à poser, pas un défaut du candidat. La légende des verdicts est rappelée en bas de la liste.
+Une donnée manquante n'est jamais une donnée contraire. **Rien au dossier** signale une question à poser, pas un défaut du candidat.
 
 ## Les quatre groupes
 
@@ -33,53 +68,96 @@ Les profils se rangent en quatre groupes. Seuls les critères **Indispensable** 
 - **À vérifier** : un indispensable reste **Rien au dossier**.
 - **Écartés** : un indispensable est **Contredit** par le dossier.
 
-Pour les conditions de contrat, de disponibilité, de TJM et de salaire, seule une information contraire compte. Une donnée absente ne met pas le profil dans **À vérifier** : elle rejoint les points à confirmer de son dossier.
+Si aucun critère n'est indispensable, tous les profils évalués correspondent.
 
-Chaque groupe se replie avec **Masquer** et se déplie avec **Afficher**. Le groupe **Écartés** arrive replié : ses profils restent consultables.
+Pour les conditions de contrat, de disponibilité, de TJM, de salaire, de permis et de véhicule, seule une information contraire compte. Une donnée absente ne met pas le profil dans **À vérifier** : elle rejoint les questions à poser de son dossier.
 
-Dans un groupe, l'ordre suit les verdicts : les indispensables d'abord, puis les critères **Important**, qui pèsent dans l'ordre de la liste, puis les critères **Bonus**, qui départagent deux profils proches.
+Chaque groupe porte une pastille de couleur et son nombre de profils. Le groupe **Écartés** arrive replié : cliquez sur **Afficher** pour le déplier, sur **Masquer** pour le replier. Ses profils restent consultables.
 
-<Tip>
-  Le niveau d'un critère se change depuis la barre **Critères**, en haut des résultats. La liste se regroupe sans relancer la recherche : voir [Les niveaux de critère](/fr/sourcing/ponderer-les-criteres).
-</Tip>
+Dans un groupe, l'ordre suit les verdicts. Les indispensables comptent le plus, les critères **Important** pèsent dans l'ordre de la liste et les critères **Bonus** départagent deux profils proches.
 
 ## Lire la liste
 
-En tête de liste, la mention **Classés sur les indispensables** rappelle la règle des groupes. À droite, une colonne par critère, les indispensables d'abord. Survolez l'en-tête d'une colonne pour lire le critère en entier, son niveau et ce que le brief exige.
-
 Chaque ligne donne :
 
-- **Le nom du profil**, suivi de son poste actuel et de son entreprise.
-- **Un signe par colonne** : le verdict du profil sur ce critère.
-- **Déjà candidat** : le profil a déjà candidaté au poste de votre logiciel de recrutement rattaché à la recherche.
-- **Entretien** : le profil a un entretien analysé.
+- **Un avatar illustré** : toujours le même pour une même personne. Dans son coin, un badge dit d'où vient le profil : le logo de LinkedIn, celui de votre logiciel de recrutement, ou celui d'Hirify pour un entretien analysé.
+- **Le nom du profil** : suivi, quand le dossier les donne, de son poste actuel, de son entreprise, de ses années d'expérience et de son lieu. La mention **profil partiel** signale un profil LinkedIn qui n'a pas été lu en entier.
+- **Les indispensables établis** : un trait par critère indispensable, puis le nombre d'indispensables établis sur le total, par exemple « 3 sur 4 ». Le trait est vert pour **Établi**, à moitié orange pour **Partiel**, gris pour **Rien au dossier** et rouge pour **Contredit**. Sans critère indispensable, tous les critères comptent.
 
-À partir de huit critères, les six premiers gardent leur colonne et les suivants se regroupent dans une colonne **Autres**. Elle compte les critères établis et signale un critère contredit. Au survol, elle détaille chaque critère avec son verdict.
+Le détail critère par critère se lit dans le dossier.
 
-Les flèches Haut et Bas passent d'un profil au suivant, et le dossier de droite suit. Tant que l'évaluation se poursuit, le bas de la liste indique combien de profils restent à évaluer.
+Les flèches Haut et Bas passent d'un profil au suivant, et le dossier de droite suit. Elles sautent le groupe **Écartés** tant qu'il est replié.
+
+Pendant la recherche, la liste s'affiche seule et se remplit au fil des évaluations. Le bas de la liste indique combien de profils sont encore en évaluation. Cliquez sur un profil pour ouvrir son dossier sans attendre. Une fois la recherche finie, le dossier s'ouvre sur le premier profil de la liste.
 
 ## Ouvrir le dossier d'un profil
 
 Cliquez sur une ligne : le volet de droite affiche le dossier, de haut en bas :
 
-- **L'en-tête** : le nom du profil, son poste actuel et son entreprise. Une ligne d'origine dit d'où vient le dossier : l'entretien daté et le recruteur qui l'a mené, ou la fiche ATS et sa date de mise à jour. L'adresse e-mail s'affiche quand elle est connue, avec un bouton pour la copier.
-- **Le groupe en une phrase** : un encart explique le rangement du profil. Pour un profil à vérifier ou écarté, il nomme les indispensables en cause. Le résumé du profil suit.
-- **Critère par critère** : chaque critère avec son niveau, ce que le brief exige, le verdict en toutes lettres et ce que le dossier en dit. Sous le verdict, l'extrait qui le prouve et ses sources : **Entretien** avec la minute, **CV** ou **Fiche ATS**. La source d'entretien ouvre la transcription au passage cité.
-- **À demander au prochain échange** : ce que le dossier ne permet pas de trancher, dont les conditions à confirmer comme **À confirmer : Contrat**. Quand le dossier couvre les critères, la section l'indique.
-- **Avec vous** : les candidatures et les entretiens de ce profil dans votre organisation, du plus récent au plus ancien, avec le poste, l'étape atteinte et le recruteur.
+- **L'en-tête** : l'avatar, le nom, le poste actuel, l'entreprise, les années d'expérience et le lieu, puis les boutons d'action. L'avatar ouvre dans un nouvel onglet la source du profil : sa page LinkedIn, sa fiche dans votre logiciel de recrutement, ou son entretien si vous y avez accès.
+- **Le suivi** : quand le profil a une candidature dans votre logiciel de recrutement, un bandeau dit qui le suit. Voir « Qui suit déjà ce profil », plus bas.
+- **Le verdict** : un bandeau à la couleur du groupe en donne le nom et la raison. Pour un profil à vérifier ou écarté, il nomme les indispensables en cause, par exemple « À vérifier : … sans preuve au dossier ». À droite, un trait par indispensable et le nombre d'indispensables établis. Le résumé du profil suit.
+- **Ce que dit le dossier** : une ligne par critère, les indispensables d'abord. Chaque ligne donne le signe du verdict, le nom du critère, ce que le brief exige et, pour un critère qui n'est pas indispensable, son niveau. Puis ce que le dossier en dit, suivi de ses sources. Un critère dont le dossier ne dit rien affiche **Rien au dossier sur ce critère.**
+- **À demander au prochain échange** : la liste numérotée de ce que le dossier ne permet pas de trancher, dont les conditions à confirmer comme **À confirmer : Contrat**. Quand rien ne manque, la section affiche **Le dossier couvre les critères.**
+- **Avec vous** : l'historique du profil dans votre organisation, du plus récent au plus ancien. Chaque candidature donne le poste, son statut, l'étape atteinte et les recruteurs qui suivent le poste. Chaque entretien donne le recruteur qui l'a mené et s'ouvre d'un clic si vous y avez accès. Les commentaires laissés dans votre logiciel de recrutement s'y ajoutent sous **Commentaire dans l'ATS**, et **Afficher plus** déplie un commentaire long.
+- **Le pied du dossier** : d'où vient le dossier. C'est l'entretien daté et le recruteur qui l'a mené, la fiche de votre logiciel de recrutement et sa date de mise à jour, ou le profil LinkedIn et le jour où il a été lu. Pour un profil LinkedIn lu en partie, le pied ajoute **profil partiel, verdict rendu sur l'aperçu de la recherche**. L'adresse e-mail suit quand elle est connue, avec un bouton pour la copier.
 
-Si la preuve vient de l'entretien d'un collègue auquel vous n'avez pas accès, un cadenas accompagne la source.
+Quand le volet est large, le suivi, les questions à poser et l'historique passent dans une colonne à droite des critères.
+
+{/* CAPTURE : le dossier d'un profil, bandeau de suivi, verdict avec ses traits, tableau Ce que dit le dossier, À demander au prochain échange et Avec vous */}
+
+### Les preuves
+
+Chaque source qui suit une affirmation s'ouvre d'un clic sur l'extrait qui la fonde :
+
+- **Entretien**, avec la minute : la citation et qui parle, puis **Voir dans l'entretien à …**, qui ouvre la transcription au passage cité.
+- **CV** : l'extrait du CV.
+- **Fiche ATS**, ou le nom de votre logiciel de recrutement : l'extrait de la fiche.
+- **Profil LinkedIn** : l'extrait du profil.
+
+Si la preuve vient de l'entretien d'un collègue auquel vous n'avez pas accès, la source **Entretien** porte un cadenas. Elle indique alors que l'accès est restreint, sans montrer la citation.
+
+Quand la recherche compte plus de six indispensables, le tableau se découpe en sections :
+
+- **À regarder** : les indispensables qui ne sont pas établis, en entier.
+- **Établis** : les indispensables établis, une ligne chacun. Au-delà de six, un bouton affiche les autres.
+- **Importants** et **Bonus** : les autres critères, une ligne chacun.
+
+Dans **Établis**, **Importants** et **Bonus**, une flèche au bout d'une ligne la déplie pour lire la phrase entière et ses sources.
+
+### Qui suit déjà ce profil
+
+Le bandeau de suivi évite à deux recruteurs de travailler le même candidat sans le savoir. Il donne le recruteur, le poste et la date du dernier mouvement :
+
+- **« … suit déjà ce profil »** : un collègue a une candidature en cours avec ce profil. Seul ce cas colore le bandeau.
+- **« Vous suivez déjà ce profil »** : la candidature en cours est la vôtre.
+- **« Une candidature est déjà en cours »** : aucun recruteur n'est nommé sur cette candidature.
+- **« Libre, dernier suivi par … »** ou **« Libre, plus aucune candidature en cours »** : la dernière candidature est close.
+
+Survolez le bandeau pour lire le détail : le poste et sa ville, l'étape et le dernier mouvement.
+
+### Les actions du dossier
 
 En haut du dossier, selon le profil :
 
-- **Fiche ATS** : ouvre la fiche dans votre logiciel de recrutement.
-- **Écarter** : retire le profil des résultats de cette recherche. Il disparaît de la liste et ne rejoint pas le groupe **Écartés**. Une notification propose **Annuler**.
+- **Ouvrir dans …**, avec le nom de votre logiciel de recrutement, ou **Fiche ATS** : ouvre la fiche du candidat dans un nouvel onglet.
+- **Ouvrir dans LinkedIn** : pour un profil trouvé sur LinkedIn, ouvre sa page LinkedIn dans un nouvel onglet. Un profil trouvé avec LinkedIn Recruiter s'ouvre dans Recruiter, ce qui demande un siège Recruiter.
+- **Écarter** : retire le profil des résultats de cette recherche. Il disparaît de la liste et ne rejoint pas le groupe **Écartés**. Le dossier passe au profil voisin, et la notification **Candidat exclu de cette recherche** propose **Annuler**.
 - **Retenir** : place le profil dans le groupe **Retenus**. Le bouton devient **Retenu**, et un nouveau clic l'en retire.
-- **Plus d'actions** : le menu à trois points propose **Rédiger un message** et **Voir l'entretien**, pour un profil qui a un entretien.
+- **Plus d'actions** : pour un profil qui a un entretien analysé, le menu à trois points propose **Rédiger un message** et, si vous avez accès à l'entretien, **Voir l'entretien**.
 
-## Poser une question sur les profils
+## Affiner avec l'IA
 
-En bas du dossier, un champ ouvre l'Assistant dans une conversation rattachée à la recherche. Avec un profil sélectionné, la question porte sur ce profil. Sans sélection, elle porte sur l'ensemble des profils trouvés.
+Le bouton **Affiner avec l'IA**, en haut à droite des résultats, ouvre un panneau à côté de la liste et du dossier. Vous y posez vos questions sur la recherche sans quitter l'écran.
+
+- **Sur le profil ouvert** : la question porte sur le profil affiché dans le dossier, et le champ l'annonce par « Question sur » suivi de son nom. L'IA lit sa fiche, son CV et son évaluation pour cette recherche.
+- **Sur toute la recherche** : tant qu'aucun dossier n'est ouvert, le champ annonce « Question sur ces … profils ». L'IA lit les profils évalués et ce que leur dossier établit.
+
+Une conversation vide propose des questions types, comme « Que vérifier en premier au téléphone ? » ou « Qui appeler en premier, et pourquoi ? ». Un clic place la question dans le champ sans l'envoyer.
+
+Quand vous lancez une recherche, le panneau s'ouvre de lui-même sur votre brief, puis sur les étapes de la recherche au fil de leur avancée : de **Brief compris** à l'évaluation des profils, et à la lecture de LinkedIn quand il fait partie des sources.
+
+Le menu à trois points du panneau propose **Fermer le panneau** et, une fois la conversation entamée, **Nouvelle conversation**.
 
 ## Partager la recherche
 
@@ -96,7 +174,7 @@ Le bouton **Partager**, en haut à droite des résultats, réunit la visibilité
     **Copier la shortlist** produit un texte mis en forme pour un e-mail. Pour chaque profil : son nom, son adresse e-mail quand elle existe, sa provenance, son groupe, son résumé, ses critères établis et ses critères contredits ou sans preuve.
   </Step>
   <Step title="Téléchargez le tableau">
-    **Télécharger en CSV** exporte les mêmes profils avec une colonne par critère et son verdict, ainsi que le groupe, la mention retenu ou non, une éventuelle candidature antérieure, les conditions non vérifiées, le résumé et le lien vers la fiche ATS.
+    **Télécharger en CSV** exporte les mêmes profils avec une colonne par critère et son verdict. S'y ajoutent le nom, l'adresse e-mail, la provenance, le groupe, la mention retenu ou non, une éventuelle candidature antérieure au poste rattaché, les conditions non vérifiées, le résumé et le lien vers la fiche ATS.
   </Step>
 </Steps>
 
@@ -108,12 +186,13 @@ Une recherche est visible par toute l'équipe par défaut. Un brief qui demande 
 
 ## Les recherches antérieures
 
-Une recherche lancée avant le passage aux critères affiche **Cette recherche date d'avant les critères**. Cliquez sur **Relancer la recherche** pour obtenir un verdict critère par critère. La relance consomme une recherche de votre budget horaire.
+Une recherche lancée avant le passage aux critères affiche **Cette recherche date d'avant les critères**. Cliquez sur **Relancer la recherche** pour obtenir un verdict critère par critère. Comme tout lancement, la relance compte dans votre budget horaire de recherches et coûte les crédits de sa [profondeur](/fr/sourcing/lancer-une-recherche#choisir-la-profondeur) dès qu'elle évalue un profil.
 
 ## Bon à savoir
 
-- **Aucune note chiffrée.** Le groupe et les verdicts situent le profil face au poste tel que vous l'avez décrit. Ce n'est ni une évaluation de la personne ni une décision.
-- **Un filtre écarte avant l'évaluation.** Un profil qui contredit un filtre du brief n'apparaît pas dans la liste. L'en-tête des résultats indique combien de profils ont été écartés et par quel filtre. Voir [Lancer une recherche](/fr/sourcing/lancer-une-recherche).
+- **Aucune note globale.** « 3 sur 4 » compte des indispensables établis, rien de plus. Le groupe et les verdicts situent le profil face au poste tel que vous l'avez décrit. Ce n'est ni une évaluation de la personne ni une décision.
+- **Un filtre écarte avant l'évaluation.** Un profil qui contredit un filtre du brief n'apparaît pas dans la liste. L'en-tête des résultats indique combien de profils ont été écartés et par quels filtres. Voir [Lancer une recherche](/fr/sourcing/lancer-une-recherche).
+- **Un motif de refus peut aussi écarter.** Un candidat refusé dans votre logiciel de recrutement pour un motif choisi dans **Paramètres**, **Intégrations**, sous **Motifs de refus éliminatoires pour le Sourcing**, n'apparaît pas dans la liste des recherches lancées ensuite. Un candidat encore en cours sur un autre poste reste proposé.
 - **Écarter ne concerne que cette recherche.** Le profil reste dans votre vivier et ressortira dans une autre recherche.
 - **Rien n'est envoyé au candidat ni écrit dans votre logiciel de recrutement.** La shortlist est un texte que vous collez où vous voulez.
 
