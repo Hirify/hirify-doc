@@ -9,16 +9,16 @@ icon: "magnifying-glass"
   Access: Hub plan.
 </Note>
 
-Sourcing finds the profiles in your own talent pool who come closest to an open job. You describe the need in a single text field. Hirify goes through your analyzed interviews and the profiles in your ATS, then assesses each profile criterion by criterion.
+Sourcing finds the profiles in your own talent pool who come closest to an open job. You describe the need in a single text field. Hirify goes through your analyzed interviews and the profiles in your ATS, then assesses each profile criterion by criterion. If you connected your LinkedIn account, the search can read LinkedIn too.
 
 ## Write the brief
 
 <Steps>
   <Step title="Open Sourcing">
-    In the sidebar, under **AI talent tools**, click **Sourcing**.
+    In the sidebar, under **Sourcing**, click **Searches**.
   </Step>
   <Step title="Type or paste">
-    In the **Describe the profile you're looking for or paste a job description…** field, write what you need in one sentence or paste a full job ad. The text is the only input. There's nothing to pick next to it.
+    In the **Describe the profile you're looking for or paste a job description…** field, write what you need in one sentence or paste a full job ad. Next to the send button, a menu sets the search's [depth](#choose-the-depth). When LinkedIn is available to your organization, a second menu picks [where to search](#choose-where-to-search).
   </Step>
   <Step title="Check what Hirify understood">
     As soon as you stop typing, Hirify reads the brief and shows what it understood under the field. See [What Hirify reads in your brief](#what-hirify-reads-in-your-brief).
@@ -28,9 +28,48 @@ Sourcing finds the profiles in your own talent pool who come closest to an open 
   </Step>
 </Steps>
 
-When the brief covers all four points, a line under the field recalls the scope: **Searching your talent pool · aiming for 10 qualified profiles**, followed by the number of searches you have left this hour.
+At the top of the screen, a counter shows the sourcing credits you have left this month. If your LinkedIn account is connected, a second counter shows the LinkedIn results left today.
 
-{/* SCREENSHOT: the Sourcing screen with a brief typed in, the Location, Languages, Day rate / salary, and Contract & start chips under the field, and the "Pick up where you left off" list below */}
+{/* SCREENSHOT: the Sourcing screen with a brief typed in, the Location, Languages, Compensation, and Contract & start chips under the field, and the "Pick up where you left off" list below */}
+
+## Choose the depth
+
+The **Depth** menu, next to the send button, sets how many profiles the search aims for and what it costs in sourcing credits:
+
+- **Quick**: about 5 qualified profiles, for 1 credit.
+- **Standard**: about 10 qualified profiles, for 2 credits. It's marked **Recommended**.
+- **Deep**: about 20 qualified profiles, for 4 credits.
+
+The first time, the depth is **Standard**. After that, your choice is remembered in this browser.
+
+Sourcing credits are your organization's monthly credits. A depth your remaining credits don't cover is grayed out. If they no longer cover the depth you picked, the menu switches to the deepest one they still cover. Credits are only taken once a profile has been evaluated: "A search that fails, that you stop or that finds no profile to evaluate costs nothing."
+
+When LinkedIn is one of the sources, each depth also shows how many LinkedIn results it reads: 25, 50, or 100. If your LinkedIn account has fewer left today, the line says so, for example "LinkedIn: … of 50 results, daily limit".
+
+## Choose where to search
+
+When LinkedIn is available to your organization, a second menu next to the send button picks the sources. Its button names the active ones: your ATS's name, or **Talent pool** when no ATS is connected, followed by **LinkedIn** when it's on.
+
+The **Search in** menu has two rows, each with its own switch:
+
+- **My talent pool**: your candidates and analyzed interviews.
+- **LinkedIn**: a search run through your LinkedIn Recruiter or Sales Navigator account.
+
+One source always stays on. You can search LinkedIn alone, but you can't turn both off. Your sources are remembered in this browser for your next searches.
+
+Without a LinkedIn account that is connected and able to search, the LinkedIn row shows "Account not connected" and a **Connect** button, which opens **Settings**, **Integrations**. The connection goes through [the Hirify extension](/en/integrations/chrome-extension).
+
+With LinkedIn on, the menu adds:
+
+- **Hide people already viewed or contacted**: leaves out the people you already viewed or contacted on LinkedIn and those your organization already evaluated or contacted. It's on by default, and your choice is remembered in this browser.
+- **A gauge**: "This search takes up to … of the … results left today", with a **+0 credit** tag. LinkedIn draws on your account's daily limit, never on your sourcing credits.
+- **A reminder**: the search goes through your LinkedIn session. Check the contract it uses there, and don't run anything else in it while the search runs.
+
+What the LinkedIn search does:
+
+- **People already in your ATS** are always left out. The progress line gives their number.
+- **If it finds too few people**, it searches again without its narrowest filters. The progress line says so, for example "search area widened" or "with no filter on industry".
+- **After the search**, Hirify reads some LinkedIn profiles in full, at your account's pace: "Reading full LinkedIn profiles · … of …".
 
 ## What Hirify reads in your brief
 
@@ -38,12 +77,12 @@ Under the field, four chips show what Hirify read in your text:
 
 - **Location**
 - **Languages**
-- **Day rate / salary**
+- **Compensation**
 - **Contract & start**
 
 A checked chip found its information. Click it to see the value Hirify kept, where it came from (**Read in your text**, with the excerpt, or **From the attached job.**), and its effect on the search. To change the value, edit the text.
 
-A dotted chip flags a point missing from the brief. Click it to add its line to your text, for example "Location: ", then fill it in. While a point is missing, the line under the field says so instead of recalling the scope: "Without location, the search will not weigh these." A missing point never stops you from starting the search.
+A dotted chip flags a point missing from the brief. Click it to add its line to your text, for example "Location: ", then fill it in. A missing point never stops you from starting the search.
 
 If the reading fails, the message **Reading unavailable, the search still runs.** appears. You can start the search anyway.
 
@@ -84,6 +123,22 @@ Once the search is done, the line shows the number of profiles evaluated and how
 
 Only one search runs at a time. If you start one while another is running, a panel tells you so, with **View that search** and **Stop the other and launch**. At the top of the screen, **1 search running** takes you back to the one in progress.
 
+## When LinkedIn doesn't go through
+
+If LinkedIn can't be read, the search carries on without it. The progress line shows "Search ran without LinkedIn:" followed by the reason:
+
+- "account unavailable"
+- "daily quota reached": your LinkedIn account used up its daily limit.
+- "LinkedIn slowed requests down"
+- "feature turned off": LinkedIn is switched off on Hirify's side for now.
+- "LinkedIn did not respond"
+- "LinkedIn session in use elsewhere, possibly open in another tab": the line adds "Close LinkedIn in your other tabs, then run the search again."
+- "timed out"
+- "search stopped": you stopped the search.
+- "the read waited too long"
+
+A LinkedIn-only search doesn't look at your talent pool. If LinkedIn doesn't go through, the screen shows **The LinkedIn search did not go through**, with the reason. If LinkedIn returns no one, it shows **No profile found on LinkedIn**. Either way, it adds "Your talent pool was not searched."
+
 ## Run again or start from a new brief
 
 To change the brief, start a new search: click **Sourcing** in the breadcrumb or in the sidebar to go back to the input field. To change only a criterion's level, there's no need to run the search again. See [Criterion levels](/en/sourcing/weight-the-criteria).
@@ -108,9 +163,9 @@ It also needs material to work on. If your talent pool doesn't contain any index
 
 ## Good to know
 
-- **Sourcing searches your talent pool, not the internet.** Not the web, not social networks. Only your analyzed interviews and the candidates in your ATS.
+- **Sourcing searches your talent pool, and LinkedIn if you add it.** It doesn't browse the web. It only reads your analyzed interviews, the candidates in your ATS, and LinkedIn through your own account when you turn it on.
 - **Ten searches per hour, per user.** Once the quota is reached, the screen shows how long until the next one. The Assistant stays available, and **Switch to Assistant** takes you there.
-- **The target is ten qualified profiles.** The search stops when it has found them, when it has gone through everything your talent pool contains, or when its time runs out. In that last case, it shows the best profiles it got.
+- **The target depends on the depth**: about 5, 10, or 20 qualified profiles. The search stops when it has found them, when it has gone through everything your talent pool contains, or when its time runs out. In that last case, it shows the best profiles it got.
 - **A profile with no analyzed interview can still be evaluated** on its CV and ATS record. A criterion these documents don't cover is marked **Nothing on file**, which isn't a bad mark.
 - **Nothing is sent to anyone.** A search produces a list, not a contact.
 

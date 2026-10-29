@@ -1,0 +1,203 @@
+---
+title: "Assign an open job to a sourcing agent"
+sidebarTitle: "Assign a job to an agent"
+description: "Create an agent on an open job, sort the profiles it suggests every morning, tune what it looks for, and resume it if it paused"
+icon: "robot"
+---
+
+<Note>
+  Access: Hub plan, with a connected ATS. LinkedIn is optional and uses your own account.
+</Note>
+
+A sourcing agent follows one open job from your ATS. Monday to Friday, every morning, it reads the people who just applied to your other jobs and, if you turn it on, a LinkedIn search run through your account. It assesses each person against the job's criteria and puts those who come close in the morning inbox. You then sort them one at a time.
+
+Agents are open to members, managers, and admins of an organization on the Hub plan. A billing admin has no access. On another plan, the **Agents** entry stays in the sidebar with a **Hub** tag and opens a window that presents the feature.
+
+## Create an agent
+
+<Steps>
+  <Step title="Open your agents">
+    In the sidebar, under **Sourcing**, click **Agents**, then **Create an agent**. A three-step window opens.
+  </Step>
+  <Step title="Pick the job">
+    The window lists the open jobs in your ATS, with how long they've been open and how many applicants they have. **Search a job** filters the list. If you're on the hiring team of some jobs, **My jobs** and **Whole organization** switch the scope. A job you already follow shows **Already has an agent** and can't be picked. Click **Continue**.
+  </Step>
+  <Step title="Say who to look for">
+    Hirify reads the job posting and draws criteria from it. Click a criterion to change its level. See [What the levels and strictness mean](#what-the-levels-and-strictness-mean). Then pick the sources (see [LinkedIn](#also-search-linkedin)) and the **Strictness**. Click **See a preview**.
+  </Step>
+  <Step title="Check the preview and launch">
+    The preview evaluates the most recent applications the first run would read, thirty at most, and stops as soon as five profiles match. LinkedIn is never part of it. A summary recalls the **Schedule**, the **Sources**, and the **Strictness**. Click **Launch the agent**. You don't need to wait for the preview to finish.
+  </Step>
+</Steps>
+
+The first run starts right away and reads the applications from the last five working days. The agent's page opens, and its profiles show up in the morning inbox as soon as they're evaluated.
+
+The **Needs help** tag points to up to three jobs open for at least two weeks, still active in your ATS, with the fewest applicants.
+
+{/* SCREENSHOT: the second step of the creation window, with criteria grouped by level, the Your talent pool and LinkedIn rows, and the strictness */}
+
+## What the levels and strictness mean
+
+Each criterion read from the job gets a level:
+
+- **Must-have**: a profile whose file contradicts it isn't suggested.
+- **Moves up**: wanted but not required. It counts in the **Balanced** and **Strict** settings.
+- **Left aside**: the agent ignores it.
+
+A contract, salary, day rate, availability, driver's license, or vehicle criterion kept at **Must-have** rules out, before evaluation, the profiles whose file contradicts it. A profile whose information is unknown isn't ruled out.
+
+The **Strictness** decides who reaches the morning inbox:
+
+- **Flexible**: everyone no must-have rules out, including those to check. This is the default.
+- **Balanced**: no must-have contradicted and at least one criterion that moves people up, even in part.
+- **Strict**: every must-have established and at least one criterion that moves people up, fully.
+
+## When the agent runs and what it reads
+
+The agent runs Monday to Friday at 6:00 am, in your organization's time zone. It reads the applications sent to your organization's other jobs, in your ATS, up to 6:00 am that day.
+
+- **The first run** goes back five working days.
+- **Later runs** start two days before the end of the previous run, to catch applications that reached Hirify late. A person the agent already read isn't read twice.
+- **After a break**, a run never goes back more than five working days.
+
+Before any evaluation, the agent leaves out:
+
+- people who already applied to the job it follows.
+- people it already read on an earlier run.
+- people ruled out by one of your organization's **Rejection reasons that rule a candidate out of Sourcing**, unless they still have an application in progress elsewhere.
+- people you can't access. An admin or a manager reads every application. A member only reads the candidates of their own interviews and of the jobs whose hiring team they're on.
+
+A run evaluates up to 80 profiles, 200 on the first run. The most recent applications go first. Only profiles that match or are to check reach the morning inbox.
+
+## Also search LinkedIn
+
+The agent can read LinkedIn on top of your talent pool, through your own account. You need:
+
+- **A connected LinkedIn account**: LinkedIn Recruiter or Sales Navigator, connected through the Hirify extension from **Settings**, **Integrations**. See [the Hirify extension](/en/integrations/chrome-extension).
+- **A free slot**: two agents with LinkedIn at most per recruiter. A paused agent, or one whose job closed, keeps its slot. Agents without LinkedIn have no limit.
+
+When you create the agent, the switch on the LinkedIn row is already on if your account is ready and you have a slot left. Turn it off for an agent on your talent pool alone. For an existing agent, open its page, go to **Sources and schedule**, and use the switch on the LinkedIn row. LinkedIn joins from the next run. You can always remove it.
+
+Once it's on:
+
+- **Time**: the LinkedIn search starts from 7:00 am, an hour after your talent pool is read. On the first run, it starts right away.
+- **Volume**: up to 50 results per morning, within what's left of your LinkedIn account's day. That limit is shared with your searches and your other agents. The LinkedIn row shows "Left today: … of … results".
+- **Resuming**: every morning, the search picks up where it stopped the day before. It never widens its criteria.
+- **Duplicates**: the agent leaves out people already in your ATS, people it already suggested, and the profiles that a search's **Hide people already viewed or contacted** option hides.
+- **Order**: people open to opportunities are evaluated first.
+
+If LinkedIn can't be read, the run goes ahead with your talent pool alone. The LinkedIn row says why, with the action that fixes it:
+
+- "No LinkedIn account connected.": **Connect LinkedIn**.
+- "LinkedIn signed you out. Meanwhile the agent carries on with …": **Reconnect**.
+- "Your LinkedIn account is paused." or "Your LinkedIn account is unavailable.": **Open settings**.
+- "LinkedIn slowed your account down. Hirify lets it rest until …": nothing to do, the agent picks LinkedIn up again after that rest.
+- "LinkedIn is unavailable for now. Your agents carry on with …": nothing to do on your side.
+
+The agent's **Run log** keeps track of each morning: **No LinkedIn this morning**, followed by the reason, or **LinkedIn partly read**, followed by "daily quota reached", "timed out", or "evaluation incomplete".
+
+## The morning email
+
+A single email per working day covers all your agents. It goes out from 6:30 am, once all your agents have finished their run, and at 8:00 am at the latest. Its subject gives the number of profiles to review this morning.
+
+- **By job**: the profiles that match, then those to check, five at most per job.
+- **By profile**: the name, current position, origin (the application that brought them in, or LinkedIn), and the number of must-haves confirmed. The email never includes what the evaluation says about the person.
+- **The button**: it opens the morning review.
+
+No email goes out on a day without new profiles. The same morning, a **Your agents found profiles** notification arrives in Hirify.
+
+The **Stop receiving this email** link turns the morning email off. The notification in Hirify keeps coming. The app has no setting to turn the email back on.
+
+## Sort the morning's profiles
+
+<Steps>
+  <Step title="Open the review">
+    Click the button in the email, or open **Agents** in the sidebar. The "… profiles to review this morning" banner leads to the review through **Start**. The number of profiles waiting also shows next to the **Agents** entry.
+  </Step>
+  <Step title="Read the card">
+    Profiles come one at a time, job by job, those that match before those to check. The card gives the profile's origin, current position, score on the must-haves, the evaluation summary, and what the file doesn't state. **View profile** opens the details on the right.
+  </Step>
+  <Step title="Shortlist or dismiss">
+    **Shortlist** keeps the profile and moves to the next one. **Dismiss** asks "Why dismiss?": pick a reason from the list below.
+  </Step>
+  <Step title="Go back on a decision">
+    After each decision, a pill at the bottom of the screen offers **Undo** for a few seconds.
+  </Step>
+</Steps>
+
+The reasons offered when you dismiss:
+
+- **Too junior**, **Too far**, **Wrong field**: the agent may learn a rule from it. See [Learned rules](#rules-learned-from-your-dismissals).
+- **Already in touch**, **Other**: no rule is drawn from it.
+
+Once everything is sorted, the screen shows **All sorted** with the count of shortlisted and set-aside profiles, and the date of the next run.
+
+Your choices stay on the agent's page, in the **Shortlisted** and **Set aside** tabs. **Remove from shortlist** and **Restore** reverse an older decision. A profile left undecided leaves the morning inbox after ten runs.
+
+{/* SCREENSHOT: the morning review, a profile card with View profile, Dismiss, and Shortlist, and the Why dismiss? question open */}
+
+## Rules learned from your dismissals
+
+Thirty seconds after you dismiss a profile as **Too junior**, **Too far**, or **Wrong field**, the agent reads that profile and the reason again. It draws a new rule, confirms a rule it already learned, or keeps nothing.
+
+- **What a rule changes**: it becomes a **Must-have** criterion of later runs. The morning inbox is reordered at once.
+- **What it covers**: a rule can only fall under one of these kinds of job requirement: skill, experience, location, language, industry, contract, pay, or availability.
+- **Where to see it**: on the agent's page, **Settings** tab, **Rules learned from your choices** section. Each rule names the dismissal it comes from, its reason, and its date.
+- **How to delete it**: click **Delete** next to the rule. The morning inbox is reordered at once without it.
+
+Undoing a dismissal, or using **Restore** in the **Set aside** tab, takes it off its rule. A rule no longer backed by any dismissal goes away.
+
+## Tune an agent
+
+An agent's page opens from **Agents**. Its **Settings** tab holds what you can change after launch:
+
+- **What the agent looks for**: **Edit** opens the criterion levels and the **Strictness**. **Save** reorders the morning inbox at once, without evaluating anyone again. A criterion moved down brings back the profiles it ruled out, if they come from the last ten runs.
+- **Signals**: **Refine** picks the people who come first in the morning inbox. Signals never change who is suggested, only the order. By default, people open to opportunities, people actively looking, and people already interviewed by you come first. Availability, career stage, and target companies are read on a LinkedIn profile, so they need LinkedIn on the agent.
+- **Sources and schedule**: the LinkedIn row, its switch, and what's left of your account's day.
+- **Run log**: for each morning, the people read, suggested, shortlisted, and set aside.
+
+At the top of the page, **Pause** stops the agent until you click **Resume**. The three-dot button offers **Delete the agent**: its runs and shortlisted profiles go with it. Nothing is deleted in your ATS.
+
+## If nobody opens your agents
+
+An agent nobody looks at pauses. A visit is opening the **Agents** page, the morning review, or an agent's page. Creating or resuming an agent counts too.
+
+- **From the third run** in a row without a visit, the morning email and a notification give the date of the pause.
+- **After ten runs** in a row without a visit, all your active agents pause before the next run. You get an email announcing the pause and a notification. If you turned the morning email off, only the notification arrives.
+
+A paused agent no longer searches or sends you emails. Profiles already found stay in the morning inbox. Agents you paused yourself and agents whose job closed aren't affected.
+
+<Steps>
+  <Step title="Open Agents">
+    In the sidebar, under **Sourcing**, click **Agents**. A panel shows how many agents are paused and since when. The button in the pause email leads to the same place, without resuming anything on its own.
+  </Step>
+  <Step title="Resume your agents">
+    Click **Resume all** to restart every agent paused for lack of visits. For a single agent, open its page and click **Resume**.
+  </Step>
+</Steps>
+
+Once resumed, an agent searches again every working morning.
+
+## When the job closes
+
+An agent whose job is no longer open in your ATS stops on its own, with the **Job closed** status. It can't be resumed. The profiles you shortlisted stay in its **Shortlisted** tab.
+
+## Good to know
+
+- **The job is read once**, when the agent is created. Later changes to the job posting aren't picked up by the agent.
+- **Only Saturday and Sunday are skipped.** On a weekday public holiday, the agent runs as usual.
+- **An agent is private.** Only you see your agents, their runs, and their profiles. Their runs don't show up among your searches.
+- **One agent per job and per recruiter.** Two colleagues can each follow the same job with their own agent.
+- **No sourcing credit.** An agent uses neither sourcing credits nor searches from your hourly budget. LinkedIn draws on your LinkedIn account's daily limit.
+- **A connected ATS is required.** Without one, no job is offered at creation. The agent doesn't read interviews on their own or your whole talent pool. It only reads recent applications to your other jobs, and LinkedIn if you add it.
+- **A new rule doesn't evaluate anyone again.** Profiles already in the morning inbox weren't judged on it: they move to the profiles to check and drop out of the inbox at **Strict**.
+- **A LinkedIn profile can stay unnamed** when LinkedIn doesn't give the name. It then shows as "LinkedIn profile".
+
+<CardGroup cols={2}>
+  <Card title="Start a search" icon="magnifying-glass" href="/en/sourcing/start-a-search">
+    Search right away, in your talent pool or on LinkedIn, from a brief.
+  </Card>
+  <Card title="Read the results" icon="table-columns" href="/en/sourcing/read-and-compare">
+    The groups, the verdicts per criterion, and a profile's file.
+  </Card>
+</CardGroup>

@@ -135,7 +135,8 @@
                       "fr/sourcing/lancer-une-recherche",
                       "fr/sourcing/ponderer-les-criteres",
                       "fr/sourcing/lire-et-comparer",
-                      "fr/sourcing/rediger-un-message-d-approche"
+                      "fr/sourcing/rediger-un-message-d-approche",
+                      "fr/sourcing/confier-un-poste-a-un-agent"
                     ]
                   },
                   {
@@ -318,7 +319,8 @@
                       "en/sourcing/start-a-search",
                       "en/sourcing/weight-the-criteria",
                       "en/sourcing/read-and-compare",
-                      "en/sourcing/write-an-outreach-message"
+                      "en/sourcing/write-an-outreach-message",
+                      "en/sourcing/assign-a-job-to-an-agent"
                     ]
                   },
                   {

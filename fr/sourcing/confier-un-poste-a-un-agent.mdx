@@ -1,0 +1,203 @@
+---
+title: "Confier un poste ouvert à un agent de sourcing"
+sidebarTitle: "Confier un poste à un agent"
+description: "Créez un agent sur un poste ouvert, triez chaque matin les profils qu'il propose, réglez ce qu'il cherche et reprenez-le s'il s'est mis en pause."
+icon: "robot"
+---
+
+<Note>
+  Accès : offre Hub, avec un logiciel de recrutement connecté. LinkedIn en option, avec votre propre compte.
+</Note>
+
+Un agent de sourcing suit un poste ouvert de votre logiciel de recrutement. Du lundi au vendredi, il lit chaque matin les personnes qui viennent de postuler sur vos autres postes et, si vous l'activez, une recherche LinkedIn faite avec votre compte. Il évalue chaque personne sur les critères du poste et dépose celles qui s'en approchent dans la boîte du matin. Vous les triez ensuite une par une.
+
+Les agents sont ouverts aux membres, aux managers et aux administrateurs d'une organisation à l'offre Hub. Un admin facturation n'y a pas accès. Sur une autre offre, l'entrée **Agents** reste dans la barre latérale avec la mention **Hub** et ouvre une fenêtre qui présente la fonctionnalité.
+
+## Créer un agent
+
+<Steps>
+  <Step title="Ouvrez les agents">
+    Dans la barre latérale, sous **Sourcing**, cliquez sur **Agents**, puis sur **Créer un agent**. Une fenêtre en trois étapes s'ouvre.
+  </Step>
+  <Step title="Choisissez le poste">
+    La fenêtre liste les postes ouverts de votre logiciel de recrutement, avec leur ancienneté et leur nombre de candidats. **Rechercher un poste** filtre la liste. Si vous faites partie de l'équipe de recrutement de certains postes, **Mes postes** et **Toute l'organisation** changent le périmètre. Un poste que vous suivez déjà porte la mention **Déjà un agent** et ne peut pas être choisi. Cliquez sur **Continuer**.
+  </Step>
+  <Step title="Dites qui chercher">
+    Hirify lit la fiche du poste et en tire des critères. Cliquez sur un critère pour changer son niveau : voir [Niveaux et exigence](#niveaux-et-exigence). Choisissez ensuite les sources (voir [LinkedIn](#chercher-aussi-sur-linkedin)) et le **Niveau d'exigence**. Cliquez sur **Voir un aperçu**.
+  </Step>
+  <Step title="Vérifiez l'aperçu et lancez">
+    L'aperçu évalue les candidatures les plus récentes que lirait le premier passage, trente au plus, et s'arrête dès que cinq profils correspondent. LinkedIn n'y entre pas. Un résumé rappelle le **Rythme**, les **Sources** et l'**Exigence**. Cliquez sur **Lancer l'agent** : inutile d'attendre la fin de l'aperçu.
+  </Step>
+</Steps>
+
+Le premier passage part aussitôt et lit les candidatures des cinq derniers jours ouvrés. La page de l'agent s'ouvre, et ses profils arrivent dans la boîte du matin dès qu'ils sont évalués.
+
+La mention **A besoin d'aide** signale jusqu'à trois postes ouverts depuis deux semaines au moins, encore actifs dans votre logiciel de recrutement, avec le moins de candidats.
+
+{/* CAPTURE : la deuxième étape de la fenêtre de création, avec les critères rangés par niveau, les lignes Votre vivier et LinkedIn, et le niveau d'exigence */}
+
+## Niveaux et exigence
+
+Chaque critère lu sur le poste prend un niveau :
+
+- **Indispensable** : un profil dont le dossier le contredit n'est pas proposé.
+- **Fait passer devant** : souhaité sans être exigé. Il compte dans les exigences **Équilibré** et **Strict**.
+- **Laissé de côté** : l'agent n'en tient pas compte.
+
+Un critère de contrat, de salaire, de TJM, de disponibilité, de permis ou de véhicule resté **Indispensable** écarte avant l'évaluation les profils dont le dossier le contredit. Un profil dont l'information est inconnue n'est pas écarté.
+
+Le **Niveau d'exigence** décide qui arrive dans la boîte du matin :
+
+- **Souple** : tous ceux qu'aucun indispensable n'écarte, y compris ceux à vérifier. C'est le réglage par défaut.
+- **Équilibré** : aucun indispensable contredit et au moins un critère qui fait passer devant, même en partie.
+- **Strict** : tous les indispensables établis et au moins un critère qui fait passer devant, pleinement.
+
+## Quand l'agent passe et ce qu'il lit
+
+L'agent passe du lundi au vendredi à 6 h, à l'heure du fuseau de votre organisation. Il lit les candidatures déposées sur les autres postes de votre organisation, dans votre logiciel de recrutement, jusqu'à 6 h le jour même.
+
+- **Le premier passage** remonte cinq jours ouvrés.
+- **Les passages suivants** repartent deux jours avant la fin du passage précédent, pour rattraper les candidatures arrivées en retard dans Hirify. Une personne déjà lue par l'agent n'est pas lue une seconde fois.
+- **Après une interruption**, un passage ne remonte jamais plus de cinq jours ouvrés.
+
+Avant toute évaluation, l'agent laisse de côté :
+
+- les personnes qui ont déjà postulé au poste qu'il suit.
+- celles qu'il a déjà lues lors d'un passage précédent.
+- celles qu'un des **Motifs de refus éliminatoires pour le Sourcing** de votre organisation écarte, sauf si elles ont encore une candidature en cours ailleurs.
+- celles que vous ne pouvez pas consulter. Un administrateur ou un manager lit toutes les candidatures. Un membre ne lit que les candidats de ses entretiens et des postes pour lesquels il fait partie de l'équipe de recrutement.
+
+Un passage évalue au plus 80 profils, 200 au premier passage. Les candidatures les plus récentes passent d'abord. Seuls les profils qui correspondent ou qui sont à vérifier arrivent dans la boîte du matin.
+
+## Chercher aussi sur LinkedIn
+
+L'agent peut lire LinkedIn en plus de votre vivier, avec votre propre compte. Il vous faut :
+
+- **Un compte LinkedIn connecté** : LinkedIn Recruiter ou Sales Navigator, connecté par l'extension Hirify depuis **Paramètres**, **Intégrations**. Voir [l'extension Hirify](/fr/integrations/extension-chrome).
+- **Une place libre** : deux agents avec LinkedIn au plus par recruteur. Un agent en pause ou dont le poste a fermé garde sa place. Les agents sans LinkedIn ne sont pas limités.
+
+À la création, l'interrupteur de la ligne LinkedIn est déjà activé si votre compte est prêt et qu'il vous reste une place. Coupez-le pour un agent sur votre vivier seul. Sur un agent existant, ouvrez sa page, section **Sources et rythme**, et utilisez l'interrupteur de la ligne LinkedIn. LinkedIn s'ajoute dès le passage suivant. Le retirer reste toujours possible.
+
+Une fois activé :
+
+- **L'heure** : la recherche LinkedIn démarre à partir de 7 h, une heure après la lecture de votre vivier. Au premier passage, elle part tout de suite.
+- **Le volume** : jusqu'à 50 résultats par matin, dans la limite de ce qui reste du jour sur votre compte LinkedIn. Cette limite est partagée avec vos recherches et vos autres agents. La ligne LinkedIn affiche « Reste aujourd'hui : … résultats sur … ».
+- **La reprise** : chaque matin, la recherche reprend là où elle s'était arrêtée la veille. Elle n'élargit jamais ses critères.
+- **Les doublons** : l'agent laisse de côté les personnes déjà dans votre logiciel de recrutement, celles qu'il a déjà proposées et les profils que masque l'option **Masquer les profils déjà vus ou contactés** d'une recherche.
+- **L'ordre** : les personnes ouvertes aux opportunités sont évaluées d'abord.
+
+Si LinkedIn ne peut pas être lu, le passage se fait avec votre vivier seul. La ligne LinkedIn dit pourquoi, avec l'action qui débloque :
+
+- « Aucun compte LinkedIn connecté. » : **Connecter LinkedIn**.
+- « LinkedIn vous a déconnecté. En attendant, l'agent continue avec … » : **Reconnecter**.
+- « Votre compte LinkedIn est en pause. » ou « Votre compte LinkedIn est indisponible. » : **Ouvrir les réglages**.
+- « LinkedIn a ralenti votre compte. Hirify le laisse au repos jusqu'au … » : rien à faire, l'agent reprend LinkedIn après ce repos.
+- « LinkedIn est momentanément indisponible. Vos agents continuent avec … » : rien à faire de votre côté.
+
+Le **Journal des passages** de l'agent garde la trace de chaque matin : **Sans LinkedIn ce matin**, suivi du motif, ou **LinkedIn partiel**, suivi de « quota du jour atteint », « délai dépassé » ou « évaluation incomplète ».
+
+## L'e-mail du matin
+
+Un seul e-mail par jour ouvré réunit tous vos agents. Il part dès 6 h 30, une fois que tous vos agents ont fini leur passage. Au plus tard, il part à 8 h. Son objet annonce le nombre de profils à valider ce matin.
+
+- **Par poste** : les profils qui correspondent, puis ceux à vérifier, cinq au plus par poste.
+- **Par profil** : le nom, le poste actuel, l'origine (la candidature qui l'a amené ou LinkedIn) et le nombre d'indispensables confirmés. L'e-mail ne reprend jamais ce que l'évaluation dit de la personne.
+- **Le bouton** : il ouvre le tri du matin.
+
+Aucun e-mail ne part un jour sans nouveau profil. Le même matin, une notification **Vos agents ont trouvé des profils** arrive dans Hirify.
+
+Le lien **Ne plus recevoir cet e-mail** coupe l'e-mail du matin. La notification dans Hirify continue d'arriver. L'application ne propose pas de réglage pour rétablir l'e-mail.
+
+## Trier les profils du matin
+
+<Steps>
+  <Step title="Ouvrez le tri">
+    Cliquez sur le bouton de l'e-mail, ou ouvrez **Agents** dans la barre latérale. Le bandeau « … profils à valider ce matin » mène au tri par **Commencer**. Le nombre de profils en attente s'affiche aussi à côté de l'entrée **Agents**.
+  </Step>
+  <Step title="Lisez la carte">
+    Les profils défilent un par un, poste par poste, ceux qui correspondent avant ceux à vérifier. La carte donne l'origine du profil, son poste actuel, son score sur les indispensables, le résumé de l'évaluation et ce que le dossier ne précise pas. **Voir le dossier** ouvre le détail à droite.
+  </Step>
+  <Step title="Retenez ou écartez">
+    **Retenir** garde le profil et passe au suivant. **Écarter** demande « Pourquoi l'écarter ? » : choisissez une raison dans la liste ci-dessous.
+  </Step>
+  <Step title="Revenez sur une décision">
+    Après chaque décision, une pastille en bas de l'écran propose **Annuler** pendant quelques secondes.
+  </Step>
+</Steps>
+
+Les raisons proposées à l'écart :
+
+- **Trop junior**, **Trop loin**, **Pas le bon métier** : l'agent peut en tirer une règle, décrite plus bas.
+- **Déjà en contact**, **Autre** : aucune règle n'en est tirée.
+
+Quand tout est trié, l'écran affiche **Tout est trié** avec le compte des retenus et des écartés, et la date du prochain passage.
+
+Vos choix restent sur la page de l'agent, dans les onglets **Retenus** et **Écartés**. **Ne plus retenir** et **Rétablir** reviennent sur une décision plus ancienne. Un profil laissé sans décision quitte la boîte du matin après dix passages.
+
+{/* CAPTURE : le tri du matin, une carte de profil avec Voir le dossier, Écarter et Retenir, la question Pourquoi l'écarter ? ouverte */}
+
+## Les règles apprises de vos écarts
+
+Trente secondes après un écart pour **Trop junior**, **Trop loin** ou **Pas le bon métier**, l'agent relit ce profil et la raison donnée. Il en tire une nouvelle règle, confirme une règle déjà apprise ou ne retient rien.
+
+- **Ce qu'une règle change** : elle devient un critère **Indispensable** des passages suivants. La boîte du matin se range aussitôt autrement.
+- **Sur quoi elle porte** : une règle ne peut relever que d'un de ces genres d'exigence du poste : compétence, expérience, lieu, langue, secteur, contrat, rémunération ou disponibilité.
+- **Où la voir** : sur la page de l'agent, onglet **Réglages**, section **Règles apprises de vos choix**. Chaque règle nomme l'écart dont elle vient, sa raison et sa date.
+- **Comment la supprimer** : cliquez sur **Supprimer** à côté de la règle. La boîte du matin se range aussitôt sans elle.
+
+Annuler un écart, ou le **Rétablir** depuis l'onglet **Écartés**, le retire de sa règle. Une règle qui ne repose plus sur aucun écart disparaît.
+
+## Régler un agent
+
+La page d'un agent s'ouvre depuis **Agents**. Son onglet **Réglages** réunit ce qui se change après le lancement :
+
+- **Ce que l'agent cherche** : **Modifier** ouvre les niveaux des critères et le **Niveau d'exigence**. **Enregistrer** range aussitôt la boîte du matin autrement, sans réévaluer personne. Un critère rétrogradé fait revenir les profils qu'il écartait, s'ils datent des dix derniers passages.
+- **Signaux** : **Affiner** choisit les personnes qui passent en premier dans la boîte du matin. Les signaux ne changent jamais qui est proposé, seulement l'ordre. Par défaut, passent en premier les personnes ouvertes aux opportunités, celles qui cherchent en ce moment et celles déjà reçues en entretien chez vous. La disponibilité, le moment de carrière et les entreprises visées se lisent sur un profil LinkedIn : ils demandent LinkedIn sur l'agent.
+- **Sources et rythme** : la ligne LinkedIn, son interrupteur et ce qui reste du jour sur votre compte.
+- **Journal des passages** : pour chaque matin, les personnes lues, celles proposées, retenues et écartées.
+
+En haut de la page, **Mettre en pause** arrête l'agent jusqu'à ce que vous cliquiez sur **Reprendre**. Le bouton à trois points propose **Supprimer l'agent** : ses passages et ses profils retenus disparaissent avec lui. Rien n'est supprimé dans votre logiciel de recrutement.
+
+## Si personne n'ouvre vos agents
+
+Un agent que personne ne regarde se met en pause. Compte comme une visite l'ouverture de la page **Agents**, du tri du matin ou de la page d'un agent. Créer ou reprendre un agent compte aussi.
+
+- **À partir du troisième passage** d'affilée sans visite, l'e-mail du matin et une notification annoncent la date de la pause.
+- **Après dix passages** d'affilée sans visite, tous vos agents actifs se mettent en pause avant le passage suivant. Vous recevez un e-mail qui annonce la pause et une notification. Si vous avez coupé l'e-mail du matin, seule la notification arrive.
+
+Un agent en pause ne cherche plus et ne vous envoie plus d'e-mail. Les profils déjà trouvés restent dans la boîte du matin. Les agents que vous avez mis en pause vous-même et ceux dont le poste a fermé ne sont pas concernés.
+
+<Steps>
+  <Step title="Ouvrez Agents">
+    Dans la barre latérale, sous **Sourcing**, cliquez sur **Agents**. Un encart indique combien d'agents sont en pause et depuis quand. Le bouton de l'e-mail de pause mène au même endroit, sans rien reprendre de lui-même.
+  </Step>
+  <Step title="Reprenez vos agents">
+    Cliquez sur **Tout reprendre** pour relancer tous les agents mis en pause faute de visite. Pour un seul agent, ouvrez sa page et cliquez sur **Reprendre**.
+  </Step>
+</Steps>
+
+Une fois repris, un agent cherche de nouveau chaque matin ouvré.
+
+## Quand le poste ferme
+
+Un agent dont le poste n'est plus ouvert dans votre logiciel de recrutement s'arrête de lui-même, avec la mention **Poste fermé**. Il ne peut pas être repris. Les profils que vous avez retenus restent dans son onglet **Retenus**.
+
+## Bon à savoir
+
+- **Le poste est lu une seule fois**, à la création de l'agent. Une modification ultérieure de la fiche de poste n'est pas reprise par l'agent.
+- **Seuls le samedi et le dimanche sont sautés.** Un jour férié en semaine, l'agent passe comme d'habitude.
+- **Un agent est privé.** Vous seul voyez vos agents, leurs passages et leurs profils. Leurs passages n'apparaissent pas dans vos recherches.
+- **Un agent par poste et par recruteur.** Deux collègues peuvent chacun suivre le même poste avec leur propre agent.
+- **Aucun crédit de sourcing.** Un agent ne consomme ni crédit de sourcing ni recherche de votre budget horaire. LinkedIn prend sur la limite du jour de votre compte LinkedIn.
+- **Il faut un logiciel de recrutement connecté.** Sans lui, aucun poste n'est proposé à la création. L'agent ne lit ni vos entretiens seuls ni l'ensemble de votre vivier : seulement les candidatures récentes à vos autres postes, et LinkedIn si vous l'ajoutez.
+- **Une règle ajoutée ne réévalue personne.** Les profils déjà dans la boîte du matin n'ont pas été jugés sur elle : ils passent dans les profils à vérifier et en sortent en exigence **Strict**.
+- **Un profil LinkedIn peut rester sans nom** quand LinkedIn ne le donne pas. Il s'affiche alors comme « Profil LinkedIn ».
+
+<CardGroup cols={2}>
+  <Card title="Lancer une recherche" icon="magnifying-glass" href="/fr/sourcing/lancer-une-recherche">
+    Chercher tout de suite, dans votre vivier ou sur LinkedIn, à partir d'un brief.
+  </Card>
+  <Card title="Lire les résultats" icon="table-columns" href="/fr/sourcing/lire-et-comparer">
+    Les groupes, les verdicts par critère et le dossier d'un profil.
+  </Card>
+</CardGroup>
