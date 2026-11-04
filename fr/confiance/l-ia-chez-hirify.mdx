@@ -43,7 +43,7 @@ Un fait dépourvu d'ancrage valide est écarté par une règle de code, non par 
 
 Les agents fonctionnent à température zéro et sous schéma strict : leurs sorties sont stables d'une exécution à l'autre et conformes à une structure attendue.
 
-Des évaluateurs de qualité échantillonnent une partie des analyses pour mesurer la fidélité à la source, l'hallucination et le biais, et détecter une dérive. Ils ne jugent pas le candidat et ne vous sont jamais montrés.
+Chaque partie du profil extrait est ensuite relue contre la transcription par une seconde passe du modèle, qui retire ou corrige un fait absent ou mal attribué. Cette relecture ne juge pas le candidat.
 
 ## Vérifier une affirmation vous-même
 

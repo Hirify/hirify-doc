@@ -43,7 +43,7 @@ A fact without a valid anchor is discarded by a code rule, not by the model's ju
 
 The agents run at temperature zero under a strict schema. Their outputs are stable from one run to the next and follow an expected structure.
 
-Quality evaluators sample some of the analyses to measure faithfulness to the source, hallucination, and bias, and to detect drift. They don't judge the candidate and are never shown to you.
+Each part of the extracted profile is then checked against the transcript by a second pass of the model, which removes or corrects a fact that is absent or attributed to the wrong person. This check doesn't judge the candidate.
 
 ## Check a claim yourself
 
